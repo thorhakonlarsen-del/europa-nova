@@ -304,6 +304,28 @@ body {
   .timeline-item { grid-template-columns: 80px 1fr; }
   .container { padding: 0 1.25rem; }
 }
+
+/* ── Print ── */
+@media print {
+  html { font-size: 12pt; }
+  body { line-height: 1.6; }
+  .doc-nav, .back-top, .pdf-download { display: none !important; }
+  .doc-footer { border-top: 1px solid #ccc; }
+  .container { max-width: 100%; padding: 0; }
+  .doc-header { padding: 2rem 0 1.5rem; }
+  .doc-cta { border: 1px solid #ccc; }
+  .doc-cta a { color: var(--navy); }
+  h2, h3 { page-break-after: avoid; }
+  p { orphans: 3; widows: 3; }
+  .stats-grid, .timeline-grid, .fig-container, table, blockquote { page-break-inside: avoid; }
+  a[href]::after { content: none; }
+}
+
+/* ── PDF Download Button ── */
+.pdf-download { position: fixed; bottom: 2rem; right: 2rem; z-index: 50; }
+.pdf-download button { background: var(--navy); color: var(--white); border: none; cursor: pointer; font-family: var(--sans); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.6rem 1.2rem; display: flex; align-items: center; gap: 0.4rem; opacity: 0.85; transition: opacity 0.2s; }
+.pdf-download button:hover { opacity: 1; }
+.pdf-download button svg { width: 14px; height: 14px; }
 </style>
 </head>
 <body>
@@ -507,5 +529,11 @@ body {
   <p><a href="index.html">Europa Nova</a> &middot; <a href="full-paper.html">Full Policy Paper</a> &middot; <a href="brand-guide.html">Brand Guidelines</a> &middot; March 2026</p>
 </footer>
 
+<div class="pdf-download">
+  <button onclick="window.print()" title="Save as PDF">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Save as PDF
+  </button>
+</div>
 </body>
 </html>
