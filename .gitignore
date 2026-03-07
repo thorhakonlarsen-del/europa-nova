@@ -1,0 +1,16 @@
+node_modules/
+.claude/
+*.xlsx
+*.docx
+*.txt
+_paper_body.html
+build_paper.py
+serve.js
+europa-nova-website.html
+Figure1_Radar_Diagram.html
+Figure3_AI_Capability_Stack.html
+Figure_2_Europe_Energy_AI_Map.jsx
+Figure_5_CashFlow_Model.jsx
+Figure_7_1_Scaling_Properties.jsx
+Figure_7_2_Corpus_Composition.jsx
+figure4_europa_nova_org_chart.jsx

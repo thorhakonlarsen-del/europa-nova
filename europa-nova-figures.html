@@ -1,0 +1,3350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Europa Nova — Interactive Figures</title>
+<meta name="description" content="Interactive figures and data visualisations from the Europa Nova policy paper.">
+
+<!-- React + dependencies + Recharts + Babel -->
+<script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/react-is@18.2.0/umd/react-is.production.min.js"></script>
+<script src="https://unpkg.com/prop-types@15.8.1/prop-types.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/recharts@2.12.7/umd/Recharts.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ── Reset ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy: #2C4A6E;
+  --navy-deep: #1B2A4A;
+  --text: #1D1D1D;
+  --text-sec: #5A5A5A;
+  --grey: #8C8C7E;
+  --light: #F7F7F4;
+  --rule: #E0DED8;
+  --white: #FFFFFF;
+  --serif: 'EB Garamond', Georgia, serif;
+  --sans: 'DM Sans', sans-serif;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--serif); color: var(--text); background: var(--light); }
+::selection { background: var(--navy); color: white; }
+
+/* ── Navigation ── */
+.site-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.97); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule);
+}
+.site-nav-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 1.5rem;
+  display: flex; justify-content: space-between; align-items: center; height: 52px;
+}
+.site-nav-mark {
+  font-family: var(--sans); font-weight: 700; font-size: 0.75rem;
+  letter-spacing: 0.15em; color: var(--navy); text-decoration: none;
+}
+.site-nav-back {
+  font-family: var(--sans); font-size: 0.7rem; color: var(--grey);
+  text-decoration: none; letter-spacing: 0.04em;
+}
+.site-nav-back:hover { color: var(--navy); }
+
+/* ── Figure navigation sidebar ── */
+.page-layout {
+  display: flex; max-width: 1200px; margin: 0 auto; padding-top: 52px; min-height: 100vh;
+}
+
+.fig-sidebar {
+  width: 260px; flex-shrink: 0; position: sticky; top: 52px;
+  height: calc(100vh - 52px); overflow-y: auto; padding: 2rem 1.5rem;
+  background: var(--white); border-right: 1px solid var(--rule);
+}
+
+.fig-sidebar-title {
+  font-family: var(--sans); font-size: 0.6rem; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey);
+  margin-bottom: 1.2rem;
+}
+
+.fig-nav-item {
+  display: block; padding: 0.6rem 0.8rem; margin-bottom: 0.25rem;
+  text-decoration: none; border-radius: 4px; cursor: pointer;
+  transition: background 0.15s, color 0.15s; border-left: 2px solid transparent;
+}
+.fig-nav-item:hover { background: var(--light); }
+.fig-nav-item.active { background: rgba(44,74,110,0.06); border-left-color: var(--navy); }
+
+.fig-nav-num {
+  font-family: var(--sans); font-size: 0.65rem; font-weight: 600;
+  color: var(--grey); letter-spacing: 0.05em; display: block;
+}
+.fig-nav-item.active .fig-nav-num { color: var(--navy); }
+
+.fig-nav-title {
+  font-family: var(--sans); font-size: 0.78rem; font-weight: 500;
+  color: var(--text); line-height: 1.35; display: block; margin-top: 1px;
+}
+
+.fig-nav-ch {
+  font-family: var(--sans); font-size: 0.6rem; color: var(--grey);
+  display: block; margin-top: 2px;
+}
+
+/* ── Main content area ── */
+.fig-main {
+  flex: 1; min-width: 0; padding: 2.5rem 2rem;
+}
+
+.fig-panel { display: none; }
+.fig-panel.active { display: block; }
+
+/* ── Figure container ── */
+.fig-container {
+  background: var(--white); border: 1px solid var(--rule); border-radius: 6px;
+  padding: 2rem; max-width: 960px; margin: 0 auto;
+}
+
+.fig-header { margin-bottom: 1.5rem; }
+.fig-label {
+  font-family: var(--sans); font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey); margin-bottom: 0.4rem;
+}
+.fig-title {
+  font-family: 'EB Garamond', Georgia, serif; font-size: 1.25rem;
+  font-weight: 700; color: var(--navy-deep); line-height: 1.35; margin-bottom: 0.4rem;
+}
+.fig-subtitle {
+  font-family: var(--sans); font-size: 0.8rem; color: var(--text-sec);
+  line-height: 1.5; font-style: italic;
+}
+
+/* ── Embedded HTML figure styles ── */
+.html-fig-wrapper { width: 100%; }
+.html-fig-wrapper .container { width: 100% !important; border: none !important; padding: 0 !important; }
+.html-fig-wrapper .figure-container { width: 100% !important; border: none !important; padding: 0 !important; }
+.html-fig-wrapper .figure-label,
+.html-fig-wrapper .figure-title,
+.html-fig-wrapper .figure-subtitle { display: none; }
+
+/* ── React mount points ── */
+.react-mount { width: 100%; min-height: 400px; }
+
+/* ── Footer ── */
+.page-footer {
+  border-top: 1px solid var(--rule); padding: 2rem; text-align: center;
+  font-family: var(--sans); font-size: 0.7rem; color: var(--grey); background: var(--white);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .fig-sidebar { display: none; }
+  .fig-main { padding: 1.5rem 1rem; }
+  /* Show a dropdown instead */
+  .mobile-select { display: block !important; }
+}
+
+.mobile-select {
+  display: none; width: 100%; padding: 0.7rem; margin-bottom: 1.5rem;
+  font-family: var(--sans); font-size: 0.85rem; border: 1px solid var(--rule);
+  background: var(--white); color: var(--text); border-radius: 4px;
+}
+
+/* ── Embedded figure overrides ── */
+
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+  
+
+  
+
+  .container {
+    width: 820px;
+    background: white;
+    border: 1px solid #E0DDD8;
+    padding: 48px 56px 40px;
+  }
+
+  .figure-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #8C8C7E;
+    margin-bottom: 8px;
+  }
+
+  .figure-title {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1D1D1D;
+    margin-bottom: 4px;
+    line-height: 1.35;
+  }
+
+  .figure-subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: #8C8C7E;
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+
+  .chart-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+  }
+
+  .legend {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 140px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .legend-swatch {
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .legend-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1D1D1D;
+  }
+
+  .legend-score {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: #8C8C7E;
+    margin-top: 1px;
+  }
+
+  .source-line {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10.5px;
+    color: #8C8C7E;
+    margin-top: 24px;
+    line-height: 1.6;
+    border-top: 1px solid rgba(44,74,110,0.18);
+    padding-top: 16px;
+  }
+
+  svg text {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+
+          .grid-line { fill: none; stroke: rgba(44,74,110,0.12); stroke-width: 0.75; }
+          .grid-line-mid { fill: none; stroke: rgba(44,74,110,0.08); stroke-width: 0.5; }
+          .axis-line { stroke: rgba(44,74,110,0.15); stroke-width: 0.75; }
+          .axis-label { font-size: 12px; font-weight: 600; fill: #1D1D1D; text-anchor: middle; }
+          .axis-value { font-size: 9px; fill: #8C8C7E; text-anchor: middle; }
+          .region-us { fill: rgba(44, 74, 110, 0.10); stroke: #2C4A6E; stroke-width: 2.2; }
+          .region-cn { fill: rgba(92, 122, 146, 0.08); stroke: #5C7A92; stroke-width: 2.0; stroke-dasharray: 6 3; }
+          .region-eu { fill: rgba(29, 29, 29, 0.06); stroke: #1D1D1D; stroke-width: 2.2; }
+          .dot-us { fill: #2C4A6E; }
+          .dot-cn { fill: #5C7A92; }
+          .dot-eu { fill: #1D1D1D; }
+        
+
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+  
+
+  
+
+  .figure-container {
+    width: 820px;
+    padding: 40px 48px 36px;
+    background: #FFFFFF;
+  }
+
+  .figure-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8C8C7E;
+    margin-bottom: 6px;
+  }
+
+  .figure-title {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1D1D1D;
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+
+  .figure-subtitle {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 13.5px;
+    font-weight: 400;
+    font-style: italic;
+    color: #8C8C7E;
+    margin-bottom: 32px;
+    line-height: 1.4;
+  }
+
+  .stack-wrapper {
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  /* Left bracket labels */
+  .bracket-column {
+    width: 148px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-right: 0;
+    flex-shrink: 0;
+  }
+
+  .bracket-group {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+  }
+
+  .bracket-group-eu {
+    /* covers bottom 2 layers: Energy + Compute */
+  }
+
+  .bracket-group-nova {
+    /* covers middle 2 layers: Research + Model Dev */
+  }
+
+  .bracket-group-gap {
+    /* covers top 1 layer: Industrial Application */
+  }
+
+  .bracket-label-area {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 14px;
+    width: 100%;
+  }
+
+  .bracket-label {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.35;
+    text-align: right;
+    letter-spacing: 0.02em;
+  }
+
+  .bracket-label.eu {
+    color: #2C4A6E;
+  }
+
+  .bracket-label.nova {
+    color: #2C4A6E;
+  }
+
+  .bracket-label.market {
+    color: #8C8C7E;
+  }
+
+  .bracket-line {
+    position: absolute;
+    right: 0;
+    width: 8px;
+    border-right: 2.5px solid;
+    border-top: 2.5px solid;
+    border-bottom: 2.5px solid;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .bracket-line.eu {
+    border-color: #2C4A6E;
+  }
+  .bracket-line.nova {
+    border-color: #2C4A6E;
+  }
+  .bracket-line.market {
+    border-color: #8C8C7E;
+  }
+
+  /* Main stack */
+  .stack-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .layer {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    height: 72px;
+    position: relative;
+    transition: all 0.2s;
+  }
+
+  .layer-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .layer-number {
+    font-size: 28px;
+    font-weight: 700;
+    opacity: 0.12;
+    flex-shrink: 0;
+    width: 32px;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .layer-text {
+    flex: 1;
+  }
+
+  .layer-name {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 2px;
+    letter-spacing: 0.01em;
+  }
+
+  .layer-desc {
+    font-size: 11.5px;
+    font-weight: 400;
+    opacity: 0.7;
+    line-height: 1.35;
+  }
+
+  .layer-icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 18px;
+  }
+
+  /* Layer styles - bottom to top */
+  .layer-energy {
+    background: rgba(44,74,110,0.08);
+    color: #2C4A6E;
+    border-left: 4px solid #2C4A6E;
+  }
+  .layer-energy .layer-icon { background: rgba(44,74,110,0.12); }
+  .layer-energy .layer-number { color: #2C4A6E; }
+
+  .layer-compute {
+    background: rgba(44,74,110,0.08);
+    color: #2C4A6E;
+    border-left: 4px solid #2C4A6E;
+  }
+  .layer-compute .layer-icon { background: rgba(44,74,110,0.12); }
+  .layer-compute .layer-number { color: #2C4A6E; }
+
+  .layer-research {
+    background: #FAFAF8;
+    color: #1D1D1D;
+    border-left: 4px solid #2C4A6E;
+  }
+  .layer-research .layer-icon { background: rgba(44,74,110,0.10); }
+  .layer-research .layer-number { color: #1D1D1D; }
+
+  .layer-model {
+    background: #FAFAF8;
+    color: #1D1D1D;
+    border-left: 4px solid #2C4A6E;
+  }
+  .layer-model .layer-icon { background: rgba(44,74,110,0.08); }
+  .layer-model .layer-number { color: #1D1D1D; }
+
+  .layer-application {
+    background: rgba(44,74,110,0.04);
+    color: #8C8C7E;
+    border-left: 4px solid #8C8C7E;
+  }
+  .layer-application .layer-icon { background: rgba(44,74,110,0.06); }
+  .layer-application .layer-number { color: #8C8C7E; }
+
+  /* Gap indicator between compute and research */
+  .gap-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    position: relative;
+  }
+
+  .gap-line {
+    width: 100%;
+    height: 0;
+    border-top: 2px dashed #2C4A6E;
+    position: absolute;
+  }
+
+  .gap-label {
+    background: #fff;
+    padding: 2px 14px;
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #2C4A6E;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    border: 1.5px solid #2C4A6E;
+    border-radius: 3px;
+  }
+
+  /* Directional arrow */
+  .arrow-column {
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .arrow-line {
+    width: 2px;
+    flex: 1;
+    background: linear-gradient(to top, #2C4A6E, #2C4A6E 50%, #8C8C7E);
+    border-radius: 1px;
+  }
+
+  .arrow-head {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 10px solid #8C8C7E;
+    margin-bottom: 2px;
+  }
+
+  .arrow-label {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8C8C7E;
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  /* Legend */
+  .legend {
+    display: flex;
+    gap: 32px;
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(44,74,110,0.18);
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .legend-swatch {
+    width: 20px;
+    height: 12px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .legend-swatch.eu { background: rgba(44,74,110,0.08); border: 1px solid #2C4A6E; }
+  .legend-swatch.nova { background: #FAFAF8; border: 1px solid #2C4A6E; }
+  .legend-swatch.market { background: rgba(44,74,110,0.04); border: 1px solid #8C8C7E; }
+
+  .legend-text {
+    font-size: 11px;
+    font-weight: 500;
+    color: #8C8C7E;
+  }
+
+  .source-line {
+    margin-top: 14px;
+    font-size: 10px;
+    color: #8C8C7E;
+    font-style: italic;
+  }
+
+
+/* Override embedded figure containers */
+.fig-panel .container,
+.fig-panel .figure-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation bar -->
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="/" class="site-nav-mark" style="display:inline-flex;align-items:center;gap:0.4rem;"><svg width="22" height="22" viewBox="0 0 200 200" fill="none"><rect x="16" y="16" width="168" height="168" stroke="#2C4A6E" stroke-width="6" fill="none" rx="4"/><text x="100" y="100" text-anchor="middle" dominant-baseline="central" font-family="'DM Sans',Calibri,sans-serif" font-weight="700" font-size="82" fill="#2C4A6E" letter-spacing="-2">EN</text></svg> EUROPA NOVA</a>
+    <a href="/" class="site-nav-back">&larr; Back to Policy Paper</a>
+  </div>
+</nav>
+
+<!-- Page layout -->
+<div class="page-layout">
+  <!-- Sidebar navigation -->
+  <aside class="fig-sidebar">
+    <div class="fig-sidebar-title">Interactive Figures</div>
+    
+    <a class="fig-nav-item active" data-target="fig1" onclick="showFigure('fig1')">
+      <span class="fig-nav-num">Figure 1</span>
+      <span class="fig-nav-title">The AI Capability Gap</span>
+      <span class="fig-nav-ch">Chapter 1</span>
+    </a>
+    <a class="fig-nav-item" data-target="fig2" onclick="showFigure('fig2')">
+      <span class="fig-nav-num">Figure 2</span>
+      <span class="fig-nav-title">The Energy–Infrastructure Mismatch</span>
+      <span class="fig-nav-ch">Chapter 2</span>
+    </a>
+    <a class="fig-nav-item" data-target="fig3" onclick="showFigure('fig3')">
+      <span class="fig-nav-num">Figure 3</span>
+      <span class="fig-nav-title">The AI Capability Stack</span>
+      <span class="fig-nav-ch">Chapter 3</span>
+    </a>
+    <a class="fig-nav-item" data-target="fig4" onclick="showFigure('fig4')">
+      <span class="fig-nav-num">Figure 4</span>
+      <span class="fig-nav-title">Europa Nova Organisation</span>
+      <span class="fig-nav-ch">Chapter 4</span>
+    </a>
+    <a class="fig-nav-item" data-target="fig5" onclick="showFigure('fig5')">
+      <span class="fig-nav-num">Figure 5</span>
+      <span class="fig-nav-title">10-Year Financial Model</span>
+      <span class="fig-nav-ch">Chapter 5</span>
+    </a>
+    <a class="fig-nav-item" data-target="fig71" onclick="showFigure('fig71')">
+      <span class="fig-nav-num">Figure 7.1</span>
+      <span class="fig-nav-title">Computational Scaling Properties</span>
+      <span class="fig-nav-ch">Chapter 7</span>
+    </a>
+    <a class="fig-nav-item" data-target="fig72" onclick="showFigure('fig72')">
+      <span class="fig-nav-num">Figure 7.2</span>
+      <span class="fig-nav-title">Training Corpus Composition</span>
+      <span class="fig-nav-ch">Chapter 7</span>
+    </a>
+  </aside>
+
+  <!-- Main content -->
+  <main class="fig-main">
+    <!-- Mobile dropdown -->
+    <select class="mobile-select" onchange="showFigure(this.value)">
+      <option value="fig1">Figure 1: The AI Capability Gap</option><option value="fig2">Figure 2: The Energy–Infrastructure Mismatch</option><option value="fig3">Figure 3: The AI Capability Stack</option><option value="fig4">Figure 4: Europa Nova Organisation</option><option value="fig5">Figure 5: 10-Year Financial Model</option><option value="fig71">Figure 7.1: Computational Scaling Properties</option><option value="fig72">Figure 7.2: Training Corpus Composition</option>
+    </select>
+
+    <!-- Figure 1: Radar (HTML) -->
+    <div id="panel-fig1" class="fig-panel active">
+      <div class="fig-container">
+        <div class="fig-header">
+          <div class="fig-label">Figure 1 &middot; Chapter 1</div>
+          <div class="fig-title">The AI Capability Gap: US, China, and Europe Compared</div>
+          <div class="fig-subtitle">Relative positioning across five dimensions of frontier AI capability</div>
+        </div>
+        <div class="html-fig-wrapper"><div class="container">
+  
+  
+  
+
+  <div class="chart-area">
+    <svg width="440" height="420" viewBox="-220 -220 440 420">
+      <defs>
+        <style>
+          .grid-line { fill: none; stroke: rgba(44,74,110,0.12); stroke-width: 0.75; }
+          .grid-line-mid { fill: none; stroke: rgba(44,74,110,0.08); stroke-width: 0.5; }
+          .axis-line { stroke: rgba(44,74,110,0.15); stroke-width: 0.75; }
+          .axis-label { font-size: 12px; font-weight: 600; fill: #1D1D1D; text-anchor: middle; }
+          .axis-value { font-size: 9px; fill: #8C8C7E; text-anchor: middle; }
+          .region-us { fill: rgba(44, 74, 110, 0.10); stroke: #2C4A6E; stroke-width: 2.2; }
+          .region-cn { fill: rgba(92, 122, 146, 0.08); stroke: #5C7A92; stroke-width: 2.0; stroke-dasharray: 6 3; }
+          .region-eu { fill: rgba(29, 29, 29, 0.06); stroke: #1D1D1D; stroke-width: 2.2; }
+          .dot-us { fill: #2C4A6E; }
+          .dot-cn { fill: #5C7A92; }
+          .dot-eu { fill: #1D1D1D; }
+        </style>
+      </defs>
+
+      <!-- Grid rings -->
+      <script type="text/javascript">
+        // We'll generate this statically
+      </script>
+
+      <!-- Grid: 5 concentric pentagons -->
+      <!-- Dimensions: Compute(top), Talent(top-right), Capital(bottom-right), Data(bottom-left), Energy(top-left) -->
+      <!-- Angles: -90, -18, 54, 126, 198 degrees -->
+
+      <!-- Helper: compute polygon points for radius r -->
+      <!-- Angle offsets: -90, -18, 54, 126, 198 -->
+
+      <!-- r=170 (10) -->
+      <polygon class="grid-line" points="0,-170 161.7,-52.5 100,137.6 -100,137.6 -161.7,-52.5" />
+      <!-- r=136 (8) -->
+      <polygon class="grid-line-mid" points="0,-136 129.3,-42.0 80,110.1 -80,110.1 -129.3,-42.0" />
+      <!-- r=102 (6) -->
+      <polygon class="grid-line" points="0,-102 97.0,-31.5 60,82.6 -60,82.6 -97.0,-31.5" />
+      <!-- r=68 (4) -->
+      <polygon class="grid-line-mid" points="0,-68 64.7,-21.0 40,55.0 -40,55.0 -64.7,-21.0" />
+      <!-- r=34 (2) -->
+      <polygon class="grid-line" points="0,-34 32.3,-10.5 20,27.5 -20,27.5 -32.3,-10.5" />
+
+      <!-- Axes -->
+      <line class="axis-line" x1="0" y1="0" x2="0" y2="-178" />
+      <line class="axis-line" x1="0" y1="0" x2="169.3" y2="-55" />
+      <line class="axis-line" x1="0" y1="0" x2="104.6" y2="144" />
+      <line class="axis-line" x1="0" y1="0" x2="-104.6" y2="144" />
+      <line class="axis-line" x1="0" y1="0" x2="-169.3" y2="-55" />
+
+      <!-- Axis labels -->
+      <text class="axis-label" x="0" y="-188">COMPUTE</text>
+      <text class="axis-label" x="182" y="-52">TALENT</text>
+      <text class="axis-label" x="116" y="160">CAPITAL</text>
+      <text class="axis-label" x="-116" y="160">DATA</text>
+      <text class="axis-label" x="-182" y="-52">ENERGY</text>
+
+      <!-- Scale labels on Compute axis -->
+      <text class="axis-value" x="12" y="-166">10</text>
+      <text class="axis-value" x="12" y="-98">6</text>
+      <text class="axis-value" x="12" y="-30">2</text>
+
+      <!-- DATA POLYGONS -->
+      <!-- US: Compute=10, Talent=10, Capital=10, Data=10, Energy=7 -->
+      <!-- Coords: (score/10)*170 at each angle -->
+      <!-- Compute(10): 0, -170 -->
+      <!-- Talent(10): 161.7, -52.5 -->
+      <!-- Capital(10): 100, 137.6 -->
+      <!-- Data(10): -100, 137.6 -->
+      <!-- Energy(7): -113.2, -36.8 -->
+      <polygon class="region-us" points="0,-170 161.7,-52.5 100,137.6 -100,137.6 -113.2,-36.8" />
+
+      <!-- China: Compute=7, Talent=7, Capital=6, Data=7, Energy=7 -->
+      <!-- Compute(7): 0, -119 -->
+      <!-- Talent(7): 113.2, -36.8 -->
+      <!-- Capital(6): 60, 82.6 -->
+      <!-- Data(7): -70, 96.3 -->
+      <!-- Energy(7): -113.2, -36.8 -->
+      <polygon class="region-cn" points="0,-119 113.2,-36.8 60,82.6 -70,96.3 -113.2,-36.8" />
+
+      <!-- Europe: Compute=3, Talent=5, Capital=2, Data=5, Energy=7 -->
+      <!-- Compute(3): 0, -51 -->
+      <!-- Talent(5): 80.9, -26.3 -->
+      <!-- Capital(2): 20, 27.5 -->
+      <!-- Data(5): -50, 68.8 -->
+      <!-- Energy(7): -113.2, -36.8 -->
+      <polygon class="region-eu" points="0,-51 80.9,-26.3 20,27.5 -50,68.8 -113.2,-36.8" />
+
+      <!-- Dots US -->
+      <circle class="dot-us" cx="0" cy="-170" r="4" />
+      <circle class="dot-us" cx="161.7" cy="-52.5" r="4" />
+      <circle class="dot-us" cx="100" cy="137.6" r="4" />
+      <circle class="dot-us" cx="-100" cy="137.6" r="4" />
+      <circle class="dot-us" cx="-113.2" cy="-36.8" r="4" />
+
+      <!-- Dots China -->
+      <circle class="dot-cn" cx="0" cy="-119" r="3.5" />
+      <circle class="dot-cn" cx="113.2" cy="-36.8" r="3.5" />
+      <circle class="dot-cn" cx="60" cy="82.6" r="3.5" />
+      <circle class="dot-cn" cx="-70" cy="96.3" r="3.5" />
+      <circle class="dot-cn" cx="-113.2" cy="-36.8" r="3.5" />
+
+      <!-- Dots Europe -->
+      <circle class="dot-eu" cx="0" cy="-51" r="3.5" />
+      <circle class="dot-eu" cx="80.9" cy="-26.3" r="3.5" />
+      <circle class="dot-eu" cx="20" cy="27.5" r="3.5" />
+      <circle class="dot-eu" cx="-50" cy="68.8" r="3.5" />
+      <circle class="dot-eu" cx="-113.2" cy="-36.8" r="3.5" />
+    </svg>
+
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: #2C4A6E;"></div>
+        <div>
+          <div class="legend-label">United States</div>
+          <div class="legend-score">10 / 10 / 10 / 10 / 7</div>
+        </div>
+      </div>
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: #5C7A92;"></div>
+        <div>
+          <div class="legend-label">China</div>
+          <div class="legend-score">7 / 7 / 6 / 7 / 7</div>
+        </div>
+      </div>
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: #1D1D1D;"></div>
+        <div>
+          <div class="legend-label">Europe</div>
+          <div class="legend-score">3 / 5 / 2 / 5 / 7</div>
+        </div>
+      </div>
+      <div style="margin-top: 8px; font-size: 10px; color: #8C8C7E; line-height: 1.5;">
+        Scores: Compute / Talent /<br/>Capital / Data / Energy
+      </div>
+    </div>
+  </div>
+
+  <div class="source-line">
+    <strong>Sources:</strong> IEA, <em>Energy and AI</em> (April 2025); Interface/Bertelsmann Stiftung, <em>Built for Purpose?</em> (October 2025); CEPS, <em>Sanctuaries of Innovation or Cathedrals in the Desert?</em> (November 2025); Macro Polo, <em>Global AI Talent Tracker 2.0</em>; Stanford HAI, <em>AI Index Report 2025</em>. Scores are the authors' assessment based on these sources and do not represent a formal index.
+  </div>
+</div></div>
+      </div>
+    </div>
+
+    <!-- Figure 2: Map (React) -->
+    <div id="panel-fig2" class="fig-panel">
+      <div class="fig-container">
+        <div class="fig-header">
+          <div class="fig-label">Figure 2 &middot; Chapter 2</div>
+          <div class="fig-title">The Energy–Infrastructure Mismatch</div>
+          <div class="fig-subtitle">Industrial electricity prices overlaid with AI data centre locations. Hover countries and sites for details.</div>
+        </div>
+        <div id="mount-fig2" class="react-mount"></div>
+      </div>
+    </div>
+
+    <!-- Figure 3: Stack (HTML) -->
+    <div id="panel-fig3" class="fig-panel">
+      <div class="fig-container">
+        <div class="fig-header">
+          <div class="fig-label">Figure 3 &middot; Chapter 3</div>
+          <div class="fig-title">The AI Capability Stack: From Energy to Application</div>
+          <div class="fig-subtitle">EU initiatives address infrastructure. The research and model development layers remain unoccupied.</div>
+        </div>
+        <div class="html-fig-wrapper"><div class="figure-container">
+  
+  
+  
+
+  <div style="display: flex; align-items: stretch;">
+    <!-- Bracket labels on the left -->
+    <div style="width: 140px; display: flex; flex-direction: column; flex-shrink: 0; position: relative;">
+      
+      <!-- Market bracket - top layer (72px) -->
+      <div style="height: 72px; display: flex; align-items: center; position: relative;">
+        <div style="text-align: right; padding-right: 18px; width: 100%;">
+          <div class="bracket-label market">Market<br>forces</div>
+        </div>
+        <div style="position: absolute; right: 0; top: 10px; bottom: 10px; width: 8px; border-right: 2.5px solid #8C8C7E; border-top: 2.5px solid #8C8C7E; border-bottom: 2.5px solid #8C8C7E; border-radius: 0 4px 4px 0;"></div>
+      </div>
+
+      <!-- Europa Nova bracket - 2 layers + gap (72+36+72 = 180px) -->
+      <div style="height: 183px; display: flex; align-items: center; position: relative;">
+        <div style="text-align: right; padding-right: 18px; width: 100%;">
+          <div class="bracket-label nova">Europa<br>Nova</div>
+        </div>
+        <div style="position: absolute; right: 0; top: 10px; bottom: 10px; width: 8px; border-right: 2.5px solid #2C4A6E; border-top: 2.5px solid #2C4A6E; border-bottom: 2.5px solid #2C4A6E; border-radius: 0 4px 4px 0;"></div>
+      </div>
+
+      <!-- THE GAP label area -->
+      <div style="height: 36px; display: flex; align-items: center;">
+      </div>
+
+      <!-- EU Initiatives bracket - bottom 2 layers (72+3+72 = 147px) -->
+      <div style="height: 147px; display: flex; align-items: center; position: relative;">
+        <div style="text-align: right; padding-right: 18px; width: 100%;">
+          <div class="bracket-label eu">EU Initiatives<br><span style="font-weight: 400; font-size: 10px; opacity: 0.7;">AI Factories &<br>Gigafactories</span></div>
+        </div>
+        <div style="position: absolute; right: 0; top: 10px; bottom: 10px; width: 8px; border-right: 2.5px solid #2C4A6E; border-top: 2.5px solid #2C4A6E; border-bottom: 2.5px solid #2C4A6E; border-radius: 0 4px 4px 0;"></div>
+      </div>
+    </div>
+
+    <!-- Main stack -->
+    <div style="flex: 1; display: flex; flex-direction: column; gap: 3px;">
+      
+      <!-- Layer 5: Industrial Application (TOP) -->
+      <div class="layer layer-application">
+        <div class="layer-content">
+          <div class="layer-number">5</div>
+          <div class="layer-text">
+            <div class="layer-name">Industrial Application</div>
+            <div class="layer-desc">Deployment in healthcare, energy, defence, finance, public services</div>
+          </div>
+          <div class="layer-icon">⚙</div>
+        </div>
+      </div>
+
+      <!-- Layer 4: Model Development -->
+      <div class="layer layer-model">
+        <div class="layer-content">
+          <div class="layer-number">4</div>
+          <div class="layer-text">
+            <div class="layer-name">Model Development</div>
+            <div class="layer-desc">Pre-training, fine-tuning, evaluation, alignment, release</div>
+          </div>
+          <div class="layer-icon">◈</div>
+        </div>
+      </div>
+
+      <!-- Layer 3: Research & Architecture -->
+      <div class="layer layer-research">
+        <div class="layer-content">
+          <div class="layer-number">3</div>
+          <div class="layer-text">
+            <div class="layer-name">Research &amp; Architecture</div>
+            <div class="layer-desc">Architectural design, data curation, alignment science, talent concentration</div>
+          </div>
+          <div class="layer-icon">△</div>
+        </div>
+      </div>
+
+      <!-- GAP INDICATOR -->
+      <div class="gap-indicator">
+        <div class="gap-line"></div>
+        <div class="gap-label">The structural gap</div>
+      </div>
+
+      <!-- Layer 2: Compute Infrastructure -->
+      <div class="layer layer-compute">
+        <div class="layer-content">
+          <div class="layer-number">2</div>
+          <div class="layer-text">
+            <div class="layer-name">Compute Infrastructure</div>
+            <div class="layer-desc">GPU clusters, networking, storage, cloud services</div>
+          </div>
+          <div class="layer-icon">▦</div>
+        </div>
+      </div>
+
+      <!-- Layer 1: Energy (BOTTOM) -->
+      <div class="layer layer-energy">
+        <div class="layer-content">
+          <div class="layer-number">1</div>
+          <div class="layer-text">
+            <div class="layer-name">Energy</div>
+            <div class="layer-desc">Renewable power, grid capacity, cooling infrastructure</div>
+          </div>
+          <div class="layer-icon">⚡</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arrow on the right -->
+    <div style="width: 38px; display: flex; flex-direction: column; align-items: center; padding: 6px 0; flex-shrink: 0;">
+      <div class="arrow-head"></div>
+      <div class="arrow-line"></div>
+      <div class="arrow-label">Value creation</div>
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div class="legend">
+    <div class="legend-item">
+      <div class="legend-swatch eu"></div>
+      <div class="legend-text">Covered by current EU initiatives</div>
+    </div>
+    <div class="legend-item">
+      <div class="legend-swatch nova"></div>
+      <div class="legend-text">Europa Nova (proposed)</div>
+    </div>
+    <div class="legend-item">
+      <div class="legend-swatch market"></div>
+      <div class="legend-text">Downstream application (market-driven)</div>
+    </div>
+  </div>
+
+  <div class="source-line">Source: Authors' analysis. See Chapter 3, Section 3.3.</div>
+</div></div>
+      </div>
+    </div>
+
+    <!-- Figure 4: Org Chart (React) -->
+    <div id="panel-fig4" class="fig-panel">
+      <div class="fig-container" style="max-width:1020px">
+        <div class="fig-header">
+          <div class="fig-label">Figure 4 &middot; Chapter 4</div>
+          <div class="fig-title">Europa Nova: Three-Pillar Organisational Structure</div>
+          <div class="fig-subtitle">Research Foundation, Compute Infrastructure Division, and Commercial Licensing Entity</div>
+        </div>
+        <div id="mount-fig4" class="react-mount"></div>
+      </div>
+    </div>
+
+    <!-- Figure 5: Cash Flow (React/Recharts) -->
+    <div id="panel-fig5" class="fig-panel">
+      <div class="fig-container" style="max-width:1020px">
+        <div class="fig-header">
+          <div class="fig-label">Figure 5 &middot; Chapter 5</div>
+          <div class="fig-title">10-Year Financial Model</div>
+          <div class="fig-subtitle">Investment profile, revenue ramp, and indicative break-even trajectory</div>
+        </div>
+        <div id="mount-fig5" class="react-mount"></div>
+      </div>
+    </div>
+
+    <!-- Figure 7.1: Scaling (React/Recharts) -->
+    <div id="panel-fig71" class="fig-panel">
+      <div class="fig-container" style="max-width:1020px">
+        <div class="fig-header">
+          <div class="fig-label">Figure 7.1 &middot; Chapter 7</div>
+          <div class="fig-title">Computational Scaling Properties Across Architecture Families</div>
+          <div class="fig-subtitle">Relative compute cost as a function of input sequence length</div>
+        </div>
+        <div id="mount-fig71" class="react-mount"></div>
+      </div>
+    </div>
+
+    <!-- Figure 7.2: Corpus (React) -->
+    <div id="panel-fig72" class="fig-panel">
+      <div class="fig-container">
+        <div class="fig-header">
+          <div class="fig-label">Figure 7.2 &middot; Chapter 7</div>
+          <div class="fig-title">Europa Nova Training Corpus Composition</div>
+          <div class="fig-subtitle">Target proportions by data category</div>
+        </div>
+        <div id="mount-fig72" class="react-mount"></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer class="page-footer">
+  Europa Nova &middot; Interactive Figures Companion &middot; March 2026 &middot; For Public Distribution
+</footer>
+
+<!-- Navigation script -->
+<script>
+function showFigure(id) {
+  document.querySelectorAll('.fig-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.fig-nav-item').forEach(n => n.classList.remove('active'));
+  const panel = document.getElementById('panel-' + id);
+  const nav = document.querySelector('[data-target="' + id + '"]');
+  if (panel) panel.classList.add('active');
+  if (nav) nav.classList.add('active');
+  // Lazy-mount React figures
+  mountReactFigure(id);
+}
+
+const mounted = {};
+function mountReactFigure(id) {
+  if (mounted[id]) return;
+  const el = document.getElementById('mount-' + id);
+  if (!el) return;
+  if (window['render_' + id]) {
+    window['render_' + id](el);
+    mounted[id] = true;
+  }
+}
+</script>
+
+<!-- React figure components -->
+<script type="text/babel">
+const { useState, useMemo, useRef, useCallback, useEffect } = React;
+const { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, 
+        AreaChart, Area, BarChart, Bar, ComposedChart, Legend, ReferenceLine, Cell } = Recharts;
+
+/* ══════════════════════════════════════════════════════════
+   FIGURE 2 — Europe Energy/AI Map
+   ══════════════════════════════════════════════════════════ */
+
+// ═══════════════════════════════════════════════════════════════════
+// Europa Nova · Figure 2 — The Energy–Infrastructure Mismatch
+// Pre-computed SVG paths from Natural Earth 110m, D3 conic conformal
+// ═══════════════════════════════════════════════════════════════════
+
+const M = {"p":{"100":{"d":"M460.5,495.6L464.8,501.4L468.9,499.5L477.9,500.2L494.4,497.6L499.0,492.5L511.0,485.9L520.4,489.4L527.2,489.3L523.1,497.1L521.8,509.0L527.7,516.8L517.4,517.2L506.9,524.8L508.5,532.5L498.4,536.2L489.1,532.6L480.6,538.7L471.9,539.8L469.2,529.7L462.6,525.8L464.1,523.2L462.5,521.6L463.6,516.4L467.0,510.7L460.3,505.1L458.4,499.6Z","n":0},"112":{"d":"M474.6,302.9L484.4,304.4L486.6,307.7L490.5,304.7L499.8,305.9L502.7,312.6L502.1,317.2L510.4,325.2L514.8,326.9L515.1,329.7L521.8,330.4L525.6,333.5L523.2,337.8L515.9,339.6L514.6,341.5L518.2,345.8L523.4,354.6L515.8,357.8L514.0,361.9L515.6,369.6L511.5,369.2L503.3,372.3L499.9,369.5L497.1,373.0L493.0,371.8L485.6,373.3L474.3,372.2L464.6,373.1L457.4,375.0L453.1,380.2L448.7,381.6L447.2,374.9L443.0,368.4L448.0,364.2L446.9,358.1L443.2,352.8L441.6,346.2L450.2,344.6L458.7,336.8L458.8,327.8L464.8,321.4L462.4,314.8L467.0,311.0Z","n":1},"191":{"d":"M389.5,469.4L393.1,471.0L401.8,476.9L411.1,478.9L414.8,476.0L418.2,481.7L422.2,485.7L418.8,492.1L413.4,489.2L405.8,490.3L396.1,488.7L391.0,489.5L388.9,493.0L384.7,489.7L382.9,496.4L389.0,503.2L391.8,507.9L397.5,513.2L402.2,516.2L407.2,522.3L418.0,527.1L417.0,529.9L405.6,525.3L398.4,520.3L387.6,516.6L377.2,505.9L379.4,504.5L373.8,498.3L373.3,493.1L366.0,491.1L363.0,498.0L359.5,492.9L359.5,487.5L359.8,487.3L367.5,487.4L369.4,484.6L373.2,486.9L377.5,486.9L377.2,482.5L380.8,480.7L381.4,474.3Z","n":0},"196":{"d":"M615.0,605.4L617.6,605.5L620.5,603.0L623.0,602.4L624.3,603.0L625.0,604.5L625.4,603.7L627.4,603.3L629.4,601.4L631.0,601.4L631.8,602.5L620.9,613.2L614.1,613.2L609.2,607.9Z","n":1},"203":{"d":"M368.0,399.4L373.0,404.1L380.4,404.8L380.2,409.1L385.8,411.9L386.9,407.7L393.8,408.8L395.3,413.5L402.7,413.6L408.2,420.6L405.3,421.0L404.0,424.0L401.8,424.9L401.5,428.5L399.6,429.4L399.6,430.9L396.3,432.9L391.7,433.1L390.6,436.6L385.6,434.2L380.9,435.4L372.7,431.3L369.2,432.7L363.8,439.4L355.9,434.8L349.9,428.4L344.6,424.9L343.3,418.4L341.4,413.8L348.5,410.2L351.9,406.2L358.8,402.8L361.1,399.7L363.8,401.4Z","n":0},"208":{"d":"M318.5,341.1L312.8,343.4L306.1,341.3L302.7,332.6L302.9,316.7L304.4,312.6L306.9,308.0L314.4,307.1L317.3,302.8L324.0,298.4L323.8,306.4L321.3,311.5L322.4,315.8L327.1,318.1L325.0,324.0L322.4,322.4L316.1,333.5ZM339.7,323.3L342.8,330.9L337.9,343.6L328.4,335.1L327.1,328.7Z","n":0},"233":{"d":"M460.2,253.5L462.1,255.9L458.7,266.0L464.6,279.5L462.3,285.1L455.6,286.7L447.3,282.7L443.4,281.6L437.1,285.7L436.2,276.5L433.6,279.0L427.5,274.6L425.2,265.9L434.2,259.7L443.5,255.4L452.4,255.9Z","n":0},"246":{"d":"M426.0,105.2L428.0,116.4L439.8,124.4L437.5,137.6L449.6,153.1L449.1,167.4L458.2,177.1L458.3,187.8L471.5,195.1L471.2,203.6L467.3,214.2L456.9,237.8L443.6,242.3L431.5,250.8L419.6,256.5L413.7,248.8L405.5,245.0L404.7,229.5L399.0,216.1L400.9,206.4L405.6,195.6L417.8,175.8L421.4,171.6L419.4,165.2L408.9,159.6L405.6,153.9L400.8,129.7L389.7,120.5L380.7,113.9L383.5,109.1L391.3,116.5L398.6,114.4L405.6,117.0L409.5,108.8L409.6,96.5L416.8,89.1L425.4,93.5Z","n":0},"250":{"d":"M-825.7,691.8L-848.6,694.9L-864.9,700.2L-876.6,699.1L-884.4,692.1L-881.5,685.9L-883.9,681.6L-892.7,680.1L-895.1,669.9L-884.6,668.6L-875.8,663.9L-866.3,661.1L-861.7,646.7L-851.5,636.4L-830.8,633.6L-828.1,640.5L-822.3,655.3L-821.5,683.5ZM280.8,425.6L285.3,429.9L299.9,433.3L294.4,443.8L292.7,454.8L289.7,457.3L285.0,455.7L285.1,459.7L276.9,468.0L276.4,475.1L281.6,472.9L285.0,479.9L284.4,484.3L287.4,490.3L283.3,494.9L285.7,507.1L291.7,509.3L290.2,516.0L279.5,524.5L257.2,518.8L240.2,522.5L238.0,531.8L224.4,532.4L212.3,523.7L207.7,526.5L187.7,516.4L184.2,509.6L191.5,501.3L198.5,470.9L190.2,452.9L183.9,443.8L169.4,434.9L170.6,423.6L184.3,422.8L200.5,429.7L200.2,411.9L208.6,420.0L233.3,411.1L237.8,398.9L246.6,396.7L247.4,402.3L251.9,403.0L255.9,409.6L262.2,417.5L267.4,416.7L275.7,424.3L277.9,425.8ZM304.7,533.2L312.2,527.3L314.1,540.8L310.1,552.9L304.8,549.6L302.3,539.0Z","n":0},"268":{"d":"M650.7,450.5L651.2,448.3L661.1,446.8L677.4,441.9L694.8,441.7L697.9,443.4L703.0,438.0L714.1,435.8L720.3,439.8L728.5,439.5L726.9,442.8L736.1,447.5L735.6,449.9L729.5,452.2L719.6,452.4L718.2,456.0L704.7,465.8L691.0,463.9L680.0,470.0L678.7,463.2L671.5,454.7L663.0,452.2L656.5,453.2Z","n":1},"276":{"d":"M356.9,359.0L359.5,366.7L357.2,371.0L360.9,376.3L363.8,384.4L363.4,389.8L368.0,399.4L363.8,401.4L361.1,399.7L358.8,402.8L351.9,406.2L348.5,410.2L341.4,413.8L343.3,418.4L344.6,424.9L349.9,428.4L355.9,434.8L352.6,442.1L349.0,444.3L350.9,454.3L350.1,457L346.6,453.9L341.6,453.6L334.2,456.6L324.9,456.1L323.5,460.2L318.1,455.9L315.0,456.7L303.8,451.8L301.6,455.2L292.7,454.8L294.4,443.8L299.9,433.3L285.3,429.9L280.8,425.6L281.7,418.8L279.9,415.3L281.6,404.8L280.8,388.5L286.6,388.8L289.3,383.1L292.2,369.0L290.7,363.7L292.6,360.5L300.3,360.0L301.9,363.4L308.3,355.9L306.4,350.1L306.1,341.3L312.8,343.4L318.5,341.1L318.7,347.1L327.8,350.6L327.8,356.1L337.0,353.0L341.9,348.6L352.4,354.3Z","n":0},"300":{"d":"M532.3,625.7L531.7,630.8L513.4,636.2L513.0,633.5L496.5,633.6L497.6,626.4L505.7,630.4L515.6,627.4L525.4,626.4L525.7,629.2ZM471.9,539.8L480.6,538.7L489.1,532.6L498.4,536.2L508.5,532.5L506.9,524.8L513.4,527.6L512.1,538.0L509.7,540.4L502.5,541.5L496.1,541.4L482.7,548.3L492.6,555.4L487.1,559.1L480.5,560.4L472.7,553.5L471.1,557.3L475.4,566.2L482.8,572.4L478.9,576.7L487.0,582.6L494.0,586.0L495.9,594.8L483.6,592.8L488.8,600.2L481.2,603.3L488.5,616.4L480.1,618.1L468.5,613.0L461.7,601.1L457.9,590.9L452.0,584.4L444.4,576.3L442.9,572.0L447.4,563.5L447.4,558.4L450.9,555.5L450.5,551.4L458.0,548.7L461.9,544.6L468.3,543.8L469.8,540.8Z","n":0},"348":{"d":"M443.2,432.3L449.6,435.5L451.1,439.5L445.3,443.8L442.2,455.0L437.4,466.5L429.3,470.7L422.5,470.9L414.8,476.0L411.1,478.9L401.8,476.9L393.1,471.0L389.5,469.4L387.0,464.4L385.2,464.4L387.8,454.1L385.5,450.9L391.3,450.3L391.5,443.9L397.2,447.4L401.2,448.6L409.7,445.7L410.1,442.5L414.2,441.6L418.9,438.5L420.1,439.3L424.6,436.7L426.5,432.8L429.7,431.3L441.3,434.3Z","n":0},"352":{"d":"M165.6,134.7L160.7,143.9L164.2,156.7L151.8,165.2L129.3,168.1L122.6,168.5L115.0,162.7L99.5,149.9L108.6,146.5L98.8,133.0L110.8,135.6L112.6,131.2L101.8,121.7L110.5,114.5L120.3,116.7L124.8,130.7L137.4,126.8L143.1,134.1L156.0,130.0Z","n":0},"372":{"d":"M172.5,341.8L171.5,352.9L161.5,364.8L142.8,369.5L130.3,363.7L142.1,350.2L141.6,333.7L156.7,325.2L165.0,319.8L164.8,328.3L161.0,336.0L166.5,337.1Z","n":0},"380":{"d":"M323.9,466.6L330.4,468.7L331.6,465.7L342.0,462.8L344.6,468.1L360.0,471.5L359.2,479.2L362.2,485.7L353.4,483.9L344.8,489.7L345.6,497.5L344.4,502.0L348.3,509.8L359.3,517.2L365.7,529.9L379.4,541.7L388.6,540.9L391.7,544.2L388.7,547.6L399.8,552.3L408.9,556.2L420.1,563.3L421.7,566.1L420.1,572.0L412.6,565.3L401.8,563.8L397.8,574.5L407.1,579.5L406.4,587.9L401.4,589.4L396.0,603.6L390.8,605.2L390.5,600.4L392.3,591.6L394.7,588.0L389.2,579.2L384.9,571.5L379.7,569.9L375.7,563.4L367.8,561.0L362.3,554.9L353.5,554.3L344.0,547.5L333.1,537.5L325.1,528.5L321.5,513.0L315.9,511.2L306.8,505.9L301.6,508.0L294.9,515.1L290.2,516.0L291.7,509.3L285.7,507.1L283.3,494.9L287.4,490.3L284.4,484.3L285.0,479.9L289.6,483.4L294.8,482.9L301.1,477.7L302.9,480.3L308.0,479.9L310.4,473.6L318.4,475.6L323.1,473.0ZM379.0,602.3L388.4,600.3L384.8,613.2L387.0,618.0L384.9,626.4L374.7,621.0L368.1,619.6L350.0,612.3L351.5,604.0L366.2,604.8ZM303.8,560.4L309.8,555.6L316.9,566.9L315.1,587.9L309.5,586.8L304.4,592.0L299.9,587.7L299.8,568.6L297.3,559.5Z","n":0},"428":{"d":"M462.3,285.1L467.1,287.6L469.6,294.8L474.6,302.9L467.0,311.0L462.4,314.8L452.6,309.3L447.9,309.3L446.0,306.4L438.1,309.6L423.7,311.2L414.7,317.5L413.2,305.9L415.7,295.6L422.6,289.0L431.2,299.3L437.8,297.7L437.1,285.7L443.4,281.6L447.3,282.7L455.6,286.7Z","n":0},"440":{"d":"M462.4,314.8L464.8,321.4L458.8,327.8L458.7,336.8L450.2,344.6L441.6,346.2L438.5,341.9L433.7,341.1L432.3,337.3L432.5,333.0L428.1,331.2L418.5,330.1L414.7,317.5L423.7,311.2L438.1,309.6L446.0,306.4L447.9,309.3L452.6,309.3Z","n":0},"442":{"d":"M279.9,415.3L281.7,418.8L280.8,425.6L277.9,425.8L275.7,424.3L277.3,415.7Z","n":0},"499":{"d":"M435.5,525.8L432.5,527.6L431.4,524.7L427.5,533.1L428.9,537.9L426.3,537.0L422.4,532.4L417.0,529.9L418.0,527.1L418.6,518.3L421.8,514.2L423.8,512.5L427.1,514.8L429.1,516.7L433.0,517.9L437.8,520.5L437.1,522.0Z","n":0},"528":{"d":"M290.7,363.7L292.2,369.0L289.3,383.1L286.6,388.8L280.8,388.5L281.6,404.8L276.4,400.9L270.7,393.8L261.6,396.3L254.6,394.4L259.9,390.6L270.0,368.6L283.1,362.9Z","n":0},"578":{"d":"M336.1,-62.9L336.9,-69.3L341.5,-70.3L346.2,-64.4L359.1,-52.4L351.3,-44.1L350.9,-30.8L348.0,-27.2L347.6,-12.4L342.9,-11.3L333.7,-21.5L336.8,-28.0L330.9,-32.8L323.5,-47.7L320.7,-61.9L329.4,-68.7L331.4,-62.4ZM437.7,93.6L430.1,102.5L426.0,105.2L425.4,93.5L416.8,89.1L409.6,96.5L409.5,108.8L405.6,117.0L398.6,114.4L391.3,116.5L383.5,109.1L380.7,113.9L377.2,115.0L377.9,125.7L366.4,124.5L365.8,133.7L360.1,134.2L357.1,146.0L352.1,164.2L343.3,187.2L346.0,192.5L343.9,198.8L337.1,198.9L333.0,213.8L334.0,234.7L339.0,242.5L337.1,260.9L330.9,271.8L327.5,280.9L322.0,271.3L306.0,289.2L294.9,292.5L284.1,284.0L282.3,267.1L282.3,230.9L289.6,221.2L309.0,208.7L322.8,192.5L334.6,170.1L348.2,138.4L357.3,125.5L370.8,103.5L382.0,94.7L391.1,94.0L396.7,79.1L406.4,77.7L414.9,72.2L434.5,79.2L428.9,85.4ZM374.1,-76.0L371.7,-65.3L362.7,-61.2L352.5,-62.7L351.2,-67.6L346.5,-67.3L342.2,-75.4L351.0,-81.7L356.1,-78.0L358.2,-84.0L366.7,-80.9ZM373.9,-35.1L367.0,-26.4L359.7,-29.4L361.5,-34.3L358.4,-39.6L365.2,-44.4L367.9,-38Z","n":0},"616":{"d":"M441.6,346.2L443.2,352.8L446.9,358.1L448.0,364.2L443.0,368.4L447.2,374.9L448.7,381.6L456.1,394.0L455.9,398.4L451.4,401.1L444.8,415.5L448.6,421.9L446.3,421.4L435.8,417.1L428.9,420.4L424.0,419.5L418.5,423.7L412.7,418.9L408.9,421.5L408.2,420.6L402.7,413.6L395.3,413.5L393.8,408.8L386.9,407.7L385.8,411.9L380.2,409.1L380.4,404.8L373.0,404.1L368.0,399.4L363.4,389.8L363.8,384.4L360.9,376.3L357.2,371.0L359.5,366.7L356.9,359.0L362.9,354.1L376.4,345.8L387.1,339.5L396.3,341.1L397.4,344.8L406.1,343.9L417.3,344.0L433.7,341.1L438.5,341.9Z","n":0},"620":{"d":"M98.5,515.7L103.6,512.9L108.8,511.9L109.7,520.1L116.5,521.8L118.9,520.3L125.4,522.5L126.8,530.9L120.5,533.8L117.5,545.8L115.0,547.6L112.8,554.7L107.4,554.7L109.9,565.2L104.0,574.5L107.1,580.2L104.4,584.0L98.4,588.7L98.2,594.1L92.1,596.9L86.2,593.0L79.3,593.0L84.4,581.4L85.8,571.6L80.8,568.7L79.6,562.1L83.3,552.3L89.5,548.1L92.0,542.1L96.9,533.6L98.4,527.0L97.6,520.9Z","n":0},"642":{"d":"M516.7,463.3L522.1,464.9L526.5,461.1L532.0,462.3L533.3,466.1L529.0,470.8L525.4,470.3L527.2,489.3L520.4,489.4L511.0,485.9L499.0,492.5L494.4,497.6L477.9,500.2L468.9,499.5L464.8,501.4L460.5,495.6L458.0,493.3L460.1,490.2L457.0,488.8L454.2,492.9L447.0,489.4L445.1,483.2L438.0,480.6L436.0,475.9L429.3,470.7L437.4,466.5L442.2,455.0L445.3,443.8L451.1,439.5L454.9,435.4L461.5,435.9L468.1,434.7L473.6,437.4L476.6,434.3L483.8,431.2L485.5,427.1L489.8,426.1L493.2,426.9L497.4,430.6L502.2,436.1L510.4,443.6L512.5,450.2L513.0,456.9Z","n":0},"688":{"d":"M414.8,476.0L422.5,470.9L429.3,470.7L436.0,475.9L438.0,480.6L445.1,483.2L447.0,489.4L454.2,492.9L457.0,488.8L460.1,490.2L458.0,493.3L460.5,495.6L458.4,499.6L460.3,505.1L467.0,510.7L463.6,516.4L462.5,521.6L464.1,523.2L462.6,525.8L457.3,526.9L453.5,528.5L453.0,527.4L454.0,525.3L454.7,521.3L453.1,521.7L450.4,519.1L448.4,518.7L446.6,516.5L444.3,515.9L442.3,513.9L440.4,515.1L439.6,520.5L437.1,522.0L437.8,520.5L433.0,517.9L429.1,516.7L427.1,514.8L423.8,512.5L426.3,511.5L427.0,503.9L420.9,498.7L422.7,491.5L418.8,492.1L422.2,485.7L418.2,481.7Z","n":0},"703":{"d":"M446.3,421.4L444.2,425.8L443.2,432.3L441.3,434.3L429.7,431.3L426.5,432.8L424.6,436.7L420.1,439.3L418.9,438.5L414.2,441.6L410.1,442.5L409.7,445.7L401.2,448.6L397.2,447.4L391.5,443.9L390.0,438.7L390.6,436.6L391.7,433.1L396.3,432.9L399.6,430.9L399.6,429.4L401.5,428.5L401.8,424.9L404.0,424.0L405.3,421.0L408.2,420.6L408.9,421.5L412.7,418.9L418.5,423.7L424.0,419.5L428.9,420.4L435.8,417.1Z","n":0},"705":{"d":"M360.0,471.5L368.9,472.2L374.1,468.3L383.4,467.2L385.2,464.4L387.0,464.4L389.5,469.4L381.4,474.3L380.8,480.7L377.2,482.5L377.5,486.9L373.2,486.9L369.4,484.6L367.5,487.4L359.8,487.3L362.2,485.7L359.2,479.2Z","n":0},"724":{"d":"M98.2,594.1L98.4,588.7L104.4,584.0L107.1,580.2L104.0,574.5L109.9,565.2L107.4,554.7L112.8,554.7L115.0,547.6L117.5,545.8L120.5,533.8L126.8,530.9L125.4,522.5L118.9,520.3L116.5,521.8L109.7,520.1L108.8,511.9L103.6,512.9L98.5,515.7L102.0,505.0L99.2,497.2L117.7,490.4L130.5,496.4L145.4,499.7L156.7,504.9L166.2,505.9L184.2,509.6L187.7,516.4L207.7,526.5L212.3,523.7L224.4,532.4L238.0,531.8L237.7,540.9L225.5,550.2L210.0,551.7L208.2,556.9L199.7,564.6L193.2,576.7L196.7,586.4L188.6,592.4L184.4,602.3L174.4,604.0L163.4,614.7L147.3,612.0L135.3,609.3L126.2,613.3L120.1,618.2L114.2,615.5L110.7,609.1L109.2,599.3Z","n":0},"752":{"d":"M327.5,280.9L330.9,271.8L337.1,260.9L339.0,242.5L334.0,234.7L333.0,213.8L337.1,198.9L343.9,198.8L346.0,192.5L343.3,187.2L352.1,164.2L357.1,146.0L360.1,134.2L365.8,133.7L366.4,124.5L377.9,125.7L377.2,115.0L380.7,113.9L389.7,120.5L400.8,129.7L405.6,153.9L408.9,159.6L398.7,166.1L394.2,178.1L396.7,187.5L387.7,201.7L375.7,216.9L372.7,239.4L379.2,249.9L387.5,257.6L382.3,275.9L374.4,280.4L373.6,306.7L370.1,321.6L359.5,320.9L355.3,333.5L345.2,334.7L341.8,320.1L334.2,302.7Z","n":0},"756":{"d":"M315.0,456.7L315.3,459.5L313.7,463.3L318.5,466.2L323.9,466.6L323.1,473.0L318.4,475.6L310.4,473.6L308.0,479.9L302.9,480.3L301.1,477.7L294.8,482.9L289.6,483.4L285.0,479.9L281.6,472.9L276.4,475.1L276.9,468.0L285.1,459.7L285.0,455.7L289.7,457.3L292.7,454.8L301.6,455.2L303.8,451.8Z","n":0},"792":{"d":"M746.3,514.5L742.1,519.8L736.3,518.2L722.0,523.0L718.2,527.6L706.2,536.1L699.8,538.7L688.7,550.2L679.0,554.5L671.6,554.3L660.1,563.7L655.0,562.4L657.6,571.0L655.6,575.5L653.7,580.1L646.6,574.9L649.0,567.5L642.2,571.6L630.8,571.8L625.5,583.5L607.3,591.5L594.7,586.4L581.3,589.9L580.3,597.2L572.2,601.5L557.9,596.5L544.3,600.4L533.1,586.7L522.1,580.2L525.2,566.7L515.9,561.1L525.5,543.2L543.3,538L545.1,525.1L567.4,520.8L577.9,506.8L589.5,498.3L607.6,491.5L630.8,494.7L648.9,493.9L660.7,486.2L670.7,483.4L680.0,470.0L691.0,463.9L704.7,465.8L709.0,469.8L711.4,477.2L721.3,476.6L727.6,478.5L722.3,486.4L734.1,500.8L734.2,506.4ZM506.9,524.8L517.4,517.2L527.7,516.8L530.5,522.4L541.8,524.6L540.7,528.9L527.2,533.3L523.5,539.3L515.7,549.9L510.3,543.6L509.7,540.4L512.1,538.0L513.4,527.6Z","n":1},"804":{"d":"M523.4,354.6L527.0,354.1L528.2,350.0L531.2,349.9L540.0,345.3L548.6,351.6L547.4,355.4L549.7,359.6L557.3,357.7L562.9,362.8L563.7,365.8L577.4,366.4L583.5,361.4L592.0,365.8L597.3,363.4L612.9,362.2L614.8,366.3L614.3,375.4L619.9,382.3L620.4,387.7L611.6,392.8L608.3,398.9L610.6,405.4L603.3,409.7L598.5,417.0L589.5,421.4L582.8,430.0L586.2,437.7L584.5,437.8L582.1,435.4L578.6,436.0L570.3,435.3L568.8,439.9L566.9,438.8L549.7,440.2L547.3,434.8L538.3,439.6L536.9,448.9L532.0,462.3L526.5,461.1L522.1,464.9L516.7,463.3L518.9,461.0L519.4,455.3L521.0,449.7L519.5,447.2L521.3,445.5L522.9,447.3L529.1,446.0L531.6,444.1L529.2,443.1L529.3,440.7L524.6,437.9L521.4,432.1L517.1,430.6L516.4,425.3L510.8,422.5L506.5,423.0L497.9,420.2L491.6,423.3L489.8,426.1L485.5,427.1L483.8,431.2L476.6,434.3L473.6,437.4L468.1,434.7L461.5,435.9L454.9,435.4L451.1,439.5L449.6,435.5L443.2,432.3L444.2,425.8L446.3,421.4L448.6,421.9L444.8,415.5L451.4,401.1L455.9,398.4L456.1,394.0L448.7,381.6L453.1,380.2L457.4,375.0L464.6,373.1L474.3,372.2L485.6,373.3L493.0,371.8L497.1,373.0L499.9,369.5L503.3,372.3L511.5,369.2L515.6,369.6L514.0,361.9L515.8,357.8Z","n":1},"807":{"d":"M462.6,525.8L469.2,529.7L471.9,539.8L469.8,540.8L468.3,543.8L461.9,544.6L458.0,548.7L450.5,551.4L445.0,548.3L442.4,541.8L443.1,536.3L444.6,536.2L444.6,533.0L451.1,529.5L453.5,528.5L457.3,526.9Z","n":0},"826":{"d":"M172.5,341.8L166.5,337.1L161.0,336.0L164.8,328.3L165.0,319.8L172.4,321.0L179.6,332.4ZM198.9,354.6L199.0,354.6L201.9,346.0L197.7,335.5L197.6,335.2L187.5,330.4L186.3,325.9L190.9,319.8L188.9,315.0L182.8,321.1L185.5,306.4L183.0,297.8L189.5,282.8L198.4,271.8L204.5,274.3L214.4,274.9L202.6,289.8L211.3,289.3L220.3,290.9L216.0,303.0L205.9,315.4L214.6,317.9L215.0,319.6L219.9,339.0L225.6,342.3L228.7,360.6L230.5,367.0L241.4,371.4L239.1,381.1L233.7,385.0L236.5,393.4L226.8,400.4L213.9,398.4L196.7,399.9L192.7,396.1L184.9,402.0L176.3,398.5L168.3,402.9L163.7,398.7L181.2,385.8L190.4,384.1L190.3,384.1L176.0,378.6L174.6,372.0L185.4,369.4L182.0,360.1L185.8,350.6Z","n":0},"051":{"d":"M753.3,481.7L749.6,484.2L740.8,478.6L739.7,476.4L734.9,479.0L729.7,476.9L727.6,478.5L721.3,476.6L711.4,477.2L709.0,469.8L704.7,465.8L718.2,456.0L722.3,458.5L727.7,458.8L727.4,463.4L735.6,465.1L735.0,471.2L741.7,472.5L747.7,472.2Z","n":1},"040":{"d":"M391.5,443.9L391.3,450.3L385.5,450.9L387.8,454.1L385.2,464.4L383.4,467.2L374.1,468.3L368.9,472.2L360.0,471.5L344.6,468.1L342.0,462.8L331.6,465.7L330.4,468.7L323.9,466.6L318.5,466.2L313.7,463.3L315.3,459.5L315.0,456.7L318.1,455.9L323.5,460.2L324.9,456.1L334.2,456.6L341.6,453.6L346.6,453.9L350.1,457L350.9,454.3L349.0,444.3L352.6,442.1L355.9,434.8L363.8,439.4L369.2,432.7L372.7,431.3L380.9,435.4L385.6,434.2L390.6,436.6L390.0,438.7Z","n":0},"008":{"d":"M450.5,551.4L450.9,555.5L447.4,558.4L447.4,563.5L442.9,572.0L440.7,571.2L440.0,567.8L432.6,563.4L430.6,556.0L430.2,545.2L431.1,540.1L428.9,537.9L427.5,533.1L431.4,524.7L432.5,527.6L435.5,525.8L438.5,529.6L441.5,530.8L443.1,536.3L442.4,541.8L445.0,548.3Z","n":0},"056":{"d":"M281.6,404.8L279.9,415.3L277.3,415.7L275.7,424.3L267.4,416.7L262.2,417.5L255.9,409.6L251.9,403.0L247.4,402.3L246.6,396.7L254.6,394.4L261.6,396.3L270.7,393.8L276.4,400.9Z","n":0},"031":{"d":"M728.5,439.5L731.6,438.3L743.4,442.7L748.5,441.0L748.2,436.5L751.1,427.4L760.7,431.4L771.7,437.8L776.9,435.4L782.3,437.1L774.5,443.4L779.1,455.0L780.2,460.9L778.2,466.4L782.6,473.0L780.3,475.3L769.4,472.1L769.0,463.2L763.5,461.0L760.2,464.3L753.3,481.7L747.7,472.2L741.7,472.5L735.0,471.2L735.6,465.1L727.4,463.4L727.7,458.8L722.3,458.5L718.2,456.0L719.6,452.4L729.5,452.2L735.6,449.9L736.1,447.5L726.9,442.8ZM749.6,484.2L741.1,486.5L732.2,482.9L727.6,478.5L729.7,476.9L734.9,479.0L739.7,476.4L740.8,478.6Z","n":1},"070":{"d":"M418.0,527.1L407.2,522.3L402.2,516.2L397.5,513.2L391.8,507.9L389.0,503.2L382.9,496.4L384.7,489.7L388.9,493.0L391.0,489.5L396.1,488.7L405.8,490.3L413.4,489.2L418.8,492.1L422.7,491.5L420.9,498.7L427.0,503.9L426.3,511.5L423.8,512.5L421.8,514.2L418.6,518.3Z","n":0}},"g":"M0,0","s":[[306.1,416.5],[221.9,388],[271,379.9],[241.2,431.8],[170.1,349.5],[363.4,127.1],[366.4,221.8],[430.7,227.9],[319.2,330],[367.5,133.7]],"fc":[242,393],"nc":[371,208],"af":[245,368],"at":[341,216]};
+
+const CD = {
+  "578":{nm:"Norway",pr:0.07,c:1},"752":{nm:"Sweden",pr:0.096,c:1},"246":{nm:"Finland",pr:0.08,c:1},
+  "208":{nm:"Denmark",pr:0.098,c:1},"352":{nm:"Iceland",pr:0.06,c:1},
+  "233":{nm:"Estonia",pr:0.11,c:2},"428":{nm:"Latvia",pr:0.13,c:2},"440":{nm:"Lithuania",pr:0.13,c:2},
+  "616":{nm:"Poland",pr:0.17,c:3},"276":{nm:"Germany",pr:0.20,c:4},"528":{nm:"Netherlands",pr:0.12,c:2},
+  "056":{nm:"Belgium",pr:0.16,c:3},"442":{nm:"Luxembourg",pr:0.14,c:2},
+  "250":{nm:"France",pr:0.17,c:3},"756":{nm:"Switzerland",pr:0.14,c:2},"040":{nm:"Austria",pr:0.16,c:3},
+  "203":{nm:"Czech Rep.",pr:0.18,c:3},"703":{nm:"Slovakia",pr:0.16,c:3},"348":{nm:"Hungary",pr:0.11,c:2},
+  "642":{nm:"Romania",pr:0.15,c:3},"100":{nm:"Bulgaria",pr:0.12,c:2},"300":{nm:"Greece",pr:0.16,c:3},
+  "380":{nm:"Italy",pr:0.23,c:4},"705":{nm:"Slovenia",pr:0.14,c:2},"191":{nm:"Croatia",pr:0.12,c:2},
+  "688":{nm:"Serbia",pr:0.09,c:1},"070":{nm:"Bosnia & Herz.",pr:0.08,c:1},
+  "499":{nm:"Montenegro",pr:0.09,c:1},"008":{nm:"Albania",pr:0.09,c:1},"807":{nm:"N. Macedonia",pr:0.10,c:2},
+  "724":{nm:"Spain",pr:0.14,c:2},"620":{nm:"Portugal",pr:0.13,c:2},
+  "372":{nm:"Ireland",pr:0.27,c:5},"826":{nm:"United Kingdom",pr:0.19,c:4},
+};
+
+const CC = { 1:"#2C4A6E", 2:"#5C7A92", 3:"#8C8C7E", 4:"#A8B5C3", 5:"#1D1D1D" };
+const CL = ["","< €0.10","€0.10–0.14","€0.14–0.19","€0.19–0.24","> €0.24"];
+
+const SITES = [
+  { p:0, nm:"Frankfurt", t:"e", cp:"~4.5 GW", dt:"FLAP-D hub. Up to 7-year grid queue. 33–42% of local electricity goes to data centres." },
+  { p:1, nm:"London", t:"e", cp:"~3.5 GW", dt:"FLAP-D hub. 5–7 year grid connection queue." },
+  { p:2, nm:"Amsterdam", t:"e", cp:"~2.8 GW", dt:"FLAP-D hub. Up to 10-year queue. Moratorium enacted; 7% of national electricity." },
+  { p:3, nm:"Paris", t:"e", cp:"~1.5 GW", dt:"FLAP-D hub. Only major market with unconstrained grid (nuclear fleet)." },
+  { p:4, nm:"Dublin", t:"e", cp:"~1.2 GW", dt:"FLAP-D hub. Connections paused until 2030. ~19% of national, ~80% of city electricity." },
+  { p:5, nm:"Narvik (Stargate Norway)", t:"p", cp:"230MW → 520MW", dt:"OpenAI/Nscale/Aker. 100,000 GPUs by end 2026. 100% hydropower." },
+  { p:6, nm:"Central Sweden", t:"p", cp:">1 GW planned", dt:"Microsoft AI expansion. 1,000MW+ renewable capacity commitments." },
+  { p:7, nm:"Southern Finland", t:"p", cp:"50+ GW enquiries", dt:"Fingrid: >100 GW connection enquiries. 99.99995% grid reliability." },
+  { p:8, nm:"Denmark", t:"p", cp:"26%/yr growth", dt:"TSO Energinet pre-built HV substations since 2017. Apple, Meta, Google present." },
+  { p:9, nm:"Northern Sweden", t:"p", cp:"Expanding", dt:"Aurora Line cross-border link completed Nov 2025. Abundant wind." },
+];
+
+const VB = "50 -110 530 770";
+const sf = "'DM Sans', sans-serif";
+
+function Figure2() {
+  const cRef = useRef(null);
+  const [tip, setTip] = useState(null);
+  const [mp, setMp] = useState({x:0,y:0});
+  const [hov, setHov] = useState(null);
+
+  const onMove = useCallback((e) => {
+    if (!cRef.current) return;
+    const r = cRef.current.getBoundingClientRect();
+    setMp({x: e.clientX - r.left, y: e.clientY - r.top});
+  },[]);
+
+  const fc = M.fc, nc = M.nc;
+  const af = M.af, at = M.at;
+  const amid = [(af[0]+at[0])/2-30, (af[1]+at[1])/2];
+
+  return (
+    <div style={{fontFamily:"'Georgia',serif",maxWidth:900,margin:"0 auto",padding:"28px 20px 20px",background:"#FAFAF8",minHeight:"100vh"}}>
+      {/* Header */}
+      <div style={{marginBottom:16,borderBottom:"2px solid #2C4A6E",paddingBottom:14}}>
+        <div style={{fontSize:10,letterSpacing:"0.22em",textTransform:"uppercase",color:"#8C8C7E",marginBottom:5,fontFamily:sf,fontWeight:600}}>
+          Europa Nova · Chapter 2 — The Window of Opportunity
+        </div>
+        <div style={{fontSize:21,fontWeight:700,color:"#1D1D1D",lineHeight:1.3}}>
+          Figure 2. The Energy–Infrastructure Mismatch
+        </div>
+        <div style={{fontSize:12.5,color:"#8C8C7E",marginTop:7,lineHeight:1.6,fontStyle:"italic",maxWidth:780}}>
+          Industrial electricity prices (€/kWh, Eurostat H1 2025) overlaid with AI data centre locations. Europe's compute is concentrated where grids are congested and energy expensive. Its cheapest, cleanest power is where almost no compute exists — yet.
+        </div>
+      </div>
+
+      {/* Map */}
+      <div ref={cRef} style={{position:"relative",background:"#F0EDE8",borderRadius:6,overflow:"hidden"}} onMouseMove={onMove}>
+        <svg viewBox={VB} style={{width:"100%",height:"auto",display:"block"}}>
+          <rect x="50" y="-110" width="530" height="770" fill="#F0EDE8"/>
+
+          {/* Graticule */}
+          <path d={M.g} fill="none" stroke="rgba(44,74,110,0.15)" strokeWidth="0.4" opacity="0.7"/>
+
+          {/* Countries */}
+          {Object.entries(M.p).map(([id, v]) => {
+            const info = CD[id];
+            const fill = info ? CC[info.c] : (v.n ? "rgba(44,74,110,0.08)" : "rgba(44,74,110,0.06)");
+            const isH = hov === id;
+            return (
+              <path key={id} d={v.d}
+                fill={fill}
+                stroke={isH ? "#fff" : "#FAFAF8"}
+                strokeWidth={isH ? 1.6 : (info ? 0.7 : 0.4)}
+                opacity={info ? (isH ? 1 : 0.88) : 0.42}
+                style={{cursor: info ? "pointer" : "default", transition:"opacity 0.12s"}}
+                onMouseEnter={() => { if(info){setHov(id);setTip({t:"c",d:info});}}}
+                onMouseLeave={() => {setHov(null);setTip(null);}}
+              />
+            );
+          })}
+
+          {/* FLAP-D zone */}
+          <ellipse cx={fc[0]} cy={fc[1]} rx={130} ry={68}
+            fill="none" stroke="#1D1D1D" strokeWidth="1.4" strokeDasharray="7,4" opacity="0.5"/>
+          <text x={fc[0]} y={fc[1]-78} textAnchor="middle"
+            style={{fontSize:10,fill:"#1D1D1D",fontFamily:sf,fontWeight:700,letterSpacing:"0.08em"}}>
+            FLAP-D CONGESTION ZONE
+          </text>
+          <text x={fc[0]} y={fc[1]-65} textAnchor="middle"
+            style={{fontSize:8.5,fill:"#1D1D1D",fontFamily:sf}}>
+            3–10 year grid connection queues · 62% of European DC capacity
+          </text>
+
+          {/* Nordic zone */}
+          <ellipse cx={nc[0]} cy={nc[1]-10} rx={140} ry={95}
+            fill="none" stroke="#2C4A6E" strokeWidth="1.4" strokeDasharray="7,4" opacity="0.45"/>
+          <text x={nc[0]} y={nc[1]-110} textAnchor="middle"
+            style={{fontSize:10,fill:"#2C4A6E",fontFamily:sf,fontWeight:700,letterSpacing:"0.08em"}}>
+            NORDIC ENERGY ADVANTAGE
+          </text>
+          <text x={nc[0]} y={nc[1]-97} textAnchor="middle"
+            style={{fontSize:8.5,fill:"#2C4A6E",fontFamily:sf}}>
+            PPAs as low as €0.03/kWh · 95–98% renewable · 30–60% cooling savings
+          </text>
+
+          {/* Migration arrow */}
+          <defs>
+            <marker id="ah" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+              <polygon points="0 0,8 3,0 6" fill="#2C4A6E" opacity="0.5"/>
+            </marker>
+          </defs>
+          <path d={`M${af[0]},${af[1]} Q${amid[0]},${amid[1]} ${at[0]},${at[1]}`}
+            stroke="#2C4A6E" strokeWidth="1.3" fill="none" strokeDasharray="6,3" markerEnd="url(#ah)" opacity="0.4"/>
+
+          {/* AI Sites */}
+          {SITES.map((site, i) => {
+            const [px,py] = M.s[site.p];
+            if (site.t === "e") {
+              return (
+                <g key={i}>
+                  <circle cx={px} cy={py} r="8" fill="none" stroke="#1D1D1D" strokeWidth="0.6" opacity="0">
+                    <animate attributeName="r" values="6;16" dur="3s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.35;0" dur="3s" repeatCount="indefinite"/>
+                  </circle>
+                  <rect x={px-5.5} y={py-5.5} width={11} height={11} rx={2}
+                    fill="#2C4A6E" stroke="#FAFAF8" strokeWidth="1.3"
+                    style={{cursor:"pointer"}}
+                    onMouseEnter={() => setTip({t:"s",d:site})}
+                    onMouseLeave={() => setTip(null)}/>
+                  <text x={px+10} y={py+4}
+                    style={{fontSize:8.5,fill:"#1D1D1D",fontFamily:sf,fontWeight:600,pointerEvents:"none"}}>
+                    {site.nm}
+                  </text>
+                </g>
+              );
+            } else {
+              return (
+                <g key={i}>
+                  <circle cx={px} cy={py} r="8" fill="none" stroke="#2C4A6E" strokeWidth="0.6" opacity="0">
+                    <animate attributeName="r" values="5;18" dur="2.5s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.45;0" dur="2.5s" repeatCount="indefinite"/>
+                  </circle>
+                  <polygon points={`${px},${py-7.5} ${px+7.5},${py} ${px},${py+7.5} ${px-7.5},${py}`}
+                    fill="#2C4A6E" stroke="#FAFAF8" strokeWidth="1.3"
+                    style={{cursor:"pointer"}}
+                    onMouseEnter={() => setTip({t:"s",d:site})}
+                    onMouseLeave={() => setTip(null)}/>
+                  <text x={px+11} y={py+4}
+                    style={{fontSize:8.5,fill:"#2C4A6E",fontFamily:sf,fontWeight:600,pointerEvents:"none"}}>
+                    {site.nm}
+                  </text>
+                </g>
+              );
+            }
+          })}
+        </svg>
+
+        {/* Tooltip */}
+        {tip && (
+          <div style={{
+            position:"absolute",
+            left:Math.min(Math.max(mp.x+16,10),600),
+            top:Math.max(mp.y-20,10),
+            background:"#1D1D1D",color:"#FAFAF8",
+            padding:"10px 14px",borderRadius:5,maxWidth:280,
+            pointerEvents:"none",zIndex:20,
+            boxShadow:"0 6px 24px rgba(0,0,0,0.3)",
+            fontFamily:sf,lineHeight:1.5
+          }}>
+            {tip.t==="c" && <>
+              <div style={{fontWeight:700,fontSize:13,marginBottom:2}}>{tip.d.nm}</div>
+              <div style={{fontSize:12}}>Industrial electricity: <span style={{fontWeight:700,color:"#FFFFFF"}}>€{tip.d.pr.toFixed(2)}/kWh</span></div>
+              <div style={{fontSize:10.5,opacity:0.65,marginTop:2}}>Eurostat non-household, H1 2025</div>
+            </>}
+            {tip.t==="s" && <>
+              <div style={{fontWeight:700,fontSize:13,marginBottom:2}}>{tip.d.nm}</div>
+              <div style={{fontSize:11.5}}>Capacity: <span style={{fontWeight:600}}>{tip.d.cp}</span></div>
+              <div style={{fontSize:11,marginTop:4,opacity:0.82,lineHeight:1.55}}>{tip.d.dt}</div>
+            </>}
+          </div>
+        )}
+      </div>
+
+      {/* Legend */}
+      <div style={{display:"flex",gap:32,marginTop:14,padding:"14px 18px",background:"#FAFAF8",borderRadius:5,flexWrap:"wrap",alignItems:"flex-start"}}>
+        <div>
+          <div style={{fontSize:9,fontWeight:700,textTransform:"uppercase",letterSpacing:"0.14em",color:"#2C4A6E",marginBottom:6,fontFamily:sf}}>
+            Industrial electricity price (€/kWh)
+          </div>
+          <div style={{display:"flex"}}>
+            {[1,2,3,4,5].map(c=>(
+              <div key={c} style={{textAlign:"center"}}>
+                <div style={{width:58,height:14,background:CC[c],borderRadius:c===1?"3px 0 0 3px":c===5?"0 3px 3px 0":0}}/>
+                <div style={{fontSize:9,color:"#8C8C7E",marginTop:3,fontFamily:sf}}>{CL[c]}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div>
+          <div style={{fontSize:9,fontWeight:700,textTransform:"uppercase",letterSpacing:"0.14em",color:"#2C4A6E",marginBottom:6,fontFamily:sf}}>
+            AI Data Centre Infrastructure
+          </div>
+          <div style={{display:"flex",gap:16,flexWrap:"wrap"}}>
+            <div style={{display:"flex",alignItems:"center",gap:5}}>
+              <div style={{width:11,height:11,background:"#2C4A6E",borderRadius:2}}/>
+              <span style={{fontSize:10.5,color:"#8C8C7E",fontFamily:sf}}>Existing FLAP-D hub (congested)</span>
+            </div>
+            <div style={{display:"flex",alignItems:"center",gap:5}}>
+              <div style={{width:11,height:11,background:"#2C4A6E",transform:"rotate(45deg)",borderRadius:1}}/>
+              <span style={{fontSize:10.5,color:"#8C8C7E",fontFamily:sf}}>Planned / expanding Nordic site</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Insight */}
+      <div style={{marginTop:14,padding:"13px 18px",borderLeft:"3px solid #2C4A6E",background:"#FAFAF8",borderRadius:"0 5px 5px 0"}}>
+        <div style={{fontSize:12.5,color:"#1D1D1D",lineHeight:1.6}}>
+          <strong>The mismatch is structural.</strong> 62% of Europe's data centre capacity sits in the FLAP-D markets, where grid connection queues stretch 3–10 years. Nordic countries offer industrial electricity at one-third to one-quarter of the Continental average, near-zero grid congestion, and 95–98% renewable generation. Over $15 billion was committed to Nordic AI infrastructure in 2025 alone.
+        </div>
+      </div>
+
+      {/* Sources */}
+      <div style={{marginTop:12,fontSize:9.5,color:"#8C8C7E",lineHeight:1.6,fontFamily:sf}}>
+        Sources: Eurostat, non-household electricity prices H1 2025 (band IC, 500–2,000 MWh); Ember, "Grids for data centres in Europe," June 2025; IEA, "Energy and AI," June 2025; Fingrid 2025; Nscale/Aker/OpenAI, July 2025. Cartography: Natural Earth 110m, D3 conic conformal projection.
+      </div>
+    </div>
+  );
+}
+
+window.render_fig2 = (el) => ReactDOM.render(React.createElement(Figure2), el);
+
+/* ══════════════════════════════════════════════════════════
+   FIGURE 4 — Organisation Chart
+   ══════════════════════════════════════════════════════════ */
+{
+const COLORS = {
+  bg: "#FAFAF8",
+  navy: "#2C4A6E",
+  navyLight: "#5C7A92",
+  gold: "#2C4A6E",
+  goldLight: "rgba(44,74,110,0.3)",
+  warmGray: "rgba(44,74,110,0.12)",
+  medGray: "rgba(44,74,110,0.18)",
+  text: "#1D1D1D",
+  textLight: "#8C8C7E",
+  white: "#FFFFFF",
+  pillar1: "#2C4A6E",
+  pillar2: "#5C7A92",
+  pillar3: "#3A5068",
+  pillar1Light: "rgba(44,74,110,0.06)",
+  pillar2Light: "rgba(92,122,146,0.06)",
+  pillar3Light: "rgba(58,80,104,0.06)",
+  pillar1Mid: "#4A6F8C",
+  pillar2Mid: "#7B9AAE",
+  pillar3Mid: "#5A7488",
+};
+
+function ConnectorLine({ x1, y1, x2, y2, dashed = false }) {
+  return (
+    <line
+      x1={x1} y1={y1} x2={x2} y2={y2}
+      stroke={COLORS.medGray}
+      strokeWidth="1.5"
+      strokeDasharray={dashed ? "6,4" : "none"}
+    />
+  );
+}
+
+function ConnectorPath({ d, dashed = false, color = COLORS.medGray }) {
+  return (
+    <path
+      d={d}
+      stroke={color}
+      strokeWidth="1.5"
+      fill="none"
+      strokeDasharray={dashed ? "6,4" : "none"}
+    />
+  );
+}
+
+function ArrowDown({ x, y1, y2, color = COLORS.medGray }) {
+  return (
+    <g>
+      <line x1={x} y1={y1} x2={x} y2={y2} stroke={color} strokeWidth="1.5" />
+      <polygon
+        points={`${x},${y2} ${x - 4},${y2 - 8} ${x + 4},${y2 - 8}`}
+        fill={color}
+      />
+    </g>
+  );
+}
+
+function EuropaNovaOrgChart() {
+  const [hoveredPillar, setHoveredPillar] = useState(null);
+
+  const W = 1100;
+  const H = 820;
+
+  return (
+    <div style={{
+      background: COLORS.bg,
+      minHeight: "100vh",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: "32px 16px",
+      fontFamily: "'EB Garamond', Georgia, serif",
+    }}>
+      <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+      {/* Title block */}
+      <div style={{ textAlign: "center", marginBottom: 8, maxWidth: 800 }}>
+        <div style={{
+          fontFamily: "'DM Sans', sans-serif",
+          fontSize: 11,
+          fontWeight: 600,
+          letterSpacing: "3px",
+          textTransform: "uppercase",
+          color: COLORS.gold,
+          marginBottom: 8,
+        }}>
+          FIGURE 4
+        </div>
+        <h1 style={{
+          fontFamily: "'EB Garamond', Georgia, serif",
+          fontSize: 22,
+          fontWeight: 700,
+          color: COLORS.navy,
+          margin: "0 0 6px 0",
+          lineHeight: 1.3,
+        }}>
+          Europa Nova — Institutional Architecture
+        </h1>
+        <p style={{
+          fontFamily: "'DM Sans', sans-serif",
+          fontSize: 12.5,
+          color: COLORS.textLight,
+          margin: 0,
+          lineHeight: 1.5,
+        }}>
+          Three-pillar structure with governance lines and treaty-nation observer relationship
+        </p>
+      </div>
+
+      {/* SVG Chart */}
+      <svg
+        viewBox={`0 0 ${W} ${H}`}
+        width="100%"
+        style={{ maxWidth: W, overflow: "visible" }}
+      >
+        <defs>
+          <filter id="dropShadow" x="-4%" y="-4%" width="108%" height="112%">
+            <feDropShadow dx="0" dy="2" stdDeviation="4" floodColor="#000" floodOpacity="0.08" />
+          </filter>
+          <filter id="softShadow" x="-4%" y="-4%" width="108%" height="116%">
+            <feDropShadow dx="0" dy="3" stdDeviation="6" floodColor="#000" floodOpacity="0.1" />
+          </filter>
+          <marker id="arrowGray" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill={COLORS.medGray} />
+          </marker>
+          <marker id="arrowGold" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill={COLORS.gold} />
+          </marker>
+        </defs>
+
+        {/* ═══════════════════════ TREATY NATIONS (top) ═══════════════════════ */}
+        <g>
+          <rect x={300} y={10} width={500} height={52} rx={6}
+            fill={COLORS.warmGray} stroke={COLORS.medGray} strokeWidth={1}
+            filter="url(#dropShadow)"
+          />
+          <text x={550} y={30} textAnchor="middle"
+            fontFamily="'DM Sans', sans-serif" fontSize={10} fontWeight={600}
+            letterSpacing="2" fill={COLORS.textLight}
+          >
+            PARTICIPATING TREATY NATIONS
+          </text>
+          <text x={550} y={48} textAnchor="middle"
+            fontFamily="'DM Sans', sans-serif" fontSize={10.5} fill={COLORS.text}
+          >
+            France · Germany · United Kingdom · Norway · Sweden · Netherlands · Switzerland · Finland
+          </text>
+        </g>
+
+        {/* Dashed observer line from nations down to board */}
+        <ConnectorLine x1={550} y1={62} x2={550} y2={100} dashed={true} />
+        <text x={566} y={86} fontFamily="'DM Sans', sans-serif" fontSize={9}
+          fill={COLORS.textLight} fontStyle="italic"
+        >
+          observer status
+        </text>
+
+        {/* ═══════════════════════ BOARD OF DIRECTORS ═══════════════════════ */}
+        <g>
+          <rect x={320} y={100} width={460} height={60} rx={8}
+            fill={COLORS.navy} filter="url(#softShadow)"
+          />
+          {/* Gold accent line on top */}
+          <rect x={320} y={100} width={460} height={4} rx={2}
+            fill={COLORS.gold}
+          />
+          <text x={550} y={126} textAnchor="middle"
+            fontFamily="'EB Garamond', Georgia, serif" fontSize={15} fontWeight={700}
+            fill={COLORS.white}
+          >
+            Board of Directors
+          </text>
+          <text x={550} y={148} textAnchor="middle"
+            fontFamily="'DM Sans', sans-serif" fontSize={10.5}
+            fill="rgba(255,255,255,0.7)"
+          >
+            9 members · Internationally recruited · No political appointees · Independent search committee
+          </text>
+        </g>
+
+        {/* Line from Board to Scientific Director */}
+        <ArrowDown x={550} y1={160} y2={198} color={COLORS.navy} />
+
+        {/* ═══════════════════════ SCIENTIFIC DIRECTOR ═══════════════════════ */}
+        <g>
+          <rect x={365} y={198} width={370} height={56} rx={8}
+            fill={COLORS.white} stroke={COLORS.navy} strokeWidth={2}
+            filter="url(#softShadow)"
+          />
+          <text x={550} y={222} textAnchor="middle"
+            fontFamily="'EB Garamond', Georgia, serif" fontSize={14} fontWeight={700}
+            fill={COLORS.navy}
+          >
+            Scientific Director
+          </text>
+          <text x={550} y={242} textAnchor="middle"
+            fontFamily="'DM Sans', sans-serif" fontSize={10}
+            fill={COLORS.textLight}
+          >
+            Veto authority on all technical decisions · Reports to Board only
+          </text>
+        </g>
+
+        {/* ═══════════════════════ THREE PILLAR CONNECTORS ═══════════════════════ */}
+        {/* Vertical from SD down */}
+        <ConnectorLine x1={550} y1={254} x2={550} y2={290} />
+        {/* Horizontal spanning all three */}
+        <ConnectorLine x1={183} y1={290} x2={917} y2={290} />
+        {/* Vertical drops to each pillar */}
+        <ArrowDown x={183} y1={290} y2={322} color={COLORS.pillar1Mid} />
+        <ArrowDown x={550} y1={290} y2={322} color={COLORS.pillar2Mid} />
+        <ArrowDown x={917} y1={290} y2={322} color={COLORS.pillar3Mid} />
+
+        {/* ═══════════════════════ PILLAR 1: RESEARCH FOUNDATION ═══════════════════════ */}
+        <g
+          onMouseEnter={() => setHoveredPillar(1)}
+          onMouseLeave={() => setHoveredPillar(null)}
+          style={{ cursor: "default" }}
+        >
+          <rect x={40} y={322} width={286} height={310} rx={10}
+            fill={COLORS.white}
+            stroke={hoveredPillar === 1 ? COLORS.pillar1Mid : COLORS.pillar1}
+            strokeWidth={hoveredPillar === 1 ? 2.5 : 1.5}
+            filter="url(#softShadow)"
+          />
+          {/* Header band */}
+          <rect x={40} y={322} width={286} height={46} rx={10}
+            fill={COLORS.pillar1}
+          />
+          <rect x={40} y={348} width={286} height={20}
+            fill={COLORS.pillar1}
+          />
+          <text x={56} y={340} fontFamily="'DM Sans', sans-serif" fontSize={9}
+            fontWeight={600} letterSpacing="1.5" fill={COLORS.goldLight}
+          >
+            PILLAR 1
+          </text>
+          <text x={56} y={358} fontFamily="'EB Garamond', Georgia, serif"
+            fontSize={13} fontWeight={700} fill={COLORS.white}
+          >
+            Research Foundation
+          </text>
+
+          {/* Content items */}
+          {[
+            ["Mandate", "Fundamental AI research:\narchitectures, alignment,\nsafety, data curation"],
+            ["Governance", "Board-directed, scientifically\nautonomous"],
+            ["Publication", "Open by default, restricted\nby exception above threshold"],
+            ["Location", "Single hub: Zürich,\nAmsterdam, or Copenhagen"],
+          ].map(([label, desc], i) => (
+            <g key={i}>
+              <circle cx={62} cy={392 + i * 55} r={3.5} fill={COLORS.pillar1Mid} />
+              <text x={76} y={388 + i * 55}
+                fontFamily="'DM Sans', sans-serif" fontSize={10.5} fontWeight={600}
+                fill={COLORS.pillar1}
+              >
+                {label}
+              </text>
+              {desc.split("\n").map((line, j) => (
+                <text key={j} x={76} y={401 + i * 55 + j * 13}
+                  fontFamily="'DM Sans', sans-serif" fontSize={9.5}
+                  fill={COLORS.textLight}
+                >
+                  {line}
+                </text>
+              ))}
+            </g>
+          ))}
+        </g>
+
+        {/* ═══════════════════════ PILLAR 2: COMPUTE INFRASTRUCTURE ═══════════════════════ */}
+        <g
+          onMouseEnter={() => setHoveredPillar(2)}
+          onMouseLeave={() => setHoveredPillar(null)}
+          style={{ cursor: "default" }}
+        >
+          <rect x={407} y={322} width={286} height={310} rx={10}
+            fill={COLORS.white}
+            stroke={hoveredPillar === 2 ? COLORS.pillar2Mid : COLORS.pillar2}
+            strokeWidth={hoveredPillar === 2 ? 2.5 : 1.5}
+            filter="url(#softShadow)"
+          />
+          <rect x={407} y={322} width={286} height={46} rx={10}
+            fill={COLORS.pillar2}
+          />
+          <rect x={407} y={348} width={286} height={20}
+            fill={COLORS.pillar2}
+          />
+          <text x={423} y={340} fontFamily="'DM Sans', sans-serif" fontSize={9}
+            fontWeight={600} letterSpacing="1.5" fill={COLORS.goldLight}
+          >
+            PILLAR 2
+          </text>
+          <text x={423} y={358} fontFamily="'EB Garamond', Georgia, serif"
+            fontSize={13} fontWeight={700} fill={COLORS.white}
+          >
+            Compute Infrastructure
+          </text>
+
+          {[
+            ["Location", "Northern Scandinavia:\nNarvik (NO) or Norrbotten (SE)"],
+            ["Energy", "100% renewable hydropower\n≈€0.03/kWh via long-term PPAs"],
+            ["Scale", "500MW initial, designed\nfor expansion to 2GW+"],
+            ["Hardware", "Multi-vendor, architecture-\nflexible, no NVIDIA lock-in"],
+          ].map(([label, desc], i) => (
+            <g key={i}>
+              <circle cx={429} cy={392 + i * 55} r={3.5} fill={COLORS.pillar2Mid} />
+              <text x={443} y={388 + i * 55}
+                fontFamily="'DM Sans', sans-serif" fontSize={10.5} fontWeight={600}
+                fill={COLORS.pillar2}
+              >
+                {label}
+              </text>
+              {desc.split("\n").map((line, j) => (
+                <text key={j} x={443} y={401 + i * 55 + j * 13}
+                  fontFamily="'DM Sans', sans-serif" fontSize={9.5}
+                  fill={COLORS.textLight}
+                >
+                  {line}
+                </text>
+              ))}
+            </g>
+          ))}
+        </g>
+
+        {/* ═══════════════════════ PILLAR 3: COMMERCIAL LICENSING ═══════════════════════ */}
+        <g
+          onMouseEnter={() => setHoveredPillar(3)}
+          onMouseLeave={() => setHoveredPillar(null)}
+          style={{ cursor: "default" }}
+        >
+          <rect x={774} y={322} width={286} height={310} rx={10}
+            fill={COLORS.white}
+            stroke={hoveredPillar === 3 ? COLORS.pillar3Mid : COLORS.pillar3}
+            strokeWidth={hoveredPillar === 3 ? 2.5 : 1.5}
+            filter="url(#softShadow)"
+          />
+          <rect x={774} y={322} width={286} height={46} rx={10}
+            fill={COLORS.pillar3}
+          />
+          <rect x={774} y={348} width={286} height={20}
+            fill={COLORS.pillar3}
+          />
+          <text x={790} y={340} fontFamily="'DM Sans', sans-serif" fontSize={9}
+            fontWeight={600} letterSpacing="1.5" fill={COLORS.goldLight}
+          >
+            PILLAR 3
+          </text>
+          <text x={790} y={358} fontFamily="'EB Garamond', Georgia, serif"
+            fontSize={13} fontWeight={700} fill={COLORS.white}
+          >
+            Commercial Licensing Entity
+          </text>
+
+          {[
+            ["Ownership", "100% owned by the\nResearch Foundation"],
+            ["Model", "License models, tools,\nand compute access"],
+            ["Pricing", "Preferential terms for\nEuropean SMEs & public sector"],
+            ["Revenue", "€500M/yr by yr 5, rising\nto €2–3B/yr by yrs 8–10"],
+          ].map(([label, desc], i) => (
+            <g key={i}>
+              <circle cx={796} cy={392 + i * 55} r={3.5} fill={COLORS.pillar3Mid} />
+              <text x={810} y={388 + i * 55}
+                fontFamily="'DM Sans', sans-serif" fontSize={10.5} fontWeight={600}
+                fill={COLORS.pillar3}
+              >
+                {label}
+              </text>
+              {desc.split("\n").map((line, j) => (
+                <text key={j} x={810} y={401 + i * 55 + j * 13}
+                  fontFamily="'DM Sans', sans-serif" fontSize={9.5}
+                  fill={COLORS.textLight}
+                >
+                  {line}
+                </text>
+              ))}
+            </g>
+          ))}
+        </g>
+
+        {/* ═══════════════════════ REVENUE CYCLE ARROW ═══════════════════════ */}
+        {/* Arrow from Pillar 3 back to Pillar 1: revenue → mission */}
+        <ConnectorPath
+          d="M 917,636 L 917,660 Q 917,680 897,680 L 203,680 Q 183,680 183,660 L 183,636"
+          color={COLORS.gold}
+        />
+        <polygon
+          points="183,636 179,644 187,644"
+          fill={COLORS.gold}
+        />
+        <text x={550} y={676} textAnchor="middle"
+          fontFamily="'DM Sans', sans-serif" fontSize={10} fontWeight={600}
+          fill={COLORS.gold}
+        >
+          Revenue sustains mission · Mission generates technology · Technology generates revenue
+        </text>
+
+        {/* ═══════════════════════ FLOW ARROWS BETWEEN PILLARS ═══════════════════════ */}
+        {/* Research → Compute (bidirectional) */}
+        <line x1={330} y1={468} x2={403} y2={468}
+          stroke={COLORS.medGray} strokeWidth={1.2}
+          markerEnd="url(#arrowGray)"
+        />
+        <text x={366} y={460} textAnchor="middle"
+          fontFamily="'DM Sans', sans-serif" fontSize={8} fill={COLORS.textLight}
+        >
+          directs
+        </text>
+
+        {/* Compute → Commercial */}
+        <line x1={697} y1={468} x2={770} y2={468}
+          stroke={COLORS.medGray} strokeWidth={1.2}
+          markerEnd="url(#arrowGray)"
+        />
+        <text x={733} y={460} textAnchor="middle"
+          fontFamily="'DM Sans', sans-serif" fontSize={8} fill={COLORS.textLight}
+        >
+          enables
+        </text>
+
+        {/* ═══════════════════════ LEGEND ═══════════════════════ */}
+        <g transform="translate(40, 720)">
+          <line x1={0} y1={0} x2={24} y2={0} stroke={COLORS.navy} strokeWidth={1.5} />
+          <polygon points="24,0 18,-3 18,3" fill={COLORS.navy} />
+          <text x={32} y={4} fontFamily="'DM Sans', sans-serif" fontSize={9} fill={COLORS.textLight}>
+            Authority / reporting line
+          </text>
+
+          <line x1={180} y1={0} x2={204} y2={0} stroke={COLORS.medGray} strokeWidth={1.5} strokeDasharray="6,4" />
+          <text x={212} y={4} fontFamily="'DM Sans', sans-serif" fontSize={9} fill={COLORS.textLight}>
+            Observer relationship (no voting rights)
+          </text>
+
+          <line x1={430} y1={0} x2={454} y2={0} stroke={COLORS.gold} strokeWidth={1.5} />
+          <polygon points="430,0 436,-3 436,3" fill={COLORS.gold} />
+          <text x={462} y={4} fontFamily="'DM Sans', sans-serif" fontSize={9} fill={COLORS.textLight}>
+            Revenue cycle
+          </text>
+        </g>
+
+        {/* ═══════════════════════ ATTRIBUTION ═══════════════════════ */}
+        <text x={W - 10} y={H - 8} textAnchor="end"
+          fontFamily="'DM Sans', sans-serif" fontSize={8.5}
+          fill={COLORS.medGray} fontStyle="italic"
+        >
+          Europa Nova Policy Paper, 2026
+        </text>
+      </svg>
+    </div>
+  );
+}
+
+// Find the component name from fig4
+window.render_fig4 = (el) => {
+  const App = typeof EuropaNovaOrgChart !== 'undefined' ? EuropaNovaOrgChart : 
+              typeof Figure4 !== 'undefined' ? Figure4 : null;
+  if (App) ReactDOM.render(React.createElement(App), el);
+};
+} // end Figure 4 block scope
+
+/* ══════════════════════════════════════════════════════════
+   FIGURE 5 — Cash Flow Model
+   ══════════════════════════════════════════════════════════ */
+{
+const COLORS = {
+  bg: "#FAFAF8",
+  card: "#FFFFFF",
+  cardBorder: "rgba(44,74,110,0.18)",
+  text: "#1D1D1D",
+  textMuted: "#8C8C7E",
+  textBright: "#1D1D1D",
+  accent: "#2C4A6E",
+  accentDim: "rgba(44,74,110,0.15)",
+  compute: "#2C4A6E",
+  research: "#5C7A92",
+  commercial: "#3A5068",
+  reserve: "#8C8C7E",
+  revenueBase: "#2C4A6E",
+  revenueOpt: "#5C7A92",
+  revenueCons: "#3A5068",
+  cumulative: "#1D1D1D",
+  breakeven: "#2C4A6E",
+  gold: "#2C4A6E",
+  gridLine: "rgba(44,74,110,0.12)",
+};
+
+// Investment data (€ billions)
+const investmentData = [
+  { year: 0, label: "Y0", compute: 1.0, research: 0.5, commercial: 0.2, reserve: 0.3, total: 2.0 },
+  { year: 1, label: "Y1", compute: 2.5, research: 1.2, commercial: 0.3, reserve: 0.5, total: 4.5 },
+  { year: 2, label: "Y2", compute: 3.0, research: 1.5, commercial: 0.5, reserve: 0.5, total: 5.5 },
+  { year: 3, label: "Y3", compute: 2.5, research: 1.8, commercial: 0.7, reserve: 0.5, total: 5.5 },
+  { year: 4, label: "Y4", compute: 2.0, research: 1.9, commercial: 0.8, reserve: 0.5, total: 5.2 },
+  { year: 5, label: "Y5", compute: 2.0, research: 1.9, commercial: 0.9, reserve: 0.5, total: 5.3 },
+  { year: 6, label: "Y6", compute: 2.0, research: 1.8, commercial: 0.9, reserve: 0.5, total: 5.2 },
+  { year: 7, label: "Y7", compute: 2.0, research: 1.8, commercial: 0.9, reserve: 0.5, total: 5.2 },
+  { year: 8, label: "Y8", compute: 1.5, research: 1.8, commercial: 0.8, reserve: 0.5, total: 4.6 },
+  { year: 9, label: "Y9", compute: 1.0, research: 1.8, commercial: 0.8, reserve: 0.5, total: 4.1 },
+  { year: 10, label: "Y10", compute: 0.5, research: 1.5, commercial: 0.7, reserve: 0.2, total: 2.9 },
+];
+
+// Revenue scenarios (€ billions)
+const revenueScenarios = {
+  conservative: [0, 0, 0, 0.05, 0.2, 0.4, 0.7, 1.0, 1.4, 1.8, 2.2],
+  baseline:     [0, 0, 0, 0.1,  0.3, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0],
+  optimistic:   [0, 0, 0, 0.15, 0.5, 0.8, 1.4, 2.0, 2.8, 3.5, 4.2],
+};
+
+// Cumulative data
+function buildCumulativeData(scenario) {
+  let cumExpense = 0;
+  let cumRevenue = 0;
+  return investmentData.map((d, i) => {
+    cumExpense += d.total;
+    cumRevenue += revenueScenarios[scenario][i];
+    return {
+      label: d.label,
+      year: d.year,
+      cumExpense: parseFloat(cumExpense.toFixed(1)),
+      cumRevenue: parseFloat(cumRevenue.toFixed(1)),
+      netPosition: parseFloat((cumRevenue - cumExpense).toFixed(1)),
+      annualExpense: d.total,
+      annualRevenue: revenueScenarios[scenario][i],
+      annualNet: parseFloat((revenueScenarios[scenario][i] - d.total).toFixed(1)),
+    };
+  });
+}
+
+// Combined annual data for the main chart
+function buildAnnualData(scenario) {
+  return investmentData.map((d, i) => ({
+    ...d,
+    revenue: revenueScenarios[scenario][i],
+    revCons: revenueScenarios.conservative[i],
+    revBase: revenueScenarios.baseline[i],
+    revOpt: revenueScenarios.optimistic[i],
+    netCashflow: parseFloat((revenueScenarios[scenario][i] - d.total).toFixed(1)),
+  }));
+}
+
+const CustomTooltip = ({ active, payload, label }) => {
+  if (!active || !payload || !payload.length) return null;
+  return (
+    <div style={{
+      background: COLORS.card,
+      border: `1px solid ${COLORS.cardBorder}`,
+      borderRadius: 6,
+      padding: "12px 16px",
+      fontFamily: "'DM Sans', sans-serif",
+      fontSize: 12,
+      color: COLORS.text,
+      boxShadow: "0 4px 20px rgba(0,0,0,0.12)",
+      minWidth: 180,
+    }}>
+      <div style={{ fontWeight: 700, color: COLORS.textBright, marginBottom: 8, fontSize: 13 }}>
+        {label}
+      </div>
+      {payload.map((entry, idx) => (
+        <div key={idx} style={{ display: "flex", justifyContent: "space-between", gap: 16, marginBottom: 3 }}>
+          <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+            <span style={{ width: 8, height: 8, borderRadius: 2, background: entry.color, display: "inline-block" }} />
+            {entry.name}
+          </span>
+          <span style={{ fontWeight: 600, fontFeatureSettings: "'tnum'" }}>
+            €{typeof entry.value === "number" ? entry.value.toFixed(1) : entry.value}B
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const StatCard = ({ label, value, sub, accent }) => (
+  <div style={{
+    background: COLORS.card,
+    border: `1px solid ${COLORS.cardBorder}`,
+    borderRadius: 8,
+    padding: "16px 20px",
+    borderTop: `2px solid ${accent || COLORS.accent}`,
+  }}>
+    <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.08em", color: COLORS.textMuted, marginBottom: 4 }}>
+      {label}
+    </div>
+    <div style={{ fontSize: 26, fontWeight: 700, color: COLORS.textBright, fontFeatureSettings: "'tnum'", lineHeight: 1.1 }}>
+      {value}
+    </div>
+    {sub && <div style={{ fontSize: 11, color: COLORS.textMuted, marginTop: 4 }}>{sub}</div>}
+  </div>
+);
+
+const ScenarioButton = ({ name, active, onClick, color }) => (
+  <button
+    onClick={onClick}
+    style={{
+      background: active ? color + "22" : "transparent",
+      border: `1px solid ${active ? color : COLORS.cardBorder}`,
+      color: active ? color : COLORS.textMuted,
+      borderRadius: 6,
+      padding: "6px 14px",
+      fontSize: 12,
+      fontWeight: active ? 600 : 400,
+      cursor: "pointer",
+      fontFamily: "'DM Sans', sans-serif",
+      letterSpacing: "0.02em",
+      transition: "all 0.2s",
+    }}
+  >
+    {name}
+  </button>
+);
+
+function Figure5() {
+  const [scenario, setScenario] = useState("baseline");
+  const [view, setView] = useState("annual"); // annual | cumulative | scenarios
+
+  const annualData = buildAnnualData(scenario);
+  const cumulativeData = buildCumulativeData(scenario);
+  const scenarioCompare = buildAnnualData("baseline"); // includes all three
+
+  const totalInvestment = investmentData.reduce((s, d) => s + d.total, 0);
+  const totalRevenue = revenueScenarios[scenario].reduce((s, v) => s + v, 0);
+  const breakEvenYear = cumulativeData.find(d => d.annualRevenue >= d.annualExpense * 0.9);
+
+  const scenarioColors = {
+    conservative: COLORS.revenueCons,
+    baseline: COLORS.revenueBase,
+    optimistic: COLORS.revenueOpt,
+  };
+
+  return (
+    <div style={{
+      background: COLORS.bg,
+      color: COLORS.text,
+      fontFamily: "'DM Sans', sans-serif",
+      minHeight: "100vh",
+      padding: "32px 24px",
+    }}>
+      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+
+      {/* Header */}
+      <div style={{ maxWidth: 960, margin: "0 auto" }}>
+        <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 4 }}>
+          <span style={{
+            fontSize: 11,
+            fontWeight: 600,
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            color: COLORS.gold,
+          }}>
+            Figure 5
+          </span>
+          <span style={{ width: 40, height: 1, background: COLORS.gold, display: "inline-block", position: "relative", top: -3 }} />
+        </div>
+        <h1 style={{
+          fontFamily: "'EB Garamond', Georgia, serif",
+          fontSize: 28,
+          fontWeight: 400,
+          color: COLORS.textBright,
+          margin: "0 0 6px 0",
+          lineHeight: 1.2,
+        }}>
+          10-Year Cash Flow Model
+        </h1>
+        <p style={{ fontSize: 13, color: COLORS.textMuted, margin: "0 0 24px 0", maxWidth: 640, lineHeight: 1.5 }}>
+          Investment profile by category, commercial revenue ramp, and indicative break-even trajectory.
+          All figures in € billions. Revenue projections begin Year 3 as the Commercial Licensing Entity initiates operations.
+        </p>
+
+        {/* Stats row */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12, marginBottom: 24 }}>
+          <StatCard
+            label="Total Investment"
+            value={`€${totalInvestment.toFixed(0)}B`}
+            sub="Over 10 years"
+            accent={COLORS.compute}
+          />
+          <StatCard
+            label={`Revenue (${scenario})`}
+            value={`€${totalRevenue.toFixed(1)}B`}
+            sub="Cumulative 10-year"
+            accent={COLORS.revenueBase}
+          />
+          <StatCard
+            label="Net Position Y10"
+            value={`€${(totalRevenue - totalInvestment).toFixed(1)}B`}
+            sub={totalRevenue - totalInvestment < 0 ? "Gap covered by treaty" : "Surplus"}
+            accent={totalRevenue - totalInvestment < 0 ? COLORS.breakeven : COLORS.revenueBase}
+          />
+          <StatCard
+            label="Annual Break-Even"
+            value={breakEvenYear ? `~Year ${breakEvenYear.year}` : "Post Y10"}
+            sub="Revenue ≥ 90% of spend"
+            accent={COLORS.gold}
+          />
+        </div>
+
+        {/* View Tabs and Scenario Controls */}
+        <div style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginBottom: 16,
+          flexWrap: "wrap",
+          gap: 12,
+        }}>
+          <div style={{ display: "flex", gap: 2, background: COLORS.card, borderRadius: 8, padding: 3, border: `1px solid ${COLORS.cardBorder}` }}>
+            {[
+              { key: "annual", label: "Annual Flows" },
+              { key: "cumulative", label: "Cumulative" },
+              { key: "scenarios", label: "Revenue Scenarios" },
+            ].map(tab => (
+              <button
+                key={tab.key}
+                onClick={() => setView(tab.key)}
+                style={{
+                  background: view === tab.key ? COLORS.accent + "22" : "transparent",
+                  border: "none",
+                  color: view === tab.key ? COLORS.accent : COLORS.textMuted,
+                  borderRadius: 6,
+                  padding: "7px 16px",
+                  fontSize: 12,
+                  fontWeight: view === tab.key ? 600 : 400,
+                  cursor: "pointer",
+                  fontFamily: "'DM Sans', sans-serif",
+                  transition: "all 0.15s",
+                }}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
+          {view !== "scenarios" && (
+            <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+              <span style={{ fontSize: 11, color: COLORS.textMuted, marginRight: 4 }}>Scenario:</span>
+              <ScenarioButton name="Conservative" active={scenario === "conservative"} onClick={() => setScenario("conservative")} color={COLORS.revenueCons} />
+              <ScenarioButton name="Baseline" active={scenario === "baseline"} onClick={() => setScenario("baseline")} color={COLORS.revenueBase} />
+              <ScenarioButton name="Optimistic" active={scenario === "optimistic"} onClick={() => setScenario("optimistic")} color={COLORS.revenueOpt} />
+            </div>
+          )}
+        </div>
+
+        {/* CHART: Annual Flows */}
+        {view === "annual" && (
+          <div style={{
+            background: COLORS.card,
+            border: `1px solid ${COLORS.cardBorder}`,
+            borderRadius: 10,
+            padding: "24px 20px 16px 12px",
+          }}>
+            <ResponsiveContainer width="100%" height={420}>
+              <ComposedChart data={annualData} barGap={0} barCategoryGap="20%">
+                <CartesianGrid strokeDasharray="3 3" stroke={COLORS.gridLine} vertical={false} />
+                <XAxis
+                  dataKey="label"
+                  tick={{ fill: COLORS.textMuted, fontSize: 11 }}
+                  axisLine={{ stroke: COLORS.gridLine }}
+                  tickLine={false}
+                />
+                <YAxis
+                  tick={{ fill: COLORS.textMuted, fontSize: 11 }}
+                  axisLine={false}
+                  tickLine={false}
+                  tickFormatter={v => `€${v}B`}
+                  domain={[0, 6]}
+                />
+                <Tooltip content={<CustomTooltip />} />
+                <Legend
+                  verticalAlign="top"
+                  height={36}
+                  iconType="square"
+                  iconSize={10}
+                  wrapperStyle={{ fontSize: 11, color: COLORS.textMuted }}
+                />
+                <Bar dataKey="compute" stackId="cost" name="Compute Infrastructure" fill={COLORS.compute} radius={[0, 0, 0, 0]} />
+                <Bar dataKey="research" stackId="cost" name="Research Operations" fill={COLORS.research} radius={[0, 0, 0, 0]} />
+                <Bar dataKey="commercial" stackId="cost" name="Commercialisation" fill={COLORS.commercial} radius={[0, 0, 0, 0]} />
+                <Bar dataKey="reserve" stackId="cost" name="Reserve" fill={COLORS.reserve} radius={[2, 2, 0, 0]} />
+                <Line
+                  type="monotone"
+                  dataKey="revenue"
+                  name={`Revenue (${scenario})`}
+                  stroke={scenarioColors[scenario]}
+                  strokeWidth={3}
+                  dot={{ fill: scenarioColors[scenario], r: 4, strokeWidth: 0 }}
+                  activeDot={{ r: 6, stroke: COLORS.bg, strokeWidth: 2 }}
+                />
+              </ComposedChart>
+            </ResponsiveContainer>
+          </div>
+        )}
+
+        {/* CHART: Cumulative */}
+        {view === "cumulative" && (
+          <div style={{
+            background: COLORS.card,
+            border: `1px solid ${COLORS.cardBorder}`,
+            borderRadius: 10,
+            padding: "24px 20px 16px 12px",
+          }}>
+            <ResponsiveContainer width="100%" height={420}>
+              <ComposedChart data={cumulativeData}>
+                <CartesianGrid strokeDasharray="3 3" stroke={COLORS.gridLine} vertical={false} />
+                <XAxis
+                  dataKey="label"
+                  tick={{ fill: COLORS.textMuted, fontSize: 11 }}
+                  axisLine={{ stroke: COLORS.gridLine }}
+                  tickLine={false}
+                />
+                <YAxis
+                  tick={{ fill: COLORS.textMuted, fontSize: 11 }}
+                  axisLine={false}
+                  tickLine={false}
+                  tickFormatter={v => `€${v}B`}
+                />
+                <Tooltip content={<CustomTooltip />} />
+                <Legend
+                  verticalAlign="top"
+                  height={36}
+                  iconType="line"
+                  iconSize={14}
+                  wrapperStyle={{ fontSize: 11, color: COLORS.textMuted }}
+                />
+                <Area
+                  type="monotone"
+                  dataKey="cumExpense"
+                  name="Cumulative Expenditure"
+                  stroke={COLORS.breakeven}
+                  fill={COLORS.breakeven + "15"}
+                  strokeWidth={2}
+                  dot={false}
+                />
+                <Area
+                  type="monotone"
+                  dataKey="cumRevenue"
+                  name="Cumulative Revenue"
+                  stroke={scenarioColors[scenario]}
+                  fill={scenarioColors[scenario] + "15"}
+                  strokeWidth={2}
+                  dot={false}
+                />
+                <Line
+                  type="monotone"
+                  dataKey="netPosition"
+                  name="Net Position"
+                  stroke={COLORS.cumulative}
+                  strokeWidth={2}
+                  strokeDasharray="6 3"
+                  dot={{ fill: COLORS.cumulative, r: 3, strokeWidth: 0 }}
+                />
+                <ReferenceLine y={0} stroke={COLORS.textMuted} strokeDasharray="2 4" strokeWidth={1} />
+              </ComposedChart>
+            </ResponsiveContainer>
+          </div>
+        )}
+
+        {/* CHART: Revenue Scenarios Comparison */}
+        {view === "scenarios" && (
+          <div style={{
+            background: COLORS.card,
+            border: `1px solid ${COLORS.cardBorder}`,
+            borderRadius: 10,
+            padding: "24px 20px 16px 12px",
+          }}>
+            <ResponsiveContainer width="100%" height={420}>
+              <ComposedChart data={scenarioCompare}>
+                <CartesianGrid strokeDasharray="3 3" stroke={COLORS.gridLine} vertical={false} />
+                <XAxis
+                  dataKey="label"
+                  tick={{ fill: COLORS.textMuted, fontSize: 11 }}
+                  axisLine={{ stroke: COLORS.gridLine }}
+                  tickLine={false}
+                />
+                <YAxis
+                  tick={{ fill: COLORS.textMuted, fontSize: 11 }}
+                  axisLine={false}
+                  tickLine={false}
+                  tickFormatter={v => `€${v}B`}
+                  domain={[0, 6]}
+                />
+                <Tooltip content={<CustomTooltip />} />
+                <Legend
+                  verticalAlign="top"
+                  height={36}
+                  iconType="line"
+                  iconSize={14}
+                  wrapperStyle={{ fontSize: 11, color: COLORS.textMuted }}
+                />
+                {/* Stacked bars for investment (faded) */}
+                <Bar dataKey="compute" stackId="cost" name="Compute" fill={COLORS.compute + "55"} radius={[0, 0, 0, 0]} />
+                <Bar dataKey="research" stackId="cost" name="Research" fill={COLORS.research + "55"} radius={[0, 0, 0, 0]} />
+                <Bar dataKey="commercial" stackId="cost" name="Commercial" fill={COLORS.commercial + "55"} radius={[0, 0, 0, 0]} />
+                <Bar dataKey="reserve" stackId="cost" name="Reserve" fill={COLORS.reserve + "44"} radius={[2, 2, 0, 0]} />
+                {/* Three revenue lines */}
+                <Line
+                  type="monotone"
+                  dataKey="revOpt"
+                  name="Optimistic"
+                  stroke={COLORS.revenueOpt}
+                  strokeWidth={2}
+                  dot={{ fill: COLORS.revenueOpt, r: 3, strokeWidth: 0 }}
+                  strokeDasharray="6 3"
+                />
+                <Line
+                  type="monotone"
+                  dataKey="revBase"
+                  name="Baseline"
+                  stroke={COLORS.revenueBase}
+                  strokeWidth={3}
+                  dot={{ fill: COLORS.revenueBase, r: 4, strokeWidth: 0 }}
+                />
+                <Line
+                  type="monotone"
+                  dataKey="revCons"
+                  name="Conservative"
+                  stroke={COLORS.revenueCons}
+                  strokeWidth={2}
+                  dot={{ fill: COLORS.revenueCons, r: 3, strokeWidth: 0 }}
+                  strokeDasharray="4 4"
+                />
+              </ComposedChart>
+            </ResponsiveContainer>
+          </div>
+        )}
+
+        {/* Data Table */}
+        <div style={{
+          marginTop: 20,
+          background: COLORS.card,
+          border: `1px solid ${COLORS.cardBorder}`,
+          borderRadius: 10,
+          overflow: "hidden",
+        }}>
+          <div style={{
+            padding: "14px 20px 10px",
+            borderBottom: `1px solid ${COLORS.cardBorder}`,
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}>
+            <span style={{ fontSize: 12, fontWeight: 600, color: COLORS.textBright, letterSpacing: "0.02em" }}>
+              Annual Detail (€ billions)
+            </span>
+            <span style={{ fontSize: 10, color: COLORS.textMuted }}>
+              {scenario.charAt(0).toUpperCase() + scenario.slice(1)} scenario
+            </span>
+          </div>
+          <div style={{ overflowX: "auto" }}>
+            <table style={{
+              width: "100%",
+              borderCollapse: "collapse",
+              fontSize: 11,
+              fontFeatureSettings: "'tnum'",
+            }}>
+              <thead>
+                <tr style={{ borderBottom: `1px solid ${COLORS.cardBorder}` }}>
+                  {["", "Y0", "Y1", "Y2", "Y3", "Y4", "Y5", "Y6", "Y7", "Y8", "Y9", "Y10", "Total"].map((h, i) => (
+                    <th key={i} style={{
+                      padding: "8px 10px",
+                      textAlign: i === 0 ? "left" : "right",
+                      color: COLORS.textMuted,
+                      fontWeight: 500,
+                      whiteSpace: "nowrap",
+                      fontSize: 10,
+                      letterSpacing: "0.04em",
+                    }}>
+                      {h}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { label: "Compute", color: COLORS.compute, key: "compute" },
+                  { label: "Research", color: COLORS.research, key: "research" },
+                  { label: "Commercial", color: COLORS.commercial, key: "commercial" },
+                  { label: "Reserve", color: COLORS.reserve, key: "reserve" },
+                ].map((row) => (
+                  <tr key={row.key} style={{ borderBottom: `1px solid ${COLORS.cardBorder}22` }}>
+                    <td style={{ padding: "6px 10px", display: "flex", alignItems: "center", gap: 6, whiteSpace: "nowrap" }}>
+                      <span style={{ width: 6, height: 6, borderRadius: 1, background: row.color, display: "inline-block" }} />
+                      <span style={{ color: COLORS.text }}>{row.label}</span>
+                    </td>
+                    {investmentData.map((d, i) => (
+                      <td key={i} style={{ padding: "6px 10px", textAlign: "right", color: COLORS.text }}>
+                        {d[row.key].toFixed(1)}
+                      </td>
+                    ))}
+                    <td style={{ padding: "6px 10px", textAlign: "right", color: COLORS.textBright, fontWeight: 600 }}>
+                      {investmentData.reduce((s, d) => s + d[row.key], 0).toFixed(1)}
+                    </td>
+                  </tr>
+                ))}
+                <tr style={{ borderBottom: `1px solid ${COLORS.cardBorder}`, borderTop: `1px solid ${COLORS.cardBorder}` }}>
+                  <td style={{ padding: "6px 10px", fontWeight: 600, color: COLORS.textBright }}>Total Spend</td>
+                  {investmentData.map((d, i) => (
+                    <td key={i} style={{ padding: "6px 10px", textAlign: "right", fontWeight: 600, color: COLORS.textBright }}>
+                      {d.total.toFixed(1)}
+                    </td>
+                  ))}
+                  <td style={{ padding: "6px 10px", textAlign: "right", fontWeight: 700, color: COLORS.textBright }}>
+                    {totalInvestment.toFixed(1)}
+                  </td>
+                </tr>
+                <tr style={{ borderBottom: `1px solid ${COLORS.cardBorder}22` }}>
+                  <td style={{ padding: "6px 10px", display: "flex", alignItems: "center", gap: 6 }}>
+                    <span style={{ width: 6, height: 6, borderRadius: 1, background: scenarioColors[scenario], display: "inline-block" }} />
+                    <span style={{ color: scenarioColors[scenario], fontWeight: 500 }}>Revenue</span>
+                  </td>
+                  {revenueScenarios[scenario].map((v, i) => (
+                    <td key={i} style={{ padding: "6px 10px", textAlign: "right", color: scenarioColors[scenario] }}>
+                      {v.toFixed(1)}
+                    </td>
+                  ))}
+                  <td style={{ padding: "6px 10px", textAlign: "right", fontWeight: 600, color: scenarioColors[scenario] }}>
+                    {totalRevenue.toFixed(1)}
+                  </td>
+                </tr>
+                <tr>
+                  <td style={{ padding: "6px 10px", fontWeight: 500, color: COLORS.cumulative }}>Net Annual</td>
+                  {investmentData.map((d, i) => {
+                    const net = revenueScenarios[scenario][i] - d.total;
+                    return (
+                      <td key={i} style={{
+                        padding: "6px 10px",
+                        textAlign: "right",
+                        color: net >= 0 ? COLORS.revenueBase : COLORS.breakeven,
+                        fontWeight: 500,
+                      }}>
+                        {net >= 0 ? "+" : ""}{net.toFixed(1)}
+                      </td>
+                    );
+                  })}
+                  <td style={{
+                    padding: "6px 10px",
+                    textAlign: "right",
+                    fontWeight: 700,
+                    color: totalRevenue - totalInvestment >= 0 ? COLORS.revenueBase : COLORS.breakeven,
+                  }}>
+                    {(totalRevenue - totalInvestment) >= 0 ? "+" : ""}{(totalRevenue - totalInvestment).toFixed(1)}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Source note */}
+        <div style={{
+          marginTop: 16,
+          fontSize: 10,
+          color: COLORS.textMuted,
+          lineHeight: 1.6,
+          maxWidth: 720,
+        }}>
+          <span style={{ fontWeight: 600 }}>Source:</span> Europa Nova Policy Paper, own projections.
+          Investment profile reflects phased infrastructure build (Years 0–3), hardware refresh cycles (~3-year GPU generations),
+          and progressive shift to commercial self-sufficiency. Revenue assumes Commercial Licensing Entity operations
+          commence Year 3. Conservative scenario assumes below-trend European AI adoption. Baseline reflects
+          moderate market capture. Optimistic assumes accelerated sovereign AI demand and favourable regulatory environment.
+          All figures in constant 2026 euros.
+        </div>
+      </div>
+    </div>
+  );
+}
+
+window.render_fig5 = (el) => {
+  const App = typeof Figure5CashFlow !== 'undefined' ? Figure5CashFlow :
+              typeof CashFlowModel !== 'undefined' ? CashFlowModel :
+              typeof Figure5 !== 'undefined' ? Figure5 : null;
+  if (App) ReactDOM.render(React.createElement(App), el);
+};
+} // end Figure 5 block scope
+
+/* ══════════════════════════════════════════════════════════
+   FIGURE 7.1 — Scaling Properties
+   ══════════════════════════════════════════════════════════ */
+{
+const COLORS = {
+  transformer: "#1D1D1D",
+  ssm: "#2C4A6E",
+  moe: "#5C7A92",
+  hybrid: "#3A5068",
+  neuromorphic: "#8C8C7E",
+  bg: "#FAFAF8",
+  grid: "rgba(44,74,110,0.12)",
+  text: "#1D1D1D",
+  muted: "#8C8C7E",
+  light: "#F7F7F4",
+  accent: "#2C4A6E",
+};
+
+const FONT = "'EB Garamond', Georgia, serif";
+const SANS = "'DM Sans', 'Helvetica Neue', sans-serif";
+
+function generateData() {
+  const points = [];
+  for (let x = 1; x <= 100; x++) {
+    const seqLen = x * 1000;
+    points.push({
+      x: seqLen,
+      xLabel: x <= 1 ? "1K" : x % 10 === 0 ? `${x}K` : "",
+      transformer: Math.pow(seqLen / 1000, 2) * 0.8,
+      ssm: (seqLen / 1000) * 2.2,
+      moe: Math.pow(seqLen / 1000, 0.72) * 3.5,
+      hybrid: Math.pow(seqLen / 1000, 0.85) * 1.6,
+      neuromorphic: Math.pow(seqLen / 1000, 0.55) * 2.8,
+    });
+  }
+  return points;
+}
+
+function ScalingTooltip({ active, payload, label }) {
+  if (!active || !payload?.length) return null;
+  return (
+    <div
+      style={{
+        background: "rgba(29,29,29,0.95)",
+        borderRadius: 4,
+        padding: "12px 16px",
+        fontFamily: SANS,
+        fontSize: 12,
+        color: "#fff",
+        lineHeight: 1.6,
+        backdropFilter: "blur(8px)",
+        border: "1px solid rgba(255,255,255,0.1)",
+      }}
+    >
+      <div style={{ fontWeight: 600, marginBottom: 6, opacity: 0.7, fontSize: 11 }}>
+        Sequence length: {(label / 1000).toFixed(0)}K tokens
+      </div>
+      {payload.map((p) => (
+        <div key={p.dataKey} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <span
+            style={{
+              width: 10,
+              height: 3,
+              borderRadius: 1,
+              background: p.color,
+              display: "inline-block",
+            }}
+          />
+          <span style={{ opacity: 0.85 }}>{p.name}:</span>
+          <span style={{ fontWeight: 600 }}>{p.value.toFixed(1)}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+const architectures = [
+  { key: "transformer", label: "Transformer (Quadratic)", scaling: "O(n²)", color: COLORS.transformer, dash: undefined, width: 2.5 },
+  { key: "ssm", label: "State-Space Model / Mamba (Linear)", scaling: "O(n)", color: COLORS.ssm, dash: undefined, width: 2.5 },
+  { key: "moe", label: "Mixture-of-Experts (Sub-linear activation)", scaling: "O(n^0.72)", color: COLORS.moe, dash: undefined, width: 2.5 },
+  { key: "hybrid", label: "Hybrid SSM-Attention (Projected)", scaling: "O(n^0.85)", color: COLORS.hybrid, dash: "8 4", width: 2 },
+  { key: "neuromorphic", label: "Neuromorphic / Event-driven (Projected)", scaling: "O(n^0.55)", color: COLORS.neuromorphic, dash: "4 4", width: 2 },
+];
+
+function Figure71() {
+  const data = useMemo(generateData, []);
+  const [hoveredArch, setHoveredArch] = useState(null);
+
+  return (
+    <div
+      style={{
+        fontFamily: SANS,
+        background: COLORS.bg,
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "40px 24px",
+      }}
+    >
+      <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+        rel="stylesheet"
+      />
+
+      <div style={{ width: "100%", maxWidth: 920 }}>
+        {/* Header */}
+        <div style={{ marginBottom: 32 }}>
+          <div
+            style={{
+              fontFamily: SANS,
+              fontSize: 11,
+              fontWeight: 600,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              color: COLORS.muted,
+              marginBottom: 8,
+            }}
+          >
+            Figure 7.1
+          </div>
+          <h1
+            style={{
+              fontFamily: FONT,
+              fontSize: 22,
+              fontWeight: 700,
+              color: COLORS.text,
+              lineHeight: 1.35,
+              margin: 0,
+              maxWidth: 700,
+            }}
+          >
+            Computational Scaling Properties Across Architecture Families
+          </h1>
+          <p
+            style={{
+              fontFamily: SANS,
+              fontSize: 13,
+              color: COLORS.muted,
+              lineHeight: 1.55,
+              marginTop: 8,
+              marginBottom: 0,
+              maxWidth: 680,
+            }}
+          >
+            Relative compute cost as a function of input sequence length. Transformer
+            attention scales quadratically; alternative architectures offer sub-quadratic
+            or linear scaling. Dashed lines indicate projected efficiency frontiers for
+            architectures under active research.
+          </p>
+        </div>
+
+        {/* Chart */}
+        <div
+          style={{
+            background: "#fff",
+            borderRadius: 3,
+            border: `1px solid ${COLORS.grid}`,
+            padding: "28px 20px 16px 8px",
+            position: "relative",
+          }}
+        >
+          {/* Europa Nova zone annotation */}
+          <div
+            style={{
+              position: "absolute",
+              top: 36,
+              right: 36,
+              background: "rgba(44,74,110,0.06)",
+              border: "1px solid rgba(44,74,110,0.18)",
+              borderRadius: 3,
+              padding: "8px 14px",
+              fontFamily: SANS,
+              fontSize: 11,
+              color: COLORS.accent,
+              fontWeight: 500,
+              lineHeight: 1.5,
+              maxWidth: 180,
+              textAlign: "center",
+            }}
+          >
+            <span style={{ fontWeight: 700 }}>Europa Nova</span> research targets
+            <br />
+            sub-quadratic frontier
+          </div>
+
+          <ResponsiveContainer width="100%" height={440}>
+            <LineChart data={data} margin={{ top: 10, right: 30, bottom: 24, left: 20 }}>
+              <CartesianGrid
+                strokeDasharray="2 4"
+                stroke={COLORS.grid}
+                vertical={false}
+              />
+              <XAxis
+                dataKey="x"
+                type="number"
+                domain={[1000, 100000]}
+                tickFormatter={(v) => `${(v / 1000).toFixed(0)}K`}
+                ticks={[1000, 10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000]}
+                tick={{ fontFamily: SANS, fontSize: 11, fill: COLORS.muted }}
+                axisLine={{ stroke: COLORS.grid }}
+                tickLine={false}
+                label={{
+                  value: "Sequence Length (tokens)",
+                  position: "insideBottom",
+                  offset: -14,
+                  style: { fontFamily: SANS, fontSize: 12, fill: COLORS.muted, fontWeight: 500 },
+                }}
+              />
+              <YAxis
+                domain={[0, 8000]}
+                tickFormatter={(v) => (v >= 1000 ? `${(v / 1000).toFixed(0)}K` : v)}
+                ticks={[0, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000]}
+                tick={{ fontFamily: SANS, fontSize: 11, fill: COLORS.muted }}
+                axisLine={false}
+                tickLine={false}
+                label={{
+                  value: "Relative Compute Cost (normalised)",
+                  angle: -90,
+                  position: "insideLeft",
+                  offset: 4,
+                  style: { fontFamily: SANS, fontSize: 12, fill: COLORS.muted, fontWeight: 500, textAnchor: "middle" },
+                }}
+              />
+              <Tooltip content={<ScalingTooltip />} />
+
+              {architectures.map((arch) => (
+                <Line
+                  key={arch.key}
+                  type="monotone"
+                  dataKey={arch.key}
+                  name={arch.label}
+                  stroke={arch.color}
+                  strokeWidth={
+                    hoveredArch === null
+                      ? arch.width
+                      : hoveredArch === arch.key
+                      ? arch.width + 1
+                      : 1
+                  }
+                  strokeDasharray={arch.dash}
+                  dot={false}
+                  opacity={
+                    hoveredArch === null ? 1 : hoveredArch === arch.key ? 1 : 0.25
+                  }
+                  style={{ transition: "opacity 0.3s, stroke-width 0.3s" }}
+                />
+              ))}
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+
+        {/* Legend */}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "6px 24px",
+            marginTop: 20,
+            paddingLeft: 4,
+          }}
+        >
+          {architectures.map((arch) => (
+            <div
+              key={arch.key}
+              onMouseEnter={() => setHoveredArch(arch.key)}
+              onMouseLeave={() => setHoveredArch(null)}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                cursor: "pointer",
+                padding: "4px 8px",
+                borderRadius: 3,
+                background:
+                  hoveredArch === arch.key ? "rgba(0,0,0,0.04)" : "transparent",
+                transition: "background 0.2s",
+              }}
+            >
+              <svg width={28} height={4}>
+                <line
+                  x1={0}
+                  y1={2}
+                  x2={28}
+                  y2={2}
+                  stroke={arch.color}
+                  strokeWidth={2.5}
+                  strokeDasharray={arch.dash || "none"}
+                />
+              </svg>
+              <span
+                style={{
+                  fontFamily: SANS,
+                  fontSize: 12,
+                  color: COLORS.text,
+                  fontWeight: 500,
+                }}
+              >
+                {arch.label}
+              </span>
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 11,
+                  color: COLORS.muted,
+                  fontWeight: 400,
+                }}
+              >
+                {arch.scaling}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Caption */}
+        <div
+          style={{
+            marginTop: 28,
+            paddingTop: 16,
+            borderTop: `1px solid ${COLORS.grid}`,
+          }}
+        >
+          <p
+            style={{
+              fontFamily: SANS,
+              fontSize: 11.5,
+              color: COLORS.muted,
+              lineHeight: 1.65,
+              margin: 0,
+              maxWidth: 720,
+            }}
+          >
+            <span style={{ fontWeight: 600, color: COLORS.text }}>Note:</span>{" "}
+            Compute cost is normalised to illustrate relative scaling behaviour, not
+            absolute FLOP counts. Solid lines represent architectures with published
+            benchmarks (Gu and Dao, 2024; IEA, 2025). Dashed lines represent projected
+            efficiency frontiers for hybrid SSM-Attention architectures and neuromorphic
+            systems based on current research trajectories. Actual performance will depend
+            on implementation, hardware, and task characteristics.
+          </p>
+          <p
+            style={{
+              fontFamily: FONT,
+              fontSize: 11,
+              fontStyle: "italic",
+              color: COLORS.muted,
+              marginTop: 10,
+            }}
+          >
+            Source: Adapted from Gu and Dao (2024) with Europa Nova projections.
+          </p>
+        </div>
+
+        {/* Key insight box */}
+        <div
+          style={{
+            marginTop: 28,
+            background: "rgba(44,74,110,0.03)",
+            border: `1px solid rgba(44,74,110,0.1)`,
+            borderLeft: `3px solid ${COLORS.accent}`,
+            borderRadius: "0 3px 3px 0",
+            padding: "16px 20px",
+          }}
+        >
+          <p
+            style={{
+              fontFamily: SANS,
+              fontSize: 12.5,
+              color: COLORS.text,
+              lineHeight: 1.65,
+              margin: 0,
+            }}
+          >
+            <span style={{ fontWeight: 700 }}>Key insight:</span> At 100K token
+            sequence length, Transformer compute cost is approximately{" "}
+            <span style={{ fontWeight: 600, color: COLORS.transformer }}>36x</span>{" "}
+            that of a linear-scaling SSM and{" "}
+            <span style={{ fontWeight: 600, color: COLORS.moe }}>24x</span> that of a
+            Mixture-of-Experts architecture. Europa Nova's architectural research
+            targets the sub-quadratic frontier where hybrid and novel architectures
+            deliver frontier capability at a fraction of the energy cost — the zone
+            where European compute budgets become competitive.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+window.render_fig71 = (el) => ReactDOM.render(React.createElement(Figure71), el);
+} // end Figure 7.1 block scope
+
+/* ══════════════════════════════════════════════════════════
+   FIGURE 7.2 — Corpus Composition
+   ══════════════════════════════════════════════════════════ */
+{
+const FONT = "'EB Garamond', Georgia, serif";
+const SANS = "'DM Sans', 'Helvetica Neue', sans-serif";
+
+const COLORS = {
+  bg: "#FAFAF8",
+  text: "#1D1D1D",
+  muted: "#8C8C7E",
+  grid: "rgba(44,74,110,0.12)",
+};
+
+const categories = [
+  {
+    label: "Multilingual Web Text",
+    pct: 40,
+    color: "#2C4A6E",
+    detail: "24 EU languages + Norwegian, Swiss German, Icelandic. Filtered web crawl with quality scoring and deduplication.",
+    subItems: ["CommonCrawl (filtered)", "National web archives", "Wikipedia (all EU languages)"],
+  },
+  {
+    label: "Code",
+    pct: 17,
+    color: "#5C7A92",
+    detail: "Demonstrably improves reasoning across all domains. 8–12% gain on mathematical benchmarks vs. text-only training (Meta, 2024).",
+    subItems: ["Open-source repositories", "Documentation & APIs", "Formal verification corpora"],
+  },
+  {
+    label: "Scientific & Technical Literature",
+    pct: 15,
+    color: "#3A5068",
+    detail: "European research output from CERN, Max Planck, CNRS, and open-access mandated publications.",
+    subItems: ["arXiv, PubMed, OpenAIRE", "EU Horizon outputs", "Patent filings (EPO)"],
+  },
+  {
+    label: "Digitised Cultural Heritage",
+    pct: 10,
+    color: "#8C8C7E",
+    detail: "58+ million objects via Europeana. National libraries across 30+ countries. Unique multilingual historical corpus.",
+    subItems: ["Europeana collections", "National library digitisation", "Audiovisual archives"],
+  },
+  {
+    label: "Synthetic Data",
+    pct: 10,
+    color: "rgba(44,74,110,0.40)",
+    detail: "10–15% max in pre-training to avoid model collapse. 80–90% in post-training (alignment, SFT, RLHF).",
+    subItems: ["Pre-training: ≤10–15%", "Post-training: 80–90%", "Quality-controlled generation"],
+  },
+  {
+    label: "Public Administration & Legal",
+    pct: 8,
+    color: "#A8B5C3",
+    detail: "Case law, regulatory filings, parliamentary records. Annotated with jurisdiction and provenance metadata.",
+    subItems: ["EUR-Lex & national law", "Court decisions (27 MS)", "Parliamentary proceedings"],
+  },
+];
+
+function polarToCartesian(cx, cy, r, angleDeg) {
+  const rad = ((angleDeg - 90) * Math.PI) / 180;
+  return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
+}
+
+function describeArc(cx, cy, r, startAngle, endAngle) {
+  const start = polarToCartesian(cx, cy, r, endAngle);
+  const end = polarToCartesian(cx, cy, r, startAngle);
+  const large = endAngle - startAngle > 180 ? 1 : 0;
+  return `M ${start.x} ${start.y} A ${r} ${r} 0 ${large} 0 ${end.x} ${end.y}`;
+}
+
+function DonutChart({ selected, onSelect }) {
+  const cx = 200, cy = 200, outerR = 170, innerR = 100, gap = 1.2;
+  let cumAngle = 0;
+  const segments = categories.map((cat, i) => {
+    const sweep = (cat.pct / 100) * 360;
+    const startAngle = cumAngle + gap / 2;
+    const endAngle = cumAngle + sweep - gap / 2;
+    const midAngle = cumAngle + sweep / 2;
+    cumAngle += sweep;
+    return { ...cat, startAngle, endAngle, midAngle, index: i };
+  });
+
+  return (
+    <svg viewBox="0 0 400 400" style={{ width: "100%", maxWidth: 380 }}>
+      {/* Background circle */}
+      <circle cx={cx} cy={cy} r={outerR + 4} fill="none" stroke={COLORS.grid} strokeWidth={0.5} />
+
+      {segments.map((seg) => {
+        const isSelected = selected === seg.index;
+        const r1 = isSelected ? outerR + 6 : outerR;
+        const r2 = isSelected ? innerR - 3 : innerR;
+
+        // Build closed donut segment path
+        const outerStart = polarToCartesian(cx, cy, r1, seg.endAngle);
+        const outerEnd = polarToCartesian(cx, cy, r1, seg.startAngle);
+        const innerStart = polarToCartesian(cx, cy, r2, seg.startAngle);
+        const innerEnd = polarToCartesian(cx, cy, r2, seg.endAngle);
+        const large = seg.endAngle - seg.startAngle > 180 ? 1 : 0;
+
+        const path = [
+          `M ${outerStart.x} ${outerStart.y}`,
+          `A ${r1} ${r1} 0 ${large} 0 ${outerEnd.x} ${outerEnd.y}`,
+          `L ${innerStart.x} ${innerStart.y}`,
+          `A ${r2} ${r2} 0 ${large} 1 ${innerEnd.x} ${innerEnd.y}`,
+          "Z",
+        ].join(" ");
+
+        // Percentage label position
+        const labelR = (r1 + r2) / 2;
+        const labelPos = polarToCartesian(cx, cy, labelR, seg.midAngle);
+
+        return (
+          <g
+            key={seg.index}
+            onClick={() => onSelect(isSelected ? null : seg.index)}
+            style={{ cursor: "pointer" }}
+          >
+            <path
+              d={path}
+              fill={seg.color}
+              opacity={selected === null || isSelected ? 1 : 0.35}
+              stroke="#fff"
+              strokeWidth={1.5}
+              style={{ transition: "opacity 0.35s ease, d 0.35s ease" }}
+            />
+            <text
+              x={labelPos.x}
+              y={labelPos.y}
+              textAnchor="middle"
+              dominantBaseline="central"
+              fill="#fff"
+              fontFamily={SANS}
+              fontSize={seg.pct >= 15 ? 15 : 12}
+              fontWeight={700}
+              style={{
+                opacity: selected === null || isSelected ? 1 : 0.3,
+                transition: "opacity 0.35s",
+                pointerEvents: "none",
+              }}
+            >
+              {seg.pct}%
+            </text>
+          </g>
+        );
+      })}
+
+      {/* Center text */}
+      <text
+        x={cx} y={cy - 10}
+        textAnchor="middle"
+        fontFamily={FONT}
+        fontSize={14}
+        fontWeight={700}
+        fill={COLORS.text}
+      >
+        Europa Nova
+      </text>
+      <text
+        x={cx} y={cy + 10}
+        textAnchor="middle"
+        fontFamily={SANS}
+        fontSize={11}
+        fill={COLORS.muted}
+      >
+        Pre-training Corpus
+      </text>
+      <text
+        x={cx} y={cy + 26}
+        textAnchor="middle"
+        fontFamily={SANS}
+        fontSize={11}
+        fill={COLORS.muted}
+      >
+        Target Composition
+      </text>
+    </svg>
+  );
+}
+
+function DetailPanel({ index }) {
+  const cat = categories[index];
+  return (
+    <div
+      style={{
+        background: "#fff",
+        border: `1px solid ${COLORS.grid}`,
+        borderLeft: `3px solid ${cat.color}`,
+        borderRadius: "0 3px 3px 0",
+        padding: "18px 22px",
+        animation: "fadeSlideIn 0.3s ease",
+      }}
+    >
+      <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 8 }}>
+        <span
+          style={{
+            fontFamily: SANS,
+            fontSize: 28,
+            fontWeight: 700,
+            color: cat.color,
+            lineHeight: 1,
+          }}
+        >
+          {cat.pct}%
+        </span>
+        <span
+          style={{
+            fontFamily: SANS,
+            fontSize: 15,
+            fontWeight: 600,
+            color: COLORS.text,
+          }}
+        >
+          {cat.label}
+        </span>
+      </div>
+      <p
+        style={{
+          fontFamily: SANS,
+          fontSize: 13,
+          color: COLORS.muted,
+          lineHeight: 1.6,
+          margin: "0 0 12px 0",
+        }}
+      >
+        {cat.detail}
+      </p>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+        {cat.subItems.map((item, i) => (
+          <span
+            key={i}
+            style={{
+              fontFamily: SANS,
+              fontSize: 11,
+              color: cat.color,
+              background: `${cat.color}0D`,
+              border: `1px solid ${cat.color}22`,
+              borderRadius: 3,
+              padding: "3px 10px",
+              fontWeight: 500,
+            }}
+          >
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Figure72() {
+  const [selected, setSelected] = useState(null);
+  const [animateIn, setAnimateIn] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setAnimateIn(true), 100);
+    return () => clearTimeout(t);
+  }, []);
+
+  return (
+    <div
+      style={{
+        fontFamily: SANS,
+        background: COLORS.bg,
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "40px 24px",
+      }}
+    >
+      <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+        rel="stylesheet"
+      />
+      <style>{`
+        @keyframes fadeSlideIn {
+          from { opacity: 0; transform: translateY(6px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
+
+      <div style={{ width: "100%", maxWidth: 920 }}>
+        {/* Header */}
+        <div style={{ marginBottom: 32 }}>
+          <div
+            style={{
+              fontFamily: SANS,
+              fontSize: 11,
+              fontWeight: 600,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              color: COLORS.muted,
+              marginBottom: 8,
+            }}
+          >
+            Figure 7.2
+          </div>
+          <h1
+            style={{
+              fontFamily: FONT,
+              fontSize: 22,
+              fontWeight: 700,
+              color: COLORS.text,
+              lineHeight: 1.35,
+              margin: 0,
+              maxWidth: 700,
+            }}
+          >
+            Europa Nova Pre-Training Corpus Composition
+          </h1>
+          <p
+            style={{
+              fontFamily: SANS,
+              fontSize: 13,
+              color: COLORS.muted,
+              lineHeight: 1.55,
+              marginTop: 8,
+              marginBottom: 0,
+              maxWidth: 680,
+            }}
+          >
+            Approximate target proportions by data category. The corpus is designed to
+            convert Europe's multilingual, institutional, and cultural diversity into a
+            training advantage. Click any segment for details.
+          </p>
+        </div>
+
+        {/* Main content */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "380px 1fr",
+            gap: 36,
+            alignItems: "start",
+          }}
+        >
+          {/* Chart */}
+          <div
+            style={{
+              opacity: animateIn ? 1 : 0,
+              transform: animateIn ? "none" : "scale(0.95)",
+              transition: "opacity 0.6s ease, transform 0.6s ease",
+            }}
+          >
+            <DonutChart selected={selected} onSelect={setSelected} />
+          </div>
+
+          {/* Right panel */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 10, paddingTop: 8 }}>
+            {selected !== null ? (
+              <DetailPanel index={selected} />
+            ) : (
+              /* Category list as legend */
+              categories.map((cat, i) => (
+                <div
+                  key={i}
+                  onClick={() => setSelected(i)}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 12,
+                    padding: "9px 14px",
+                    borderRadius: 3,
+                    cursor: "pointer",
+                    background: "transparent",
+                    border: `1px solid transparent`,
+                    transition: "background 0.2s, border-color 0.2s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = `${cat.color}08`;
+                    e.currentTarget.style.borderColor = `${cat.color}20`;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "transparent";
+                    e.currentTarget.style.borderColor = "transparent";
+                  }}
+                >
+                  <div
+                    style={{
+                      width: 14,
+                      height: 14,
+                      borderRadius: 2,
+                      background: cat.color,
+                      flexShrink: 0,
+                    }}
+                  />
+                  <span
+                    style={{
+                      fontFamily: SANS,
+                      fontSize: 13,
+                      fontWeight: 500,
+                      color: COLORS.text,
+                      flex: 1,
+                    }}
+                  >
+                    {cat.label}
+                  </span>
+                  <span
+                    style={{
+                      fontFamily: SANS,
+                      fontSize: 14,
+                      fontWeight: 700,
+                      color: cat.color,
+                      minWidth: 36,
+                      textAlign: "right",
+                    }}
+                  >
+                    {cat.pct}%
+                  </span>
+                </div>
+              ))
+            )}
+
+            {selected !== null && (
+              <button
+                onClick={() => setSelected(null)}
+                style={{
+                  fontFamily: SANS,
+                  fontSize: 12,
+                  color: COLORS.muted,
+                  background: "none",
+                  border: `1px solid ${COLORS.grid}`,
+                  borderRadius: 3,
+                  padding: "7px 14px",
+                  cursor: "pointer",
+                  alignSelf: "flex-start",
+                  marginTop: 4,
+                  transition: "color 0.2s",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = COLORS.text)}
+                onMouseLeave={(e) => (e.currentTarget.style.color = COLORS.muted)}
+              >
+                ← Show all categories
+              </button>
+            )}
+
+            {/* Data principles box */}
+            <div
+              style={{
+                marginTop: selected !== null ? 12 : 8,
+                background: "rgba(44,74,110,0.03)",
+                border: `1px solid rgba(44,74,110,0.08)`,
+                borderRadius: 3,
+                padding: "14px 18px",
+              }}
+            >
+              <div
+                style={{
+                  fontFamily: SANS,
+                  fontSize: 11,
+                  fontWeight: 600,
+                  color: COLORS.text,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.08em",
+                  marginBottom: 8,
+                }}
+              >
+                Data Design Principles
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {[
+                  ["Annotated diversity", "Provenance and perspective metadata on every source — calibrated understanding, not engineered neutrality"],
+                  ["Synthetic discipline", "≤15% synthetic in pre-training; 80–90% in post-training alignment"],
+                  ["Legal legitimacy", "GDPR-compliant provenance enables deployment in European healthcare, finance, and public sector"],
+                ].map(([title, desc], i) => (
+                  <div key={i} style={{ display: "flex", gap: 8, alignItems: "baseline" }}>
+                    <div
+                      style={{
+                        width: 4,
+                        height: 4,
+                        borderRadius: "50%",
+                        background: COLORS.text,
+                        flexShrink: 0,
+                        marginTop: 6,
+                      }}
+                    />
+                    <p style={{ fontFamily: SANS, fontSize: 12, color: COLORS.muted, lineHeight: 1.55, margin: 0 }}>
+                      <span style={{ fontWeight: 600, color: COLORS.text }}>{title}:</span>{" "}
+                      {desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer caption */}
+        <div
+          style={{
+            marginTop: 32,
+            paddingTop: 16,
+            borderTop: `1px solid ${COLORS.grid}`,
+          }}
+        >
+          <p
+            style={{
+              fontFamily: SANS,
+              fontSize: 11.5,
+              color: COLORS.muted,
+              lineHeight: 1.65,
+              margin: 0,
+              maxWidth: 720,
+            }}
+          >
+            <span style={{ fontWeight: 600, color: COLORS.text }}>Note:</span>{" "}
+            Proportions are approximate targets for the initial pre-training corpus and
+            will be adjusted based on empirical results during the first research phase
+            (Years 1–3). The 24 official EU languages are supplemented by Norwegian,
+            Icelandic, Swiss languages, and other European languages to reflect the full
+            treaty membership of Europa Nova. Code proportion includes both programming
+            languages and formal mathematical notation.
+          </p>
+          <p
+            style={{
+              fontFamily: FONT,
+              fontSize: 11,
+              fontStyle: "italic",
+              color: COLORS.muted,
+              marginTop: 10,
+            }}
+          >
+            Source: Europa Nova research design.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+window.render_fig72 = (el) => {
+  const App = typeof Figure72Corpus !== 'undefined' ? Figure72Corpus :
+              typeof CorpusComposition !== 'undefined' ? CorpusComposition :
+              typeof Figure72 !== 'undefined' ? Figure72 : null;
+  if (App) ReactDOM.render(React.createElement(App), el);
+};
+} // end Figure 7.2 block scope
+</script>
+
+</body>
+</html>

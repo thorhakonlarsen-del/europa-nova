@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Guidelines — Europa Nova</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --navy: #2C4A6E;
+  --text: #1D1D1D;
+  --grey: #8C8C7E;
+  --light: #F7F7F4;
+  --lighter: #FAFAF8;
+  --rule: rgba(44, 74, 110, 0.18);
+  --white: #FFFFFF;
+  --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --sans: 'DM Sans', 'Calibri', 'Helvetica Neue', sans-serif;
+  --max-w: 760px;
+  --max-w-wide: 1020px;
+}
+html { font-size: 18px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--serif); color: var(--text); background: var(--white); line-height: 1.7; }
+::selection { background: var(--navy); color: var(--white); }
+
+/* ── Nav ── */
+.doc-nav { position: sticky; top: 0; background: var(--white); border-bottom: 1px solid var(--rule); z-index: 100; padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+.doc-nav a { font-family: var(--sans); font-size: 0.72rem; font-weight: 600; color: var(--navy); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; }
+.doc-nav a:hover { opacity: 0.7; }
+
+/* ── Layout ── */
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
+.container-wide { max-width: var(--max-w-wide); margin: 0 auto; padding: 0 2rem; }
+section { padding: 4rem 0; border-top: 1px solid var(--rule); }
+section:first-of-type { border-top: none; }
+
+/* ── Typography ── */
+h1, h2, h3, h4 { font-family: var(--sans); font-weight: 600; line-height: 1.2; color: var(--text); }
+a { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { opacity: 0.7; }
+
+.section-label {
+  font-family: var(--sans); font-size: 0.65rem; font-weight: 600;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey);
+  margin-bottom: 0.75rem;
+}
+.section-title { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.rule--accent { display: block; width: 50px; height: 2px; background: var(--navy); margin: 1rem 0 2rem; border: none; }
+
+/* ── Hero ── */
+.brand-hero {
+  padding: 6rem 0 4rem;
+  text-align: center;
+}
+.brand-hero .logo-large { margin: 0 auto 2rem; }
+.brand-hero h1 { font-size: 2.6rem; margin-bottom: 0.75rem; }
+.brand-hero .subtitle { font-family: var(--serif); font-size: 1.15rem; font-style: italic; color: var(--grey); }
+.brand-hero .version { font-family: var(--sans); font-size: 0.7rem; color: var(--grey); margin-top: 1.5rem; letter-spacing: 0.06em; }
+
+/* ── Color Swatches ── */
+.swatch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0; }
+.swatch { border: 1px solid var(--rule); }
+.swatch-block { height: 100px; display: flex; align-items: flex-end; padding: 0.75rem; }
+.swatch-info { padding: 0.75rem; }
+.swatch-name { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; color: var(--text); }
+.swatch-hex { font-family: var(--sans); font-size: 0.7rem; color: var(--grey); margin-top: 0.15rem; }
+.swatch-use { font-size: 0.78rem; color: var(--grey); margin-top: 0.35rem; line-height: 1.4; }
+
+.tint-row { display: flex; gap: 0; margin: 1.5rem 0; border: 1px solid var(--rule); overflow: hidden; }
+.tint-cell { flex: 1; text-align: center; padding: 1.25rem 0.5rem 0.75rem; }
+.tint-cell span { display: block; font-family: var(--sans); font-size: 0.6rem; color: var(--grey); margin-top: 0.5rem; }
+
+/* ── Type Specimens ── */
+.type-specimen { margin: 2rem 0; padding: 2rem; background: var(--lighter); border: 1px solid var(--rule); }
+.type-specimen .label { font-family: var(--sans); font-size: 0.6rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); margin-bottom: 0.75rem; }
+.type-sample-h1 { font-family: var(--sans); font-size: 2.4rem; font-weight: 600; color: var(--text); line-height: 1.15; }
+.type-sample-h2 { font-family: var(--sans); font-size: 1.5rem; font-weight: 600; color: var(--text); line-height: 1.25; }
+.type-sample-h3 { font-family: var(--sans); font-size: 0.9rem; font-weight: 600; color: var(--text); }
+.type-sample-body { font-family: var(--serif); font-size: 1rem; line-height: 1.75; color: var(--text); }
+.type-sample-meta { font-family: var(--sans); font-size: 0.7rem; color: var(--grey); letter-spacing: 0.04em; }
+.type-sample-label { font-family: var(--sans); font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey); }
+.type-sample-accent { font-family: var(--serif); font-size: 2.8rem; font-weight: 400; color: var(--navy); opacity: 0.5; line-height: 1; }
+
+/* ── Component Examples ── */
+.component-box { margin: 2rem 0; padding: 2.5rem; background: var(--lighter); border: 1px solid var(--rule); }
+.component-label { font-family: var(--sans); font-size: 0.6rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); margin-bottom: 1.5rem; }
+
+.ex-btn {
+  display: inline-block; font-family: var(--sans); font-weight: 600;
+  font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.9rem 2.2rem; text-decoration: none; cursor: pointer; border: none;
+  transition: opacity 0.2s;
+}
+.ex-btn:hover { opacity: 0.8; }
+.ex-btn--primary { background: var(--navy); color: var(--white); }
+.ex-btn--outline { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
+.ex-btn--ghost { background: transparent; color: var(--navy); padding: 0.9rem 0; text-decoration: none; }
+.ex-btn--ghost::after { content: ' →'; }
+
+.ex-nav { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1.5rem; border: 1px solid var(--rule); background: var(--white); margin-top: 1.5rem; }
+.ex-nav-mark { font-family: var(--sans); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.15em; color: var(--navy); }
+.ex-nav-links { display: flex; gap: 1.5rem; list-style: none; }
+.ex-nav-links a { font-family: var(--sans); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--grey); text-decoration: none; }
+
+.ex-card { border: 1px solid var(--rule); padding: 2rem; margin-top: 1.5rem; background: var(--white); }
+.ex-card .card-label { font-family: var(--sans); font-size: 0.6rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); margin-bottom: 0.5rem; }
+.ex-card .card-title { font-family: var(--sans); font-size: 1.1rem; font-weight: 600; color: var(--text); margin-bottom: 0.5rem; }
+.ex-card .card-body { font-family: var(--serif); font-size: 0.9rem; color: var(--text); line-height: 1.6; }
+
+/* ── Logo Section ── */
+.logo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; }
+.logo-box { display: flex; align-items: center; justify-content: center; padding: 3rem; border: 1px solid var(--rule); min-height: 180px; }
+.logo-box--dark { background: var(--navy); }
+.logo-box--light { background: var(--lighter); }
+
+.logo-sizes { display: flex; align-items: flex-end; gap: 2.5rem; margin: 2rem 0; padding: 2rem; background: var(--lighter); border: 1px solid var(--rule); }
+
+.logo-clearspace { display: flex; align-items: center; justify-content: center; margin: 2rem 0; padding: 3rem; border: 1px solid var(--rule); position: relative; }
+.logo-clearspace .space-indicator {
+  position: absolute; border: 1px dashed var(--grey); opacity: 0.4;
+}
+
+/* ── Rules grid ── */
+.rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; }
+.rule-col h4 { font-size: 0.8rem; letter-spacing: 0.06em; margin-bottom: 1rem; }
+.rule-col ul { list-style: none; }
+.rule-col li { font-size: 0.85rem; line-height: 1.5; padding: 0.4rem 0; padding-left: 1.4rem; position: relative; }
+.rule-col--do li::before { content: '✓'; position: absolute; left: 0; color: var(--navy); font-weight: 700; }
+.rule-col--dont li::before { content: '✗'; position: absolute; left: 0; color: var(--grey); font-weight: 700; }
+
+/* ── Data viz ── */
+.viz-palette { display: flex; gap: 0; margin: 1.5rem 0; border: 1px solid var(--rule); overflow: hidden; }
+.viz-swatch { flex: 1; text-align: center; padding: 1.5rem 0.5rem 1rem; }
+.viz-swatch span { display: block; font-family: var(--sans); font-size: 0.55rem; color: var(--grey); margin-top: 0.5rem; }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  html { font-size: 16px; }
+  .swatch-grid { grid-template-columns: 1fr; }
+  .logo-grid { grid-template-columns: 1fr; }
+  .rules-grid { grid-template-columns: 1fr; }
+  .tint-row { flex-wrap: wrap; }
+  .tint-cell { min-width: 33%; }
+  .brand-hero h1 { font-size: 1.8rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="doc-nav">
+  <a href="index.html" style="display:inline-flex;align-items:center;gap:0.4rem;"><svg width="22" height="22" viewBox="0 0 200 200" fill="none"><rect x="16" y="16" width="168" height="168" stroke="#2C4A6E" stroke-width="6" fill="none" rx="4"/><text x="100" y="100" text-anchor="middle" dominant-baseline="central" font-family="'DM Sans',Calibri,sans-serif" font-weight="700" font-size="82" fill="#2C4A6E" letter-spacing="-2">EN</text></svg> Europa Nova</a>
+  <a href="index.html">&larr; Back to Main</a>
+</nav>
+
+<!-- ════════════════════════════════════════════ HERO ════════════════════════════════════════════ -->
+<header class="brand-hero container">
+  <svg class="logo-large" width="80" height="80" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="16" y="16" width="168" height="168" stroke="#2C4A6E" stroke-width="3" fill="none" rx="4"/>
+    <text x="100" y="100" text-anchor="middle" dominant-baseline="central" font-family="'DM Sans', Calibri, sans-serif" font-weight="700" font-size="82" fill="#2C4A6E" letter-spacing="-2">EN</text>
+  </svg>
+  <h1>Brand Guidelines</h1>
+  <p class="subtitle">Europa Nova — Visual Identity &amp; Design System</p>
+  <p class="version">Version 2.0 · March 2026 · Web &amp; Digital</p>
+</header>
+
+<main class="container">
+
+<!-- ════════════════════════ 01 · BRAND PHILOSOPHY ════════════════════════ -->
+<section id="philosophy">
+  <p class="section-label">01 &middot; Brand Philosophy</p>
+  <h2 class="section-title">Institutional Authority, Not Corporate Gloss</h2>
+  <hr class="rule--accent">
+
+  <p>Europa Nova proposes a treaty-based European research institution &mdash; an entity of the calibre of CERN, not a startup. The visual identity reflects this ambition: restrained, scholarly, and serious. Every design decision serves clarity and credibility.</p>
+
+  <p style="margin-top:1.5rem;">The brand rests on three principles:</p>
+
+  <p style="margin-top:1rem;"><strong style="font-family:var(--sans);font-size:0.85rem;">Restraint over decoration.</strong> No gradients, no shadows, no ornamental graphics. The absence of embellishment signals confidence. Policy papers compete on argument, not aesthetics.</p>
+
+  <p style="margin-top:1rem;"><strong style="font-family:var(--sans);font-size:0.85rem;">European typographic tradition.</strong> Serif body text (in the lineage of Garamond), sans-serif headings (in the lineage of Swiss modernism). This combination has been the standard for serious European publishing for centuries.</p>
+
+  <p style="margin-top:1rem;"><strong style="font-family:var(--sans);font-size:0.85rem;">Three colours, no exceptions.</strong> A near-black for text, a muted dark blue for accents, a warm grey for secondary information. These three, plus white, constitute the entire palette. Discipline in colour signals discipline in thought.</p>
+</section>
+
+<!-- ════════════════════════ 02 · LOGO ════════════════════════ -->
+<section id="logo">
+  <p class="section-label">02 &middot; Logo</p>
+  <h2 class="section-title">The EN Monogram</h2>
+  <hr class="rule--accent">
+
+  <p>The Europa Nova mark is an abstract monogram of the letters <strong>E</strong> and <strong>N</strong>, set in the primary typeface (DM Sans Bold) within a thin rectangular border. The design is deliberately restrained: no icon, no symbol, no graphic device. The letterforms themselves carry the identity.</p>
+
+  <p style="margin-top:1rem;">The border echoes the thin accent lines used throughout the design system, creating a visual connection between the mark and the content it represents.</p>
+
+  <div class="logo-grid">
+    <div class="logo-box logo-box--light">
+      <svg width="120" height="120" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="16" y="16" width="168" height="168" stroke="#2C4A6E" stroke-width="3" fill="none" rx="4"/>
+        <text x="100" y="100" text-anchor="middle" dominant-baseline="central" font-family="'DM Sans', Calibri, sans-serif" font-weight="700" font-size="82" fill="#2C4A6E" letter-spacing="-2">EN</text>
+      </svg>
+    </div>
+    <div class="logo-box logo-box--dark">
+      <svg width="120" height="120" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="16" y="16" width="168" height="168" stroke="rgba(255,255,255,0.8)" stroke-width="3" fill="none" rx="4"/>
+        <text x="100" y="100" text-anchor="middle" dominant-baseline="central" font-family="'DM Sans', Calibri, sans-serif" font-weight="700" font-size="82" fill="#FFFFFF" letter-spacing="-2">EN</text>
+      </svg>
+    </div>
+  </div>
+  <p style="font-family:var(--sans);font-size:0.72rem;color:var(--grey);margin-top:0.5rem;">Left: Primary mark on light backgrounds. Right: Reversed mark on navy.</p>
+
+  <h3 style="font-size:0.85rem;margin-top:2.5rem;margin-bottom:1rem;">Minimum Size &amp; Clear Space</h3>
+  <p>Minimum display size: 32&times;32px (digital) or 10mm (print). Clear space around the mark equals the height of the letter &ldquo;E&rdquo; on all sides. Never crop, rotate, recolour, or add effects to the mark.</p>
+
+  <div class="logo-sizes">
+    <svg width="64" height="64" viewBox="0 0 200 200" fill="none"><rect x="16" y="16" width="168" height="168" stroke="#2C4A6E" stroke-width="3" fill="none" rx="4"/><text x="100" y="100" text-anchor="middle" dominant-baseline="central" font-family="'DM Sans',Calibri,sans-serif" font-weight="700" font-size="82" fill="#2C4A6E" letter-spacing="-2">EN</text></svg>
+    <svg width="48" height="48" viewBox="0 0 200 200" fill="none"><rect x="16" y="16" width="168" height="168" stroke="#2C4A6E" stroke-width="3" fill="none" rx="4"/><text x="100" y="100" text-anchor="middle" dominant-baseline="central" font-family="'DM Sans',Calibri,sans-serif" font-weight="700" font-size="82" fill="#2C4A6E" letter-spacing="-2">EN</text></svg>
+    <svg width="32" height="32" viewBox="0 0 200 200" fill="none"><rect x="16" y="16" width="168" height="168" stroke="#2C4A6E" stroke-width="3" fill="none" rx="4"/><text x="100" y="100" text-anchor="middle" dominant-baseline="central" font-family="'DM Sans',Calibri,sans-serif" font-weight="700" font-size="82" fill="#2C4A6E" letter-spacing="-2">EN</text></svg>
+    <span style="font-family:var(--sans);font-size:0.65rem;color:var(--grey);">64px &middot; 48px &middot; 32px (minimum)</span>
+  </div>
+
+  <h3 style="font-size:0.85rem;margin-top:2.5rem;margin-bottom:1rem;">Wordmark</h3>
+  <p>When space permits, the full wordmark &ldquo;EUROPA NOVA&rdquo; appears alongside the monogram, set in DM Sans Bold at 0.8rem equivalent, letter-spacing 0.15em, uppercase, in navy.</p>
+
+  <div style="display:flex;align-items:center;gap:1rem;margin:1.5rem 0;padding:1.5rem;border:1px solid var(--rule);background:var(--lighter);">
+    <svg width="36" height="36" viewBox="0 0 200 200" fill="none"><rect x="16" y="16" width="168" height="168" stroke="#2C4A6E" stroke-width="3" fill="none" rx="4"/><text x="100" y="100" text-anchor="middle" dominant-baseline="central" font-family="'DM Sans',Calibri,sans-serif" font-weight="700" font-size="82" fill="#2C4A6E" letter-spacing="-2">EN</text></svg>
+    <span style="font-family:var(--sans);font-weight:700;font-size:0.85rem;letter-spacing:0.15em;color:var(--navy);">EUROPA NOVA</span>
+  </div>
+</section>
+
+<!-- ════════════════════════ 03 · COLOUR ════════════════════════ -->
+<section id="colour">
+  <p class="section-label">03 &middot; Colour System</p>
+  <h2 class="section-title">Three Colours. No Exceptions.</h2>
+  <hr class="rule--accent">
+
+  <p>The entire visual identity uses exactly three chromatic values, plus white and two warm neutrals for backgrounds. This constraint is deliberate: it prevents visual clutter and ensures that accent colour carries meaning whenever it appears.</p>
+
+  <h3 style="font-size:0.85rem;margin-top:2.5rem;margin-bottom:0.5rem;">Core Palette</h3>
+
+  <div class="swatch-grid">
+    <div class="swatch">
+      <div class="swatch-block" style="background:#1D1D1D;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Text</div>
+        <div class="swatch-hex">#1D1D1D &middot; rgb(29,29,29)</div>
+        <div class="swatch-use">All body text, headings, primary content. Near-black &mdash; softer than pure #000.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#2C4A6E;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Accent</div>
+        <div class="swatch-hex">#2C4A6E &middot; rgb(44,74,110)</div>
+        <div class="swatch-use">Chapter numbers, links, interactive elements, accent lines, logo, navigation marks.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#8C8C7E;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Secondary</div>
+        <div class="swatch-hex">#8C8C7E &middot; rgb(140,140,126)</div>
+        <div class="swatch-use">Meta information, captions, labels, footer text, dates, navigation links.</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-size:0.85rem;margin-top:2.5rem;margin-bottom:0.5rem;">Background &amp; Surface Tones</h3>
+  <p>Three neutral surfaces provide depth without introducing colour. All derived from a warm off-white base.</p>
+
+  <div class="swatch-grid">
+    <div class="swatch">
+      <div class="swatch-block" style="background:#FFFFFF; border-bottom: 1px solid var(--rule);"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">White</div>
+        <div class="swatch-hex">#FFFFFF</div>
+        <div class="swatch-use">Primary page background.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#FAFAF8;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Lighter</div>
+        <div class="swatch-hex">#FAFAF8</div>
+        <div class="swatch-use">Cards, code blocks, table of contents.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#F7F7F4;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Light</div>
+        <div class="swatch-hex">#F7F7F4</div>
+        <div class="swatch-use">Alternating sections, stat banners.</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-size:0.85rem;margin-top:2.5rem;margin-bottom:0.5rem;">Accent Tints (Data Visualisation)</h3>
+  <p>For charts and data displays, derive tints from the accent colour using opacity. Never introduce new hues.</p>
+
+  <div class="tint-row">
+    <div class="tint-cell" style="background:rgba(44,74,110,1);"><span style="color:#fff;">100%</span></div>
+    <div class="tint-cell" style="background:rgba(44,74,110,0.7);"><span style="color:#fff;">70%</span></div>
+    <div class="tint-cell" style="background:rgba(44,74,110,0.4);"><span>40%</span></div>
+    <div class="tint-cell" style="background:rgba(44,74,110,0.18);"><span>18%</span></div>
+    <div class="tint-cell" style="background:rgba(44,74,110,0.08);"><span>8%</span></div>
+    <div class="tint-cell" style="background:rgba(44,74,110,0.03);"><span>3%</span></div>
+  </div>
+  <p style="font-family:var(--sans);font-size:0.65rem;color:var(--grey);margin-top:0.5rem;">Navy accent at decreasing opacities. 18% is used for rules/separators. 8% and 3% for light backgrounds.</p>
+
+  <h3 style="font-size:0.85rem;margin-top:2.5rem;margin-bottom:0.5rem;">Data Series Colours</h3>
+  <p>When charts require multiple series, use only these three values. Differentiate further through pattern, weight, or opacity &mdash; never through additional hues.</p>
+  <div class="viz-palette">
+    <div class="viz-swatch" style="background:var(--navy);color:white;padding-top:2rem;">
+      <span style="color:rgba(255,255,255,0.7);">Series A<br>#2C4A6E</span>
+    </div>
+    <div class="viz-swatch" style="background:var(--grey);color:white;padding-top:2rem;">
+      <span style="color:rgba(255,255,255,0.8);">Series B<br>#8C8C7E</span>
+    </div>
+    <div class="viz-swatch" style="background:var(--text);color:white;padding-top:2rem;">
+      <span style="color:rgba(255,255,255,0.7);">Series C<br>#1D1D1D</span>
+    </div>
+    <div class="viz-swatch" style="background:rgba(44,74,110,0.4);padding-top:2rem;">
+      <span>Series D<br>Navy 40%</span>
+    </div>
+    <div class="viz-swatch" style="background:rgba(140,140,126,0.4);padding-top:2rem;">
+      <span>Series E<br>Grey 40%</span>
+    </div>
+  </div>
+
+  <h3 style="font-size:0.85rem;margin-top:2.5rem;margin-bottom:0.5rem;">Semantic Colour Rules</h3>
+  <div style="margin:1rem 0;font-size:0.88rem;line-height:1.8;">
+    <p><strong style="font-family:var(--sans);font-size:0.8rem;">Headings (H1–H4):</strong> Always <code style="font-size:0.75rem;background:var(--lighter);padding:0.15rem 0.4rem;border:1px solid var(--rule);">#1D1D1D</code> (text colour). Never accent.</p>
+    <p style="margin-top:0.5rem;"><strong style="font-family:var(--sans);font-size:0.8rem;">Chapter numbers:</strong> <code style="font-size:0.75rem;background:var(--lighter);padding:0.15rem 0.4rem;border:1px solid var(--rule);">#2C4A6E</code> at 50% opacity. The only heading element that uses accent.</p>
+    <p style="margin-top:0.5rem;"><strong style="font-family:var(--sans);font-size:0.8rem;">Links &amp; interactive elements:</strong> <code style="font-size:0.75rem;background:var(--lighter);padding:0.15rem 0.4rem;border:1px solid var(--rule);">#2C4A6E</code> (accent). Underline with 1px offset.</p>
+    <p style="margin-top:0.5rem;"><strong style="font-family:var(--sans);font-size:0.8rem;">Meta text &amp; captions:</strong> <code style="font-size:0.75rem;background:var(--lighter);padding:0.15rem 0.4rem;border:1px solid var(--rule);">#8C8C7E</code> (secondary grey).</p>
+    <p style="margin-top:0.5rem;"><strong style="font-family:var(--sans);font-size:0.8rem;">Separators / rules:</strong> <code style="font-size:0.75rem;background:var(--lighter);padding:0.15rem 0.4rem;border:1px solid var(--rule);">rgba(44,74,110,0.18)</code> (accent at 18% opacity).</p>
+    <p style="margin-top:0.5rem;"><strong style="font-family:var(--sans);font-size:0.8rem;">Accent rules:</strong> 2px solid <code style="font-size:0.75rem;background:var(--lighter);padding:0.15rem 0.4rem;border:1px solid var(--rule);">#2C4A6E</code>, 50–60px wide. Used under section titles.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════ 04 · TYPOGRAPHY ════════════════════════ -->
+<section id="typography">
+  <p class="section-label">04 &middot; Typography</p>
+  <h2 class="section-title">Two Families, Strict Hierarchy</h2>
+  <hr class="rule--accent">
+
+  <p>The typographic system uses exactly two families. <strong>EB Garamond</strong> (web equivalent of Georgia) carries all body text &mdash; the voice of the document. <strong>DM Sans</strong> (web equivalent of Calibri) handles all structural elements: headings, navigation, labels, buttons, and meta-data.</p>
+
+  <p style="margin-top:1rem;">Never mix their roles. Body text is always serif. Headings are always sans-serif. No exceptions.</p>
+
+  <div class="type-specimen">
+    <p class="label">Heading H1 &middot; DM Sans 600 &middot; 2.4rem</p>
+    <p class="type-sample-h1">Europa Nova: A Treaty-Based Framework</p>
+  </div>
+  <div class="type-specimen">
+    <p class="label">Heading H2 &middot; DM Sans 600 &middot; 1.5rem</p>
+    <p class="type-sample-h2">Europe&rsquo;s Strategic AI Deficit</p>
+  </div>
+  <div class="type-specimen">
+    <p class="label">Heading H3 &middot; DM Sans 600 &middot; 0.9rem</p>
+    <p class="type-sample-h3">2.1 &nbsp;The Concentration of AGI Development</p>
+  </div>
+  <div class="type-specimen">
+    <p class="label">Chapter Number &middot; EB Garamond 400 &middot; 2.8rem &middot; Navy 50%</p>
+    <p class="type-sample-accent">5</p>
+  </div>
+  <div class="type-specimen">
+    <p class="label">Body Text &middot; EB Garamond 400 &middot; 1rem &middot; Line-height 1.75</p>
+    <p class="type-sample-body">Europa Nova proposes a treaty-based research institution, modelled on CERN but with a commercial licensing arm, dedicated to developing safe artificial general intelligence. Established by treaty among five to eight nations.</p>
+  </div>
+  <div class="type-specimen">
+    <p class="label">Section Label &middot; DM Sans 600 &middot; 0.65rem &middot; Tracking 0.15em &middot; Uppercase &middot; Grey</p>
+    <p class="type-sample-label">THE CASE FOR EUROPA NOVA</p>
+  </div>
+  <div class="type-specimen">
+    <p class="label">Meta / Date &middot; DM Sans 400 &middot; 0.7rem &middot; Grey</p>
+    <p class="type-sample-meta">March 2026 &middot; For Public Distribution</p>
+  </div>
+
+  <h3 style="font-size:0.85rem;margin-top:2.5rem;margin-bottom:1rem;">Font Stack</h3>
+  <div style="font-family:var(--sans);font-size:0.78rem;line-height:2;">
+    <p><strong>Serif:</strong> <code style="font-size:0.7rem;background:var(--lighter);padding:0.1rem 0.35rem;border:1px solid var(--rule);">'EB Garamond', Georgia, 'Times New Roman', serif</code></p>
+    <p><strong>Sans:</strong> <code style="font-size:0.7rem;background:var(--lighter);padding:0.1rem 0.35rem;border:1px solid var(--rule);">'DM Sans', 'Calibri', 'Helvetica Neue', sans-serif</code></p>
+  </div>
+
+  <h3 style="font-size:0.85rem;margin-top:2.5rem;margin-bottom:1rem;">Text Alignment</h3>
+  <p>All body text is <strong>left-aligned</strong> (ragged right). This is the standard for screen reading and follows European typographic convention for documents intended for digital distribution. Never justify text without a hyphenation engine.</p>
+</section>
+
+<!-- ════════════════════════ 05 · LAYOUT ════════════════════════ -->
+<section id="layout">
+  <p class="section-label">05 &middot; Layout &amp; Spacing</p>
+  <h2 class="section-title">Generous White Space, Narrow Measure</h2>
+  <hr class="rule--accent">
+
+  <p>Content width is constrained to 680&ndash;720px (approximately 65&ndash;75 characters per line), the optimal measure for reading. Wider layouts (up to 960px) are used for data visualisations and multi-column content.</p>
+
+  <h3 style="font-size:0.85rem;margin-top:2.5rem;margin-bottom:1rem;">Section Structure</h3>
+  <div style="font-size:0.88rem;line-height:1.8;">
+    <p>Each section follows this pattern:</p>
+    <p style="margin-top:0.75rem;padding-left:1.5rem;border-left:2px solid var(--navy);">
+      <span style="font-family:var(--sans);font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey);">SECTION LABEL</span><br>
+      <span style="font-family:var(--sans);font-size:1.15rem;font-weight:600;">Section Title</span><br>
+      <span style="display:inline-block;width:50px;height:2px;background:var(--navy);margin:0.3rem 0;"></span><br>
+      <span style="font-style:italic;color:var(--grey);font-size:0.85rem;">Content follows...</span>
+    </p>
+  </div>
+
+  <h3 style="font-size:0.85rem;margin-top:2.5rem;margin-bottom:1rem;">Spacing Scale</h3>
+  <div style="font-family:var(--sans);font-size:0.78rem;line-height:2.2;">
+    <p><strong>Section padding:</strong> 5rem (90px) top and bottom</p>
+    <p><strong>Between heading and content:</strong> 1.5rem</p>
+    <p><strong>Between paragraphs:</strong> 1.25rem</p>
+    <p><strong>Container padding (sides):</strong> 2rem (desktop), 1.25rem (mobile)</p>
+    <p><strong>Figure margins:</strong> 2.5rem top and bottom</p>
+  </div>
+
+  <h3 style="font-size:0.85rem;margin-top:2.5rem;margin-bottom:1rem;">Separators</h3>
+  <p>Two types of horizontal rules are used:</p>
+  <div style="margin:1rem 0 0.5rem;"><hr style="width:100%;height:1px;background:var(--rule);border:none;"></div>
+  <p style="font-family:var(--sans);font-size:0.65rem;color:var(--grey);">Standard rule: 1px, accent at 18% opacity. Full width. Separates sections.</p>
+  <div style="margin:1.5rem 0 0.5rem;"><hr style="width:50px;height:2px;background:var(--navy);border:none;"></div>
+  <p style="font-family:var(--sans);font-size:0.65rem;color:var(--grey);">Accent rule: 2px, solid navy, 50px wide. Follows section titles.</p>
+</section>
+
+<!-- ════════════════════════ 06 · COMPONENTS ════════════════════════ -->
+<section id="components">
+  <p class="section-label">06 &middot; UI Components</p>
+  <h2 class="section-title">Buttons, Cards, Navigation</h2>
+  <hr class="rule--accent">
+
+  <div class="component-box">
+    <p class="component-label">Buttons</p>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:1.5rem;">
+      <a class="ex-btn ex-btn--primary" href="#">Primary Action</a>
+      <a class="ex-btn ex-btn--outline" href="#">Secondary</a>
+      <a class="ex-btn ex-btn--ghost" href="#">Text Link</a>
+    </div>
+  </div>
+
+  <div class="component-box">
+    <p class="component-label">Navigation Bar</p>
+    <div class="ex-nav">
+      <span class="ex-nav-mark">EUROPA NOVA</span>
+      <ul class="ex-nav-links">
+        <li><a href="#">The Case</a></li>
+        <li><a href="#">Pillars</a></li>
+        <li><a href="#">Funding</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="component-box">
+    <p class="component-label">Content Card</p>
+    <div class="ex-card">
+      <p class="card-label">Pillar One</p>
+      <p class="card-title">The Research Foundation</p>
+      <p class="card-body">Nine internationally recruited scientists. One Scientific Director with technical veto authority. Compensation at &euro;1&ndash;2M to compete with industry.</p>
+    </div>
+  </div>
+
+  <div class="component-box">
+    <p class="component-label">Blockquote</p>
+    <blockquote style="padding-left:1.5rem;border-left:2px solid var(--navy);font-style:italic;color:var(--grey);font-size:1.05rem;line-height:1.6;">
+      If we compete in yesterday&rsquo;s race, we lose. If we define tomorrow&rsquo;s, we lead.
+    </blockquote>
+  </div>
+
+  <div class="component-box">
+    <p class="component-label">Figure Container</p>
+    <div style="margin:0;padding:1.5rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);">
+      <div style="background:var(--lighter);height:120px;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:0.75rem;color:var(--grey);">[Figure content]</div>
+      <p style="font-family:var(--sans);font-size:0.72rem;font-style:italic;color:var(--navy);text-align:center;margin-top:0.75rem;"><strong>Figure 1.</strong> Description of the figure in italic sans-serif.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ 07 · DATA VIZ ════════════════════════ -->
+<section id="data-viz">
+  <p class="section-label">07 &middot; Data Visualisation</p>
+  <h2 class="section-title">Monochromatic, Data-Dense, Honest</h2>
+  <hr class="rule--accent">
+
+  <p>All charts and figures use the brand&rsquo;s three-colour palette plus their opacity variants. No red, green, or traffic-light coding. Differentiation comes from value contrast, labels, and spatial arrangement &mdash; not from colour.</p>
+
+  <h3 style="font-size:0.85rem;margin-top:2.5rem;margin-bottom:1rem;">Principles</h3>
+  <div style="font-size:0.88rem;line-height:1.8;">
+    <p><strong style="font-family:var(--sans);font-size:0.8rem;">Labels over legends.</strong> Place data labels directly on or adjacent to the visual element. Avoid separate legend boxes where possible.</p>
+    <p style="margin-top:0.5rem;"><strong style="font-family:var(--sans);font-size:0.8rem;">No decorative gridlines.</strong> Use subtle rules (accent 18%) only when they aid reading.</p>
+    <p style="margin-top:0.5rem;"><strong style="font-family:var(--sans);font-size:0.8rem;">Source attribution.</strong> Every figure includes a source line in the caption, set in sans-serif italic.</p>
+    <p style="margin-top:0.5rem;"><strong style="font-family:var(--sans);font-size:0.8rem;">Interactive figures.</strong> On the web, figures may include hover tooltips and subtle transitions (max 0.2s, ease). No animations on page load.</p>
+  </div>
+
+  <h3 style="font-size:0.85rem;margin-top:2.5rem;margin-bottom:1rem;">Figure Caption Format</h3>
+  <p style="font-family:var(--sans);font-size:0.72rem;font-style:italic;color:var(--navy);text-align:center;padding:1rem;border:1px solid var(--rule);margin:1rem 0;"><strong style="font-style:normal;">Figure N.</strong> Description of the figure content. <em>Source: attribution.</em></p>
+</section>
+
+<!-- ════════════════════════ 08 · RULES ════════════════════════ -->
+<section id="rules">
+  <p class="section-label">08 &middot; Do&rsquo;s &amp; Don&rsquo;ts</p>
+  <h2 class="section-title">Guard Rails</h2>
+  <hr class="rule--accent">
+
+  <div class="rules-grid">
+    <div class="rule-col rule-col--do">
+      <h4><span style="color:var(--navy);">✓</span> &nbsp;Do</h4>
+      <ul>
+        <li>Use EB Garamond for all body text</li>
+        <li>Use DM Sans for headings and meta elements only</li>
+        <li>Keep to three colours: text, accent, secondary</li>
+        <li>Left-align all body text (ragged right)</li>
+        <li>Use thin lines (1&ndash;2px) in accent colour</li>
+        <li>Centre figures with italic caption below</li>
+        <li>Derive data-viz tints from accent opacity</li>
+        <li>Maintain generous white space between sections</li>
+        <li>Keep headings in text colour (#1D1D1D)</li>
+        <li>Use the monogram at minimum 32px</li>
+      </ul>
+    </div>
+    <div class="rule-col rule-col--dont">
+      <h4><span style="color:var(--grey);">✗</span> &nbsp;Don&rsquo;t</h4>
+      <ul>
+        <li>Use pure black (#000000) anywhere</li>
+        <li>Introduce a third accent or decoration colour</li>
+        <li>Add gradients, shadows, or 3D effects</li>
+        <li>Use coloured backgrounds on text content</li>
+        <li>Justify text without a hyphenation algorithm</li>
+        <li>Mix more than two font families</li>
+        <li>Place images or photographs on the cover</li>
+        <li>Use thick borders, boxes, or card shadows</li>
+        <li>Use traffic-light (red/amber/green) coding</li>
+        <li>Animate elements on page load</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ 09 · WEB ════════════════════════ -->
+<section id="web">
+  <p class="section-label">09 &middot; Web Adaptations</p>
+  <h2 class="section-title">Print to Screen</h2>
+  <hr class="rule--accent">
+
+  <p>The original Europa Nova style guide was designed for A4 print. The following translations apply for web and digital contexts:</p>
+
+  <div style="margin:1.5rem 0;font-size:0.85rem;">
+    <table style="width:100%;border-collapse:collapse;font-family:var(--sans);font-size:0.78rem;">
+      <thead>
+        <tr style="border-bottom:2px solid var(--navy);">
+          <th style="text-align:left;padding:0.5rem 0;font-weight:600;">Print Specification</th>
+          <th style="text-align:left;padding:0.5rem 0;font-weight:600;">Web Equivalent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid var(--rule);"><td style="padding:0.5rem 0;">Georgia 11pt body</td><td style="padding:0.5rem 0;">EB Garamond 18px (1rem)</td></tr>
+        <tr style="border-bottom:1px solid var(--rule);"><td style="padding:0.5rem 0;">Calibri Bold headings</td><td style="padding:0.5rem 0;">DM Sans 600 weight</td></tr>
+        <tr style="border-bottom:1px solid var(--rule);"><td style="padding:0.5rem 0;">155mm text width (~65–75 chars)</td><td style="padding:0.5rem 0;">max-width: 680–720px</td></tr>
+        <tr style="border-bottom:1px solid var(--rule);"><td style="padding:0.5rem 0;">25mm/30mm margins</td><td style="padding:0.5rem 0;">2rem side padding</td></tr>
+        <tr style="border-bottom:1px solid var(--rule);"><td style="padding:0.5rem 0;">Chapter on new page</td><td style="padding:0.5rem 0;">border-top: 2px solid navy + 4rem top margin</td></tr>
+        <tr style="border-bottom:1px solid var(--rule);"><td style="padding:0.5rem 0;">Footnotes at page bottom</td><td style="padding:0.5rem 0;">Inline parenthetical or hover tooltips</td></tr>
+        <tr style="border-bottom:1px solid var(--rule);"><td style="padding:0.5rem 0;">Dotted ToC leaders (&hellip;)</td><td style="padding:0.5rem 0;">Flexbox layout with left-aligned links</td></tr>
+        <tr><td style="padding:0.5rem 0;">Static figures</td><td style="padding:0.5rem 0;">Interactive SVG/HTML with hover states</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ════════════════════════ FOOTER ════════════════════════ -->
+<section style="padding:3rem 0;border-top:1px solid var(--rule);text-align:center;">
+  <svg width="36" height="36" viewBox="0 0 200 200" fill="none" style="opacity:0.4;"><rect x="16" y="16" width="168" height="168" stroke="#2C4A6E" stroke-width="3" fill="none" rx="4"/><text x="100" y="100" text-anchor="middle" dominant-baseline="central" font-family="'DM Sans',Calibri,sans-serif" font-weight="700" font-size="82" fill="#2C4A6E" letter-spacing="-2">EN</text></svg>
+  <p style="font-family:var(--sans);font-size:0.65rem;color:var(--grey);margin-top:1rem;">&copy; 2026 Europa Nova Initiative &middot; Brand Guidelines v2.0</p>
+  <p style="font-family:var(--sans);font-size:0.65rem;margin-top:0.5rem;"><a href="index.html" style="color:var(--navy);text-decoration:none;">Europa Nova</a> &middot; <a href="open-letter.html" style="color:var(--navy);text-decoration:none;">Open Letter</a> &middot; <a href="full-paper.html" style="color:var(--navy);text-decoration:none;">Full Policy Paper</a></p>
+</section>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,1947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Europa Nova — A Treaty-Based Framework for Sovereign European AGI</title>
+<meta name="description" content="Europa Nova proposes a treaty-based European research institution dedicated to developing safe artificial general intelligence. A policy paper and open letter to European heads of state.">
+<meta property="og:title" content="Europa Nova — Sovereign European AGI">
+<meta property="og:description" content="An independent, treaty-based European institution for artificial general intelligence. Modelled on CERN. Powered by Nordic energy.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://europa-nova.eu">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Europa Nova — Sovereign European AGI">
+<meta name="twitter:description" content="A treaty-based European research institution for safe artificial general intelligence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Base ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy: #2C4A6E;
+  --navy-deep: #1B2A4A;
+  --text: #1D1D1D;
+  --grey: #8C8C7E;
+  --light: #F7F7F4;
+  --lighter: #FAFAF8;
+  --rule: rgba(44, 74, 110, 0.18);
+  --white: #FFFFFF;
+  --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --sans: 'DM Sans', 'Calibri', 'Helvetica Neue', sans-serif;
+  --max-w: 720px;
+  --max-w-wide: 960px;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--serif);
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.7;
+}
+
+::selection {
+  background: var(--navy);
+  color: var(--white);
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4 {
+  font-family: var(--sans);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+a {
+  color: var(--navy);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+a:hover { opacity: 0.7; }
+
+/* ── Layout ── */
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
+.container-wide { max-width: var(--max-w-wide); margin: 0 auto; padding: 0 2rem; }
+
+section { padding: 5rem 0; }
+
+.rule {
+  width: 100%;
+  height: 1px;
+  background: var(--rule);
+  border: none;
+}
+
+.rule--accent {
+  background: var(--navy);
+  height: 2px;
+  width: 60px;
+}
+
+/* ── Progress Bar ── */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: var(--navy);
+  z-index: 200;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* ── Navigation ── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--rule);
+  transition: transform 0.3s ease;
+}
+
+nav.nav-hidden {
+  transform: translateY(-100%);
+}
+
+nav .nav-inner {
+  max-width: var(--max-w-wide);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+}
+
+.nav-mark {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--navy);
+  text-decoration: none;
+}
+.nav-mark:hover { opacity: 1; }
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--grey);
+  text-decoration: none;
+  transition: color 0.2s;
+  position: relative;
+}
+.nav-links a:hover { color: var(--navy); opacity: 1; }
+.nav-links a.active {
+  color: var(--navy);
+  font-weight: 600;
+}
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: var(--navy);
+}
+
+/* Hamburger */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--navy);
+  transition: all 0.3s ease;
+}
+.nav-hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(4.5px, 4.5px);
+}
+.nav-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(4.5px, -4.5px);
+}
+
+/* Mobile menu */
+.nav-mobile {
+  display: none;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--rule);
+  padding: 1.5rem 2rem;
+  z-index: 99;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.nav-mobile.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.nav-mobile a {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--grey);
+  text-decoration: none;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--rule);
+  transition: color 0.2s;
+}
+.nav-mobile a:last-child { border-bottom: none; }
+.nav-mobile a:hover { color: var(--navy); opacity: 1; }
+
+/* ── Hero ── */
+.hero {
+  padding: 10rem 0 6rem;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-label {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--grey);
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  max-width: 560px;
+}
+
+.hero-quote {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text);
+  max-width: 560px;
+  margin-bottom: 3rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--navy);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.85rem 2rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+.btn--primary {
+  background: var(--navy);
+  color: var(--white);
+  border: 1px solid var(--navy);
+}
+.btn--primary:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+  opacity: 1;
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+}
+.btn--secondary:hover {
+  background: var(--navy);
+  color: var(--white);
+  opacity: 1;
+}
+
+/* ── Stats strip ── */
+.stats {
+  background: var(--light);
+  padding: 3.5rem 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--sans);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--grey);
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+/* ── Section headings ── */
+.section-label {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.section-intro {
+  font-size: 1.05rem;
+  color: var(--grey);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+/* ── The Case ── */
+.case p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+.case p:last-child { margin-bottom: 0; }
+
+/* ── Inline Figure ── */
+.figure-block {
+  padding: 3rem 0;
+}
+
+.figure-wrapper {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  padding: 2.5rem 3rem 2rem;
+}
+
+.figure-label-inline {
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 0.5rem;
+}
+
+.figure-title-inline {
+  font-family: var(--sans);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.figure-subtitle-inline {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  color: var(--grey);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.figure-source {
+  font-family: var(--sans);
+  font-size: 0.58rem;
+  color: var(--grey);
+  margin-top: 1.5rem;
+  line-height: 1.6;
+  border-top: 1px solid var(--rule);
+  padding-top: 1rem;
+}
+
+/* ── Figure 1: Editorial bar comparison ── */
+.fig1-grid {
+  display: grid;
+  gap: 0;
+  margin-top: 2rem;
+}
+
+.fig1-dimension {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 0;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.fig1-dimension:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+.fig1-dim-label {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.fig1-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fig1-bar-row {
+  display: grid;
+  grid-template-columns: 48px 24px 1fr;
+  align-items: center;
+  gap: 6px;
+  height: 20px;
+}
+
+.fig1-bar-label {
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  font-weight: 500;
+  text-align: right;
+}
+
+.fig1-bar-value {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-align: right;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.fig1-bar-track {
+  height: 100%;
+  background: var(--lighter);
+  position: relative;
+  overflow: hidden;
+}
+
+.fig1-bar-fill {
+  height: 100%;
+  transition: width 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.fig1-bar-fill[data-country="us"] { background: var(--navy); }
+.fig1-bar-fill[data-country="cn"] { background: var(--grey); }
+.fig1-bar-fill[data-country="eu"] { background: var(--text); }
+.fig1-bar-label[data-country="us"] { color: var(--navy); }
+.fig1-bar-label[data-country="cn"] { color: var(--grey); }
+.fig1-bar-label[data-country="eu"] { color: var(--text); }
+
+.fig1-legend {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 0.75rem;
+}
+
+.fig1-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fig1-legend-swatch {
+  width: 20px;
+  height: 3px;
+  flex-shrink: 0;
+}
+
+.fig1-legend-text {
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 500;
+  color: var(--grey);
+}
+
+.fig1-insight {
+  margin-top: 1.75rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--navy);
+  background: rgba(44, 74, 110, 0.03);
+}
+
+.fig1-insight p {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  color: var(--text);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.fig1-insight strong {
+  color: var(--navy);
+}
+
+/* ── Three pillars ── */
+.pillars {
+  background: var(--lighter);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 2.5rem;
+}
+
+.pillar {
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--navy);
+}
+
+.pillar-number {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 0.5rem;
+}
+
+.pillar h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.pillar p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--grey);
+}
+
+/* ── Figure 3: Architectural stack ── */
+.stack-container {
+  margin-top: 2rem;
+  position: relative;
+}
+
+.stack-row {
+  display: grid;
+  grid-template-columns: 40px 1fr 130px;
+  align-items: stretch;
+  min-height: 68px;
+  position: relative;
+}
+
+.stack-num {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0.5rem;
+}
+
+.stack-content {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stack-row:last-child .stack-content {
+  border-bottom: 1px solid var(--rule);
+}
+
+.stack-name {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin-bottom: 2px;
+}
+
+.stack-desc {
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 400;
+  color: var(--grey);
+  line-height: 1.4;
+}
+
+.stack-owner {
+  font-family: var(--sans);
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.stack-row:last-child .stack-owner {
+  border-bottom: 1px solid var(--rule);
+}
+
+.stack-row--eu .stack-num { color: var(--navy); }
+.stack-row--eu .stack-content { background: rgba(44, 74, 110, 0.03); }
+.stack-row--eu .stack-name { color: var(--navy); }
+.stack-row--eu .stack-owner { color: var(--navy); }
+
+.stack-row--nova .stack-num { color: var(--text); }
+.stack-row--nova .stack-content { background: rgba(44, 74, 110, 0.06); border-left: 3px solid var(--navy); }
+.stack-row--nova .stack-name { color: var(--text); font-weight: 700; }
+.stack-row--nova .stack-owner { color: var(--navy); font-weight: 700; }
+
+.stack-row--market .stack-num { color: var(--rule); }
+.stack-row--market .stack-name { color: var(--grey); }
+.stack-row--market .stack-owner { color: var(--grey); }
+
+/* The structural gap */
+.stack-gap {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  position: relative;
+}
+
+.stack-gap::before {
+  content: '';
+  position: absolute;
+  left: 40px;
+  right: 0;
+  top: 50%;
+  height: 0;
+  border-top: 1.5px dashed var(--navy);
+}
+
+.stack-gap-tag {
+  position: relative;
+  z-index: 1;
+  margin-left: 40px;
+  background: var(--white);
+  padding: 4px 14px;
+  font-family: var(--sans);
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--navy);
+}
+
+.stack-legend {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 0.75rem;
+}
+
+.stack-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stack-legend-mark {
+  width: 18px;
+  height: 2px;
+  flex-shrink: 0;
+}
+
+.stack-legend-text {
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: var(--grey);
+}
+
+/* ── Figure 2: Energy comparison ── */
+.energy-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0 1rem;
+}
+.energy-table th {
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grey);
+  text-align: left;
+  padding: 0 0.5rem 0.5rem;
+  border-bottom: 2px solid var(--navy);
+}
+.energy-table th:not(:first-child) { text-align: right; }
+.energy-table td {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--text);
+}
+.energy-table td:not(:first-child) { text-align: right; }
+.energy-table .energy-group-label td {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--grey);
+  padding-top: 1rem;
+  border-bottom: none;
+}
+.energy-table .energy-highlight td {
+  color: var(--navy);
+  font-weight: 600;
+}
+.energy-status {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.4rem;
+  border-radius: 2px;
+}
+.energy-status--red { background: rgba(29,29,29,0.06); color: var(--text); }
+.energy-status--amber { background: rgba(140,140,126,0.12); color: var(--grey); }
+.energy-status--green { background: rgba(44,74,110,0.08); color: var(--navy); }
+
+/* ── Funding contributions ── */
+.contrib-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  margin: 2rem 0 1.5rem;
+  border: 1px solid var(--rule);
+}
+.contrib-item {
+  background: var(--white);
+  padding: 1rem;
+}
+.contrib-country {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 0.25rem;
+}
+.contrib-amount {
+  font-family: var(--sans);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+.contrib-context {
+  font-family: var(--sans);
+  font-size: 0.55rem;
+  color: var(--grey);
+  margin-top: 0.2rem;
+  line-height: 1.4;
+}
+@media (max-width: 640px) {
+  .contrib-grid { grid-template-columns: repeat(2, 1fr); }
+  .energy-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.5rem -0.5rem 1rem; padding: 0 0.5rem; }
+  .energy-table { font-size: 0.7rem; min-width: 480px; }
+  .energy-table td, .energy-table th { padding: 0.35rem 0.3rem; }
+}
+
+/* ── Governance Principles ── */
+.principle {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--grey);
+  margin-bottom: 1.5rem;
+}
+
+.principle strong {
+  color: var(--navy);
+}
+
+.principle:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Timeline ── */
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.timeline-grid::before {
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--rule);
+}
+
+.timeline-phase {
+  position: relative;
+  padding: 0 1rem;
+}
+
+.timeline-phase::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 1rem;
+  width: 12px;
+  height: 12px;
+  background: var(--white);
+  border: 2px solid var(--navy);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-period {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.05em;
+  padding-top: 42px;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.timeline-desc {
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  color: var(--grey);
+  line-height: 1.5;
+}
+
+/* ── FAQ ── */
+.faq-item {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.faq-item:first-of-type {
+  border-top: 1px solid var(--rule);
+}
+
+.faq-q {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.faq-q::after {
+  content: '+';
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--grey);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.faq-item.open .faq-q::after {
+  content: '\2013';
+}
+
+.faq-a {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--grey);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+  opacity: 0;
+  margin-top: 0;
+}
+
+.faq-item.open .faq-a {
+  max-height: 600px;
+  opacity: 1;
+  margin-top: 0.75rem;
+}
+
+/* ── Endorsements ── */
+.endorsements {
+  background: var(--light);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.endorsement-note {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--grey);
+  line-height: 1.7;
+  padding: 2rem;
+  background: var(--white);
+  border: 1px solid var(--rule);
+}
+
+/* ── Support form ── */
+.support-form {
+  margin-top: 2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-row--full {
+  grid-template-columns: 1fr;
+}
+
+.form-field label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 0.4rem;
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  font-family: var(--serif);
+  font-size: 0.92rem;
+  color: var(--text);
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  border-color: var(--navy);
+}
+
+.form-field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238C8C7E' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  padding-right: 2.5rem;
+}
+
+.form-success {
+  display: none;
+  padding: 1.5rem 2rem;
+  background: var(--light);
+  border: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.form-success.visible {
+  display: block;
+}
+
+/* ── Footer ── */
+footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.6);
+  padding: 4rem 0;
+}
+
+footer a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+}
+footer a:hover { color: white; opacity: 1; }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.footer-mark {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.footer-heading {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.3);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  html { font-size: 16px; }
+  .hero { padding: 8rem 0 4rem; min-height: auto; }
+  .hero h1 { font-size: 2.2rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .pillar-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .nav-mobile { display: block; }
+  .section-title { font-size: 1.5rem; }
+  .fig1-dimension { grid-template-columns: 80px 1fr; }
+  .fig1-bar-label { width: 44px; font-size: 0.52rem; }
+  .fig1-legend { flex-wrap: wrap; gap: 1rem; }
+  .fig1-insight { padding: 1rem; }
+  .figure-wrapper { padding: 1.5rem; }
+  .stack-row { grid-template-columns: 32px 1fr 90px; min-height: 60px; }
+  .stack-legend { flex-wrap: wrap; gap: 0.75rem; }
+  .timeline-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .timeline-grid::before { display: none; }
+  .timeline-phase::before { display: none; }
+  .timeline-period { padding-top: 0; }
+  .stack-legend-row { flex-wrap: wrap; gap: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.8rem; }
+  .hero-actions { flex-direction: column; }
+  .btn { text-align: center; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .timeline-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Print ── */
+@media print {
+  nav, .progress-bar, .nav-mobile { display: none; }
+  .hero { padding-top: 2rem; min-height: auto; }
+  section { padding: 2rem 0; }
+  .fade-in { opacity: 1; transform: none; }
+  body { font-size: 11pt; }
+  .btn { border: 1px solid #000; }
+}
+
+/* ── Fade in on scroll ── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- Progress Bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Navigation -->
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a href="#" class="nav-mark" style="display:inline-flex;align-items:center;gap:0.4rem;"><svg width="22" height="22" viewBox="0 0 200 200" fill="none"><rect x="16" y="16" width="168" height="168" stroke="#2C4A6E" stroke-width="6" fill="none" rx="4"/><text x="100" y="100" text-anchor="middle" dominant-baseline="central" font-family="'DM Sans',Calibri,sans-serif" font-weight="700" font-size="82" fill="#2C4A6E" letter-spacing="-2">EN</text></svg> EUROPA NOVA</a>
+    <ul class="nav-links">
+      <li><a href="#case" data-section="case">The Case</a></li>
+      <li><a href="#proposal" data-section="proposal">The Proposal</a></li>
+      <li><a href="#faq" data-section="faq">Questions</a></li>
+      <li><a href="#support" data-section="support">Support</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="nav-mobile" id="mobileMenu">
+  <a href="#case" class="mobile-link">The Case</a>
+  <a href="#proposal" class="mobile-link">The Proposal</a>
+  <a href="#governance" class="mobile-link">Governance</a>
+  <a href="#funding" class="mobile-link">Funding</a>
+  <a href="#faq" class="mobile-link">Questions</a>
+  <a href="#support" class="mobile-link">Support</a>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <p class="hero-label">An Open Letter to European Heads of State</p>
+    <h1>Europa Nova</h1>
+    <p class="hero-subtitle">A Treaty-Based Framework for Sovereign European Artificial General Intelligence</p>
+    <div class="hero-quote">
+      The question is not whether artificial general intelligence will arrive. The question is whether Europe will have any voice in what it becomes &mdash; or whether it will, once again, write the rules for a technology it depends on others to build.
+    </div>
+    <div class="hero-actions">
+      <a href="open-letter.html" class="btn btn--primary">Read the Open Letter</a>
+      <a href="full-paper.html" class="btn btn--secondary">Read the Full Paper</a>
+    </div>
+  </div>
+</section>
+
+<!-- Key stats -->
+<section class="stats">
+  <div class="container-wide">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">2 of 36</div>
+        <div class="stat-label">Frontier AI models from Europe.<br>28 are American. 6 are Chinese.</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">80%</div>
+        <div class="stat-label">Of global AI compute controlled<br>by industry. Up from 40% in 2019.</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">57,000</div>
+        <div class="stat-label">EU accelerators (total EuroHPC).<br>Meta alone planned 1.3 million.</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">Of Norwegian electricity<br>from renewable sources.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The Case -->
+<section id="case" class="case">
+  <div class="container fade-in">
+    <p class="section-label">The Case</p>
+    <h2 class="section-title">Europe Has a Structural Absence in the Most Consequential Technology of This Century</h2>
+    <hr class="rule rule--accent" style="margin-bottom: 2.5rem;">
+
+    <p>Artificial general intelligence is being developed almost exclusively by a handful of private American and Chinese corporations. Europe has one frontier AI laboratory &mdash; Mistral, in Paris. Of the 36 AI models that have crossed the 10&#x00B2;&#x2075; FLOP training threshold since GPT-4, 28 came from US labs, six from China, and two from Europe. The combined AI capital expenditure of Microsoft, Google, Amazon, and Meta exceeded $200 billion in 2024. The EU&rsquo;s InvestAI programme mobilises &euro;200 billion &mdash; of which only &euro;20 billion is public money.</p>
+
+    <p>The European Commission has responded with real ambition: nineteen AI Factories, five planned Gigafactories, and an AI Continent Action Plan that promises to triple data centre capacity within seven years. But three independent analyses &mdash; by CEPS, Interface, and the Bertelsmann Stiftung &mdash; converge on the same diagnosis. The Gigafactories lack anchor customers. They are geographically dispersed for political balance rather than concentrated where energy is cheapest and talent is deepest. And they depend almost entirely on NVIDIA&rsquo;s proprietary technology stack, potentially deepening the dependencies they were created to reduce.</p>
+
+    <p>The EU has built a compute layer. It has not built the research organisation that gives compute a purpose. Building AI Factories without a research institution is like constructing a particle accelerator without a physics department.</p>
+
+    <p>Three converging factors create a narrow window of opportunity. The AI architecture is in flux &mdash; state-space models and hybrid approaches may be more compute-efficient than Transformers, favouring innovation over brute-force scaling. Energy has become the binding constraint on AI progress, and Northern Europe has abundant, cheap, clean electricity. And the geopolitical landscape &mdash; US export controls, China&rsquo;s acceleration, NATO&rsquo;s northern expansion &mdash; makes sovereign European AI capability a strategic necessity, not a luxury.</p>
+  </div>
+</section>
+
+<!-- Figure 1: Radar Diagram -->
+<section class="figure-block">
+  <div class="container-wide fade-in">
+    <div class="figure-wrapper">
+      <div class="figure-label-inline">Figure 1</div>
+      <div class="figure-title-inline">The AI Capability Gap: US, China, and Europe Compared</div>
+      <div class="figure-subtitle-inline">Relative positioning across five dimensions of frontier AI capability. Scores are conceptual (1&ndash;10), derived from quantitative and qualitative indicators.</div>
+
+      <div class="fig1-grid">
+        <!-- Compute -->
+        <div class="fig1-dimension">
+          <div class="fig1-dim-label">Compute</div>
+          <div class="fig1-bars">
+            <div class="fig1-bar-row">
+              <div class="fig1-bar-label" data-country="us">US</div>
+              <span class="fig1-bar-value">10</span>
+              <div class="fig1-bar-track"><div class="fig1-bar-fill" data-country="us" style="width: 100%;"></div></div>
+            </div>
+            <div class="fig1-bar-row">
+              <div class="fig1-bar-label" data-country="cn">China</div>
+              <span class="fig1-bar-value">6</span>
+              <div class="fig1-bar-track"><div class="fig1-bar-fill" data-country="cn" style="width: 60%;"></div></div>
+            </div>
+            <div class="fig1-bar-row">
+              <div class="fig1-bar-label" data-country="eu">Europe</div>
+              <span class="fig1-bar-value">2</span>
+              <div class="fig1-bar-track"><div class="fig1-bar-fill" data-country="eu" style="width: 20%;"></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Talent -->
+        <div class="fig1-dimension">
+          <div class="fig1-dim-label">Talent</div>
+          <div class="fig1-bars">
+            <div class="fig1-bar-row">
+              <div class="fig1-bar-label" data-country="us">US</div>
+              <span class="fig1-bar-value">9</span>
+              <div class="fig1-bar-track"><div class="fig1-bar-fill" data-country="us" style="width: 90%;"></div></div>
+            </div>
+            <div class="fig1-bar-row">
+              <div class="fig1-bar-label" data-country="cn">China</div>
+              <span class="fig1-bar-value">7</span>
+              <div class="fig1-bar-track"><div class="fig1-bar-fill" data-country="cn" style="width: 70%;"></div></div>
+            </div>
+            <div class="fig1-bar-row">
+              <div class="fig1-bar-label" data-country="eu">Europe</div>
+              <span class="fig1-bar-value">6</span>
+              <div class="fig1-bar-track"><div class="fig1-bar-fill" data-country="eu" style="width: 60%;"></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Capital -->
+        <div class="fig1-dimension">
+          <div class="fig1-dim-label">Capital</div>
+          <div class="fig1-bars">
+            <div class="fig1-bar-row">
+              <div class="fig1-bar-label" data-country="us">US</div>
+              <span class="fig1-bar-value">10</span>
+              <div class="fig1-bar-track"><div class="fig1-bar-fill" data-country="us" style="width: 100%;"></div></div>
+            </div>
+            <div class="fig1-bar-row">
+              <div class="fig1-bar-label" data-country="cn">China</div>
+              <span class="fig1-bar-value">7</span>
+              <div class="fig1-bar-track"><div class="fig1-bar-fill" data-country="cn" style="width: 70%;"></div></div>
+            </div>
+            <div class="fig1-bar-row">
+              <div class="fig1-bar-label" data-country="eu">Europe</div>
+              <span class="fig1-bar-value">3</span>
+              <div class="fig1-bar-track"><div class="fig1-bar-fill" data-country="eu" style="width: 30%;"></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Data -->
+        <div class="fig1-dimension">
+          <div class="fig1-dim-label">Data</div>
+          <div class="fig1-bars">
+            <div class="fig1-bar-row">
+              <div class="fig1-bar-label" data-country="us">US</div>
+              <span class="fig1-bar-value">9</span>
+              <div class="fig1-bar-track"><div class="fig1-bar-fill" data-country="us" style="width: 90%;"></div></div>
+            </div>
+            <div class="fig1-bar-row">
+              <div class="fig1-bar-label" data-country="cn">China</div>
+              <span class="fig1-bar-value">8</span>
+              <div class="fig1-bar-track"><div class="fig1-bar-fill" data-country="cn" style="width: 80%;"></div></div>
+            </div>
+            <div class="fig1-bar-row">
+              <div class="fig1-bar-label" data-country="eu">Europe</div>
+              <span class="fig1-bar-value">5</span>
+              <div class="fig1-bar-track"><div class="fig1-bar-fill" data-country="eu" style="width: 50%;"></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Energy -->
+        <div class="fig1-dimension">
+          <div class="fig1-dim-label">Energy</div>
+          <div class="fig1-bars">
+            <div class="fig1-bar-row">
+              <div class="fig1-bar-label" data-country="us">US</div>
+              <span class="fig1-bar-value">7</span>
+              <div class="fig1-bar-track"><div class="fig1-bar-fill" data-country="us" style="width: 70%;"></div></div>
+            </div>
+            <div class="fig1-bar-row">
+              <div class="fig1-bar-label" data-country="cn">China</div>
+              <span class="fig1-bar-value">6</span>
+              <div class="fig1-bar-track"><div class="fig1-bar-fill" data-country="cn" style="width: 60%;"></div></div>
+            </div>
+            <div class="fig1-bar-row">
+              <div class="fig1-bar-label" data-country="eu">Europe</div>
+              <span class="fig1-bar-value">8</span>
+              <div class="fig1-bar-track"><div class="fig1-bar-fill" data-country="eu" style="width: 80%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fig1-legend">
+        <div class="fig1-legend-item"><div class="fig1-legend-swatch" style="background: var(--navy);"></div><div class="fig1-legend-text">United States</div></div>
+        <div class="fig1-legend-item"><div class="fig1-legend-swatch" style="background: var(--grey);"></div><div class="fig1-legend-text">China</div></div>
+        <div class="fig1-legend-item"><div class="fig1-legend-swatch" style="background: var(--text);"></div><div class="fig1-legend-text">Europe</div></div>
+      </div>
+
+      <div class="fig1-insight">
+        <p><strong>The gap is structural, not uniform.</strong> Europe <em>leads</em> on energy (8/10) &mdash; Northern Scandinavia&rsquo;s renewable abundance is a genuine strategic advantage. But on compute and capital, the deficit is severe: Europe scores just 2/10 and 3/10 respectively. These are the dimensions where concentrated institutional investment &mdash; exactly what Europa Nova proposes &mdash; can shift the trajectory.</p>
+      </div>
+
+      <div class="figure-source">
+        <strong>Sources:</strong> IEA, <em>Energy and AI</em> (April 2025); Interface/Bertelsmann Stiftung, <em>Built for Purpose?</em> (October 2025); CEPS, <em>Sanctuaries of Innovation or Cathedrals in the Desert?</em> (November 2025); Macro Polo, <em>Global AI Talent Tracker 2.0</em>; Stanford HAI, <em>AI Index Report 2025</em>. Scores are the authors&rsquo; assessment.
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- The Proposal -->
+<section id="proposal" class="pillars">
+  <div class="container-wide fade-in">
+    <p class="section-label">The Proposal</p>
+    <h2 class="section-title">Europa Nova: Three Pillars</h2>
+    <p class="section-intro">An independent, treaty-based European research institution dedicated to developing safe artificial general intelligence. Modelled on CERN, but with a commercial licensing arm. Established by treaty among five to eight nations.</p>
+
+    <div class="pillar-grid">
+      <div class="pillar">
+        <p class="pillar-number">Pillar I</p>
+        <h3>Research Foundation</h3>
+        <p>Governed by nine internationally recruited scientists. Led by a Scientific Director with veto authority on all technical decisions and market-rate compensation. One concentrated research hub in a major European city &mdash; not distributed across capitals. Full publication freedom for fundamental research. The research agenda is set by scientists, not by political bodies.</p>
+      </div>
+      <div class="pillar">
+        <p class="pillar-number">Pillar II</p>
+        <h3>Nordic Compute Infrastructure</h3>
+        <p>Located in Northern Scandinavia, running on 100% renewable hydropower at &euro;0.03/kWh. Arctic cooling reduces energy costs by 30&ndash;60%. Initial capacity: 500MW, expandable to 2GW. OpenAI chose Narvik for Stargate Norway for exactly these reasons. Multi-vendor hardware strategy from day one &mdash; no lock-in to a single provider.</p>
+      </div>
+      <div class="pillar">
+        <p class="pillar-number">Pillar III</p>
+        <h3>Commercial Licensing Entity</h3>
+        <p>Wholly owned by the Foundation. Licenses models, tools, and compute access to European industry and the public sector. Revenue funds the mission. The mission generates the technology. Protected by international treaty, not corporate bylaws. Projected revenue: &euro;500M by year five, rising to &euro;2&ndash;3B annually by years eight to ten.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Figure 2: Energy-Infrastructure Mismatch -->
+<section class="figure-block">
+  <div class="container-wide fade-in">
+    <div class="figure-wrapper">
+      <div class="figure-label-inline">Figure 2</div>
+      <div class="figure-title-inline">The Energy&ndash;Infrastructure Mismatch</div>
+      <div class="figure-subtitle-inline">Where Europe&rsquo;s data centres are vs. where the energy is. The infrastructure is in the wrong place.</div>
+
+      <div class="energy-table-wrap">
+      <table class="energy-table">
+        <thead>
+          <tr>
+            <th>Location</th>
+            <th>Elec. Cost</th>
+            <th>DC Share</th>
+            <th>Grid</th>
+            <th>Renewable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="energy-group-label"><td colspan="5">Established Hubs (FLAP-D) &mdash; 62% of European DC capacity</td></tr>
+          <tr><td>Frankfurt</td><td>&euro;0.12/kWh</td><td>~15%</td><td><span class="energy-status energy-status--red">Saturated</span></td><td>52%</td></tr>
+          <tr><td>London</td><td>&euro;0.10/kWh</td><td>~14%</td><td><span class="energy-status energy-status--red">Constrained</span></td><td>43%</td></tr>
+          <tr><td>Amsterdam</td><td>&euro;0.09/kWh</td><td>~13%</td><td><span class="energy-status energy-status--red">Moratorium</span></td><td>40%</td></tr>
+          <tr><td>Paris</td><td>&euro;0.08/kWh</td><td>~11%</td><td><span class="energy-status energy-status--amber">Moderate</span></td><td>23%</td></tr>
+          <tr><td>Dublin</td><td>&euro;0.11/kWh</td><td>~9%</td><td><span class="energy-status energy-status--red">Critical</span></td><td>36%</td></tr>
+          <tr class="energy-group-label"><td colspan="5">Nordic Emerging &mdash; Fastest-growing region, lowest costs</td></tr>
+          <tr class="energy-highlight"><td>Norway</td><td>&euro;0.03/kWh</td><td>~4%</td><td><span class="energy-status energy-status--green">Abundant</span></td><td>98%</td></tr>
+          <tr class="energy-highlight"><td>Sweden</td><td>&euro;0.04/kWh</td><td>~3%</td><td><span class="energy-status energy-status--green">Abundant</span></td><td>68%</td></tr>
+          <tr class="energy-highlight"><td>Finland</td><td>&euro;0.05/kWh</td><td>~2%</td><td><span class="energy-status energy-status--green">Growing</span></td><td>56%</td></tr>
+          <tr class="energy-highlight"><td>Denmark</td><td>&euro;0.06/kWh</td><td>~2%</td><td><span class="energy-status energy-status--amber">Planned</span></td><td>84%</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="fig1-insight">
+        <p><strong>The mismatch is striking.</strong> FLAP-D hubs hold 62% of data centre capacity but face the highest energy costs and grid saturation. The Nordics offer electricity at one-third to one-quarter of the cost, with abundant grid capacity and near-total renewable supply. OpenAI, Microsoft, and CoreWeave have already committed over $15 billion to Nordic AI infrastructure.</p>
+      </div>
+
+      <div class="figure-source">
+        <strong>Sources:</strong> IEA, <em>Energy and AI</em> (April 2025); Ember (June 2025); Eurostat; Nordic TSOs; public announcements.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Figure 3: The AI Capability Stack -->
+<section class="figure-block">
+  <div class="container-wide fade-in">
+    <div class="figure-wrapper">
+      <div class="figure-label-inline">Figure 3</div>
+      <div class="figure-title-inline">The AI Capability Stack: From Energy to Application</div>
+      <div class="figure-subtitle-inline">EU initiatives address the infrastructure layers. The research and model development layers remain unoccupied.</div>
+
+      <div class="stack-container">
+        <div class="stack-row stack-row--market">
+          <div class="stack-num">5</div>
+          <div class="stack-content">
+            <div class="stack-name">Industrial Application</div>
+            <div class="stack-desc">Deployment in healthcare, energy, defence, finance, public services</div>
+          </div>
+          <div class="stack-owner">Market forces</div>
+        </div>
+        <div class="stack-row stack-row--nova">
+          <div class="stack-num">4</div>
+          <div class="stack-content">
+            <div class="stack-name">Model Development</div>
+            <div class="stack-desc">Pre-training, fine-tuning, evaluation, alignment, release</div>
+          </div>
+          <div class="stack-owner">Europa Nova</div>
+        </div>
+        <div class="stack-row stack-row--nova">
+          <div class="stack-num">3</div>
+          <div class="stack-content">
+            <div class="stack-name">Research &amp; Architecture</div>
+            <div class="stack-desc">Architectural design, data curation, alignment science, talent concentration</div>
+          </div>
+          <div class="stack-owner">Europa Nova</div>
+        </div>
+
+        <div class="stack-gap">
+          <div class="stack-gap-tag">The structural gap</div>
+        </div>
+
+        <div class="stack-row stack-row--eu">
+          <div class="stack-num">2</div>
+          <div class="stack-content">
+            <div class="stack-name">Compute Infrastructure</div>
+            <div class="stack-desc">GPU clusters, networking, storage, cloud services</div>
+          </div>
+          <div class="stack-owner">EU initiatives</div>
+        </div>
+        <div class="stack-row stack-row--eu">
+          <div class="stack-num">1</div>
+          <div class="stack-content">
+            <div class="stack-name">Energy</div>
+            <div class="stack-desc">Renewable power, grid capacity, cooling infrastructure</div>
+          </div>
+          <div class="stack-owner">EU initiatives</div>
+        </div>
+      </div>
+
+      <div class="stack-legend">
+        <div class="stack-legend-item"><div class="stack-legend-mark" style="background: var(--navy);"></div><div class="stack-legend-text">Covered by current EU initiatives</div></div>
+        <div class="stack-legend-item"><div class="stack-legend-mark" style="background: var(--navy); height: 3px;"></div><div class="stack-legend-text">Europa Nova (proposed)</div></div>
+        <div class="stack-legend-item"><div class="stack-legend-mark" style="background: var(--rule);"></div><div class="stack-legend-text">Downstream application (market-driven)</div></div>
+      </div>
+
+      <div class="figure-source">
+        <strong>Source:</strong> Authors&rsquo; analysis. See Chapter 3, Section 3.3 of the full policy paper.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key design principles -->
+<section id="governance">
+  <div class="container fade-in">
+    <p class="section-label">Governance</p>
+    <h2 class="section-title">Six Principles, Each a Response to a Documented European Failure</h2>
+    <hr class="rule rule--accent" style="margin-bottom: 2.5rem;">
+    <p class="principle"><strong>Concentration over distribution</strong> &mdash; because dispersed resources produce dispersed mediocrity. CERN works because it is in Geneva.</p>
+    <p class="principle"><strong>Scientific autonomy</strong> &mdash; because political direction of research produces incremental work. The Scientific Director controls the programme.</p>
+    <p class="principle"><strong>Market-rate compensation</strong> &mdash; because 57% of the world&rsquo;s top AI researchers already work in the United States. The alternative to paying market rates is not cheaper talent. It is no talent.</p>
+    <p class="principle"><strong>A sunset clause at year three</strong> &mdash; independent evaluation, orderly wind-down if results are insufficient. This is what makes the proposal credible to sceptics.</p>
+    <p class="principle"><strong>No <em>juste retour</em></strong> &mdash; because Airbus&rsquo;s decades of workshare distortions demonstrate the cost of proportional return.</p>
+    <p class="principle"><strong>Democratic oversight without operational control</strong> &mdash; modelled on central bank independence. The public has a right to know. It does not direct experiments.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- Funding -->
+<section id="funding">
+  <div class="container fade-in">
+    <p class="section-label">Funding</p>
+    <h2 class="section-title">&euro;50 Billion Over Ten Years</h2>
+    <hr class="rule rule--accent" style="margin-bottom: 2.5rem;">
+    <p style="font-size: 1rem; line-height: 1.8; color: var(--grey); margin-bottom: 1.5rem;">Sovereign treaty contributions from five to eight nations provide approximately &euro;3 billion per year. A 1&ndash;2% allocation from Norway&rsquo;s Government Pension Fund Global &mdash; structured as infrastructure investment with residual value, not a grant &mdash; provides anchor capital. Commercial licensing revenue from year four progressively reduces the need for sovereign contributions. EIB co-financing covers physical infrastructure.</p>
+    <p style="font-size: 1rem; line-height: 1.8; color: var(--grey); margin-bottom: 2rem;">Context: OpenAI&rsquo;s Stargate is $500 billion. Microsoft alone spent $80 billion on AI infrastructure in fiscal 2025. Europa Nova&rsquo;s &euro;5 billion per year is roughly four times CERN&rsquo;s budget. It is the minimum credible stake in a contest where the buy-in rises every quarter.</p>
+
+    <p class="section-label" style="margin-bottom: 0.75rem;">Illustrative National Allocation</p>
+    <div class="contrib-grid">
+      <div class="contrib-item">
+        <div class="contrib-country">Germany</div>
+        <div class="contrib-amount">&euro;800M</div>
+        <div class="contrib-context">Less than annual Bundeswehr increase</div>
+      </div>
+      <div class="contrib-item">
+        <div class="contrib-country">France</div>
+        <div class="contrib-amount">&euro;600M</div>
+        <div class="contrib-context">Comparable to France 2030 AI allocation</div>
+      </div>
+      <div class="contrib-item">
+        <div class="contrib-country">United Kingdom</div>
+        <div class="contrib-amount">&euro;500M</div>
+        <div class="contrib-context">Post-Brexit strategic re-engagement</div>
+      </div>
+      <div class="contrib-item">
+        <div class="contrib-country">Norway</div>
+        <div class="contrib-amount">&euro;400M</div>
+        <div class="contrib-context">Host-nation premium. ~0.08% of GDP</div>
+      </div>
+      <div class="contrib-item">
+        <div class="contrib-country">Sweden</div>
+        <div class="contrib-amount">&euro;250M</div>
+        <div class="contrib-context">Nordic cluster co-host</div>
+      </div>
+      <div class="contrib-item">
+        <div class="contrib-country">Netherlands</div>
+        <div class="contrib-amount">&euro;200M</div>
+        <div class="contrib-context">ASML ecosystem synergy</div>
+      </div>
+      <div class="contrib-item">
+        <div class="contrib-country">Switzerland</div>
+        <div class="contrib-amount">&euro;150M</div>
+        <div class="contrib-context">CERN model precedent</div>
+      </div>
+      <div class="contrib-item">
+        <div class="contrib-country">Finland</div>
+        <div class="contrib-amount">&euro;100M</div>
+        <div class="contrib-context">AI leadership ambition (Silo AI heritage)</div>
+      </div>
+    </div>
+    <p style="font-family: var(--sans); font-size: 0.6rem; color: var(--grey); text-align: center;">Total: &euro;3 billion per year &middot; &euro;30 billion over ten years &middot; Each contribution is less than 0.06% of the nation&rsquo;s annual budget</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- Timeline -->
+<section id="roadmap">
+  <div class="container-wide fade-in">
+    <p class="section-label">Roadmap</p>
+    <h2 class="section-title">Phased Implementation</h2>
+    <hr class="rule rule--accent" style="margin-bottom: 2rem;">
+
+    <div class="timeline-grid">
+      <div class="timeline-phase">
+        <div class="timeline-period">Years 0&ndash;1</div>
+        <div class="timeline-title">Treaty &amp; Foundation</div>
+        <div class="timeline-desc">Treaty negotiation among founding nations. Board and Scientific Director appointment. Site selection for research hub. Begin compute facility construction in Northern Scandinavia.</div>
+      </div>
+      <div class="timeline-phase">
+        <div class="timeline-period">Years 1&ndash;3</div>
+        <div class="timeline-title">Research Launch</div>
+        <div class="timeline-desc">First 200&ndash;500 researchers hired. Initial compute capacity online (500MW). First architectural research outputs. Year-three independent evaluation gate.</div>
+      </div>
+      <div class="timeline-phase">
+        <div class="timeline-period">Years 3&ndash;5</div>
+        <div class="timeline-title">Scale &amp; Commercialise</div>
+        <div class="timeline-desc">Commercial Licensing Entity begins operations. First model releases. Revenue generation starts. Compute expansion to 1GW+. Projected revenue: &euro;500M by year five.</div>
+      </div>
+      <div class="timeline-phase">
+        <div class="timeline-period">Years 5&ndash;10</div>
+        <div class="timeline-title">Frontier Capability</div>
+        <div class="timeline-desc">Full-scale operations. Revenue of &euro;2&ndash;3B annually. Sovereign contributions progressively reduced. Europa Nova as anchor institution for European AI capability.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container fade-in">
+    <p class="section-label">Questions and Objections</p>
+    <h2 class="section-title" style="margin-bottom: 2rem;">The Hardest Questions, Addressed Directly</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">&euro;50 billion is too expensive.</div>
+      <div class="faq-a">It is a large number. It is also less than what Microsoft alone spent on AI infrastructure in a single fiscal year ($80 billion in FY2025). OpenAI&rsquo;s Stargate initiative represents $500 billion. The EU&rsquo;s own InvestAI commits &euro;200 billion. Europa Nova&rsquo;s &euro;5 billion per year, shared across eight nations, is roughly four times CERN and two-thirds of ESA. The question is not whether &euro;50 billion is a lot of money. It is. The question is whether it is proportionate to the stakes of being permanently dependent on foreign AI systems for every sector of the European economy.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Europe has tried large-scale technology projects before and failed.</div>
+      <div class="faq-a">Europe has also tried them and succeeded. CERN has produced twelve Nobel Prizes and the World Wide Web. ESA operates the Galileo navigation system and the Copernicus earth observation programme. The difference between success and failure is governance design, not ambition. Europa Nova&rsquo;s governance is explicitly engineered to avoid the documented failure modes: Galileo&rsquo;s governance ambiguity, Airbus&rsquo;s workshare distortions, EuroHPC&rsquo;s geographical dispersion. The year-three evaluation gate ensures the project either delivers or is shut down &mdash; no zombie projects.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Why not just improve the EU&rsquo;s existing AI Factory and Gigafactory initiatives?</div>
+      <div class="faq-a">Europa Nova does not replace those initiatives &mdash; it complements them. The AI Factories provide compute infrastructure. But compute without a research organisation to direct it is an expensive commodity. Three independent analyses (CEPS, Interface, Bertelsmann Stiftung) all conclude that the current approach addresses infrastructure but not the research organisation, architectural ambition, or talent concentration needed for frontier AI. Europa Nova is the missing layer &mdash; and it would be the anchor customer that the Gigafactories currently lack.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Who would lead this? Where do you find a Scientific Director of the required calibre?</div>
+      <div class="faq-a">The same global talent pool that staffs Google DeepMind, Anthropic, and OpenAI. Europa Nova offers something industry cannot: genuine research freedom unconstrained by quarterly product cycles, full publication rights for fundamental research, and the opportunity to shape a foundational institution. Compensation at &euro;1&ndash;2 million matches industry base salaries. The search must be international, conducted by a committee of recognised AI researchers, not by national nomination.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Why a treaty and not an EU regulation?</div>
+      <div class="faq-a">Because consensus among twenty-seven member states produces compromise, and compromise produces mediocrity. A treaty among five to eight willing and capable nations can make harder choices and sustain them across political cycles. CERN was founded by twelve states. ESO by five. Both achieved world leadership precisely because they were not subject to the full EU legislative machinery. A treaty also naturally includes the United Kingdom &mdash; home to DeepMind and the AI Safety Institute &mdash; which any EU-only framework would exclude.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Why Northern Scandinavia for the compute infrastructure?</div>
+      <div class="faq-a">Physics and economics. Norway generates 98% of its electricity from renewables. Long-term Nordic power contracts secure rates at &euro;0.03/kWh &mdash; a fraction of Frankfurt or Dublin prices. Arctic temperatures reduce cooling costs by 30&ndash;60%. Grid reliability in Finland reached 99.99995% in 2025. The market has already validated this: OpenAI, Microsoft, and CoreWeave collectively committed over $15 billion to Nordic AI infrastructure in 2025. The researchers do not live at the compute facility &mdash; they work at the research hub in a major European city, connected by dedicated fibre.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What if the project fails?</div>
+      <div class="faq-a">The treaty includes provisions for orderly wind-down after the year-three evaluation. If Europa Nova is terminated at year three, total expenditure is approximately &euro;12&ndash;15 billion. The compute infrastructure &mdash; data centres, power connections, cooling systems &mdash; retains value as European data centre capacity and can be sold or repurposed. The worst case is not &euro;15 billion lost. It is &euro;15 billion partially recoverable through asset disposal. The alternative &mdash; permanent dependence on foreign AI systems &mdash; has no asset recovery at all.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Is this really about AGI, or is that an overstatement?</div>
+      <div class="faq-a">It is about the trajectory. Whether artificial general intelligence arrives in five years or twenty, the institutions, the infrastructure, and the talent required to develop it are being assembled now. The organisations that build the precursor systems will build the successors. Europa Nova&rsquo;s mandate is deliberately broad: not generative AI specifically, but general intelligence through whatever architecture proves most effective.</div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- Endorsements -->
+<section id="endorsements" class="endorsements">
+  <div class="container fade-in">
+    <p class="section-label">Endorsements</p>
+    <h2 class="section-title">Signatories</h2>
+    <hr class="rule rule--accent" style="margin-bottom: 2.5rem;">
+
+    <div class="endorsement-note">
+      This letter is open for endorsement by researchers, policymakers, industry leaders, and citizens who share the conviction that Europe must be a co-author of humanity&rsquo;s most powerful technology. First signatories will be announced in the coming months. To express your support, use the form below.
+    </div>
+  </div>
+</section>
+
+<!-- Support -->
+<section id="support">
+  <div class="container fade-in">
+    <p class="section-label">Express Support</p>
+    <h2 class="section-title">Add Your Voice</h2>
+    <p class="section-intro">Expressions of support are reviewed before publication. Submitting this form does not automatically add your name to the public signatory list.</p>
+
+    <form class="support-form" id="supportForm">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="title">Title / Role</label>
+          <input type="text" id="title" name="title" autocomplete="organization-title">
+        </div>
+        <div class="form-field">
+          <label for="org">Organisation</label>
+          <input type="text" id="org" name="organisation" autocomplete="organization">
+        </div>
+      </div>
+      <div class="form-row form-row--full">
+        <div class="form-field">
+          <label for="category">I am a...</label>
+          <select id="category" name="category">
+            <option value="">Select one</option>
+            <option value="researcher">Researcher / Academic</option>
+            <option value="policymaker">Policymaker / Government Official</option>
+            <option value="industry">Industry Leader / Executive</option>
+            <option value="investor">Investor / Fund Manager</option>
+            <option value="citizen">Engaged Citizen</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row form-row--full">
+        <div class="form-field">
+          <label for="message">Message (optional)</label>
+          <textarea id="message" name="message" placeholder="Why does this matter to you?"></textarea>
+        </div>
+      </div>
+      <div style="margin-top: 0.5rem;">
+        <button type="submit" class="btn btn--primary" style="border: none; cursor: pointer;">Submit Expression of Support</button>
+      </div>
+    </form>
+
+    <div class="form-success" id="formSuccess">
+      Thank you for your expression of support. Your submission has been received and will be reviewed. We will be in touch if your endorsement is selected for publication.
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container-wide">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-mark">EUROPA NOVA</p>
+        <p>A policy proposal for a treaty-based European research institution dedicated to developing safe artificial general intelligence.</p>
+        <p style="margin-top: 1rem;">March 2026 &middot; For Public Distribution</p>
+      </div>
+      <div>
+        <p class="footer-heading">Documents</p>
+        <ul class="footer-links">
+          <li><a href="open-letter.html">Open Letter</a></li>
+          <li><a href="full-paper.html">Full Policy Paper</a></li>
+          <li><a href="full-paper.html#executive-summary">Executive Summary</a></li>
+          <li><a href="brand-guide.html">Brand Guidelines</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <ul class="footer-links">
+          <li><a href="mailto:contact@europa-nova.eu">contact@europa-nova.eu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Europa Nova Initiative. This document and website are released for public distribution and discussion.
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── FAQ toggle ──
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+// ── Scroll fade-in ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ── Smooth scroll for nav links ──
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const href = a.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
+    if (target) {
+      e.preventDefault();
+      const navHeight = document.getElementById('mainNav').offsetHeight;
+      const targetPos = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+      window.scrollTo({ top: targetPos, behavior: 'smooth' });
+      // Close mobile menu
+      closeMobileMenu();
+    }
+  });
+});
+
+// ── Nav hide/show on scroll ──
+let lastScroll = 0;
+const nav = document.getElementById('mainNav');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.scrollY;
+  if (currentScroll <= 80) {
+    nav.classList.remove('nav-hidden');
+  } else if (currentScroll > lastScroll && currentScroll > 200) {
+    nav.classList.add('nav-hidden');
+    closeMobileMenu();
+  } else if (currentScroll < lastScroll - 5) {
+    nav.classList.remove('nav-hidden');
+  }
+  lastScroll = currentScroll;
+}, { passive: true });
+
+// ── Active section tracking ──
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a[data-section]');
+
+function updateActiveNav() {
+  const scrollPos = window.scrollY + 120;
+  let currentSection = '';
+  sections.forEach(section => {
+    if (section.offsetTop <= scrollPos) {
+      currentSection = section.id;
+    }
+  });
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.dataset.section === currentSection);
+  });
+}
+
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+updateActiveNav();
+
+// ── Progress bar ──
+const progressBar = document.getElementById('progressBar');
+function updateProgress() {
+  const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrolled = (window.scrollY / scrollHeight) * 100;
+  progressBar.style.width = scrolled + '%';
+}
+window.addEventListener('scroll', updateProgress, { passive: true });
+
+// ── Mobile hamburger ──
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+let menuOpen = false;
+
+function closeMobileMenu() {
+  menuOpen = false;
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('visible');
+  setTimeout(() => {
+    if (!menuOpen) mobileMenu.style.display = 'none';
+  }, 250);
+}
+
+hamburger.addEventListener('click', () => {
+  menuOpen = !menuOpen;
+  hamburger.classList.toggle('open');
+  if (menuOpen) {
+    mobileMenu.style.display = 'block';
+    requestAnimationFrame(() => {
+      mobileMenu.classList.add('visible');
+    });
+  } else {
+    closeMobileMenu();
+  }
+});
+
+document.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', () => {
+    closeMobileMenu();
+  });
+});
+
+// ── Form handling ──
+const form = document.getElementById('supportForm');
+const formSuccess = document.getElementById('formSuccess');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  // In production, this would submit to a backend
+  form.style.display = 'none';
+  formSuccess.classList.add('visible');
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Letter — Europa Nova</title>
+<meta name="description" content="An open letter to European heads of state proposing Europa Nova, a treaty-based European research institution for sovereign artificial general intelligence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy: #2C4A6E;
+  --text: #1D1D1D;
+  --grey: #8C8C7E;
+  --light: #F7F7F4;
+  --lighter: #FAFAF8;
+  --rule: rgba(44, 74, 110, 0.18);
+  --white: #FFFFFF;
+  --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --sans: 'DM Sans', 'Calibri', 'Helvetica Neue', sans-serif;
+  --max-w: 680px;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--serif);
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.75;
+}
+
+::selection {
+  background: var(--navy);
+  color: var(--white);
+}
+
+/* ── Navigation ── */
+.doc-nav {
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--rule);
+  z-index: 100;
+  padding: 0.75rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.doc-nav a {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.doc-nav a:hover { opacity: 0.7; }
+
+/* ── Container ── */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ── Header ── */
+.doc-header {
+  padding: 5rem 0 3rem;
+  border-bottom: 2px solid var(--navy);
+  margin-bottom: 3rem;
+}
+
+.doc-header .kicker {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 1rem;
+}
+
+.doc-header h1 {
+  font-family: var(--sans);
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.doc-header .subtitle {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--grey);
+  line-height: 1.5;
+}
+
+.doc-header .meta {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  color: var(--grey);
+  margin-top: 1.5rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── Body ── */
+.doc-body {
+  padding-bottom: 5rem;
+}
+
+.doc-body h2 {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 3rem 0 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+
+.doc-body h2:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.doc-body h3 {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 2rem 0 0.75rem;
+}
+
+.doc-body p {
+  margin-bottom: 1.25rem;
+}
+
+.doc-body .lead {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.doc-body .pullquote {
+  border-left: 3px solid var(--navy);
+  padding: 0.75rem 0 0.75rem 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: var(--grey);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* ── Stats Grid ── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.stat-item .stat-num {
+  font-family: var(--sans);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+}
+
+.stat-item .stat-label {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  color: var(--grey);
+  margin-top: 0.25rem;
+  line-height: 1.4;
+}
+
+/* ── Pillar ── */
+.pillar {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  background: var(--lighter);
+  border-left: 3px solid var(--navy);
+}
+
+.pillar .pillar-name {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.35rem;
+}
+
+.pillar p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* ── Timeline ── */
+.timeline-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.timeline-item .tl-period {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.timeline-item .tl-title {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-item p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* ── CTA ── */
+.doc-cta {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+}
+
+.doc-cta p {
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 1.25rem;
+}
+
+.doc-cta a {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  border: 1.5px solid var(--white);
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.doc-cta a:hover {
+  background: var(--white);
+  color: var(--navy);
+  opacity: 1;
+}
+
+/* ── Footer ── */
+.doc-footer {
+  padding: 2rem 0;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+}
+
+.doc-footer p {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  color: var(--grey);
+}
+
+.doc-footer a {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  html { font-size: 16px; }
+  .doc-header h1 { font-size: 1.8rem; }
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .timeline-item { grid-template-columns: 80px 1fr; }
+  .container { padding: 0 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="doc-nav">
+  <a href="index.html" style="display:inline-flex;align-items:center;gap:0.4rem;"><svg width="22" height="22" viewBox="0 0 200 200" fill="none"><rect x="16" y="16" width="168" height="168" stroke="#2C4A6E" stroke-width="6" fill="none" rx="4"/><text x="100" y="100" text-anchor="middle" dominant-baseline="central" font-family="'DM Sans',Calibri,sans-serif" font-weight="700" font-size="82" fill="#2C4A6E" letter-spacing="-2">EN</text></svg> Europa Nova</a>
+  <a href="full-paper.html">Read the Full Paper &rarr;</a>
+</nav>
+
+<article class="container">
+  <header class="doc-header">
+    <p class="kicker">An Open Letter to European Heads of State</p>
+    <h1>Europa Nova</h1>
+    <p class="subtitle">A Sovereign European Initiative for Artificial General Intelligence</p>
+    <p class="meta">March 2026 &middot; For Public Distribution</p>
+  </header>
+
+  <div class="doc-body">
+    <p class="lead">The question is not whether artificial general intelligence will arrive. The question is whether Europe will have any say in what it becomes.</p>
+
+    <h2>The Uncomfortable Truth</h2>
+
+    <p>We address this letter to you not with alarm, but with clarity. As you read this, the most consequential technology in human history is being developed almost exclusively by a handful of private American and Chinese corporations. The decisions these organisations make about artificial general intelligence &mdash; how it reasons, what values it embodies, whose interests it serves &mdash; will reshape every economy, every institution, and every society on Earth within the next decade.</p>
+
+    <p>Europe has no seat at this table. Not because we lack the talent, the scientific tradition, or the resources. But because we have failed to commit. We have authored regulations while others built infrastructure. We have published strategies while others trained models. We have distributed funding across 27 nations in the name of fairness while our competitors concentrated resources in the name of results.</p>
+
+    <p>This letter proposes a different path. Not another framework, not another action plan, not another consortium of committees. We propose a single, decisive act of sovereign ambition: the creation of Europa Nova &mdash; an independent, treaty-based European institution dedicated to the development of artificial general intelligence that reflects European values, serves European citizens, and positions Europe as a co-author of humanity&rsquo;s most powerful technology.</p>
+
+    <div class="pullquote">
+      Europe&rsquo;s share of global data centre capacity has fallen from 25% in 2015 to 15% in 2024. If we compete in yesterday&rsquo;s race, we lose. If we define tomorrow&rsquo;s, we lead.
+    </div>
+
+    <h2>Why This Moment Matters</h2>
+
+    <p>Three developments have converged to create a narrow but real window of opportunity for Europe.</p>
+
+    <h3>1. The Architecture Is Not Settled</h3>
+
+    <p>The Transformer architecture that underpins today&rsquo;s leading models is almost certainly not the endpoint. Research into state-space models, continuous-time architectures, and hybrid attention mechanisms suggests that fundamentally more compute-efficient approaches are within reach. A European initiative that begins now is not entering a race already lost &mdash; it is positioning itself for the next paradigm, where architectural innovation matters more than brute-force scaling.</p>
+
+    <h3>2. Energy Has Become the Decisive Constraint</h3>
+
+    <p>Training frontier AI models requires extraordinary amounts of electricity. The established data centre hubs in Frankfurt, London, Amsterdam, and Dublin are facing severe grid congestion. Wait times for grid connections in EU countries now range from two to ten years. Meanwhile, the Nordic countries &mdash; Norway, Sweden, Finland, and Iceland &mdash; possess an abundance of renewable hydroelectric and wind power at a fraction of the cost. Northern Europe&rsquo;s cool climate reduces cooling costs by 30&ndash;60% compared to conventional locations. Europe&rsquo;s perceived weakness &mdash; the absence of concentrated tech infrastructure &mdash; becomes a strength when the bottleneck shifts from software to energy.</p>
+
+    <h3>3. The Geopolitical Window Is Open</h3>
+
+    <p>Current US policy on AI export controls, combined with growing concerns about digital sovereignty, means that dependence on American AI infrastructure carries real strategic risk. The EU has recognised this through its AI Continent Action Plan and InvestAI initiative. But recognition is not the same as execution. Europe needs a vehicle that can move at the speed of technology, not the speed of bureaucracy.</p>
+
+    <h2>What We Propose: Europa Nova</h2>
+
+    <p>Europa Nova is a sovereign European research institution, established by international treaty, dedicated to the development of safe artificial general intelligence. It is modelled not on EU agencies, but on CERN &mdash; an institution that proved Europe can lead the world in fundamental research when it commits fully.</p>
+
+    <p>But Europa Nova differs from CERN in one critical respect: AGI is not only a scientific endeavour. It is an economic and strategic one. Therefore, Europa Nova is designed from the outset to translate research into industrial capability, with a commercial licensing arm that ensures Europe captures the economic value of its investment.</p>
+
+    <h3>Organisational Structure</h3>
+
+    <div class="pillar">
+      <p class="pillar-name">The Research Foundation</p>
+      <p>The scientific core. Governed by a board of nine internationally recognised researchers and technologists &mdash; not political appointees &mdash; with a Scientific Director who holds veto authority on all technical decisions. Research is conducted at a single primary hub. There is no geographical distribution for political balance.</p>
+    </div>
+
+    <div class="pillar">
+      <p class="pillar-name">The Compute Infrastructure Division</p>
+      <p>Responsible for building and operating the physical computing infrastructure. Located in Northern Scandinavia, running entirely on renewable hydroelectric power, employing closed-loop liquid cooling, and returning waste heat to local communities. Designed from the outset for gigawatt-scale operations.</p>
+    </div>
+
+    <div class="pillar">
+      <p class="pillar-name">The Commercial Licensing Entity</p>
+      <p>100% owned by the Foundation but operates with commercial autonomy. Licenses Europa Nova&rsquo;s models, tools, and infrastructure to European and global enterprises. Revenue flows back to the Foundation, creating a self-sustaining cycle of investment.</p>
+    </div>
+
+    <h2>The Nordic Compute Advantage</h2>
+
+    <p>The location of Europa Nova&rsquo;s compute infrastructure is not a political choice. It is an economic and physical necessity.</p>
+
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num">98%</div>
+        <div class="stat-label">Renewable energy share,<br>Norwegian electricity</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">&euro;0.03/kWh</div>
+        <div class="stat-label">Cost of long-term Nordic<br>power purchase agreements</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">30&ndash;60%</div>
+        <div class="stat-label">Cooling cost reduction vs.<br>conventional locations</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">99.99995%</div>
+        <div class="stat-label">Grid reliability in Finland<br>(transmission main grid)</div>
+      </div>
+    </div>
+
+    <p>The market has already validated this logic. In July 2025, OpenAI announced Stargate Norway, its first European AI data centre, located near Narvik in northern Norway. Microsoft, CoreWeave, and Brookfield collectively committed over $15 billion to Nordic AI infrastructure in 2025 alone.</p>
+
+    <h2>Funding: Ambitious but Realistic</h2>
+
+    <p>Europa Nova requires a committed investment of &euro;50 billion over ten years, with a minimum of &euro;5 billion annually. This is substantial. It is also modest compared to what the competition is spending. OpenAI&rsquo;s Stargate initiative alone represents $500 billion in planned US AI infrastructure investment.</p>
+
+    <p><strong>Treaty-based sovereign contributions</strong> from 5&ndash;8 participating nations provide the foundational &euro;3 billion per year. This is not subject to annual budget negotiations. It is a treaty obligation.</p>
+
+    <p><strong>Strategic sovereign wealth fund allocation.</strong> Norway&rsquo;s Government Pension Fund Global, the world&rsquo;s largest sovereign wealth fund at approximately $1.7 trillion, represents a unique European asset. A dedicated allocation of 1&ndash;2% &mdash; structured as an investment, not a grant &mdash; would provide anchor capital.</p>
+
+    <p><strong>Commercial revenue</strong> from licensing is projected to contribute meaningfully from year 4&ndash;5 onward, progressively reducing the need for sovereign contributions.</p>
+
+    <p><strong>European Investment Bank co-financing</strong> for physical infrastructure leverages the EIB&rsquo;s existing commitment to AI gigafactory financing.</p>
+
+    <h2>Governance: Designed to Succeed, Not to Compromise</h2>
+
+    <p>The single greatest risk to Europa Nova is not technical. It is organisational. European large-scale technology projects have repeatedly failed because governance was designed for political legitimacy rather than operational excellence. Europa Nova is designed differently.</p>
+
+    <p><strong>A small founding coalition,</strong> not a continental committee. Five to eight nations with demonstrated AI capability and political will: France, Germany, the United Kingdom, Norway, Sweden, the Netherlands, Switzerland, and Finland.</p>
+
+    <p><strong>Scientific leadership with real authority.</strong> The Scientific Director is recruited from the global top tier of AI research and has veto power on all technical decisions. Compensation is set at market rates &mdash; competitive with Anthropic, Google DeepMind, and OpenAI.</p>
+
+    <p><strong>A rigorous sunset mechanism.</strong> After three years, an independent external panel conducts a comprehensive evaluation. If Europa Nova is not on a credible trajectory, the treaty includes provisions for orderly wind-down. This is not a concession to sceptics. It is a commitment to excellence.</p>
+
+    <p><strong>No geographical distribution of research.</strong> One primary research hub. One primary compute facility. Not a &ldquo;centre of excellence&rdquo; in every participating nation. CERN works because it is in Geneva. Europa Nova works because it is concentrated.</p>
+
+    <h2>The Talent Equation</h2>
+
+    <p>Europe produces world-class AI researchers and then loses them. Yann LeCun is French &mdash; he works at Meta in New York. Demis Hassabis is British &mdash; DeepMind is owned by Google. This brain drain is not inevitable. It is the consequence of a gap that Europa Nova is specifically designed to close.</p>
+
+    <p>Three factors attract and retain top research talent: compensation, research freedom, and compute access. Europa Nova addresses all three. A fourth factor is often overlooked: quality of life. Zurich, Amsterdam, Stockholm, and Oslo are consistently ranked among the world&rsquo;s most liveable cities &mdash; a genuine competitive advantage over San Francisco.</p>
+
+    <h2>A European Approach to Values and Openness</h2>
+
+    <p><strong>Stratified openness.</strong> Fundamental research and architectural innovations are published openly. Pre-training models up to a defined capability threshold are released with open weights. Models above the threshold are available through controlled licensing. Alignment and safety research is always open.</p>
+
+    <p><strong>Annotated diversity, not artificial balance.</strong> Europa Nova&rsquo;s training data does not attempt to artificially balance perspectives. Instead, data sources are annotated with provenance, perspective, and context as metadata. The model learns that perspectives exist and differ &mdash; it does not learn that all perspectives are equally prevalent.</p>
+
+    <p><strong>Democratic oversight with technical competence.</strong> An Advisory Council of parliamentarians provides democratic accountability, but without operational control.</p>
+
+    <h2>Proposed Timeline</h2>
+
+    <div class="timeline-item">
+      <div class="tl-period">Year 0&ndash;1</div>
+      <div>
+        <div class="tl-title">Foundation</div>
+        <p>Treaty negotiation and signing. Recruitment of Scientific Director. Site selection. Establishment of the commercial licensing entity.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-period">Year 1&ndash;3</div>
+      <div>
+        <div class="tl-title">Build</div>
+        <p>Construction of primary compute facility (500MW, expandable to 2GW). Research hub established. 200&ndash;400 researchers recruited. First architectural results.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-period">Year 3</div>
+      <div>
+        <div class="tl-title">Evaluation Gate</div>
+        <p>Independent external assessment. Continue/terminate decision based on scientific progress, not political considerations.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-period">Year 3&ndash;7</div>
+      <div>
+        <div class="tl-title">Scale</div>
+        <p>Gigawatt-scale compute. First Europa Nova foundation models. Commercial licensing begins. Compute access for European SMEs and researchers.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-period">Year 7&ndash;10</div>
+      <div>
+        <div class="tl-title">Frontier</div>
+        <p>Europa Nova operates at the frontier of AGI research. Self-sustaining revenue from commercial licensing. Europe possesses sovereign capability.</p>
+      </div>
+    </div>
+
+    <h2>A Call for Sovereign Ambition</h2>
+
+    <p>We have no illusion about the difficulty of what we propose. It requires political courage to concentrate resources rather than distribute them. It requires institutional innovation to create a structure that moves at the speed of technology rather than the speed of diplomacy. It requires financial commitment at a scale that will face scrutiny, and a tolerance for the possibility of failure that is foreign to most public-sector thinking.</p>
+
+    <p>But consider the alternative. Without sovereign AGI capability, Europe becomes a consumer of intelligence designed elsewhere, embedded with values chosen by others, governed by rules written without European input. Every European industry &mdash; automotive, financial services, healthcare, energy, defence &mdash; will depend on AI systems over which Europe has no influence and no recourse.</p>
+
+    <div class="pullquote">
+      That is not a future worthy of a continent that invented the scientific method, built the institutions of liberal democracy, and has, when it chose to, led the world in fundamental research.
+    </div>
+
+    <p>Europa Nova is not an expense. It is the investment that determines whether Europe remains a subject of history or becomes its object.</p>
+
+    <p>We invite the heads of state of European nations &mdash; beginning with those who recognise both the urgency and the opportunity &mdash; to convene a founding summit within the next twelve months. Not to discuss whether Europe should act, but to decide how.</p>
+
+    <p><strong>The technology will not wait. The question is whether we will.</strong></p>
+
+    <div class="doc-cta">
+      <p>This letter is an open invitation for endorsement by researchers, industry leaders, policymakers, and citizens who share the conviction that Europe must be a co-author of humanity&rsquo;s most powerful technology.</p>
+      <a href="index.html#support">Express Your Support</a>
+    </div>
+  </div>
+</article>
+
+<footer class="doc-footer container">
+  <p><a href="index.html">Europa Nova</a> &middot; <a href="full-paper.html">Full Policy Paper</a> &middot; <a href="brand-guide.html">Brand Guidelines</a> &middot; March 2026</p>
+</footer>
+
+</body>
+</html>
