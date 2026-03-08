@@ -1766,7 +1766,11 @@ footer p {
     <h2 class="section-title">Add Your Voice</h2>
     <p class="section-intro">Expressions of support are reviewed before publication. Submitting this form does not automatically add your name to the public signatory list.<br>You can also reach us directly at <a href="mailto:support@europa-nova.eu" style="color:var(--navy);font-weight:600;">support@europa-nova.eu</a>.</p>
 
-    <form class="support-form" id="supportForm">
+    <form class="support-form" id="supportForm" action="https://formsubmit.co/support@europa-nova.eu" method="POST">
+      <input type="hidden" name="_subject" value="New Expression of Support — Europa Nova">
+      <input type="hidden" name="_next" value="https://europa-nova.eu/thank-you.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
       <div class="form-row">
         <div class="form-field">
           <label for="name">Full Name</label>
@@ -1968,15 +1972,8 @@ document.querySelectorAll('.mobile-link').forEach(link => {
 });
 
 // ── Form handling ──
-const form = document.getElementById('supportForm');
-const formSuccess = document.getElementById('formSuccess');
-
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  // In production, this would submit to a backend
-  form.style.display = 'none';
-  formSuccess.classList.add('visible');
-});
+// Form now submits via formsubmit.co to support@europa-nova.eu
+// Redirect after submission is handled by _next hidden field
 </script>
 
 </body>
