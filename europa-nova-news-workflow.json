@@ -53,7 +53,7 @@
       "typeVersion": 2,
       "position": [600, 0],
       "parameters": {
-        "jsCode": "const { feeds, previousItems } = $json;\nconst fourteenDaysAgo = new Date(Date.now() - 14 * 24 * 60 * 60 * 1000);\n\nfunction extractTag(xml, tag) {\n  // Handle CDATA\n  const cdataRe = new RegExp('<' + tag + '>\\\\s*<!\\\\[CDATA\\\\[([\\\\s\\\\S]*?)\\\\]\\\\]>\\\\s*</' + tag + '>', 'i');\n  const cdataMatch = xml.match(cdataRe);\n  if (cdataMatch) return cdataMatch[1].trim();\n\n  // Handle plain text\n  const plainRe = new RegExp('<' + tag + '[^>]*>([\\\\s\\\\S]*?)</' + tag + '>', 'i');\n  const plainMatch = xml.match(plainRe);\n  if (plainMatch) return plainMatch[1].replace(/<[^>]*>/g, '').trim();\n\n  return '';\n}\n\nconst allItems = [];\n\nfor (const feed of feeds) {\n  const { xml, name } = feed;\n  const itemMatches = xml.match(/<item>[\\s\\S]*?<\\/item>/g) || [];\n\n  for (const itemXml of itemMatches) {\n    const title = extractTag(itemXml, 'title');\n    const link = extractTag(itemXml, 'link') || (itemXml.match(/href=\"([^\"]+)\"/) || [])[1] || '';\n    const pubDate = extractTag(itemXml, 'pubDate');\n    const description = extractTag(itemXml, 'description').substring(0, 400);\n\n    if (!title || !link) continue;\n\n    const itemDate = pubDate ? new Date(pubDate) : new Date();\n    if (isNaN(itemDate.getTime()) || itemDate < fourteenDaysAgo) continue;\n\n    allItems.push({ title, link, pubDate: itemDate.toISOString(), description, source: name });\n  }\n}\n\n// Deduplicate by URL\nconst seen = new Set();\nconst unique = allItems.filter(item => {\n  if (seen.has(item.link)) return false;\n  seen.add(item.link);\n  return true;\n});\n\n// Sort newest first, cap at 30 for Claude input\nunique.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));\nconst items = unique.slice(0, 30);\n\nreturn [{ json: { items, count: items.length, previousItems } }];"
+        "jsCode": "const { feeds, previousItems } = $json;\nconst fourteenDaysAgo = new Date(Date.now() - 14 * 24 * 60 * 60 * 1000);\n\nfunction extractTag(xml, tag) {\n  // Handle CDATA\n  const cdataRe = new RegExp('<' + tag + '>\\\\s*<!\\\\[CDATA\\\\[([\\\\s\\\\S]*?)\\\\]\\\\]>\\\\s*</' + tag + '>', 'i');\n  const cdataMatch = xml.match(cdataRe);\n  if (cdataMatch) return cdataMatch[1].trim();\n\n  // Handle plain text\n  const plainRe = new RegExp('<' + tag + '[^>]*>([\\\\s\\\\S]*?)</' + tag + '>', 'i');\n  const plainMatch = xml.match(plainRe);\n  if (plainMatch) return plainMatch[1].replace(/<[^>]*>/g, '').trim();\n\n  return '';\n}\n\nconst allItems = [];\n\nfor (const feed of feeds) {\n  const { xml, name } = feed;\n  const itemMatches = xml.match(/<item>[\\s\\S]*?<\\/item>/g) || [];\n\n  for (const itemXml of itemMatches) {\n    const title = extractTag(itemXml, 'title');\n    const link = extractTag(itemXml, 'link') || (itemXml.match(/href=\\\"([^\\\"]+)\\\"/) || [])[1] || '';\n    const pubDate = extractTag(itemXml, 'pubDate');\n    const description = extractTag(itemXml, 'description').substring(0, 400);\n\n    if (!title || !link) continue;\n\n    const itemDate = pubDate ? new Date(pubDate) : new Date();\n    if (isNaN(itemDate.getTime()) || itemDate < fourteenDaysAgo) continue;\n\n    allItems.push({ title, link, pubDate: itemDate.toISOString(), description, source: name });\n  }\n}\n\n// Deduplicate by URL\nconst seen = new Set();\nconst unique = allItems.filter(item => {\n  if (seen.has(item.link)) return false;\n  seen.add(item.link);\n  return true;\n});\n\n// Sort newest first, cap at 30 for Claude input\nunique.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));\nconst items = unique.slice(0, 30);\n\nreturn [{ json: { items, count: items.length, previousItems } }];"
       }
     },
     {
@@ -79,18 +79,12 @@
     },
     {
       "id": "en-news-005",
-      "name": "Claude API (Code)",
+      "name": "Prep Claude",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [1000, 0],
       "parameters": {
-        "jsCode": "const { items, previousItems } = $json;\n\nconst systemPrompt = 'You are a policy analyst for Europa Nova, a proposed treaty-based European institution for sovereign AGI development. Your task is to filter and annotate recent news items for relevance to European AI policy and sovereignty.\\n\\nRelevant topics:\\n- European sovereign AI capability and strategic autonomy\\n- AI compute infrastructure, data centres, Nordic energy for AI\\n- Frontier model development, AI safety, governance frameworks\\n- EU AI policy (AI Factories, Gigafactories, AI Act, AI Continent Action Plan)\\n- Geopolitical AI competition: US-Europe-China dynamics\\n- Treaty-based international technology cooperation (CERN, ESA, Galileo precedents)\\n- Sovereign wealth fund investment in technology\\n- AI talent, brain drain, research institutions\\n- Norway, Sweden, Finland AI policy and energy infrastructure\\n\\nFor each relevant item, write a commentary of exactly 3-4 sentences. The commentary must:\\n- State what happened and why it matters for European AI sovereignty specifically\\n- Be analytical and forward-looking, not journalistic\\n- Stay within the bounds of what the source material supports — do not overstate\\n- Avoid buzzwords: no synergy, paradigm shift, game-changing, crucial, holistic\\n- Never start with I or This\\n- End with a forward-looking observation or implication\\n\\nRespond ONLY with valid JSON in this exact format — no preamble, no markdown fences:\\n{\\n  \"items\": [\\n    {\\n      \"date\": \"YYYY-MM-DD\",\\n      \"source\": \"Source name\",\\n      \"title\": \"Article title\",\\n      \"url\": \"Article URL\",\\n      \"commentary\": \"3-4 sentence commentary here\"\\n    }\\n  ]\\n}\\n\\nInclude maximum 5 most relevant items. If fewer than 5 are relevant, include only those. If nothing is relevant, return {\"items\": []}.';\n\nconst itemList = items.map((item, i) =>\n  `${i + 1}. TITLE: ${item.title}\\nSOURCE: ${item.source}\\nDATE: ${item.pubDate}\\nURL: ${item.link}\\nSUMMARY: ${item.description}`\n).join('\\n\\n');\n\nconst userPrompt = `Here are ${items.length} recent news items. Filter for relevance and write analytical commentary for each relevant item:\\n\\n${itemList}`;\n\n// Get API key from credential\nconst credentials = await this.getCredentials('httpHeaderAuth');\nconst apiKey = credentials.value;\n\nconst response = await this.helpers.httpRequest({\n  method: 'POST',\n  url: 'https://api.anthropic.com/v1/messages',\n  headers: {\n    'content-type': 'application/json',\n    'x-api-key': apiKey,\n    'anthropic-version': '2023-06-01'\n  },\n  body: {\n    model: 'claude-sonnet-4-20250514',\n    max_tokens: 2000,\n    system: systemPrompt,\n    messages: [{ role: 'user', content: userPrompt }]\n  },\n  json: true,\n  timeout: 120000\n});\n\nreturn [{ json: { ...response, previousItems } }];"
-      },
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "mUvdNFOl0ZGZUbcH",
-          "name": "Header Auth account"
-        }
+        "jsCode": "const { items, previousItems } = $json;\n\nconst apiKey = \"ANTHROPIC_API_KEY_HERE\";\n\nconst systemPrompt = 'You are a policy analyst for Europa Nova, a proposed treaty-based European institution for sovereign AGI development. Your task is to filter and annotate recent news items for relevance to European AI policy and sovereignty.\\n\\nRelevant topics:\\n- European sovereign AI capability and strategic autonomy\\n- AI compute infrastructure, data centres, Nordic energy for AI\\n- Frontier model development, AI safety, governance frameworks\\n- EU AI policy (AI Factories, Gigafactories, AI Act, AI Continent Action Plan)\\n- Geopolitical AI competition: US-Europe-China dynamics\\n- Treaty-based international technology cooperation (CERN, ESA, Galileo precedents)\\n- Sovereign wealth fund investment in technology\\n- AI talent, brain drain, research institutions\\n- Norway, Sweden, Finland AI policy and energy infrastructure\\n\\nFor each relevant item, write a commentary of exactly 3-4 sentences. The commentary must:\\n- State what happened and why it matters for European AI sovereignty specifically\\n- Be analytical and forward-looking, not journalistic\\n- Stay within the bounds of what the source material supports — do not overstate\\n- Avoid buzzwords: no synergy, paradigm shift, game-changing, crucial, holistic\\n- Never start with I or This\\n- End with a forward-looking observation or implication\\n\\nRespond ONLY with valid JSON in this exact format — no preamble, no markdown fences:\\n{\\n  \"items\": [\\n    {\\n      \"date\": \"YYYY-MM-DD\",\\n      \"source\": \"Source name\",\\n      \"title\": \"Article title\",\\n      \"url\": \"Article URL\",\\n      \"commentary\": \"3-4 sentence commentary here\"\\n    }\\n  ]\\n}\\n\\nInclude maximum 5 most relevant items. If fewer than 5 are relevant, include only those. If nothing is relevant, return {\"items\": []}.';\n\nconst itemList = items.map(function(item, i) {\n  return (i + 1) + \". TITLE: \" + item.title + \"\\nSOURCE: \" + item.source + \"\\nDATE: \" + item.pubDate + \"\\nURL: \" + item.link + \"\\nSUMMARY: \" + item.description;\n}).join(\"\\n\\n\");\n\nconst userPrompt = \"Here are \" + items.length + \" recent news items. Filter for relevance and write analytical commentary for each relevant item:\\n\\n\" + itemList;\n\nconst response = await this.helpers.httpRequest({\n  method: \"POST\",\n  url: \"https://api.anthropic.com/v1/messages\",\n  headers: {\n    \"anthropic-version\": \"2023-06-01\",\n    \"content-type\": \"application/json\",\n    \"x-api-key\": apiKey\n  },\n  body: {\n    model: \"claude-sonnet-4-20250514\",\n    max_tokens: 2000,\n    system: systemPrompt,\n    messages: [{ role: \"user\", content: userPrompt }]\n  },\n  json: true,\n  timeout: 120000\n});\n\nreturn [{ json: { ...response, previousItems } }];"
       }
     },
     {
@@ -98,9 +92,9 @@
       "name": "Build news.json",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [1400, 0],
+      "position": [1200, 0],
       "parameters": {
-        "jsCode": "const claudeResponse = $input.first().json;\nconst previousItems = claudeResponse.previousItems || [];\n\n// Extract text from Claude response\nconst content = claudeResponse.content || [];\nconst textBlock = content.find(b => b.type === 'text');\nconst text = textBlock?.text || '{\"items\":[]}';\n\n// Parse Claude's JSON output\nlet parsed;\ntry {\n  const clean = text.replace(/```json\\n?/g, '').replace(/```\\n?/g, '').trim();\n  parsed = JSON.parse(clean);\n} catch(e) {\n  console.log('JSON parse error: ' + e.message);\n  console.log('Raw text: ' + text.substring(0, 500));\n  parsed = { items: [] };\n}\n\nlet newItems = (parsed.items || []).slice(0, 5);\n\n// Fallback: if Claude returned 0 items, keep previous items\nif (newItems.length === 0 && previousItems.length > 0) {\n  console.log('No new items from Claude — retaining previous items as fallback');\n  newItems = previousItems.slice(0, 5);\n}\n\n// Deduplicate: merge new + previous, prefer new, cap at 5\nif (newItems.length > 0 && newItems.length < 5 && previousItems.length > 0) {\n  const newUrls = new Set(newItems.map(i => i.url));\n  const filler = previousItems.filter(i => !newUrls.has(i.url));\n  newItems = newItems.concat(filler).slice(0, 5);\n}\n\nconst newsData = {\n  updated: new Date().toISOString(),\n  items: newItems\n};\n\nreturn [{ json: { newsData, count: newItems.length } }];"
+        "jsCode": "const claudeResponse = $input.first().json;\nconst previousItems = $('Prep Claude').first().json.previousItems || [];\n\n// Extract text from Claude response\nconst content = claudeResponse.content || [];\nconst textBlock = content.find(b => b.type === 'text');\nconst text = textBlock?.text || '{\"items\":[]}';\n\n// Parse Claude's JSON output\nlet parsed;\ntry {\n  const clean = text.replace(/```json\\n?/g, '').replace(/```\\n?/g, '').trim();\n  parsed = JSON.parse(clean);\n} catch(e) {\n  console.log('JSON parse error: ' + e.message);\n  console.log('Raw text: ' + text.substring(0, 500));\n  parsed = { items: [] };\n}\n\nlet newItems = (parsed.items || []).slice(0, 5);\n\n// Fallback: if Claude returned 0 items, keep previous items\nif (newItems.length === 0 && previousItems.length > 0) {\n  console.log('No new items from Claude — retaining previous items as fallback');\n  newItems = previousItems.slice(0, 5);\n}\n\n// Deduplicate: merge new + previous, prefer new, cap at 5\nif (newItems.length > 0 && newItems.length < 5 && previousItems.length > 0) {\n  const newUrls = new Set(newItems.map(i => i.url));\n  const filler = previousItems.filter(i => !newUrls.has(i.url));\n  newItems = newItems.concat(filler).slice(0, 5);\n}\n\nconst newsData = {\n  updated: new Date().toISOString(),\n  items: newItems\n};\n\nreturn [{ json: { newsData, count: newItems.length } }];"
       }
     },
     {
@@ -108,27 +102,19 @@
       "name": "Binary Encode",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [1600, 0],
+      "position": [1400, 0],
       "parameters": {
         "jsCode": "const newsData = $json.newsData;\nconst jsonString = JSON.stringify(newsData, null, 2);\nconst base64 = Buffer.from(jsonString, 'utf8').toString('base64');\n\nreturn [{\n  json: {},\n  binary: {\n    data: {\n      data: base64,\n      mimeType: 'application/json',\n      fileName: 'news.json',\n      fileExtension: 'json'\n    }\n  }\n}];"
       }
     },
     {
       "id": "en-news-009",
-      "name": "FTP Upload",
-      "type": "n8n-nodes-base.ftp",
-      "typeVersion": 1,
-      "position": [1800, 0],
+      "name": "GitHub Push",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1600, 0],
       "parameters": {
-        "operation": "upload",
-        "path": "/public_html/news.json",
-        "binaryPropertyName": "data"
-      },
-      "credentials": {
-        "ftp": {
-          "id": "FTP_CREDENTIAL_ID_REPLACE_ME",
-          "name": "Europa Nova FTP"
-        }
+        "jsCode": "// Push news.json to GitHub Pages repo via GitHub Contents API\n// Requires a GitHub Personal Access Token with repo scope\nconst githubToken = \"GITHUB_TOKEN_HERE\";\nconst owner = \"thorhalvorsen\";\nconst repo = \"europa-nova\";\nconst path = \"news.json\";\nconst branch = \"main\";\n\n// Get the binary data from previous node\nconst binaryData = $input.first().binary.data;\nconst content = binaryData.data; // Already base64 encoded\n\n// Get current file SHA (required for updates)\nlet sha = '';\ntry {\n  const existing = await this.helpers.httpRequest({\n    method: 'GET',\n    url: 'https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path + '?ref=' + branch,\n    headers: {\n      'Authorization': 'Bearer ' + githubToken,\n      'Accept': 'application/vnd.github.v3+json',\n      'User-Agent': 'n8n-europa-nova'\n    },\n    json: true\n  });\n  sha = existing.sha;\n} catch(e) {\n  console.log('File does not exist yet, creating new');\n}\n\n// Commit the file\nconst commitBody = {\n  message: 'Update news.json via n8n workflow',\n  content: content,\n  branch: branch\n};\nif (sha) commitBody.sha = sha;\n\nconst result = await this.helpers.httpRequest({\n  method: 'PUT',\n  url: 'https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path,\n  headers: {\n    'Authorization': 'Bearer ' + githubToken,\n    'Accept': 'application/vnd.github.v3+json',\n    'User-Agent': 'n8n-europa-nova',\n    'Content-Type': 'application/json'\n  },\n  body: commitBody,\n  json: true\n});\n\nreturn [{ json: { success: true, commitSha: result.commit?.sha, url: result.content?.html_url } }];"
       }
     },
     {
@@ -136,9 +122,9 @@
       "name": "Keep Previous On Failure",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [1400, 200],
+      "position": [1200, 200],
       "parameters": {
-        "jsCode": "// Error handler: if Claude API fails, retain previous items\nconst previousItems = $('Claude API (Code)').first().json.previousItems || [];\n\nif (previousItems.length === 0) {\n  console.log('Claude API failed and no previous items available — skipping update');\n  return [];\n}\n\nconsole.log('Claude API failed — retaining previous ' + previousItems.length + ' items');\n\nconst newsData = {\n  updated: new Date().toISOString(),\n  items: previousItems.slice(0, 5)\n};\n\nreturn [{ json: { newsData, count: previousItems.length } }];"
+        "jsCode": "// Error handler: if Claude API fails, retain previous items\nconst previousItems = $('Prep Claude').first().json.previousItems || [];\n\nif (previousItems.length === 0) {\n  console.log('Claude API failed and no previous items available — skipping update');\n  return [];\n}\n\nconsole.log('Claude API failed — retaining previous ' + previousItems.length + ' items');\n\nconst newsData = {\n  updated: new Date().toISOString(),\n  items: previousItems.slice(0, 5)\n};\n\nreturn [{ json: { newsData, count: previousItems.length } }];"
       }
     }
   ],
@@ -175,12 +161,12 @@
     "Has New Items?": {
       "main": [
         [
-          { "node": "Claude API (Code)", "type": "main", "index": 0 }
+          { "node": "Prep Claude", "type": "main", "index": 0 }
         ],
         []
       ]
     },
-    "Claude API (Code)": {
+    "Prep Claude": {
       "main": [
         [
           { "node": "Build news.json", "type": "main", "index": 0 }
@@ -197,7 +183,7 @@
     "Binary Encode": {
       "main": [
         [
-          { "node": "FTP Upload", "type": "main", "index": 0 }
+          { "node": "GitHub Push", "type": "main", "index": 0 }
         ]
       ]
     },
