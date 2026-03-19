@@ -1,12 +1,75 @@
 {
-  "updated": "2026-03-18T08:00:00Z",
+  "updated": "2026-03-19T08:00:00Z",
   "items": [
     {
       "date": "2026-03-14",
       "source": "Government of Canada / Government of Norway",
-      "title": "Canada–Norway Joint Statement on Sovereign Technology and AI",
+      "title": "Canada–Norway Joint Statement on Sovereign Technology and AI Cooperation",
       "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/03/canada-norway-joint-statement-on-sovereign-technology-and-ai-cooperation.html",
       "commentary": "Prime Ministers Carney and Støre signed a joint statement committing both nations to cooperation on AI infrastructure, frontier model development, and sovereign technology capacity. The statement confirms what the strategic argument for European AI sovereignty has long assumed: that Norway has identified AI dependency as a national security concern and is actively pursuing treaty-level arrangements outside existing multilateral frameworks. The energy infrastructure, sovereign wealth fund, and geographic position that make Norway indispensable to any serious European AI initiative are the same assets Canada is now formally courting. That Norway is in demand is not a complication — it is a reason to move quickly."
+    },
+    {
+      "date": "2026-03-03",
+      "source": "European Commission / Euronews",
+      "title": "Europe unites to build sovereign cloud and AI infrastructure to stop reliance on US",
+      "url": "https://www.euronews.com/next/2026/03/03/europe-unites-to-build-sovereign-cloud-and-ai-infrastructure-to-stop-reliance-on-us",
+      "commentary": "The European Commission unveiled EURO-3C at Mobile World Congress 2026, a EUR 75 million federated Telco-Edge-Cloud infrastructure project backed by more than 70 organisations across 13 countries. The initiative explicitly aims to reduce European dependence on US and Chinese cloud providers, who currently control 85 percent of Europe's cloud market. For Europa Nova, EURO-3C validates the federated infrastructure model — connecting existing national capabilities rather than building a single centralised system — which is precisely the architecture a treaty-based AI institution would need to operate across sovereign boundaries. The modest EUR 75 million budget, however, underscores how far Europe remains from matching the scale of investment required for frontier AI compute."
+    },
+    {
+      "date": "2026-02-18",
+      "source": "CNBC",
+      "title": "'A matter of national survival': European governments accelerate digital sovereignty as geopolitical tensions ramp up",
+      "url": "https://www.cnbc.com/2026/02/18/europe-digital-sovereignty-geopolitical-tensions.html",
+      "commentary": "European ministers described digital sovereignty as a matter of national survival, as the continent confronts simultaneous pressure from Russian cyber operations, deteriorating relations with the Trump administration, and 85 percent dependence on US cloud providers. All 27 EU member states signed a November 2025 declaration committing to reduce strategic digital dependencies, and sovereign cloud spending is projected to triple to USD 23 billion by 2027. The political language has shifted from aspiration to urgency — the conditions under which a treaty-based European AI institution becomes politically feasible are now present. What remains absent is an institutional vehicle capable of translating this urgency into coordinated sovereign compute capacity at frontier scale."
+    },
+    {
+      "date": "2026-01-29",
+      "source": "Euronews",
+      "title": "The AI brain drain: Why Europe can't keep the talent it trains",
+      "url": "https://www.euronews.com/my-europe/2026/01/29/the-ai-brain-drain-why-europe-cant-keep-the-talent-it-trains",
+      "commentary": "Europe produces 30 percent more AI talent per capita than the United States, yet experiences a substantial net outflow of senior AI professionals, driven by US salary premiums of 30 to 70 percent across comparable roles. Net tech talent inflows to Europe fell from 52,000 in 2022 to 26,000 in 2024, meaning the continent is effectively subsidising American AI capacity with European education budgets. A European institution offering frontier-scale research infrastructure and competitive compensation — funded by sovereign wealth rather than venture capital — would directly address the primary pull factor driving this exodus. Without such an institution, the AI Continent Action Plan's talent pillar will continue to train researchers for export."
+    },
+    {
+      "date": "2025-12-02",
+      "source": "TechCrunch / Mistral AI",
+      "title": "Mistral closes in on Big AI rivals with new open-weight frontier and small models",
+      "url": "https://techcrunch.com/2025/12/02/mistral-closes-in-on-big-ai-rivals-with-mistral-3-open-weight-frontier-and-small-models/",
+      "commentary": "Mistral released its Large 3 model with 675 billion parameters under the Apache 2.0 open-source license, featuring multilingual capabilities across European languages and a mixture-of-experts architecture with 41 billion active parameters. The release demonstrates that a European company can produce frontier-competitive models, but Mistral's reliance on NVIDIA hardware and US cloud infrastructure for training reveals the structural dependency that open weights alone cannot resolve. Europa Nova's value proposition is precisely this missing layer: sovereign European compute infrastructure that would allow companies like Mistral to train frontier models without routing capital and data through American hyperscalers. Open-weight models trained on sovereign infrastructure represent the most credible path to genuine European AI autonomy."
+    },
+    {
+      "date": "2025-07-31",
+      "source": "OpenAI / TechCrunch",
+      "title": "OpenAI to launch AI data center in Norway, its first in Europe",
+      "url": "https://techcrunch.com/2025/07/31/openai-to-launch-ai-data-center-in-norway-its-first-in-europe/",
+      "commentary": "OpenAI announced Stargate Norway, a 230MW AI gigafactory in Kvandal near Narvik, targeting 100,000 NVIDIA GPUs by end of 2026, powered entirely by renewable hydroelectricity and operated through a joint venture between Nscale and Aker. The project confirms Norway's emergence as Europe's most attractive location for AI compute — abundant clean energy, cool climate, and fast-track permitting — while simultaneously illustrating the sovereignty paradox: the infrastructure is in Norway, but the primary beneficiary and offtaker is an American company. Europa Nova would need to ensure that European sovereign AI infrastructure serves European frontier model development first, rather than functioning as a low-cost energy supplier to US labs. The energy assets that make Norway indispensable are already being claimed."
+    },
+    {
+      "date": "2025-04-09",
+      "source": "European Commission",
+      "title": "Commission sets course for Europe's AI leadership with an ambitious AI Continent Action Plan",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1013",
+      "commentary": "The European Commission presented its AI Continent Action Plan, structured around five pillars: compute infrastructure including AI Factories and Gigafactories, a Data Union Strategy, innovation and adoption in strategic sectors, skills and talent development, and streamlined AI Act implementation. The plan acknowledges that Europe holds only 5 to 10 percent of global AI compute capacity compared to 60 to 75 percent in the United States, and proposes 13 AI Factories across 12 member states. While the diagnosis is accurate and the ambition is welcome, the Commission's instrument set — funding programmes, regulatory coordination, public-private partnerships — lacks the institutional permanence and operational independence that frontier AI development demands. A treaty-based institution with its own governance, budget authority, and research mandate would convert these action plan aspirations into durable capability."
+    },
+    {
+      "date": "2025-02-11",
+      "source": "European Commission",
+      "title": "EU launches InvestAI initiative to mobilise EUR 200 billion of investment in artificial intelligence",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/eu-launches-investai-initiative-mobilise-eu200-billion-investment-artificial-intelligence",
+      "commentary": "At the Paris AI Action Summit, Commission President von der Leyen announced InvestAI, a public-private initiative targeting EUR 200 billion in AI investment across Europe, including EUR 20 billion for four AI gigafactories, while more than 60 European companies launched the EU AI Champions Initiative with EUR 150 billion in planned investment. The headline figures are substantial, but the mechanism — a coalition of voluntary private commitments coordinated by the Commission — carries no treaty obligation and no enforcement mechanism. CERN's annual budget of approximately CHF 1.2 billion is modest by comparison, yet its treaty basis ensures consistent, multi-decade investment that no voluntary initiative can replicate. Europa Nova's case rests on precisely this distinction between announced investment targets and institutionally guaranteed capability."
+    },
+    {
+      "date": "2025-02-10",
+      "source": "French Government / AI Action Summit",
+      "title": "Paris AI Action Summit: 58 countries sign declaration on inclusive AI, US and UK refuse",
+      "url": "https://www.techuk.org/resource/what-were-the-outcomes-of-the-paris-ai-action-summit.html",
+      "commentary": "The Paris AI Action Summit convened over 1,000 participants from more than 100 countries, producing a joint declaration on inclusive and sustainable AI signed by 58 nations including France, China, and India — but notably not the United States or the United Kingdom. The US refusal to sign a multilateral AI governance declaration, combined with the summit's acknowledged failure to advance binding safety commitments, exposes the limits of summit diplomacy for AI governance. Anthropic CEO Dario Amodei called the event a missed opportunity on safety, reinforcing the argument that non-binding declarations cannot substitute for institutional capacity. The governance vacuum that summits leave unfilled is precisely where a treaty-based European institution — with operational authority, not just declaratory ambition — would occupy a distinct and necessary role."
+    },
+    {
+      "date": "2024-05-22",
+      "source": "Government of the Republic of Korea / UK Government",
+      "title": "Seoul AI Safety Summit: Frontier AI Safety Commitments signed by 20 organisations",
+      "url": "https://www.gov.uk/government/publications/seoul-declaration-for-safe-innovative-and-inclusive-ai-ai-seoul-summit-2024/seoul-statement-of-intent-toward-international-cooperation-on-ai-safety-science-ai-seoul-summit-2024-annex",
+      "commentary": "The Seoul AI Safety Summit produced the Frontier AI Safety Commitments, signed by 20 organisations including Anthropic, OpenAI, Microsoft, and NVIDIA, establishing frameworks for disclosure, evaluation, and risk mitigation, while launching the International Network of AI Safety Institutes with 10 founding members. The commitments represent the most concrete voluntary safety framework to date, yet they remain corporate pledges rather than sovereign obligations — no government is bound, and no institution has authority to enforce compliance. The AISI network's federated structure across national institutes offers a useful precedent for Europa Nova: international coordination of safety evaluation requires permanent institutional capacity, not periodic summits. Seoul demonstrated both the demand for international AI governance infrastructure and the structural inadequacy of the current approach to supply it."
     }
   ]
 }
