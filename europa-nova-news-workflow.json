@@ -79,39 +79,12 @@
     },
     {
       "id": "en-news-005",
-      "name": "Prep Claude",
+      "name": "Claude API (Code)",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [1000, 0],
       "parameters": {
-        "jsCode": "const { items, previousItems } = $json;\n\nconst systemPrompt = 'You are a policy analyst for Europa Nova, a proposed treaty-based European institution for sovereign AGI development. Your task is to filter and annotate recent news items for relevance to European AI policy and sovereignty.\\n\\nRelevant topics:\\n- European sovereign AI capability and strategic autonomy\\n- AI compute infrastructure, data centres, Nordic energy for AI\\n- Frontier model development, AI safety, governance frameworks\\n- EU AI policy (AI Factories, Gigafactories, AI Act, AI Continent Action Plan)\\n- Geopolitical AI competition: US-Europe-China dynamics\\n- Treaty-based international technology cooperation (CERN, ESA, Galileo precedents)\\n- Sovereign wealth fund investment in technology\\n- AI talent, brain drain, research institutions\\n- Norway, Sweden, Finland AI policy and energy infrastructure\\n\\nFor each relevant item, write a commentary of exactly 3-4 sentences. The commentary must:\\n- State what happened and why it matters for European AI sovereignty specifically\\n- Be analytical and forward-looking, not journalistic\\n- Stay within the bounds of what the source material supports — do not overstate\\n- Avoid buzzwords: no synergy, paradigm shift, game-changing, crucial, holistic\\n- Never start with I or This\\n- End with a forward-looking observation or implication\\n\\nRespond ONLY with valid JSON in this exact format — no preamble, no markdown fences:\\n{\\n  \"items\": [\\n    {\\n      \"date\": \"YYYY-MM-DD\",\\n      \"source\": \"Source name\",\\n      \"title\": \"Article title\",\\n      \"url\": \"Article URL\",\\n      \"commentary\": \"3-4 sentence commentary here\"\\n    }\\n  ]\\n}\\n\\nInclude maximum 5 most relevant items. If fewer than 5 are relevant, include only those. If nothing is relevant, return {\"items\": []}.';\n\nconst itemList = items.map((item, i) =>\n  `${i + 1}. TITLE: ${item.title}\\nSOURCE: ${item.source}\\nDATE: ${item.pubDate}\\nURL: ${item.link}\\nSUMMARY: ${item.description}`\n).join('\\n\\n');\n\nconst userPrompt = `Here are ${items.length} recent news items. Filter for relevance and write analytical commentary for each relevant item:\\n\\n${itemList}`;\n\nconst apiBody = JSON.stringify({\n  model: 'claude-sonnet-4-20250514',\n  max_tokens: 2000,\n  system: systemPrompt,\n  messages: [{ role: 'user', content: userPrompt }]\n});\n\nreturn [{ json: { apiBody, previousItems } }];"
-      }
-    },
-    {
-      "id": "en-news-006",
-      "name": "Claude API",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.4,
-      "position": [1200, 0],
-      "parameters": {
-        "method": "POST",
-        "url": "https://api.anthropic.com/v1/messages",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            { "name": "anthropic-version", "value": "2023-06-01" },
-            { "name": "content-type", "value": "application/json" }
-          ]
-        },
-        "sendBody": true,
-        "specifyBody": "string",
-        "body": "={{ $json.apiBody }}",
-        "contentType": "application/json",
-        "options": {
-          "timeout": 120000
-        }
+        "jsCode": "const { items, previousItems } = $json;\n\nconst systemPrompt = 'You are a policy analyst for Europa Nova, a proposed treaty-based European institution for sovereign AGI development. Your task is to filter and annotate recent news items for relevance to European AI policy and sovereignty.\\n\\nRelevant topics:\\n- European sovereign AI capability and strategic autonomy\\n- AI compute infrastructure, data centres, Nordic energy for AI\\n- Frontier model development, AI safety, governance frameworks\\n- EU AI policy (AI Factories, Gigafactories, AI Act, AI Continent Action Plan)\\n- Geopolitical AI competition: US-Europe-China dynamics\\n- Treaty-based international technology cooperation (CERN, ESA, Galileo precedents)\\n- Sovereign wealth fund investment in technology\\n- AI talent, brain drain, research institutions\\n- Norway, Sweden, Finland AI policy and energy infrastructure\\n\\nFor each relevant item, write a commentary of exactly 3-4 sentences. The commentary must:\\n- State what happened and why it matters for European AI sovereignty specifically\\n- Be analytical and forward-looking, not journalistic\\n- Stay within the bounds of what the source material supports — do not overstate\\n- Avoid buzzwords: no synergy, paradigm shift, game-changing, crucial, holistic\\n- Never start with I or This\\n- End with a forward-looking observation or implication\\n\\nRespond ONLY with valid JSON in this exact format — no preamble, no markdown fences:\\n{\\n  \"items\": [\\n    {\\n      \"date\": \"YYYY-MM-DD\",\\n      \"source\": \"Source name\",\\n      \"title\": \"Article title\",\\n      \"url\": \"Article URL\",\\n      \"commentary\": \"3-4 sentence commentary here\"\\n    }\\n  ]\\n}\\n\\nInclude maximum 5 most relevant items. If fewer than 5 are relevant, include only those. If nothing is relevant, return {\"items\": []}.';\n\nconst itemList = items.map((item, i) =>\n  `${i + 1}. TITLE: ${item.title}\\nSOURCE: ${item.source}\\nDATE: ${item.pubDate}\\nURL: ${item.link}\\nSUMMARY: ${item.description}`\n).join('\\n\\n');\n\nconst userPrompt = `Here are ${items.length} recent news items. Filter for relevance and write analytical commentary for each relevant item:\\n\\n${itemList}`;\n\n// Get API key from credential\nconst credentials = await this.getCredentials('httpHeaderAuth');\nconst apiKey = credentials.value;\n\nconst response = await this.helpers.httpRequest({\n  method: 'POST',\n  url: 'https://api.anthropic.com/v1/messages',\n  headers: {\n    'content-type': 'application/json',\n    'x-api-key': apiKey,\n    'anthropic-version': '2023-06-01'\n  },\n  body: {\n    model: 'claude-sonnet-4-20250514',\n    max_tokens: 2000,\n    system: systemPrompt,\n    messages: [{ role: 'user', content: userPrompt }]\n  },\n  json: true,\n  timeout: 120000\n});\n\nreturn [{ json: { ...response, previousItems } }];"
       },
       "credentials": {
         "httpHeaderAuth": {
@@ -127,7 +100,7 @@
       "typeVersion": 2,
       "position": [1400, 0],
       "parameters": {
-        "jsCode": "const claudeResponse = $input.first().json;\nconst previousItems = $('Prep Claude').first().json.previousItems || [];\n\n// Extract text from Claude response\nconst content = claudeResponse.content || [];\nconst textBlock = content.find(b => b.type === 'text');\nconst text = textBlock?.text || '{\"items\":[]}';\n\n// Parse Claude's JSON output\nlet parsed;\ntry {\n  const clean = text.replace(/```json\\n?/g, '').replace(/```\\n?/g, '').trim();\n  parsed = JSON.parse(clean);\n} catch(e) {\n  console.log('JSON parse error: ' + e.message);\n  console.log('Raw text: ' + text.substring(0, 500));\n  parsed = { items: [] };\n}\n\nlet newItems = (parsed.items || []).slice(0, 5);\n\n// Fallback: if Claude returned 0 items, keep previous items\nif (newItems.length === 0 && previousItems.length > 0) {\n  console.log('No new items from Claude — retaining previous items as fallback');\n  newItems = previousItems.slice(0, 5);\n}\n\n// Deduplicate: merge new + previous, prefer new, cap at 5\nif (newItems.length > 0 && newItems.length < 5 && previousItems.length > 0) {\n  const newUrls = new Set(newItems.map(i => i.url));\n  const filler = previousItems.filter(i => !newUrls.has(i.url));\n  newItems = newItems.concat(filler).slice(0, 5);\n}\n\nconst newsData = {\n  updated: new Date().toISOString(),\n  items: newItems\n};\n\nreturn [{ json: { newsData, count: newItems.length } }];"
+        "jsCode": "const claudeResponse = $input.first().json;\nconst previousItems = claudeResponse.previousItems || [];\n\n// Extract text from Claude response\nconst content = claudeResponse.content || [];\nconst textBlock = content.find(b => b.type === 'text');\nconst text = textBlock?.text || '{\"items\":[]}';\n\n// Parse Claude's JSON output\nlet parsed;\ntry {\n  const clean = text.replace(/```json\\n?/g, '').replace(/```\\n?/g, '').trim();\n  parsed = JSON.parse(clean);\n} catch(e) {\n  console.log('JSON parse error: ' + e.message);\n  console.log('Raw text: ' + text.substring(0, 500));\n  parsed = { items: [] };\n}\n\nlet newItems = (parsed.items || []).slice(0, 5);\n\n// Fallback: if Claude returned 0 items, keep previous items\nif (newItems.length === 0 && previousItems.length > 0) {\n  console.log('No new items from Claude — retaining previous items as fallback');\n  newItems = previousItems.slice(0, 5);\n}\n\n// Deduplicate: merge new + previous, prefer new, cap at 5\nif (newItems.length > 0 && newItems.length < 5 && previousItems.length > 0) {\n  const newUrls = new Set(newItems.map(i => i.url));\n  const filler = previousItems.filter(i => !newUrls.has(i.url));\n  newItems = newItems.concat(filler).slice(0, 5);\n}\n\nconst newsData = {\n  updated: new Date().toISOString(),\n  items: newItems\n};\n\nreturn [{ json: { newsData, count: newItems.length } }];"
       }
     },
     {
@@ -165,7 +138,7 @@
       "typeVersion": 2,
       "position": [1400, 200],
       "parameters": {
-        "jsCode": "// Error handler: if Claude API fails, retain previous items\nconst previousItems = $('Prep Claude').first().json.previousItems || [];\n\nif (previousItems.length === 0) {\n  console.log('Claude API failed and no previous items available — skipping update');\n  return [];\n}\n\nconsole.log('Claude API failed — retaining previous ' + previousItems.length + ' items');\n\nconst newsData = {\n  updated: new Date().toISOString(),\n  items: previousItems.slice(0, 5)\n};\n\nreturn [{ json: { newsData, count: previousItems.length } }];"
+        "jsCode": "// Error handler: if Claude API fails, retain previous items\nconst previousItems = $('Claude API (Code)').first().json.previousItems || [];\n\nif (previousItems.length === 0) {\n  console.log('Claude API failed and no previous items available — skipping update');\n  return [];\n}\n\nconsole.log('Claude API failed — retaining previous ' + previousItems.length + ' items');\n\nconst newsData = {\n  updated: new Date().toISOString(),\n  items: previousItems.slice(0, 5)\n};\n\nreturn [{ json: { newsData, count: previousItems.length } }];"
       }
     }
   ],
@@ -202,19 +175,12 @@
     "Has New Items?": {
       "main": [
         [
-          { "node": "Prep Claude", "type": "main", "index": 0 }
+          { "node": "Claude API (Code)", "type": "main", "index": 0 }
         ],
         []
       ]
     },
-    "Prep Claude": {
-      "main": [
-        [
-          { "node": "Claude API", "type": "main", "index": 0 }
-        ]
-      ]
-    },
-    "Claude API": {
+    "Claude API (Code)": {
       "main": [
         [
           { "node": "Build news.json", "type": "main", "index": 0 }
