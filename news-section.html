@@ -1,0 +1,243 @@
+<!-- ============================================================
+     POLICY CONTEXT SECTION
+     Insert this block between </section> (Related Initiatives)
+     and the <section> opening of Endorsements.
+     Requires /news.json to be present at the domain root.
+     ============================================================ -->
+
+<section id="context" aria-labelledby="context-heading" style="
+  padding: 80px 24px;
+  background: #FAFAF8;
+  border-top: 1px solid rgba(0,0,0,0.06);
+">
+  <div style="max-width: 800px; margin: 0 auto;">
+
+    <p style="
+      font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #8C8C7E;
+      margin: 0 0 16px 0;
+    ">Policy Context</p>
+
+    <h2 id="context-heading" style="
+      font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: normal;
+      color: #1D1D1D;
+      margin: 0 0 12px 0;
+      line-height: 1.25;
+    ">The Landscape Is Moving</h2>
+
+    <p style="
+      font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+      font-size: 1.05rem;
+      color: #8C8C7E;
+      margin: 0 0 56px 0;
+      line-height: 1.65;
+      max-width: 600px;
+    ">Recent developments in European AI policy, sovereign technology cooperation, and frontier AI governance — with commentary on their implications.</p>
+
+    <div id="news-feed" aria-live="polite" aria-label="Policy news feed">
+      <!-- Loading state -->
+      <div id="news-loading" style="color: #8C8C7E; font-family: 'EB Garamond', Georgia, serif; font-size: 0.9rem; font-style: italic;">
+        Loading recent developments&hellip;
+      </div>
+    </div>
+
+    <p id="news-updated" style="
+      font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 11px;
+      color: rgba(0,0,0,0.25);
+      margin: 48px 0 0 0;
+      letter-spacing: 0.05em;
+    "></p>
+
+  </div>
+</section>
+
+<style>
+  /* Scoped to .news-item — no risk of global interference */
+  .news-item {
+    padding: 40px 0;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .news-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .news-item:first-child {
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+  .news-meta {
+    font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8C8C7E;
+    margin: 0 0 12px 0;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .news-meta-sep {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.15);
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .news-title {
+    font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 1.1rem;
+    font-weight: normal;
+    line-height: 1.35;
+    margin: 0 0 16px 0;
+  }
+  .news-title a {
+    color: #1D1D1D;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .news-title a:hover {
+    color: #2C4A6E;
+    border-color: #2C4A6E;
+  }
+  .news-commentary {
+    font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 0.975rem;
+    line-height: 1.75;
+    color: #555;
+    margin: 0;
+    max-width: 680px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .news-item {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+(function() {
+  function formatDate(isoString) {
+    try {
+      var d = new Date(isoString);
+      return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    } catch(e) {
+      return isoString;
+    }
+  }
+
+  function formatUpdated(isoString) {
+    try {
+      var d = new Date(isoString);
+      return 'Updated ' + d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    } catch(e) {
+      return '';
+    }
+  }
+
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function renderFeed(data) {
+    var feed = document.getElementById('news-feed');
+    var updatedEl = document.getElementById('news-updated');
+
+    if (!data.items || data.items.length === 0) {
+      feed.innerHTML = '<p style="font-family:EB Garamond,Georgia,serif;color:#8C8C7E;font-style:italic;font-size:0.9rem;">No recent developments to display.</p>';
+      return;
+    }
+
+    if (data.updated) {
+      updatedEl.textContent = formatUpdated(data.updated);
+    }
+
+    var html = data.items.map(function(item, index) {
+      var date = item.date ? formatDate(item.date + 'T00:00:00Z') : '';
+      var source = escapeHtml(item.source || '');
+      var title = escapeHtml(item.title || 'Untitled');
+      var url = escapeHtml(item.url || '#');
+      var commentary = escapeHtml(item.commentary || '');
+
+      return [
+        '<article class="news-item" style="transition-delay:' + (index * 80) + 'ms" aria-label="' + title + '">',
+        '  <p class="news-meta">',
+        '    <span>' + date + '</span>',
+        '    <span class="news-meta-sep" aria-hidden="true"></span>',
+        '    <span>' + source + '</span>',
+        '  </p>',
+        '  <h3 class="news-title"><a href="' + url + '" target="_blank" rel="noopener noreferrer">' + title + '</a></h3>',
+        '  <p class="news-commentary">' + commentary + '</p>',
+        '</article>'
+      ].join('\n');
+    }).join('\n');
+
+    feed.innerHTML = html;
+
+    // Scroll-triggered fade-in via IntersectionObserver
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.news-item').forEach(function(el) {
+        observer.observe(el);
+      });
+    } else {
+      // Fallback for older browsers
+      document.querySelectorAll('.news-item').forEach(function(el) {
+        el.classList.add('visible');
+      });
+    }
+  }
+
+  function loadFeed() {
+    var loading = document.getElementById('news-loading');
+
+    fetch('/news.json?v=' + Date.now())
+      .then(function(r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function(data) {
+        if (loading) loading.remove();
+        renderFeed(data);
+      })
+      .catch(function(err) {
+        if (loading) {
+          loading.textContent = '';
+          loading.style.display = 'none';
+        }
+        console.warn('Europa Nova news feed: ' + err.message);
+      });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadFeed);
+  } else {
+    loadFeed();
+  }
+})();
+</script>
