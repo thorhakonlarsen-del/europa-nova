@@ -1,6 +1,41 @@
 {
-  "updated": "2026-03-19T08:00:00Z",
+  "updated": "2026-05-15T08:00:00Z",
   "items": [
+    {
+      "date": "2026-05-07",
+      "source": "CNBC",
+      "title": "EU weighs restricting use of U.S. cloud platforms to process sensitive government data",
+      "url": "https://www.cnbc.com/2026/05/07/eu-commission-cloud-sensitive-data.html",
+      "commentary": "The European Commission is reportedly evaluating restrictions on US cloud providers handling sensitive EU government workloads, which would convert the Cloud Sovereignty Framework from a procurement preference into binding policy. The shift reflects the same logic that has driven projected sovereign-cloud spending past USD 23 billion: data residency without jurisdictional control is no longer accepted as sovereignty, particularly under an American administration that treats CLOUD Act access as routine. If formalised, the restriction creates an immediate demand signal for European providers and a compliance question for US hyperscalers operating in regulated sectors. The same logic, applied at the AI compute layer, is precisely what a treaty-based European AI institution would operationalise — but with frontier-scale capacity that no sovereign cloud provider can supply alone."
+    },
+    {
+      "date": "2026-04-24",
+      "source": "Fortune / CNBC",
+      "title": "Cohere acquires German AI company Aleph Alpha in deal valuing the combined entity at $20bn",
+      "url": "https://fortune.com/2026/04/24/cohere-aleph-alpha-deal-signals-rise-of-ai-middle-powers-counterweight-to-u-s-china/",
+      "commentary": "Canadian AI company Cohere announced the acquisition of Aleph Alpha, Germany's most credible frontier-model laboratory, at a combined valuation of approximately USD 20 billion, backed by EUR 500 million in structured financing from the Schwarz Group and explicit endorsements from both the German and Canadian governments. The framing in Berlin emphasises continued European operations, but corporate decision-making authority for the only German firm capable of pursuing frontier scale has now crossed the Atlantic. The deal validates the emerging \"middle powers\" thesis — that advanced economies outside the US and China are converging on shared sovereign-AI strategies — while simultaneously illustrating what happens when no European institutional vehicle exists to anchor such laboratories on the continent. Voluntary commercial alignment cannot substitute for treaty-grounded sovereign capacity; the difference becomes visible the moment capital pressure arrives."
+    },
+    {
+      "date": "2026-04-17",
+      "source": "European Commission",
+      "title": "Commission advances cloud sovereignty through strategic procurement",
+      "url": "https://commission.europa.eu/news-and-media/news/commission-advances-cloud-sovereignty-through-strategic-procurement-2026-04-17_en",
+      "commentary": "The European Commission awarded EUR 180 million in sovereign cloud contracts over six years to four providers — Post Telecom, STACKIT, Scaleway, and Proximus — under a new Cloud Sovereignty Framework that grades providers on eight concrete objectives via Sovereignty Effectiveness Assurance Levels (SEAL-0 to SEAL-4). The framework converts what had been an abstract debate about cloud sovereignty into a procurement-grade specification, with most awarded providers reaching SEAL-3 and full EU supply-chain SEAL-4 still beyond commercial reach. For Europa Nova, the SEAL methodology offers a precedent worth adapting: a treaty-based AI institution requires equivalent objective measures for sovereign compute access — supply chain provenance, governance independence, jurisdictional control — rather than the marketing language that currently dominates AI sovereignty discourse. Procurement frameworks alone, however, cannot summon frontier-scale capacity; the institutional vehicle remains the missing piece."
+    },
+    {
+      "date": "2026-04-09",
+      "source": "European Commission",
+      "title": "Commission marks one year of the AI Continent Action Plan with two new reports on AI adoption and policymaking",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-marks-one-year-ai-continent-action-plan-two-new-reports-ai-adoption-and-policymaking",
+      "commentary": "The one-year progress report claims delivery across all five pillars: 19 operational AI Factories with 13 antennas, a Data Union Strategy, a European Legal Gateway Office, EUR 1 billion in adoption calls, and the AI Omnibus and Service Desk for regulatory simplification. The AI Gigafactories call drew 76 responses across 60 sites in 16 Member States — confirming that the political appetite and consortium capacity to commit hundreds of billions in private and public capital is already present. What the report cannot demonstrate is institutional permanence: AI Factories and Gigafactories are instruments of the current Commission's political cycle, not durable carriers of sovereign capability across decades. A treaty-based AI institution would convert the Action Plan's documented momentum into binding cross-cycle capacity, which is the remaining gap between aspiration and structural autonomy."
+    },
+    {
+      "date": "2026-03-30",
+      "source": "Euronews",
+      "title": "'Europe needs AI cloud infrastructure': Mistral raises $830m for data centre near Paris",
+      "url": "https://www.euronews.com/next/2026/03/30/europe-needs-ai-cloud-infrastructure-mistral-raises-830m-for-data-centre-near-paris",
+      "commentary": "Mistral raised EUR 750 million (USD 830 million) to build a 44-megawatt data centre near Bruyères-le-Châtel equipped with more than 13,000 NVIDIA chips, with a stated path to 200 megawatts of European compute capacity by 2027 and a 1.4-gigawatt campus by 2030 in partnership with NVIDIA and the UAE's MGX fund. The financing structure — bank loans and strategic equity rather than sovereign commitment — reveals why even Europe's most capable frontier laboratory remains capital-constrained relative to American peers, and why NVIDIA dependency persists at the silicon layer no matter how large the European data centre footprint grows. A treaty-based institution with sovereign budget authority would shift the financing question from market terms to political ones, matching the multi-decade horizons that frontier infrastructure actually requires. Mistral's expansion proves the demand for sovereign European AI compute; the absence of an institutional backstop explains why the supply remains structurally undersized."
+    },
     {
       "date": "2026-03-14",
       "source": "Government of Canada / Government of Norway",
