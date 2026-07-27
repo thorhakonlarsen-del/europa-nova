@@ -1,6 +1,41 @@
 {
-  "updated": "2026-05-15T08:00:00Z",
+  "updated": "2026-07-27T15:49:22.311Z",
   "items": [
+    {
+      "date": "2026-07-07",
+      "source": "European Systemic Risk Board",
+      "title": "Frontier AI models could strain cyber resilience in the financial system, ESRB warns",
+      "url": "https://www.esrb.europa.eu/news/pr/date/2026/html/esrb.pr260707~4e1b68241a.en.html",
+      "commentary": "The European Systemic Risk Board raised its assessment of systemic cyber risk from elevated to severe and named frontier AI models as the reason, finding that they currently favour attackers by enabling vulnerabilities to be discovered and exploited with greater speed, scale and sophistication. What makes the warning unusual is its second finding: that the concentration of leading AI providers outside the EU is itself a source of strategic dependency and geopolitical risk, and that the Union must scale up its capacity, expertise and strategic autonomy in this area. A macroprudential authority has now placed European dependence on non-European frontier models inside its formal risk framework rather than treating it as an industrial policy preference. Sovereign frontier capability has acquired a constituency with supervisory instruments behind it."
+    },
+    {
+      "date": "2026-07-07",
+      "source": "European Commission",
+      "title": "EU Action Plan on Cybersecurity and Artificial Intelligence",
+      "url": "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence",
+      "commentary": "The Commission's action plan pairs a defensive agenda — evaluating AI models before they are placed on the EU market, a European Blueprint developed with ENISA for secure access to advanced AI systems, and secure testing platforms for energy, transport, health, finance and public administration — with a capability pillar resting on AI Factories and Gigafactories and an EU Grand Challenge on AI for cybersecurity. Naming secure access to advanced AI systems as an explicit policy objective is an implicit acknowledgement that Europe does not control the systems in question and must negotiate its way to them. The document carries no budget figures and no implementation timeline, which is the recurring shape of Commission instruments: an accurate diagnosis attached to a delivery mechanism bounded by the political cycle. Converting negotiated access into owned capability is precisely the gap a treaty-based institution with its own budget authority exists to close."
+    },
+    {
+      "date": "2026-07-07",
+      "source": "ECB Banking Supervision",
+      "title": "Letter to significant institutions on AI-enabled cybersecurity threats",
+      "url": "https://www.bankingsupervision.europa.eu/press/letterstobanks/shared/pdf/2026/ssm.2026_letter_on_AI_enabled_cybersecurity_threats.en.pdf",
+      "commentary": "Claudia Buch, Chair of the Supervisory Board, wrote to the chief executives of every significant institution supervised under the Single Supervisory Mechanism requiring a comprehensive action plan — with named owners, allocated resources and implementation timelines — to be submitted to each bank's Joint Supervisory Team by 31 October 2026. The expectations extend to third-party software and open-source components, AI-assisted defensive tooling under human oversight, and supply chain assurance sized to the threat, which draws the AI capabilities of a bank's vendors inside the supervisory perimeter. Three European authorities issued warnings on AI-enabled cyber risk on the same day, which is less a coincidence than a signal that the assessment is now settled across the institutional layer. Where the underlying model capability is sourced becomes a supervisory question the moment a bank is asked to evidence assurance over it."
+    },
+    {
+      "date": "2026-07-06",
+      "source": "Financial Conduct Authority",
+      "title": "AI and the future of retail financial services (The Mills Review)",
+      "url": "https://www.fca.org.uk/publications/corporate-documents/mills-review",
+      "commentary": "The Financial Conduct Authority's review, led by executive director Sheldon Mills, sets out seven priorities for a retail market shifting towards AI-enabled, continuous and delegated services — among them securing the regulatory perimeter, enabling the foundations for agentic finance, and developing a trusted public-interest AI financial capability service. That last recommendation is the notable one: a national regulator proposing that some AI capability serving consumers should sit in public rather than purely commercial hands. Commissioned research covering more than 5,000 UK consumers found one in five adults already open to AI making decisions on their behalf, which is the demand side of a market in which the models doing the deciding are overwhelmingly American. The United Kingdom is answering the delegation question with a public-interest institution at national scale; the same question at frontier scale still has no European answer."
+    },
+    {
+      "date": "2026-06-03",
+      "source": "European Commission",
+      "title": "Strengthening Europe's tech sovereignty — Cloud and AI Development Act",
+      "url": "https://commission.europa.eu/news-and-media/news/strengthening-europes-tech-sovereignty-2026-06-03_en",
+      "commentary": "The Commission's Tech Sovereignty Package proposes a Cloud and AI Development Act structured around research and innovation, data centre capacity, and autonomy, with the autonomy pillar introducing a four-level framework running from EU-based data processing at the first level to requirements on third-country control, EU ownership, supply chain transparency, personnel clearance and independent audit at the highest. The justification the Commission cites is its own market data: the share of the European cloud market held by EU-based providers fell from roughly 29 percent in 2017 to around 15 percent in 2022. Graduated sovereignty levels are the correct instrument for procurement, because they convert an abstract claim into something a buyer can specify and an auditor can verify. They cannot summon frontier-scale compute into existence, which is the layer at which specification runs out and institutional capacity is required."
+    },
     {
       "date": "2026-05-07",
       "source": "CNBC",
@@ -106,5 +141,27 @@
       "url": "https://www.gov.uk/government/publications/seoul-declaration-for-safe-innovative-and-inclusive-ai-ai-seoul-summit-2024/seoul-statement-of-intent-toward-international-cooperation-on-ai-safety-science-ai-seoul-summit-2024-annex",
       "commentary": "The Seoul AI Safety Summit produced the Frontier AI Safety Commitments, signed by 20 organisations including Anthropic, OpenAI, Microsoft, and NVIDIA, establishing frameworks for disclosure, evaluation, and risk mitigation, while launching the International Network of AI Safety Institutes with 10 founding members. The commitments represent the most concrete voluntary safety framework to date, yet they remain corporate pledges rather than sovereign obligations — no government is bound, and no institution has authority to enforce compliance. The AISI network's federated structure across national institutes offers a useful precedent for Europa Nova: international coordination of safety evaluation requires permanent institutional capacity, not periodic summits. Seoul demonstrated both the demand for international AI governance infrastructure and the structural inadequacy of the current approach to supply it."
     }
+  ],
+  "seen": [
+    "https://www.esrb.europa.eu/news/pr/date/2026/html/esrb.pr260707~4e1b68241a.en.html",
+    "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence",
+    "https://www.bankingsupervision.europa.eu/press/letterstobanks/shared/pdf/2026/ssm.2026_letter_on_AI_enabled_cybersecurity_threats.en.pdf",
+    "https://www.fca.org.uk/publications/corporate-documents/mills-review",
+    "https://commission.europa.eu/news-and-media/news/strengthening-europes-tech-sovereignty-2026-06-03_en",
+    "https://www.cnbc.com/2026/05/07/eu-commission-cloud-sensitive-data.html",
+    "https://fortune.com/2026/04/24/cohere-aleph-alpha-deal-signals-rise-of-ai-middle-powers-counterweight-to-u-s-china",
+    "https://commission.europa.eu/news-and-media/news/commission-advances-cloud-sovereignty-through-strategic-procurement-2026-04-17_en",
+    "https://digital-strategy.ec.europa.eu/en/news/commission-marks-one-year-ai-continent-action-plan-two-new-reports-ai-adoption-and-policymaking",
+    "https://www.euronews.com/next/2026/03/30/europe-needs-ai-cloud-infrastructure-mistral-raises-830m-for-data-centre-near-paris",
+    "https://www.canada.ca/en/innovation-science-economic-development/news/2026/03/canada-norway-joint-statement-on-sovereign-technology-and-ai-cooperation.html",
+    "https://www.euronews.com/next/2026/03/03/europe-unites-to-build-sovereign-cloud-and-ai-infrastructure-to-stop-reliance-on-us",
+    "https://www.cnbc.com/2026/02/18/europe-digital-sovereignty-geopolitical-tensions.html",
+    "https://www.euronews.com/my-europe/2026/01/29/the-ai-brain-drain-why-europe-cant-keep-the-talent-it-trains",
+    "https://techcrunch.com/2025/12/02/mistral-closes-in-on-big-ai-rivals-with-mistral-3-open-weight-frontier-and-small-models",
+    "https://techcrunch.com/2025/07/31/openai-to-launch-ai-data-center-in-norway-its-first-in-europe",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1013",
+    "https://digital-strategy.ec.europa.eu/en/news/eu-launches-investai-initiative-mobilise-eu200-billion-investment-artificial-intelligence",
+    "https://www.techuk.org/resource/what-were-the-outcomes-of-the-paris-ai-action-summit.html",
+    "https://www.gov.uk/government/publications/seoul-declaration-for-safe-innovative-and-inclusive-ai-ai-seoul-summit-2024/seoul-statement-of-intent-toward-international-cooperation-on-ai-safety-science-ai-seoul-summit-2024-annex"
   ]
 }
