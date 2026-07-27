@@ -1,6 +1,13 @@
 {
-  "updated": "2026-07-27T15:49:22.311Z",
+  "updated": "2026-07-27T16:09:52.201Z",
   "items": [
+    {
+      "date": "2026-07-21",
+      "source": "Microsoft",
+      "title": "Microsoft and Mistral expand strategic partnership to give enterprises and regulated industries frontier AI they can control",
+      "url": "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/",
+      "commentary": "Microsoft committed a multibillion-dollar sum to expanding Mistral's European GPU capacity, built on thousands of NVIDIA Vera Rubin processors, and will draw on that capacity to help deliver its own cloud and AI services in Europe. No equity changed hands, which makes the structure more revealing than an acquisition would have been: Europe's leading frontier laboratory is scaling on American demand and American silicon, while the sovereignty case for the arrangement is being made by the American partner. Microsoft's framing — that Europe should have access to the world's most capable AI without compromising control over its data, operations or digital future — concedes the premise of the sovereignty argument and answers it with commercial guarantees rather than institutional ones. Access on favourable terms is not the same as capability that survives a change in those terms."
+    },
     {
       "date": "2026-07-07",
       "source": "European Systemic Risk Board",
@@ -49,6 +56,13 @@
       "title": "Cohere acquires German AI company Aleph Alpha in deal valuing the combined entity at $20bn",
       "url": "https://fortune.com/2026/04/24/cohere-aleph-alpha-deal-signals-rise-of-ai-middle-powers-counterweight-to-u-s-china/",
       "commentary": "Canadian AI company Cohere announced the acquisition of Aleph Alpha, Germany's most credible frontier-model laboratory, at a combined valuation of approximately USD 20 billion, backed by EUR 500 million in structured financing from the Schwarz Group and explicit endorsements from both the German and Canadian governments. The framing in Berlin emphasises continued European operations, but corporate decision-making authority for the only German firm capable of pursuing frontier scale has now crossed the Atlantic. The deal validates the emerging \"middle powers\" thesis — that advanced economies outside the US and China are converging on shared sovereign-AI strategies — while simultaneously illustrating what happens when no European institutional vehicle exists to anchor such laboratories on the continent. Voluntary commercial alignment cannot substitute for treaty-grounded sovereign capacity; the difference becomes visible the moment capital pressure arrives."
+    },
+    {
+      "date": "2026-04-20",
+      "source": "Health Data Hub",
+      "title": "France's national health data platform begins its migration off Microsoft Azure",
+      "url": "https://www.health-data-hub.fr/sites/default/files/2026-04/20260420%20CP%20La%20PDS%20engage%20sa%20migration%20.pdf",
+      "commentary": "The Plateforme des données de santé selected Scaleway to replace Microsoft Azure, ending seven years in which a dataset intended to cover the entire population receiving care in France sat on infrastructure owned by a company subject to the CLOUD Act. The decisive constraint was SecNumCloud certification, which Azure cannot obtain because of US ownership — a procurement rule that achieved what years of litigation before the Conseil d'Etat and repeated objections from the CNIL did not. Sovereignty requirements written as certifications rather than aspirations prove enforceable precisely because they bind the buyer instead of appealing to the seller. No equivalent instrument exists one layer up: there is no certification a European buyer can specify that would cause a frontier model to be trained under European control."
     },
     {
       "date": "2026-04-17",
@@ -162,6 +176,8 @@
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1013",
     "https://digital-strategy.ec.europa.eu/en/news/eu-launches-investai-initiative-mobilise-eu200-billion-investment-artificial-intelligence",
     "https://www.techuk.org/resource/what-were-the-outcomes-of-the-paris-ai-action-summit.html",
-    "https://www.gov.uk/government/publications/seoul-declaration-for-safe-innovative-and-inclusive-ai-ai-seoul-summit-2024/seoul-statement-of-intent-toward-international-cooperation-on-ai-safety-science-ai-seoul-summit-2024-annex"
+    "https://www.gov.uk/government/publications/seoul-declaration-for-safe-innovative-and-inclusive-ai-ai-seoul-summit-2024/seoul-statement-of-intent-toward-international-cooperation-on-ai-safety-science-ai-seoul-summit-2024-annex",
+    "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control",
+    "https://www.health-data-hub.fr/sites/default/files/2026-04/20260420%20CP%20La%20PDS%20engage%20sa%20migration%20.pdf"
   ]
 }
