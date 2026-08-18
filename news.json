@@ -1,6 +1,27 @@
 {
-  "updated": "2026-07-27T16:09:52.201Z",
+  "updated": "2026-08-18T15:51:56.461Z",
   "items": [
+    {
+      "date": "2026-07-30",
+      "source": "European Commission — Digital Strategy",
+      "title": "EU launches AI Gigafactories call to boost Europe's computing capacity and unlock more than €30 billion in investment",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/eu-launches-ai-gigafactories-call-boost-europes-computing-capacity-and-unlock-more-eu30-billion",
+      "commentary": "The Commission has opened the call for AI gigafactories, presented as unlocking more than EUR 30 billion in investment to expand Europe's training-scale compute. Compute procurement of this magnitude is the most concrete instrument the Union currently has for reducing dependency on non-European infrastructure, but the call's design will determine whether the resulting capacity is genuinely governed in Europe or merely hosted here on imported accelerators and foreign operating stacks. Siting decisions will also push demand towards jurisdictions with abundant firm low-carbon power and cool climates, which strengthens the Nordic case for hosting a share of the build-out. The open question is whether a consortium-by-consortium tender can produce the coherent, mission-directed frontier capability that a treaty-based institution would deliver by construction."
+    },
+    {
+      "date": "2026-07-31",
+      "source": "European Commission — Digital Strategy",
+      "title": "Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
+      "commentary": "Enforcement of a further tranche of AI Act obligations, including new transparency requirements, begins on 2 August, moving the Union from rule-setting into supervisory practice. Because the largest general-purpose model providers subject to these duties are predominantly non-European, the effectiveness of enforcement is itself a test of regulatory reach over foreign suppliers on whom European firms and administrations already depend. Rules constrain how imported capability behaves but do not create domestic capability, so enforcement and capacity-building need to advance together rather than substitute for one another. Whether compliance evidence is verifiable in Europe, and by European institutions, will be the practical measure of sovereignty here."
+    },
+    {
+      "date": "2026-08-11",
+      "source": "Google News — sovereign AI Europe",
+      "title": "In-region inference, open models, and new European infrastructure for sovereign AI. - mistral.ai",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9zbGlwUWhiRC1udXFGMzJHeGZkUmN6bHk4T3UxWE5uM2trY2xhUUdTeXZzQ1ZSTXlvc3AzMWREczBUcjg0N1g4ZWdaSkJkVldfYWJ0SjR5cGFGMlFpdUpFTGNTS0EyVm45dllmc21TckJwT05IalE?oc=5",
+      "commentary": "Europe's most prominent frontier model developer has set out a combination of in-region inference, open weights and new European infrastructure as its sovereignty proposition. The mix matters analytically: in-region serving addresses jurisdictional control over data flows, while open weights address the deeper dependency question of whether European users can inspect, adapt and self-host the models they rely upon. A single venture-financed company nonetheless carries concentration risk for a continent's strategic capability, since ownership and commercial direction can shift in ways public infrastructure cannot. The stronger arrangement would pair private developers with a publicly mandated institution holding compute and model assets on a long horizon."
+    },
     {
       "date": "2026-07-21",
       "source": "Microsoft",
@@ -147,13 +168,6 @@
       "title": "Paris AI Action Summit: 58 countries sign declaration on inclusive AI, US and UK refuse",
       "url": "https://www.techuk.org/resource/what-were-the-outcomes-of-the-paris-ai-action-summit.html",
       "commentary": "The Paris AI Action Summit convened over 1,000 participants from more than 100 countries, producing a joint declaration on inclusive and sustainable AI signed by 58 nations including France, China, and India — but notably not the United States or the United Kingdom. The US refusal to sign a multilateral AI governance declaration, combined with the summit's acknowledged failure to advance binding safety commitments, exposes the limits of summit diplomacy for AI governance. Anthropic CEO Dario Amodei called the event a missed opportunity on safety, reinforcing the argument that non-binding declarations cannot substitute for institutional capacity. The governance vacuum that summits leave unfilled is precisely where a treaty-based European institution — with operational authority, not just declaratory ambition — would occupy a distinct and necessary role."
-    },
-    {
-      "date": "2024-05-22",
-      "source": "Government of the Republic of Korea / UK Government",
-      "title": "Seoul AI Safety Summit: Frontier AI Safety Commitments signed by 20 organisations",
-      "url": "https://www.gov.uk/government/publications/seoul-declaration-for-safe-innovative-and-inclusive-ai-ai-seoul-summit-2024/seoul-statement-of-intent-toward-international-cooperation-on-ai-safety-science-ai-seoul-summit-2024-annex",
-      "commentary": "The Seoul AI Safety Summit produced the Frontier AI Safety Commitments, signed by 20 organisations including Anthropic, OpenAI, Microsoft, and NVIDIA, establishing frameworks for disclosure, evaluation, and risk mitigation, while launching the International Network of AI Safety Institutes with 10 founding members. The commitments represent the most concrete voluntary safety framework to date, yet they remain corporate pledges rather than sovereign obligations — no government is bound, and no institution has authority to enforce compliance. The AISI network's federated structure across national institutes offers a useful precedent for Europa Nova: international coordination of safety evaluation requires permanent institutional capacity, not periodic summits. Seoul demonstrated both the demand for international AI governance infrastructure and the structural inadequacy of the current approach to supply it."
     }
   ],
   "seen": [
@@ -178,6 +192,24 @@
     "https://www.techuk.org/resource/what-were-the-outcomes-of-the-paris-ai-action-summit.html",
     "https://www.gov.uk/government/publications/seoul-declaration-for-safe-innovative-and-inclusive-ai-ai-seoul-summit-2024/seoul-statement-of-intent-toward-international-cooperation-on-ai-safety-science-ai-seoul-summit-2024-annex",
     "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control",
-    "https://www.health-data-hub.fr/sites/default/files/2026-04/20260420%20CP%20La%20PDS%20engage%20sa%20migration%20.pdf"
+    "https://www.health-data-hub.fr/sites/default/files/2026-04/20260420%20CP%20La%20PDS%20engage%20sa%20migration%20.pdf",
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVlgyeExUY2phdTdLSzBPTW9hQnM3TWN0anotZExTenc2LUpSSlVzTnVuM212dkk5REd0MzdPVnR3V0ducDJfbmJBSXB6ekVqd05nNWk4RzltT0E1dXM5ZVZ2OERxMGdkOWJnbHRwb2ZtQ2VCWkgxRVEzVmJWVXNVWV9paDVNYm1KMXZydTJkbVlWTWhCeFNyRmhvLWZfTEFsNnY2SkdURlIxeFFsSi0zemlIUTZHTk84cHRB0gHAAUFVX3lxTFAzbEhqQW82LWhMWFEzdjUwOWJtdDJ4QmY2NXVNbExoanpvWkNjR09kM0ttZXpYTmdPYnJ3bGlNNFMwQ3JaWThFc1p3cTBTVlJsU2FSR3l1VTdtSXczZDRsZDRBbW5iUlk4WTdxc0w4SkpVV1dHM3MxU3NlMU03ZlBZeTZobkxIaXlic3JydmNlbVpXVXRERExSR0cyb18zZFNod3JyNnc5aUJVZGVKUVdEQkRiZGVLN0tXem5tTGp4dQ",
+    "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPZkx5MFJBeXY0OF83a01lTnc1aGlRaTI0dTJxMlZXejlyMmhjd2w4MWYyMW5TdkJPNVA1cV9tYm10VkpzTmdTRzdoXzlDbDNuSFVuRDh5c1d6bTM5a3QxR2h1TGZKN3BCMVFFcTlLZEptdk9rcU9abGxncWdsQTJhZGV1U01ITVcxYk5ydXhtRkhIYktxUFo5YnhIa3d1ZUVFSndiNFl4X0pXUDAyTk5uNkhlLXFtTFdNWEp6VndwNDZia3hJU254c2szVGV5NFR1alZaWno2dXB5VHZ6WFVwZmVhZDMwbzQ4YmfSAe8BQVVfeXFMTXlkV1h6dkdMWkc1V0JKSHVOczQ4SW1vTmhoSkhDNW1ZRmhqbnRwNEpJU1c3WDBHU0FtWnBIeWJkVUFwdURtaUF4UVNhQXVZdWZyT0hUMGdxaFRMYURfbnAzaW9lSFdKT09wRHpLbGR2WmdVa2FCMzczMmkzSlgxQU4xZzZHdk1vdXVHM1piTEFKZ1RhaE1rR1ZnMmQtQkZmWDBYTEVlVUhSd2JFX0t3c0NDN2pLZUxnTXVfTFZIY0pINExKYXNqQUtCX2Ywd1lNTXRRdG56bUZYbDVvSzlVek4tWjVKX0xDeG5NdHBmaFU",
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxQMEdZdHMzM1d1YzNFdG9ySDVIbldhX2kzVjJETm5odXNtZXFwYTU5Tmxzc0JhQ2Y5XzZ0dUVrTV9jcTFPVENQQWtOQlpIVFBGUnpiZy1zMXJncmRNbzlwbjZrMDhtbnVneVV5YmgtTnJPTHZ6TjdsRmtleTZ1ellXUjdMc3JBTlViTVJXWU1xT3IwYTZrbEE",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE9zbGlwUWhiRC1udXFGMzJHeGZkUmN6bHk4T3UxWE5uM2trY2xhUUdTeXZzQ1ZSTXlvc3AzMWREczBUcjg0N1g4ZWdaSkJkVldfYWJ0SjR5cGFGMlFpdUpFTGNTS0EyVm45dllmc21TckJwT05IalE",
+    "https://news.google.com/rss/articles/CBMijwFBVV95cUxOaURYRC1WVVFpenp5QUdrTGVsYkRRRUdPMHV2Mmx4VU9HaWkwajh3NTg2QXpfaVFVTWVRdHJadjN3V0c0aHRhMFJTdG05clZvWXFTbHkyRjRaLWNSRjAwcmZvVjh1bFlodFRpamxDQ0ZrbDZmUlZ4WUJFaW5JME1IeW5LbWMyOXRlX0l3bFVzWQ",
+    "https://news.google.com/rss/articles/CBMibEFVX3lxTE40S3d2U3ltX1BISFdMb0gyRmxXejhOS1BkUkNDSXdLV2gwM09tdVdEay1mb283dVVCX19WaVY2Sk9XemZ4Vlg3WHhRZmVNMjFrdEVLeGdkbDZZcE9RUml3TlZQOW5NcUVua0htdg",
+    "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOa1pmc3NRVUVhU2RNd3JqZ1A4Qjc5cEpqZkgtYnpGMElLWE1OMDR0cEFJaERXcnUxU1ByNUU3ekU5Z1M5YTNOT2FDNHY1MUlqWVhjbFNvTi1XRENqazF1YjlHU3JNZklZU0h3SHJSbVVUWHlYTmdfTWVBUy1TS2VkRVJGYlR2S1NQaS1xTS11TG9lZll4aDlZUXJvY3pielVvTGRGV2VYUG1oVTY3QUluQmNUdFI0WFZUcjE1dnFYS0c3QXRmaGNJZlNjUEM1YkJwVU1uM2tLRTBPankzajc4TUx6c0V4VE5aWU4zTi1vTTRsek1jQ2VxNUxjTQ",
+    "https://news.google.com/rss/articles/CBMizwFBVV95cUxNT1pVNDB0S0F6RGVXd21RM3pwcVJjS0xDRTJUN093SlRxaWJvaURrTy00WkdZVk5hX3A0WGlNWjZWSXVVTEFNV0t3NmNfMTlfWURWbjFhMFMzNU02RkI1N2JtN0ViT3BCbDdHbTFQc0RRVUNiaUxQTUdnZHQwMFd4a3NrQkNzZFNPUy12YjBkSUtqN052LVVZQUdBMEdKQml3dmcybW1lUm5EUmlHS01kcnFJUVNmZmk5SlVpSEp2RWRPZ2o2T0pYX2RWZXpHdG8",
+    "https://news.google.com/rss/articles/CBMiygFBVV95cUxQbHNqN21vZC1fbkc1WnRiUHNpRU80aEQwV1BIVUpOWWJpcWdjV09TTVZWNGdmSnR5a3NUTnZ2dGdOOEZ3ZXc2cWVGU096amYtZ0JZQkl0MkJsQUp1eGo2WWVZOUNQMG0zRHluUlV6d0dQN0pqQzI1eHJQYmtjU0s3M1JkSEFlZGJJN0M4QWhYYXFxblk1alFWSGZNLUE0S3dzQzZ2U1ktekVpbVhvX29Obm9VZE82TG84T0xCaHdvWTB3N1hRTzVDZGZR",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxOMzB4ZzgydW5GaTJxWEVIRU9CNWhYVVIwczZwRE9XNXN0QVhfZWloN09zdHkzVkVwR2VwdUxOdVlhSnJneTJBM1RNeUR5SE00Q3RKbzhET2lkVTF0QWVxSzJ6dlRRRjVlQW9kdzZkdjB5ZTJXNFFyb25DZTFTcDZpYjlsZ1pEM1Q3dUVGcWZkSWZ3Y1drZUh4bjVFVGNyRVJfUmRiMFlJUnozOFhZdlhUa1hjZFN0c2RJbWU2TWNiX09la1dm",
+    "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTE1JVUhtVjNkbjJseVZvVUliVDRaV2RnSjMwVmt5NXpRODhOdHAxYXdKQWE1RXRVSjh0bDNEeXhMUG54bVh1dTJjY3lXU1NkaEdZUlBXaFVtVlZnMDlkeENuclJ1Ny1PY2pxU1ZIOURtVzlUd05tSVVya1F0aVNmdms",
+    "https://digital-strategy.ec.europa.eu/en/news/eu-launches-ai-gigafactories-call-boost-europes-computing-capacity-and-unlock-more-eu30-billion",
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZF9vQUVnQXBrNHpaN21pSVZEemdnUnJzenhiN2xpWndPZDFGdWZFbndZU0VGZ1Vyejd1NnFrSnQxTm1zRjQxYUczUVNxS0IyY2tCbE1falgyQl9HMnZtYzlXcl9jcDc0OXVybFlTVFRYdlBPT1VfS1JZUnRoZVo0YXN1R1dtZHYxbmk1OGdnWHdWM3pqaW1uXzZleUJJWEFsTzN4Q2lGM0RjTmpua3F2Ujk5bVBCcEZCSVNDNFlvbnBHUQ",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxQWmN4d3QzejFYWnpTQ1l1NlhpMTFJRjFWYmpHMHNueGZlQnNaSmVTaFJGYXB3X0lNWm5wQW4wUHQ5aXRKNVplVWthbzhMSU4xdUhjQzU5Y2V1TWc1MHpidzJJQnpFRnRWLUJUMW9xM2tTN25FdVNadk1kY0NMVDZQSjB2TEtndjV0WGpKN2VWdUM5alNC",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNkVzZmxPNUh1UVcydDBmd0JpWUVocExWNC1WVTlTQ010SjJLd2lhallFcmc1QWFPS2UzMlhXRExqNDJmZVJZY0cwWHpBbERkeC1aR05tT3NBRXNldXlhLWVuUlE5eXpvM0JXYWVRZk1oLXhKNXhGeF9CYXRqdVBYdG8yUkxBRXdF",
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxOVWRBejVRcU1tR2J0VEZ0TzYtSXlzeXQyYnh5cm5jYTUxMDBJRU1BQm1YMkxWTTlqXzhmV2kzcS14OERjOGpBdnQyMUJ1N0tOQVZ0YkhnclRXRVIyV1RlTEszUC1aM1FpVHRiYUY3QXZSeFhBM2dJZUljVjRXN21tTkFEWWZjWUx6aEg0UW9mbW42NDMtWWdRZ2ZPSQ",
+    "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5FanlEWmVOaG9iTjFRV3FCS0FvMUQ4SVBQaDFDejh6c1JsM2NQWTBvbnBUOXN1TldNMHNQWFlhWjNqbEtSc3RqXzhiYVlBV1VxT1dVcNIBXEFVX3lxTE14b2JtUDZnY0NfdzI5T2padHoySlcwVlFVRHVkb3BMRHlxcDNQMDV6Z3ZJNkY1Z2dkeWR5VmZ5NmdSbTVsbDEyN0ZqLUFDTGZDc1ZTSDdXSm9HX0E1"
   ]
 }
