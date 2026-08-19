@@ -1,5 +1,19 @@
-<svg width="512" height="512" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="200" height="200" fill="#1a2236"/>
-  <rect x="16" y="16" width="168" height="168" stroke="#ffffff" stroke-width="6" fill="none" rx="4"/>
-  <text x="100" y="100" text-anchor="middle" dominant-baseline="central" font-family='DM Sans,Calibri,sans-serif' font-weight="700" font-size="82" fill="#ffffff" letter-spacing="-2">EN</text>
+<svg width="512" height="512" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Europa Nova">
+  <title>Europa Nova</title>
+  <!-- EN drawn as geometry, not typeset: the mark is identical on every
+       machine whether or not DM Sans is installed. Palette navy-deep
+       (#1B2A4A), square corners, letters optically centred on 100,100. -->
+  <rect width="200" height="200" fill="#1B2A4A"/>
+  <rect x="16" y="16" width="168" height="168" fill="none" stroke="#F7F7F4" stroke-width="6"/>
+  <g fill="#F7F7F4">
+    <!-- E -->
+    <rect x="49" y="63" width="15" height="74"/>
+    <rect x="49" y="63" width="44" height="15"/>
+    <rect x="49" y="92" width="37" height="14"/>
+    <rect x="49" y="122" width="44" height="15"/>
+    <!-- N -->
+    <rect x="107" y="63" width="15" height="74"/>
+    <rect x="136" y="63" width="15" height="74"/>
+    <polygon points="107,63 122,63 151,137 136,137"/>
+  </g>
 </svg>
