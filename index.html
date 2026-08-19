@@ -23,7 +23,7 @@
   --navy: #2C4A6E;
   --navy-deep: #1B2A4A;
   --text: #1D1D1D;
-  --grey: #8C8C7E;
+  --grey: #6C6C60;
   --light: #F7F7F4;
   --lighter: #FAFAF8;
   --rule: rgba(44, 74, 110, 0.18);
@@ -97,8 +97,10 @@ section { padding: 5rem 0; }
   height: 2px;
   background: var(--navy);
   z-index: 200;
-  width: 0%;
-  transition: width 0.1s linear;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.1s linear;
 }
 
 /* ── Navigation ── */
@@ -1764,7 +1766,7 @@ footer p {
       font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #8C8C7E;
+      color: #6C6C60;
       margin: 0 0 16px 0;
     ">Policy Context</p>
 
@@ -1780,14 +1782,14 @@ footer p {
     <p style="
       font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
       font-size: 1.05rem;
-      color: #8C8C7E;
+      color: #6C6C60;
       margin: 0 0 56px 0;
       line-height: 1.65;
       max-width: 600px;
     ">Recent developments in European AI policy, sovereign technology cooperation, and frontier AI governance — with commentary on their implications.</p>
 
     <div id="news-feed" aria-live="polite" aria-label="Policy news feed">
-      <div id="news-loading" style="color: #8C8C7E; font-family: 'EB Garamond', Georgia, serif; font-size: 0.9rem; font-style: italic;">
+      <div id="news-loading" style="color: #6C6C60; font-family: 'EB Garamond', Georgia, serif; font-size: 0.9rem; font-style: italic;">
         Loading recent developments&hellip;
       </div>
     </div>
@@ -1821,7 +1823,7 @@ footer p {
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #8C8C7E;
+    color: #6C6C60;
     margin: 0 0 12px 0;
     display: flex;
     gap: 16px;
@@ -1861,9 +1863,21 @@ footer p {
     max-width: 680px;
   }
   @media (prefers-reduced-motion: reduce) {
+    /* Reveal-on-scroll content is shown outright rather than animated in.
+       State changes are preserved: the FAQ still opens, the progress bar
+       still tracks, the figure bars still show their final values. */
+    html { scroll-behavior: auto; }
+    .fade-in,
+    .fade-in.visible,
     .news-item {
       opacity: 1;
       transform: none;
+      transition: none;
+    }
+    .progress-bar,
+    .fig1-bar-fill,
+    .faq-a,
+    .news-title {
       transition: none;
     }
   }
@@ -1902,7 +1916,7 @@ footer p {
     var updatedEl = document.getElementById('news-updated');
 
     if (!data.items || data.items.length === 0) {
-      feed.innerHTML = '<p style="font-family:EB Garamond,Georgia,serif;color:#8C8C7E;font-style:italic;font-size:0.9rem;">No recent developments to display.</p>';
+      feed.innerHTML = '<p style="font-family:EB Garamond,Georgia,serif;color:#6C6C60;font-style:italic;font-size:0.9rem;">No recent developments to display.</p>';
       return;
     }
 
@@ -2171,7 +2185,7 @@ const progressBar = document.getElementById('progressBar');
 function updateProgress() {
   const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
   const scrolled = (window.scrollY / scrollHeight) * 100;
-  progressBar.style.width = scrolled + '%';
+  progressBar.style.transform = 'scaleX(' + Math.min(Math.max(scrolled / 100, 0), 1) + ')';
 }
 window.addEventListener('scroll', updateProgress, { passive: true });
 

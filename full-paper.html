@@ -12,7 +12,7 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
   --navy: #2C4A6E; --text: #1D1D1D;
-  --grey: #8C8C7E; --light: #F7F7F4;
+  --grey: #6C6C60; --light: #F7F7F4;
   --lighter: #FAFAF8; --rule: rgba(44, 74, 110, 0.18); --white: #FFFFFF;
   --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
   --sans: 'DM Sans', 'Calibri', 'Helvetica Neue', sans-serif;
@@ -234,6 +234,15 @@ body { font-family: var(--serif); color: var(--text); background: var(--white); 
 .pdf-download button { background: var(--navy); color: var(--white); border: none; cursor: pointer; font-family: var(--sans); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.6rem 1.2rem; display: flex; align-items: center; gap: 0.4rem; opacity: 0.85; transition: opacity 0.2s; }
 .pdf-download button:hover { opacity: 1; }
 .pdf-download button svg { width: 14px; height: 14px; }
+
+/* Reduced motion: figures are revealed on scroll via JS, so they are shown
+   outright here. Hover and state feedback is kept, just made instant. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fig-container, .fig-container.fig-visible { opacity: 1; transform: none; transition: none; }
+  .fig2-bar, .fig4-box, .fig5-seg, .fig1-poly, .fig1-dots,
+  .back-top, .fig-tooltip, .fig-tooltip-box { transition: none; }
+}
 </style>
 </head>
 <body>
@@ -341,7 +350,7 @@ body { font-family: var(--serif); color: var(--text); background: var(--white); 
       <text x="-105" y="148" text-anchor="end" font-family="'DM Sans',sans-serif" font-size="11" font-weight="600" fill="#1D1D1D" letter-spacing="0.08em">DATA</text>
       <text x="-166" y="-44" text-anchor="end" font-family="'DM Sans',sans-serif" font-size="11" font-weight="600" fill="#1D1D1D" letter-spacing="0.08em">ENERGY</text>
       <!-- Scale numbers -->
-      <g font-family="'DM Sans',sans-serif" font-size="9" fill="#8C8C7E" text-anchor="end">
+      <g font-family="'DM Sans',sans-serif" font-size="9" fill="#6C6C60" text-anchor="end">
         <text x="-6" y="-28">2</text>
         <text x="-6" y="-60">4</text>
         <text x="-6" y="-92">6</text>
@@ -374,18 +383,18 @@ body { font-family: var(--serif); color: var(--text); background: var(--white); 
     <g transform="translate(430,20)">
       <rect x="0" y="0" width="14" height="4" fill="#2C4A6E" rx="1"/>
       <text x="20" y="5" font-family="'DM Sans',sans-serif" font-size="11" font-weight="600" fill="#1D1D1D">United States</text>
-      <text x="20" y="17" font-family="'DM Sans',sans-serif" font-size="9" fill="#8C8C7E">10 / 9 / 10 / 9 / 7</text>
+      <text x="20" y="17" font-family="'DM Sans',sans-serif" font-size="9" fill="#6C6C60">10 / 9 / 10 / 9 / 7</text>
 
       <rect x="0" y="34" width="14" height="4" fill="#8C8C7E" rx="1"/>
       <text x="20" y="39" font-family="'DM Sans',sans-serif" font-size="11" font-weight="600" fill="#1D1D1D">China</text>
-      <text x="20" y="51" font-family="'DM Sans',sans-serif" font-size="9" fill="#8C8C7E">6 / 7 / 7 / 8 / 6</text>
+      <text x="20" y="51" font-family="'DM Sans',sans-serif" font-size="9" fill="#6C6C60">6 / 7 / 7 / 8 / 6</text>
 
       <rect x="0" y="68" width="14" height="4" fill="#1D1D1D" rx="1"/>
       <text x="20" y="73" font-family="'DM Sans',sans-serif" font-size="11" font-weight="600" fill="#1D1D1D">Europe</text>
-      <text x="20" y="85" font-family="'DM Sans',sans-serif" font-size="9" fill="#8C8C7E">2 / 6 / 3 / 5 / 8</text>
+      <text x="20" y="85" font-family="'DM Sans',sans-serif" font-size="9" fill="#6C6C60">2 / 6 / 3 / 5 / 8</text>
 
-      <text x="0" y="112" font-family="'EB Garamond',serif" font-size="10" font-style="italic" fill="#8C8C7E">Scores: Compute / Talent /</text>
-      <text x="0" y="124" font-family="'EB Garamond',serif" font-size="10" font-style="italic" fill="#8C8C7E">Capital / Data / Energy</text>
+      <text x="0" y="112" font-family="'EB Garamond',serif" font-size="10" font-style="italic" fill="#6C6C60">Scores: Compute / Talent /</text>
+      <text x="0" y="124" font-family="'EB Garamond',serif" font-size="10" font-style="italic" fill="#6C6C60">Capital / Data / Energy</text>
     </g>
   </svg>
 </div>
@@ -801,7 +810,7 @@ body { font-family: var(--serif); color: var(--text); background: var(--white); 
       <!-- Center circle -->
       <circle cx="100" cy="100" r="55" fill="var(--lighter)"/>
       <text x="100" y="96" text-anchor="middle" font-family="'DM Sans',Calibri,sans-serif" font-size="11" font-weight="700" fill="#1D1D1D">EUROPA NOVA</text>
-      <text x="100" y="110" text-anchor="middle" font-family="'DM Sans',Calibri,sans-serif" font-size="8" fill="#8C8C7E">Training Corpus</text>
+      <text x="100" y="110" text-anchor="middle" font-family="'DM Sans',Calibri,sans-serif" font-size="8" fill="#6C6C60">Training Corpus</text>
     </svg>
     <ul class="fig72-labels">
       <li><span class="dot" style="background:#2C4A6E;"></span><strong>40%</strong> Multilingual web text</li>

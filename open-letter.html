@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Open Letter — Europa Nova</title>
-<meta name="description" content="An open letter to European heads of state proposing Europa Nova, a treaty-based European research institution for sovereign artificial general intelligence.">
+<meta name="description" content="An open letter to European heads of state proposing Europa Nova, a treaty-based European research institution for sovereign European capability in frontier AI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 :root {
   --navy: #2C4A6E;
   --text: #1D1D1D;
-  --grey: #8C8C7E;
+  --grey: #6C6C60;
   --light: #F7F7F4;
   --lighter: #FAFAF8;
   --rule: rgba(44, 74, 110, 0.18);
@@ -326,6 +326,11 @@ body {
 .pdf-download button { background: var(--navy); color: var(--white); border: none; cursor: pointer; font-family: var(--sans); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.6rem 1.2rem; display: flex; align-items: center; gap: 0.4rem; opacity: 0.85; transition: opacity 0.2s; }
 .pdf-download button:hover { opacity: 1; }
 .pdf-download button svg { width: 14px; height: 14px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .pdf-download { transition: none; }
+}
 </style>
 </head>
 <body>
