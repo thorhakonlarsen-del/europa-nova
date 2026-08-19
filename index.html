@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>document.documentElement.className += ' js';</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Europa Nova — A Treaty-Based Framework for Sovereign European AI Capability</title>
@@ -9,7 +10,14 @@
 <meta property="og:description" content="An independent, treaty-based European institution for sovereign capability in frontier AI. Modelled on CERN. Powered by Nordic energy.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://europa-nova.eu">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://europa-nova.eu/europa-nova-monogram.png">
+<link rel="icon" href="monogram.svg" type="image/svg+xml">
+<link rel="alternate icon" href="europa-nova-monogram.png" sizes="512x512">
+<link rel="apple-touch-icon" href="europa-nova-monogram.png">
+<!-- summary, not summary_large_image: the monogram is 512x512, and a square
+     asset in a 1200x630 slot renders as a broken or letterboxed card. -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://europa-nova.eu/europa-nova-monogram.png">
 <meta name="twitter:title" content="Europa Nova — Sovereign European AI Capability">
 <meta name="twitter:description" content="A treaty-based European research institution for sovereign capability in frontier AI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -177,9 +185,11 @@ nav .nav-inner {
 .nav-hamburger {
   display: none;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
   cursor: pointer;
-  padding: 4px;
+  /* 44x44 minimum touch target; the bars stay 22px wide inside it. */
+  padding: 11px;
   background: none;
   border: none;
 }
@@ -958,15 +968,24 @@ nav .nav-inner {
   color: var(--grey);
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease, visibility 0.3s;
   opacity: 0;
   margin-top: 0;
+  /* Without this a screen reader reads every collapsed answer aloud;
+     max-height alone does not remove content from the accessibility tree. */
+  visibility: hidden;
+}
+
+.faq-q:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
 }
 
 .faq-item.open .faq-a {
   max-height: 600px;
   opacity: 1;
   margin-top: 0.75rem;
+  visibility: visible;
 }
 
 /* ── Endorsements ── */
@@ -1042,7 +1061,7 @@ nav .nav-inner {
 }
 
 .form-field select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238C8C7E' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236C6C60' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0.9rem center;
   padding-right: 2.5rem;
@@ -1066,7 +1085,7 @@ nav .nav-inner {
 /* ── Footer ── */
 footer {
   background: var(--navy);
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.78);
   padding: 4rem 0;
 }
 
@@ -1102,7 +1121,7 @@ footer p {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.75);
   margin-bottom: 1rem;
 }
 
@@ -1126,7 +1145,7 @@ footer p {
   font-family: var(--sans);
   font-size: 0.7rem;
   letter-spacing: 0.05em;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.7);
 }
 
 /* ── Responsive ── */
@@ -1175,7 +1194,9 @@ footer p {
 }
 
 /* ── Fade in on scroll ── */
-.fade-in {
+/* Scroll reveal is opt-in: the .js flag is set in <head> before paint, so a
+   blocked or broken script leaves the argument visible rather than blank. */
+.js .fade-in {
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -1474,7 +1495,7 @@ footer p {
       </div>
 
       <div class="fig1-insight">
-        <p><strong>The mismatch is striking.</strong> FLAP-D hubs hold 62% of data centre capacity but face the highest energy costs and grid saturation. The Nordics offer electricity at one-third to one-quarter of the cost, with abundant grid capacity and near-total renewable supply. OpenAI, Microsoft, and CoreWeave have already committed over $15 billion to Nordic AI infrastructure.</p>
+        <p><strong>The mismatch is striking.</strong> FLAP-D hubs hold 62% of data centre capacity but face the highest energy costs and grid saturation. The Nordics offer electricity at one-third to one-quarter of the cost, with abundant grid capacity and near-total renewable supply. Microsoft, CoreWeave, and Brookfield have already committed over $15 billion to Nordic AI infrastructure.</p>
       </div>
 
       <div class="figure-source">
@@ -1541,9 +1562,9 @@ footer p {
       </div>
 
       <div class="stack-legend">
-        <div class="stack-legend-item"><div class="stack-legend-mark" style="background: var(--navy);"></div><div class="stack-legend-text">Covered by current EU initiatives</div></div>
-        <div class="stack-legend-item"><div class="stack-legend-mark" style="background: var(--navy); height: 3px;"></div><div class="stack-legend-text">Europa Nova (proposed)</div></div>
-        <div class="stack-legend-item"><div class="stack-legend-mark" style="background: var(--rule);"></div><div class="stack-legend-text">Downstream application (market-driven)</div></div>
+        <div class="stack-legend-item"><div class="stack-legend-mark" style="background: rgba(44, 74, 110, 0.10); height: 12px; border: 1px solid var(--rule);"></div><div class="stack-legend-text">Covered by current EU initiatives</div></div>
+        <div class="stack-legend-item"><div class="stack-legend-mark" style="background: rgba(44, 74, 110, 0.10); height: 12px; border: 1px solid var(--rule); border-left: 3px solid var(--navy);"></div><div class="stack-legend-text">Europa Nova (proposed)</div></div>
+        <div class="stack-legend-item"><div class="stack-legend-mark" style="background: var(--white); height: 12px; border: 1px dashed var(--rule);"></div><div class="stack-legend-text">Downstream application (market-driven)</div></div>
       </div>
 
       <div class="figure-source">
@@ -1622,7 +1643,7 @@ footer p {
         <div class="contrib-context">AI leadership ambition (Silo AI heritage)</div>
       </div>
     </div>
-    <p style="font-family: var(--sans); font-size: 0.6rem; color: var(--grey); text-align: center;">Total: &euro;3 billion per year &middot; &euro;30 billion over ten years &middot; Each contribution is less than 0.06% of the nation&rsquo;s annual budget</p>
+    <p style="font-family: var(--sans); font-size: 0.6rem; color: var(--grey); text-align: center;">Total: &euro;3 billion per year &middot; &euro;30 billion in treaty contributions over ten years &middot; Each contribution is less than 0.06% of the nation&rsquo;s annual budget</p>
   </div>
 </section>
 
@@ -1647,12 +1668,12 @@ footer p {
         <div class="timeline-desc">First 200&ndash;400 researchers hired. Initial compute capacity online (500MW). First architectural research outputs. Year-three independent evaluation gate.</div>
       </div>
       <div class="timeline-phase">
-        <div class="timeline-period">Years 3&ndash;5</div>
+        <div class="timeline-period">Years 3&ndash;7</div>
         <div class="timeline-title">Scale &amp; Commercialise</div>
         <div class="timeline-desc">Commercial Licensing Entity begins operations. First model releases. Revenue generation starts. Compute expansion to 1GW+. Projected revenue: &euro;500M by year five.</div>
       </div>
       <div class="timeline-phase">
-        <div class="timeline-period">Years 5&ndash;10</div>
+        <div class="timeline-period">Years 7&ndash;10</div>
         <div class="timeline-title">Frontier Capability</div>
         <div class="timeline-desc">Full-scale operations. Revenue of &euro;2&ndash;3B annually. Sovereign contributions progressively reduced. Europa Nova as anchor institution for European AI capability.</div>
       </div>
@@ -1695,7 +1716,7 @@ footer p {
 
     <div class="faq-item">
       <div class="faq-q">Why Northern Scandinavia for the compute infrastructure?</div>
-      <div class="faq-a">Physics and economics. Norway generates 98% of its electricity from renewables. Long-term Nordic power contracts secure rates at &euro;0.03/kWh &mdash; a fraction of Frankfurt or Dublin prices. Arctic temperatures reduce cooling costs by 30&ndash;60%. Grid reliability in Finland reached 99.99995% in 2025. The market has already validated this: OpenAI, Microsoft, and CoreWeave collectively committed over $15 billion to Nordic AI infrastructure in 2025. The researchers do not live at the compute facility &mdash; they work at the research hub in a major European city, connected by dedicated fibre.</div>
+      <div class="faq-a">Physics and economics. Norway generates 98% of its electricity from renewables. Long-term Nordic power contracts secure rates at &euro;0.03/kWh &mdash; a fraction of Frankfurt or Dublin prices. Arctic temperatures reduce cooling costs by 30&ndash;60%. Grid reliability in Finland reached 99.99995% in 2025. The market has already validated this: Microsoft, CoreWeave, and Brookfield collectively committed over $15 billion to Nordic AI infrastructure in 2025. The researchers do not live at the compute facility &mdash; they work at the research hub in a major European city, connected by dedicated fibre.</div>
     </div>
 
     <div class="faq-item">
@@ -1797,7 +1818,7 @@ footer p {
     <p id="news-updated" style="
       font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
       font-size: 11px;
-      color: rgba(0,0,0,0.25);
+      color: rgba(0,0,0,0.62);
       margin: 48px 0 0 0;
       letter-spacing: 0.05em;
     "></p>
@@ -2107,11 +2128,29 @@ footer p {
 <script>
 // ── FAQ toggle ──
 document.querySelectorAll('.faq-q').forEach(q => {
-  q.addEventListener('click', () => {
+  // Make each question a real control: reachable by Tab, operable by Enter and
+  // Space, and announced with its open state by a screen reader.
+  q.setAttribute('role', 'button');
+  q.setAttribute('tabindex', '0');
+  q.setAttribute('aria-expanded', 'false');
+  const answer = q.nextElementSibling;
+  if (answer) {
+    if (!answer.id) answer.id = 'faq-a-' + Math.random().toString(36).slice(2, 8);
+    q.setAttribute('aria-controls', answer.id);
+  }
+  function toggle() {
     const item = q.parentElement;
     const wasOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!wasOpen) item.classList.add('open');
+    // Answers stay independently open, so two can be compared side by side.
+    item.classList.toggle('open', !wasOpen);
+    q.setAttribute('aria-expanded', String(!wasOpen));
+  }
+  q.addEventListener('click', toggle);
+  q.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+      e.preventDefault();
+      toggle();
+    }
   });
 });
 

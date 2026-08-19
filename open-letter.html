@@ -323,13 +323,13 @@ body {
 
 /* ── PDF Download Button ── */
 .pdf-download { position: fixed; bottom: 2rem; right: 2rem; z-index: 50; }
-.pdf-download button { background: var(--navy); color: var(--white); border: none; cursor: pointer; font-family: var(--sans); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.6rem 1.2rem; display: flex; align-items: center; gap: 0.4rem; opacity: 0.85; transition: opacity 0.2s; }
+.pdf-download button { background: var(--navy); color: var(--white); border: none; cursor: pointer; font-family: var(--sans); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.8rem 1.2rem; display: flex; align-items: center; gap: 0.4rem; opacity: 0.85; transition: opacity 0.2s; }
 .pdf-download button:hover { opacity: 1; }
 .pdf-download button svg { width: 14px; height: 14px; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .pdf-download { transition: none; }
+  .pdf-download button, .doc-cta a { transition: none; }
 }
 </style>
 </head>
