@@ -14,3 +14,8 @@ Figure_5_CashFlow_Model.jsx
 Figure_7_1_Scaling_Properties.jsx
 Figure_7_2_Corpus_Composition.jsx
 figure4_europa_nova_org_chart.jsx
+
+# Working notes. GitHub Pages serves the repository root, so anything
+# committed here is published at europa-nova.eu/<filename>.
+GOAL_*.md
+_arkiv/
