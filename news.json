@@ -1,6 +1,13 @@
 {
-  "updated": "2026-08-18T15:51:56.461Z",
+  "updated": "2026-08-20T06:57:56.360Z",
   "items": [
+    {
+      "date": "2026-08-05",
+      "source": "Google News — sovereign AI Europe",
+      "title": "NVIDIA Dominates With 92% Share in Counterpoint Research’s Sovereign AI LLM Index",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOdUhhQnZpd2JGQlRzMnlyd3Mtcks5VzNrZ2hEamFlT01ST2cxa2RnVWRvTlNBN3ZzTUJQdkdxZXE3cDJGTEEyaFMxYzk0UXVGV0xROWplVkxTV3d0MzB3V1piWFNBbVdLS1ZVb3pkTmlkN1hEcTh2S1hNRjhiWXQ5UTVFa2p6QkZWX3FGeXZQMHJjVlhZRUR6NUd1NXFfMnU2R3E1MUtDVlZDcVZKMUFJaWlPOE42X0lXTGVtTGFnSVZ6TVZObEpvUmtyUVlTUQ?oc=5",
+      "commentary": "Counterpoint Research puts NVIDIA at 92 per cent of its index tracking sovereign AI large language model activity, a figure that quantifies how thin the notion of sovereignty becomes when the underlying accelerators come from a single non-European vendor. For Europe, the implication is that AI Factories, gigafactory plans and national model programmes can be domestically owned and domestically hosted while still resting on an import dependency that no procurement rule currently addresses. The measure of autonomy therefore shifts from where models are trained to who controls allocation, pricing and export terms for the silicon underneath. Any credible European compute strategy will need to treat supplier concentration as a distinct risk category alongside energy and capital, rather than assuming that hosting infrastructure on European soil settles the question."
+    },
     {
       "date": "2026-07-30",
       "source": "European Commission — Digital Strategy",
@@ -161,13 +168,6 @@
       "title": "EU launches InvestAI initiative to mobilise EUR 200 billion of investment in artificial intelligence",
       "url": "https://digital-strategy.ec.europa.eu/en/news/eu-launches-investai-initiative-mobilise-eu200-billion-investment-artificial-intelligence",
       "commentary": "At the Paris AI Action Summit, Commission President von der Leyen announced InvestAI, a public-private initiative targeting EUR 200 billion in AI investment across Europe, including EUR 20 billion for four AI gigafactories, while more than 60 European companies launched the EU AI Champions Initiative with EUR 150 billion in planned investment. The headline figures are substantial, but the mechanism — a coalition of voluntary private commitments coordinated by the Commission — carries no treaty obligation and no enforcement mechanism. CERN's annual budget of approximately CHF 1.2 billion is modest by comparison, yet its treaty basis ensures consistent, multi-decade investment that no voluntary initiative can replicate. Europa Nova's case rests on precisely this distinction between announced investment targets and institutionally guaranteed capability."
-    },
-    {
-      "date": "2025-02-10",
-      "source": "French Government / AI Action Summit",
-      "title": "Paris AI Action Summit: 58 countries sign declaration on inclusive AI, US and UK refuse",
-      "url": "https://www.techuk.org/resource/what-were-the-outcomes-of-the-paris-ai-action-summit.html",
-      "commentary": "The Paris AI Action Summit convened over 1,000 participants from more than 100 countries, producing a joint declaration on inclusive and sustainable AI signed by 58 nations including France, China, and India — but notably not the United States or the United Kingdom. The US refusal to sign a multilateral AI governance declaration, combined with the summit's acknowledged failure to advance binding safety commitments, exposes the limits of summit diplomacy for AI governance. Anthropic CEO Dario Amodei called the event a missed opportunity on safety, reinforcing the argument that non-binding declarations cannot substitute for institutional capacity. The governance vacuum that summits leave unfilled is precisely where a treaty-based European institution — with operational authority, not just declaratory ambition — would occupy a distinct and necessary role."
     }
   ],
   "seen": [
@@ -210,6 +210,7 @@
     "https://news.google.com/rss/articles/CBMilAFBVV95cUxQWmN4d3QzejFYWnpTQ1l1NlhpMTFJRjFWYmpHMHNueGZlQnNaSmVTaFJGYXB3X0lNWm5wQW4wUHQ5aXRKNVplVWthbzhMSU4xdUhjQzU5Y2V1TWc1MHpidzJJQnpFRnRWLUJUMW9xM2tTN25FdVNadk1kY0NMVDZQSjB2TEtndjV0WGpKN2VWdUM5alNC",
     "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNkVzZmxPNUh1UVcydDBmd0JpWUVocExWNC1WVTlTQ010SjJLd2lhallFcmc1QWFPS2UzMlhXRExqNDJmZVJZY0cwWHpBbERkeC1aR05tT3NBRXNldXlhLWVuUlE5eXpvM0JXYWVRZk1oLXhKNXhGeF9CYXRqdVBYdG8yUkxBRXdF",
     "https://news.google.com/rss/articles/CBMimwFBVV95cUxOVWRBejVRcU1tR2J0VEZ0TzYtSXlzeXQyYnh5cm5jYTUxMDBJRU1BQm1YMkxWTTlqXzhmV2kzcS14OERjOGpBdnQyMUJ1N0tOQVZ0YkhnclRXRVIyV1RlTEszUC1aM1FpVHRiYUY3QXZSeFhBM2dJZUljVjRXN21tTkFEWWZjWUx6aEg0UW9mbW42NDMtWWdRZ2ZPSQ",
-    "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5FanlEWmVOaG9iTjFRV3FCS0FvMUQ4SVBQaDFDejh6c1JsM2NQWTBvbnBUOXN1TldNMHNQWFlhWjNqbEtSc3RqXzhiYVlBV1VxT1dVcNIBXEFVX3lxTE14b2JtUDZnY0NfdzI5T2padHoySlcwVlFVRHVkb3BMRHlxcDNQMDV6Z3ZJNkY1Z2dkeWR5VmZ5NmdSbTVsbDEyN0ZqLUFDTGZDc1ZTSDdXSm9HX0E1"
+    "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5FanlEWmVOaG9iTjFRV3FCS0FvMUQ4SVBQaDFDejh6c1JsM2NQWTBvbnBUOXN1TldNMHNQWFlhWjNqbEtSc3RqXzhiYVlBV1VxT1dVcNIBXEFVX3lxTE14b2JtUDZnY0NfdzI5T2padHoySlcwVlFVRHVkb3BMRHlxcDNQMDV6Z3ZJNkY1Z2dkeWR5VmZ5NmdSbTVsbDEyN0ZqLUFDTGZDc1ZTSDdXSm9HX0E1",
+    "https://news.google.com/rss/articles/CBMizgFBVV95cUxOdUhhQnZpd2JGQlRzMnlyd3Mtcks5VzNrZ2hEamFlT01ST2cxa2RnVWRvTlNBN3ZzTUJQdkdxZXE3cDJGTEEyaFMxYzk0UXVGV0xROWplVkxTV3d0MzB3V1piWFNBbVdLS1ZVb3pkTmlkN1hEcTh2S1hNRjhiWXQ5UTVFa2p6QkZWX3FGeXZQMHJjVlhZRUR6NUd1NXFfMnU2R3E1MUtDVlZDcVZKMUFJaWlPOE42X0lXTGVtTGFnSVZ6TVZObEpvUmtyUVlTUQ"
   ]
 }
