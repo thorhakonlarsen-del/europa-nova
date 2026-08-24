@@ -1,6 +1,27 @@
 {
-  "updated": "2026-08-20T06:57:56.360Z",
+  "updated": "2026-08-24T07:13:51.786Z",
   "items": [
+    {
+      "date": "2026-08-21",
+      "source": "Google News — sovereign AI Europe",
+      "title": "The Mistral paradox: Europe’s push for tech sovereignty relies on China’s Z.ai - South China Morning Post",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQNmNTOW1wamRsZVNJUi1Uem93Y3ZjVk8zT19NU19wdDUxUTkyajdLOVVjSkF6dzNFaTIyOEpDUnNObWdyS1NDLW9pMWd6Rm9WUVh5LUI3Z1ZwWGs4MlAxSC1TZ3lZYlZqUmp2MEIzTmdPQ2dzTzZ5M0lOY1liZDFEeF8tbnRTcm5VcFUwdS1HVWh5bnYyWFd0TDA1ekQtMTU3SGRYWDUtQmo1aFJXRkVXRDRMdUZwU3ZzS05SSVVR0gG-AUFVX3lxTE1iR1FDWXBIdDNnR3NidkhTbXhhVmp3Vmt2NzczYzZUN215LVZTdE1jd3dMZmVtazFkc29xalpoeW9uODNyeVJkMm5ySnAwNWdFWHFvcFA2V1hneGd4ZW9EUUhXMWg2M0JXSHo5TWVEMEpGdENCRzk4UnAxR0V4eHVBVkYxNXI0SzJlQ3VVRFZ1R2hYcGY4S3FPd3Q4X09HWW84TVEzQ1k0OHl5VWo4aDFjYldTRW9EREJQN0szX1E?oc=5",
+      "commentary": "Reporting that Europe's flagship model developer draws on Chinese open-weight work from Z.ai reframes the sovereignty debate away from corporate nationality and towards the underlying research and weights supply chain. National-champion branding offers little protection if the architectures, training recipes and base models originate outside the bloc, and Europe's dependency simply shifts from American to Chinese upstream sources. For a treaty-based institution, the lesson is that sovereignty must be measured at the level of demonstrable in-house capability to train frontier systems from scratch, not at the level of who owns the deploying entity. Expect European procurement rules to face pressure to define provenance requirements for model lineage, a standard almost no current European offering could meet unaided."
+    },
+    {
+      "date": "2026-08-05",
+      "source": "Google News — European AI compute",
+      "title": "Europe Turns AI Sovereignty Into a €30 Billion Compute Tender",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQYkNad2hueXdVYlFLeG15ZGpHeU10MDJfUDMyY2hGdUtKemgtWkRKRlFZcHpHQ3UtcUQ5Nmg3SXpUUnNzVjREXzhObUliUEZQOHJCRGczSktOcWJEa3Npcl9vWkM1dVJjeFA3OXZ3THhpR3dWazhQU0xYX29nTzRyaHAzQ28yWWxFVENEbzA5U28?oc=5",
+      "commentary": "Framing sovereign compute ambitions as a procurement exercise on the order of EUR 30 billion tests whether public money can buy strategic autonomy through tendering rather than through institution-building. Tenders reward whoever can deliver capacity fastest, which in practice favours incumbent hyperscalers and American accelerator supply, so the sovereignty gain depends entirely on how ownership, siting and operational control are written into the contracts. A CERN-style vehicle would instead treat compute as durable shared infrastructure with governance attached, rather than a set of time-limited service purchases. Whether Europe ends up owning capability or merely renting it will be settled in the tender conditions, not the headline figure."
+    },
+    {
+      "date": "2026-08-04",
+      "source": "Google News — sovereign AI Europe",
+      "title": "Aleph Alpha Merger with Cohere: Europe's Real AI Strategy",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdTZEckYxemVvemZPQXBMVHJvODd6RTVCMkFpMkN5cnJtbEpmOWs5WmwzeUF5YkM5NUxWZ1NSMmctakt4NktZcUNJcFFmYzZrVFZYekxvWUZFTXBVeEhZNWluZjhXY05JVElxYS1sWVVNNVoxOV83SG1jOHkxQkNxcER0S2pGYkRhaE0wS1o3TTl4MDVQ?oc=5",
+      "commentary": "Consolidation of Germany's most prominent model developer into a non-European partner marks the closing of one route to sovereign frontier capability through venture-funded national champions. Private capital in Europe has repeatedly proved too shallow to sustain independent frontier training runs, and the exit path for such firms runs towards foreign acquirers or partners with deeper balance sheets. Sovereignty claims that rest on a handful of start-ups are therefore hostage to ordinary corporate finance, which no industrial strategy document can override. The case strengthens the argument for public, treaty-anchored funding structures whose ownership cannot be sold when the next financing round proves difficult."
+    },
     {
       "date": "2026-08-05",
       "source": "Google News — sovereign AI Europe",
@@ -147,27 +168,6 @@
       "title": "Mistral closes in on Big AI rivals with new open-weight frontier and small models",
       "url": "https://techcrunch.com/2025/12/02/mistral-closes-in-on-big-ai-rivals-with-mistral-3-open-weight-frontier-and-small-models/",
       "commentary": "Mistral released its Large 3 model with 675 billion parameters under the Apache 2.0 open-source license, featuring multilingual capabilities across European languages and a mixture-of-experts architecture with 41 billion active parameters. The release demonstrates that a European company can produce frontier-competitive models, but Mistral's reliance on NVIDIA hardware and US cloud infrastructure for training reveals the structural dependency that open weights alone cannot resolve. Europa Nova's value proposition is precisely this missing layer: sovereign European compute infrastructure that would allow companies like Mistral to train frontier models without routing capital and data through American hyperscalers. Open-weight models trained on sovereign infrastructure represent the most credible path to genuine European AI autonomy."
-    },
-    {
-      "date": "2025-07-31",
-      "source": "OpenAI / TechCrunch",
-      "title": "OpenAI to launch AI data center in Norway, its first in Europe",
-      "url": "https://techcrunch.com/2025/07/31/openai-to-launch-ai-data-center-in-norway-its-first-in-europe/",
-      "commentary": "OpenAI announced Stargate Norway, a 230MW AI gigafactory in Kvandal near Narvik, targeting 100,000 NVIDIA GPUs by end of 2026, powered entirely by renewable hydroelectricity and operated through a joint venture between Nscale and Aker. The project confirms Norway's emergence as Europe's most attractive location for AI compute — abundant clean energy, cool climate, and fast-track permitting — while simultaneously illustrating the sovereignty paradox: the infrastructure is in Norway, but the primary beneficiary and offtaker is an American company. Europa Nova would need to ensure that European sovereign AI infrastructure serves European frontier model development first, rather than functioning as a low-cost energy supplier to US labs. The energy assets that make Norway indispensable are already being claimed."
-    },
-    {
-      "date": "2025-04-09",
-      "source": "European Commission",
-      "title": "Commission sets course for Europe's AI leadership with an ambitious AI Continent Action Plan",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1013",
-      "commentary": "The European Commission presented its AI Continent Action Plan, structured around five pillars: compute infrastructure including AI Factories and Gigafactories, a Data Union Strategy, innovation and adoption in strategic sectors, skills and talent development, and streamlined AI Act implementation. The plan acknowledges that Europe holds only 5 to 10 percent of global AI compute capacity compared to 60 to 75 percent in the United States, and proposes 13 AI Factories across 12 member states. While the diagnosis is accurate and the ambition is welcome, the Commission's instrument set — funding programmes, regulatory coordination, public-private partnerships — lacks the institutional permanence and operational independence that frontier AI development demands. A treaty-based institution with its own governance, budget authority, and research mandate would convert these action plan aspirations into durable capability."
-    },
-    {
-      "date": "2025-02-11",
-      "source": "European Commission",
-      "title": "EU launches InvestAI initiative to mobilise EUR 200 billion of investment in artificial intelligence",
-      "url": "https://digital-strategy.ec.europa.eu/en/news/eu-launches-investai-initiative-mobilise-eu200-billion-investment-artificial-intelligence",
-      "commentary": "At the Paris AI Action Summit, Commission President von der Leyen announced InvestAI, a public-private initiative targeting EUR 200 billion in AI investment across Europe, including EUR 20 billion for four AI gigafactories, while more than 60 European companies launched the EU AI Champions Initiative with EUR 150 billion in planned investment. The headline figures are substantial, but the mechanism — a coalition of voluntary private commitments coordinated by the Commission — carries no treaty obligation and no enforcement mechanism. CERN's annual budget of approximately CHF 1.2 billion is modest by comparison, yet its treaty basis ensures consistent, multi-decade investment that no voluntary initiative can replicate. Europa Nova's case rests on precisely this distinction between announced investment targets and institutionally guaranteed capability."
     }
   ],
   "seen": [
@@ -211,6 +211,13 @@
     "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNkVzZmxPNUh1UVcydDBmd0JpWUVocExWNC1WVTlTQ010SjJLd2lhallFcmc1QWFPS2UzMlhXRExqNDJmZVJZY0cwWHpBbERkeC1aR05tT3NBRXNldXlhLWVuUlE5eXpvM0JXYWVRZk1oLXhKNXhGeF9CYXRqdVBYdG8yUkxBRXdF",
     "https://news.google.com/rss/articles/CBMimwFBVV95cUxOVWRBejVRcU1tR2J0VEZ0TzYtSXlzeXQyYnh5cm5jYTUxMDBJRU1BQm1YMkxWTTlqXzhmV2kzcS14OERjOGpBdnQyMUJ1N0tOQVZ0YkhnclRXRVIyV1RlTEszUC1aM1FpVHRiYUY3QXZSeFhBM2dJZUljVjRXN21tTkFEWWZjWUx6aEg0UW9mbW42NDMtWWdRZ2ZPSQ",
     "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5FanlEWmVOaG9iTjFRV3FCS0FvMUQ4SVBQaDFDejh6c1JsM2NQWTBvbnBUOXN1TldNMHNQWFlhWjNqbEtSc3RqXzhiYVlBV1VxT1dVcNIBXEFVX3lxTE14b2JtUDZnY0NfdzI5T2padHoySlcwVlFVRHVkb3BMRHlxcDNQMDV6Z3ZJNkY1Z2dkeWR5VmZ5NmdSbTVsbDEyN0ZqLUFDTGZDc1ZTSDdXSm9HX0E1",
-    "https://news.google.com/rss/articles/CBMizgFBVV95cUxOdUhhQnZpd2JGQlRzMnlyd3Mtcks5VzNrZ2hEamFlT01ST2cxa2RnVWRvTlNBN3ZzTUJQdkdxZXE3cDJGTEEyaFMxYzk0UXVGV0xROWplVkxTV3d0MzB3V1piWFNBbVdLS1ZVb3pkTmlkN1hEcTh2S1hNRjhiWXQ5UTVFa2p6QkZWX3FGeXZQMHJjVlhZRUR6NUd1NXFfMnU2R3E1MUtDVlZDcVZKMUFJaWlPOE42X0lXTGVtTGFnSVZ6TVZObEpvUmtyUVlTUQ"
+    "https://news.google.com/rss/articles/CBMizgFBVV95cUxOdUhhQnZpd2JGQlRzMnlyd3Mtcks5VzNrZ2hEamFlT01ST2cxa2RnVWRvTlNBN3ZzTUJQdkdxZXE3cDJGTEEyaFMxYzk0UXVGV0xROWplVkxTV3d0MzB3V1piWFNBbVdLS1ZVb3pkTmlkN1hEcTh2S1hNRjhiWXQ5UTVFa2p6QkZWX3FGeXZQMHJjVlhZRUR6NUd1NXFfMnU2R3E1MUtDVlZDcVZKMUFJaWlPOE42X0lXTGVtTGFnSVZ6TVZObEpvUmtyUVlTUQ",
+    "https://news.google.com/rss/articles/CBMivgFBVV95cUxQNmNTOW1wamRsZVNJUi1Uem93Y3ZjVk8zT19NU19wdDUxUTkyajdLOVVjSkF6dzNFaTIyOEpDUnNObWdyS1NDLW9pMWd6Rm9WUVh5LUI3Z1ZwWGs4MlAxSC1TZ3lZYlZqUmp2MEIzTmdPQ2dzTzZ5M0lOY1liZDFEeF8tbnRTcm5VcFUwdS1HVWh5bnYyWFd0TDA1ekQtMTU3SGRYWDUtQmo1aFJXRkVXRDRMdUZwU3ZzS05SSVVR0gG-AUFVX3lxTE1iR1FDWXBIdDNnR3NidkhTbXhhVmp3Vmt2NzczYzZUN215LVZTdE1jd3dMZmVtazFkc29xalpoeW9uODNyeVJkMm5ySnAwNWdFWHFvcFA2V1hneGd4ZW9EUUhXMWg2M0JXSHo5TWVEMEpGdENCRzk4UnAxR0V4eHVBVkYxNXI0SzJlQ3VVRFZ1R2hYcGY4S3FPd3Q4X09HWW84TVEzQ1k0OHl5VWo4aDFjYldTRW9EREJQN0szX1E",
+    "https://news.google.com/rss/articles/CBMihAJBVV95cUxOQ2VUM0hlQk5XRTJ3cTdPTEdzOUFldmFNYzVmWWlfaklaRkpzTHdqVGI3Rm9fa1JDcFBHaGZYSFhWVkFUTEdVd3lMbXN1U0lJZ2s2X1p1dTdIRXMyRm9IWEpoZm1reVZDMk91QkNLdG9nVkw4cG9ha00xYlFfN25FT1VidHBDSTUyM2d0Q21aOVY4X0xTRVMtN3FwNWtRaHl5NmdLSzJteWx6OEpna1E2Mk1XLXRZenUwUkpzY25PSlJyRk53MTlBc2xuRDdiQzF0SXVxbG5WeDVvbnVoZmxSQlhUaWxWNFpjcVhRVU5FVTBvUk9OXzJOSmk1V0F5QU9XaHVvTg",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxQOFoySHBOLWZrckxYTU5xUGZQVndzeXREVWZCbzdPYU03cDVTRkpQWFdzeUNkV3d6N3puNll0dTc2ZFhia1N1STVNWDFpM1BJM2xtbUJLdENzbVNNbmxoU2lPUWZzS2FzMUU2WVkxRHhuTlhPbjN3djVQSzJyQzhBc3FoMlYzb1drWU9pS2hpTDZEenQ4cnhBcW1B",
+    "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQc0tsZHk5QTVHaUpNR1lPTTdoU3JRTjllYUZLZ1UxTUdUak1QZnFySGdPQmVPT0xHRWtJM1hMMTdaOWs3cjZyVVlKems1RGt6YUh3Tkp1Tjk3R2ppakNIcm12VFNwdjVsS1pKUndOOUFzUU16aG5ZVVpLYTR0UVN5UDB6ZkNqVGtNWW1lelJydTJlel9DM2dPbzRaUnlhU1dqYTZveWdkQ2J0STBpYmlFZ1pXaW9kNXZxTXpwTllkSDdFTlo4SEtCVkd2RW5TS1RwVnF1NzNWdWluOFZzQkpkX0luWVFRZEZoQ3FIOVoyTk5Idw",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxNY2ZkQnJscmh3eW1VNzlFMk83VC1zM2laazZ3SVhRUkVfazA4cUczclhpdk1WVmhBMVNiMFQ4d0l6a2pjOWNMblhYS0g2bDlpRTRUT2J3V2Rnd25yM0ppRDNPaWg1d255MFh4Vk5NLUd4aXRBSHV5TVlSNlg5eURfaWVaekhocjA2WGpGbTZ2OHgxRjh2YjFnVjN2Mzh1UQ",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxQYkNad2hueXdVYlFLeG15ZGpHeU10MDJfUDMyY2hGdUtKemgtWkRKRlFZcHpHQ3UtcUQ5Nmg3SXpUUnNzVjREXzhObUliUEZQOHJCRGczSktOcWJEa3Npcl9vWkM1dVJjeFA3OXZ3THhpR3dWazhQU0xYX29nTzRyaHAzQ28yWWxFVENEbzA5U28",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdTZEckYxemVvemZPQXBMVHJvODd6RTVCMkFpMkN5cnJtbEpmOWs5WmwzeUF5YkM5NUxWZ1NSMmctakt4NktZcUNJcFFmYzZrVFZYekxvWUZFTXBVeEhZNWluZjhXY05JVElxYS1sWVVNNVoxOV83SG1jOHkxQkNxcER0S2pGYkRhaE0wS1o3TTl4MDVQ"
   ]
 }
