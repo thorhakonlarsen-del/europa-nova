@@ -1,6 +1,27 @@
 {
-  "updated": "2026-08-24T07:13:51.786Z",
+  "updated": "2026-08-27T17:34:45.438Z",
   "items": [
+    {
+      "date": "2026-08-24",
+      "source": "Google News — sovereign AI Europe",
+      "title": "Mistral x HUMAIN - mistral.ai",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBoM215alpsRHFKLTB6NUJ1cmRubHpweTlaczlWaTAyeWRfaTAtWUVZZGZpU0thZGNlWnRRUnRMLTVtYzcyZEx3d0FwWFFJeTk5cDZv?oc=5",
+      "commentary": "Mistral, the closest thing Europe has to an independent frontier laboratory, has announced a tie-up with Saudi Arabia's HUMAIN, extending a pattern in which European model development is underwritten by capital and compute sourced outside the Union. Such arrangements ease the financing constraint that European public budgets have so far failed to relieve, but they also distribute influence over Europe's only scaled frontier developer to partners whose strategic interests are not European. The relevant question for EU policymakers is not whether Mistral should seek external partners, but why the alternative — pooled European public capital on treaty terms — remains unavailable at the scale frontier training now requires. Absent that alternative, each new external partnership narrows the space in which a genuinely sovereign European frontier capability could later be assembled."
+    },
+    {
+      "date": "2026-08-20",
+      "source": "Google News — sovereign AI Europe",
+      "title": "DCAI and Corti Launch Sovereign AI Control Layer for European Enterprises - Trifork First to Adopt as Implementation Partner - PR Newswire UK",
+      "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNSWNTOXUxZXFDbm5wYWNmRXRkOGpmWHJNSVEtWHNvRzFYS2FwU2hDcWx1Wm45WmM1b21zNjdsNjFyZ3p6Y1BMeXNtc3ljR1ppSWpZRi1aUV92VWZDX1dSdkpwcGljME1QNENZX2J4UGdfY2NoaFpvbFo0Y0ozbzV4eGViVWIwZjFPd2JkeXRIcEo2M0RCWTVNSEVucUJkNWNyaXdYbWtaMjI1SGJqRG5JaTZsODRXSURaV2xQYWg4Vkl0S0lBaGR5TWF0eDdfNVY1RnNJenU2OWpLZi1vQ19aNzJ6MkdhWkhRUTFQbEZJWl9MTVUwTlgySFROVm14S1F1SzdCSDN5TzlKc29yYjJZ?oc=5",
+      "commentary": "A Danish compute-and-clinical-AI pairing has launched what it describes as a sovereign control layer for European enterprises, with an implementation partner already lined up. Offerings of this kind matter because they test whether jurisdictional control can be delivered as a commercial product layered above models and infrastructure, rather than requiring ownership of the underlying stack. The commercial risk is that a control layer reassures buyers about data residency and auditability while leaving the model itself, and the terms on which it is served, in non-European hands. Whether European procurement treats such layers as sufficient, or insists on deeper substitution, will shape how much genuine capability the continent ends up building."
+    },
+    {
+      "date": "2026-08-26",
+      "source": "Google News — sovereign AI Europe",
+      "title": "Rebellions supplies AI chip racks to UK cluster - Aju Press",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5GUFUyN2MzWVlEaWRORXdaYV8xaFN6N1NNbE9ZekI0X3RJeURpZXNGOFc3N0dzSGluSGEtdTJKQVJfMm1OYV9OWDY0Tld4VFRVNXBCdkhBZ9IBV0FVX3lxTE5GUFUyN2MzWVlEaWRORXdaYV8xaFN6N1NNbE9ZekI0X3RJeURpZXNGOFc3N0dzSGluSGEtdTJKQVJfMm1OYV9OWDY0Tld4VFRVNXBCdkhBZw?oc=5",
+      "commentary": "Korean accelerator designer Rebellions is reported to be supplying NPU racks to a UK cluster under a sovereign AI framing, a reminder that \"sovereign\" build-outs in Europe routinely run on imported silicon. Diversifying away from a single dominant American supplier does reduce one concentration risk, yet substituting an Asian vendor changes the counterparty rather than removing the dependency. For European compute planning, the episode underlines that control over siting, energy and workloads is achievable far sooner than control over the accelerator supply chain. Any credible European compute strategy will therefore need to state explicitly which layers of the stack it intends to own and which it accepts importing for the foreseeable future."
+    },
     {
       "date": "2026-08-21",
       "source": "Google News — sovereign AI Europe",
@@ -147,27 +168,6 @@
       "title": "Europe unites to build sovereign cloud and AI infrastructure to stop reliance on US",
       "url": "https://www.euronews.com/next/2026/03/03/europe-unites-to-build-sovereign-cloud-and-ai-infrastructure-to-stop-reliance-on-us",
       "commentary": "The European Commission unveiled EURO-3C at Mobile World Congress 2026, a EUR 75 million federated Telco-Edge-Cloud infrastructure project backed by more than 70 organisations across 13 countries. The initiative explicitly aims to reduce European dependence on US and Chinese cloud providers, who currently control 85 percent of Europe's cloud market. For Europa Nova, EURO-3C validates the federated infrastructure model — connecting existing national capabilities rather than building a single centralised system — which is precisely the architecture a treaty-based AI institution would need to operate across sovereign boundaries. The modest EUR 75 million budget, however, underscores how far Europe remains from matching the scale of investment required for frontier AI compute."
-    },
-    {
-      "date": "2026-02-18",
-      "source": "CNBC",
-      "title": "'A matter of national survival': European governments accelerate digital sovereignty as geopolitical tensions ramp up",
-      "url": "https://www.cnbc.com/2026/02/18/europe-digital-sovereignty-geopolitical-tensions.html",
-      "commentary": "European ministers described digital sovereignty as a matter of national survival, as the continent confronts simultaneous pressure from Russian cyber operations, deteriorating relations with the Trump administration, and 85 percent dependence on US cloud providers. All 27 EU member states signed a November 2025 declaration committing to reduce strategic digital dependencies, and sovereign cloud spending is projected to triple to USD 23 billion by 2027. The political language has shifted from aspiration to urgency — the conditions under which a treaty-based European AI institution becomes politically feasible are now present. What remains absent is an institutional vehicle capable of translating this urgency into coordinated sovereign compute capacity at frontier scale."
-    },
-    {
-      "date": "2026-01-29",
-      "source": "Euronews",
-      "title": "The AI brain drain: Why Europe can't keep the talent it trains",
-      "url": "https://www.euronews.com/my-europe/2026/01/29/the-ai-brain-drain-why-europe-cant-keep-the-talent-it-trains",
-      "commentary": "Europe produces 30 percent more AI talent per capita than the United States, yet experiences a substantial net outflow of senior AI professionals, driven by US salary premiums of 30 to 70 percent across comparable roles. Net tech talent inflows to Europe fell from 52,000 in 2022 to 26,000 in 2024, meaning the continent is effectively subsidising American AI capacity with European education budgets. A European institution offering frontier-scale research infrastructure and competitive compensation — funded by sovereign wealth rather than venture capital — would directly address the primary pull factor driving this exodus. Without such an institution, the AI Continent Action Plan's talent pillar will continue to train researchers for export."
-    },
-    {
-      "date": "2025-12-02",
-      "source": "TechCrunch / Mistral AI",
-      "title": "Mistral closes in on Big AI rivals with new open-weight frontier and small models",
-      "url": "https://techcrunch.com/2025/12/02/mistral-closes-in-on-big-ai-rivals-with-mistral-3-open-weight-frontier-and-small-models/",
-      "commentary": "Mistral released its Large 3 model with 675 billion parameters under the Apache 2.0 open-source license, featuring multilingual capabilities across European languages and a mixture-of-experts architecture with 41 billion active parameters. The release demonstrates that a European company can produce frontier-competitive models, but Mistral's reliance on NVIDIA hardware and US cloud infrastructure for training reveals the structural dependency that open weights alone cannot resolve. Europa Nova's value proposition is precisely this missing layer: sovereign European compute infrastructure that would allow companies like Mistral to train frontier models without routing capital and data through American hyperscalers. Open-weight models trained on sovereign infrastructure represent the most credible path to genuine European AI autonomy."
     }
   ],
   "seen": [
@@ -218,6 +218,15 @@
     "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQc0tsZHk5QTVHaUpNR1lPTTdoU3JRTjllYUZLZ1UxTUdUak1QZnFySGdPQmVPT0xHRWtJM1hMMTdaOWs3cjZyVVlKems1RGt6YUh3Tkp1Tjk3R2ppakNIcm12VFNwdjVsS1pKUndOOUFzUU16aG5ZVVpLYTR0UVN5UDB6ZkNqVGtNWW1lelJydTJlel9DM2dPbzRaUnlhU1dqYTZveWdkQ2J0STBpYmlFZ1pXaW9kNXZxTXpwTllkSDdFTlo4SEtCVkd2RW5TS1RwVnF1NzNWdWluOFZzQkpkX0luWVFRZEZoQ3FIOVoyTk5Idw",
     "https://news.google.com/rss/articles/CBMingFBVV95cUxNY2ZkQnJscmh3eW1VNzlFMk83VC1zM2laazZ3SVhRUkVfazA4cUczclhpdk1WVmhBMVNiMFQ4d0l6a2pjOWNMblhYS0g2bDlpRTRUT2J3V2Rnd25yM0ppRDNPaWg1d255MFh4Vk5NLUd4aXRBSHV5TVlSNlg5eURfaWVaekhocjA2WGpGbTZ2OHgxRjh2YjFnVjN2Mzh1UQ",
     "https://news.google.com/rss/articles/CBMikAFBVV95cUxQYkNad2hueXdVYlFLeG15ZGpHeU10MDJfUDMyY2hGdUtKemgtWkRKRlFZcHpHQ3UtcUQ5Nmg3SXpUUnNzVjREXzhObUliUEZQOHJCRGczSktOcWJEa3Npcl9vWkM1dVJjeFA3OXZ3THhpR3dWazhQU0xYX29nTzRyaHAzQ28yWWxFVENEbzA5U28",
-    "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdTZEckYxemVvemZPQXBMVHJvODd6RTVCMkFpMkN5cnJtbEpmOWs5WmwzeUF5YkM5NUxWZ1NSMmctakt4NktZcUNJcFFmYzZrVFZYekxvWUZFTXBVeEhZNWluZjhXY05JVElxYS1sWVVNNVoxOV83SG1jOHkxQkNxcER0S2pGYkRhaE0wS1o3TTl4MDVQ"
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdTZEckYxemVvemZPQXBMVHJvODd6RTVCMkFpMkN5cnJtbEpmOWs5WmwzeUF5YkM5NUxWZ1NSMmctakt4NktZcUNJcFFmYzZrVFZYekxvWUZFTXBVeEhZNWluZjhXY05JVElxYS1sWVVNNVoxOV83SG1jOHkxQkNxcER0S2pGYkRhaE0wS1o3TTl4MDVQ",
+    "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQNlBuS1lJX0NFQjNkQWpkYkU1NmZSRnhWb0NJMk15Zll2UUoyZ0FfcnJpeDR0ak9PRDBkVlNhWmFWcmVUUjViU1hxRXdLNUpxOWlMMFI4TE93Zlk3UHJEMXZJTFlJRWIzOUxDRXdieXNrZXBGaE10MjFIOVRIVW13UFpjdWFRTzFSZ2hKTGJEdjhhUXFydEdsNHZqSXZYZ2dHR2lFcFhtZzRUazUtazRIYzlaS3JvSy1XeUdOendLZE1UUnI2cGhzeVdZalB5UG1SQmtFMXpJVW9JTGp0NXBYLWt3RXJ6Zms0NF96V1VnRdIB7wFBVV95cUxQNlBuS1lJX0NFQjNkQWpkYkU1NmZSRnhWb0NJMk15Zll2UUoyZ0FfcnJpeDR0ak9PRDBkVlNhWmFWcmVUUjViU1hxRXdLNUpxOWlMMFI4TE93Zlk3UHJEMXZJTFlJRWIzOUxDRXdieXNrZXBGaE10MjFIOVRIVW13UFpjdWFRTzFSZ2hKTGJEdjhhUXFydEdsNHZqSXZYZ2dHR2lFcFhtZzRUazUtazRIYzlaS3JvSy1XeUdOendLZE1UUnI2cGhzeVdZalB5UG1SQmtFMXpJVW9JTGp0NXBYLWt3RXJ6Zms0NF96V1VnRQ",
+    "https://www.fca.org.uk/news/press-releases/young-investors-trust-ai-more-tv-or-celebrities",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE84MklOQWNpQ25abEwweHNMVTktZ0trRTZ0UXlWYUpkWldwdWxSYk1fU3RhbEVhUkJXcWVleXlDNmNJUi1LNzhOVjZBV3ZEeGZjS2ZrWE9MT1VGOFQ1TmxaaHVoRmVCRDVFWmcwVzZhaXRYWWRRdlE",
+    "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5GUFUyN2MzWVlEaWRORXdaYV8xaFN6N1NNbE9ZekI0X3RJeURpZXNGOFc3N0dzSGluSGEtdTJKQVJfMm1OYV9OWDY0Tld4VFRVNXBCdkhBZ9IBV0FVX3lxTE5GUFUyN2MzWVlEaWRORXdaYV8xaFN6N1NNbE9ZekI0X3RJeURpZXNGOFc3N0dzSGluSGEtdTJKQVJfMm1OYV9OWDY0Tld4VFRVNXBCdkhBZw",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxQSVZ4YVlVekFTUkxUeWhHT1FDVUZGTHZaNDFLemRzSERkUl9tMFN4dVZSYmw0bjZUTndKMEEzSklma3NacmtZWTZQRHFFWkhBQlpJbGJQd25fUnlmQmtDSVhJb3piRTYtWVNFSnNVY0FZdjF4Q0NBTG9YMlNNRHJRR3ZPX00xUHVEa1Roa2pDZENadGV6",
+    "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBoM215alpsRHFKLTB6NUJ1cmRubHpweTlaczlWaTAyeWRfaTAtWUVZZGZpU0thZGNlWnRRUnRMLTVtYzcyZEx3d0FwWFFJeTk5cDZv",
+    "https://digital-strategy.ec.europa.eu/en/events/pitching-day-finalists-apply-ai-startup-award",
+    "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ucHpFLTZucXhnRndhMWtzSjY3WVNnU3NsTFRKY0xlM1dJMGJSYi1TdmVCMmVjaHVNLW94cEVYMW55akxESTN6X2lldm40LUR6cV93NUU0Szl4d1NBVkJ6ampnVFV4alFi",
+    "https://news.google.com/rss/articles/CBMijwJBVV95cUxNSWNTOXUxZXFDbm5wYWNmRXRkOGpmWHJNSVEtWHNvRzFYS2FwU2hDcWx1Wm45WmM1b21zNjdsNjFyZ3p6Y1BMeXNtc3ljR1ppSWpZRi1aUV92VWZDX1dSdkpwcGljME1QNENZX2J4UGdfY2NoaFpvbFo0Y0ozbzV4eGViVWIwZjFPd2JkeXRIcEo2M0RCWTVNSEVucUJkNWNyaXdYbWtaMjI1SGJqRG5JaTZsODRXSURaV2xQYWg4Vkl0S0lBaGR5TWF0eDdfNVY1RnNJenU2OWpLZi1vQ19aNzJ6MkdhWkhRUTFQbEZJWl9MTVUwTlgySFROVm14S1F1SzdCSDN5TzlKc29yYjJZ"
   ]
 }
