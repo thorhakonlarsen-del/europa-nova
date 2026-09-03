@@ -1,6 +1,20 @@
 {
-  "updated": "2026-08-31T13:28:29.617Z",
+  "updated": "2026-09-03T11:04:44.785Z",
   "items": [
+    {
+      "date": "2026-08-29",
+      "source": "Google News — European AI compute",
+      "title": "Europe Pushes for AI Sovereignty Amid Heavy Reliance on US Tech",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPemRXMkFZZ2FXbXlrd1F4MGJhOGVlUWhRN09QbVR6SzNKUFJDdG5ULTRoMU1ERW5XZE5YbVhUclRDUGlDQ0E4VGZhTExUSkdIMC1PbTA5UnNqcG9uZGh1d0NPWjFoV0hET081cEdmV0pXYWNUU1A1RENDNUlRWnJZVjZHV3p1U0xQcncwTDhheTNvSjVvcnctYTRoTkI5bWNCLWktUkxtMXJYOG5xTFI5RkR1RGRkdmJnNDFYQTBPWTc5Z0JDazdSYXZKNUF3ZEwzbUFBRXBR?oc=5",
+      "commentary": "Coverage frames Europe's sovereignty drive as running directly against continued structural dependence on American hardware, cloud platforms and frontier models. The tension it identifies is the central design problem for any European capability programme: declared autonomy financed through procurement from the very suppliers that create the dependency does not shift control. Meaningful sovereignty requires ownership of the training stack and the models themselves, not merely of the buildings and contracts around them. Expect this gap between stated ambition and supplier reality to become the main test applied to European compute and model initiatives over the coming year."
+    },
+    {
+      "date": "2026-08-31",
+      "source": "Google News — sovereign AI Europe",
+      "title": "AMD Enters a Sovereign AI Showcase, Not a Revenue Windfall",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNVExLQm9JVE8wdk1vRlBWM3c1Z0NVQWszdF9lb196cnpuMEhBZWxOT3I3QUpCRUZOem4zbGVrcGc0UURiOExscHZ0R2xjdXFIWVltNllBXy1pU200SzV6bG1KT2ZoZU9HNU9tcjBlX2JOeW1tbUhrVG5SSE44NERGOVUxNFhMS243QlduVDJ5bWRFalJXeWNxbWg1VDNOQlpjSnpQLXA4dEpqVTVTQmNMVzdua05QSk5Z?oc=5",
+      "commentary": "Market commentary reads the sovereign AI wave primarily as a shop window for American silicon vendors rather than a material earnings driver, which is a revealing lens on how these programmes are perceived from the supply side. If sovereign compute build-outs are understood chiefly as showcases for US chip architectures, the sovereignty gained is confined to physical siting and legal jurisdiction rather than to the underlying technology base. That distinction matters for how European public money — whether from EU instruments or national funds — should be conditioned when it underwrites accelerator purchases. The strategic question ahead is whether Europe can convert procurement scale into leverage over the chip and software layers, rather than remaining a demand-side customer with a sovereignty label attached."
+    },
     {
       "date": "2026-08-24",
       "source": "Google News — sovereign AI Europe",
@@ -154,20 +168,6 @@
       "title": "'Europe needs AI cloud infrastructure': Mistral raises $830m for data centre near Paris",
       "url": "https://www.euronews.com/next/2026/03/30/europe-needs-ai-cloud-infrastructure-mistral-raises-830m-for-data-centre-near-paris",
       "commentary": "Mistral raised EUR 750 million (USD 830 million) to build a 44-megawatt data centre near Bruyères-le-Châtel equipped with more than 13,000 NVIDIA chips, with a stated path to 200 megawatts of European compute capacity by 2027 and a 1.4-gigawatt campus by 2030 in partnership with NVIDIA and the UAE's MGX fund. The financing structure — bank loans and strategic equity rather than sovereign commitment — reveals why even Europe's most capable frontier laboratory remains capital-constrained relative to American peers, and why NVIDIA dependency persists at the silicon layer no matter how large the European data centre footprint grows. A treaty-based institution with sovereign budget authority would shift the financing question from market terms to political ones, matching the multi-decade horizons that frontier infrastructure actually requires. Mistral's expansion proves the demand for sovereign European AI compute; the absence of an institutional backstop explains why the supply remains structurally undersized."
-    },
-    {
-      "date": "2026-03-14",
-      "source": "Government of Canada / Government of Norway",
-      "title": "Canada–Norway Joint Statement on Sovereign Technology and AI Cooperation",
-      "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/03/canada-norway-joint-statement-on-sovereign-technology-and-ai-cooperation.html",
-      "commentary": "Prime Ministers Carney and Støre signed a joint statement committing both nations to cooperation on AI infrastructure, frontier model development, and sovereign technology capacity. The statement confirms what the strategic argument for European AI sovereignty has long assumed: that Norway has identified AI dependency as a national security concern and is actively pursuing treaty-level arrangements outside existing multilateral frameworks. The energy infrastructure, sovereign wealth fund, and geographic position that make Norway indispensable to any serious European AI initiative are the same assets Canada is now formally courting. That Norway is in demand is not a complication — it is a reason to move quickly."
-    },
-    {
-      "date": "2026-03-03",
-      "source": "European Commission / Euronews",
-      "title": "Europe unites to build sovereign cloud and AI infrastructure to stop reliance on US",
-      "url": "https://www.euronews.com/next/2026/03/03/europe-unites-to-build-sovereign-cloud-and-ai-infrastructure-to-stop-reliance-on-us",
-      "commentary": "The European Commission unveiled EURO-3C at Mobile World Congress 2026, a EUR 75 million federated Telco-Edge-Cloud infrastructure project backed by more than 70 organisations across 13 countries. The initiative explicitly aims to reduce European dependence on US and Chinese cloud providers, who currently control 85 percent of Europe's cloud market. For Europa Nova, EURO-3C validates the federated infrastructure model — connecting existing national capabilities rather than building a single centralised system — which is precisely the architecture a treaty-based AI institution would need to operate across sovereign boundaries. The modest EUR 75 million budget, however, underscores how far Europe remains from matching the scale of investment required for frontier AI compute."
     }
   ],
   "seen": [
@@ -230,6 +230,10 @@
     "https://news.google.com/rss/articles/CBMijwJBVV95cUxNSWNTOXUxZXFDbm5wYWNmRXRkOGpmWHJNSVEtWHNvRzFYS2FwU2hDcWx1Wm45WmM1b21zNjdsNjFyZ3p6Y1BMeXNtc3ljR1ppSWpZRi1aUV92VWZDX1dSdkpwcGljME1QNENZX2J4UGdfY2NoaFpvbFo0Y0ozbzV4eGViVWIwZjFPd2JkeXRIcEo2M0RCWTVNSEVucUJkNWNyaXdYbWtaMjI1SGJqRG5JaTZsODRXSURaV2xQYWg4Vkl0S0lBaGR5TWF0eDdfNVY1RnNJenU2OWpLZi1vQ19aNzJ6MkdhWkhRUTFQbEZJWl9MTVUwTlgySFROVm14S1F1SzdCSDN5TzlKc29yYjJZ",
     "https://news.google.com/rss/articles/CBMilAFBVV95cUxOR1c1TFZSNzZEMkJocW1vNHJfY0R0eWhOLU1yMXJjNEl2Z25kMFo1aDR3aHJKNWV1a2pFeDRIeFBobTdnYzRFd21uWVRpY3JQd0UtZUdKUEJ5RUlyUDVoSkNRNDRGM1NycW8tNDgzd0dnbG50UXYzTjBJWlpYcnY1cVZYUENPS1BfM0Q5VmxOV3lZdDN4",
     "https://news.google.com/rss/articles/CBMi7wFBVV95cUxObFdrNTE2ZTIxNW95OEVKUk9rZWQ3WUJKWlROeDVmODNNTVIzSlVWMUdUZXpJa19QX29jYVZ6NkZJUTh0ekowTGZCRWphWjhjUmRBMjV5N2hTM3VXUUxmbTg2cXpNR2g2WmRnQ2VoRHVrWnJ2ajlXcUN5NTVSRWxqUjktRlRrR0VJSERaTmZMVkM3bXRMS2NuNk1Nb2dhNTlMMFM3Unh3SllvWVl2aDBIbHV4eEx2eGxwRUExS3JGcUlQUVdtaV9VUEQ4ODRnM0pTSVNVVjlCZHU1OU9xRWRjUWdfNzFna1hKV09WZU9xbw",
-    "https://news.google.com/rss/articles/CBMisAJBVV95cUxNbDcxazRyTWs4c09ILVdsTVptZTBENVZjMVhuZEVOcEMtTzRiRk5vUWp0dHUzSTVsajZ2ZEVBTE1aZ1FNeERhQ1RCb2s4M2hpak1JT2p2WlUyNDBRUmlzY0xXdHdFc1loX1JoZlU4TmZXY191NUFsVjY1cDNVdHotdG9vbnpXVmRNQ09GVHo1QUV6cGtuSWpxeUlUUm9OdVhReHpMZnRYZWczaFFDdzNYUWM5QVpIUXN1cU45cGIwa1pLbzZTczhpRGY1VGljMDRvV1l2akZUc1hnTGpUYkQ3T09RMGE1aklXa2N1SlR5dFZodzhYakxJOS1YcjdqWXFrNjc3TWZPWW1kVTYxaG12Mkx0bjM4RERxMmlmMmxUb2w0bUwycUxwaEk0ZnQ4UmZx"
+    "https://news.google.com/rss/articles/CBMisAJBVV95cUxNbDcxazRyTWs4c09ILVdsTVptZTBENVZjMVhuZEVOcEMtTzRiRk5vUWp0dHUzSTVsajZ2ZEVBTE1aZ1FNeERhQ1RCb2s4M2hpak1JT2p2WlUyNDBRUmlzY0xXdHdFc1loX1JoZlU4TmZXY191NUFsVjY1cDNVdHotdG9vbnpXVmRNQ09GVHo1QUV6cGtuSWpxeUlUUm9OdVhReHpMZnRYZWczaFFDdzNYUWM5QVpIUXN1cU45cGIwa1pLbzZTczhpRGY1VGljMDRvV1l2akZUc1hnTGpUYkQ3T09RMGE1aklXa2N1SlR5dFZodzhYakxJOS1YcjdqWXFrNjc3TWZPWW1kVTYxaG12Mkx0bjM4RERxMmlmMmxUb2w0bUwycUxwaEk0ZnQ4UmZx",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNVExLQm9JVE8wdk1vRlBWM3c1Z0NVQWszdF9lb196cnpuMEhBZWxOT3I3QUpCRUZOem4zbGVrcGc0UURiOExscHZ0R2xjdXFIWVltNllBXy1pU200SzV6bG1KT2ZoZU9HNU9tcjBlX2JOeW1tbUhrVG5SSE44NERGOVUxNFhMS243QlduVDJ5bWRFalJXeWNxbWg1VDNOQlpjSnpQLXA4dEpqVTVTQmNMVzdua05QSk5Z",
+    "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPemRXMkFZZ2FXbXlrd1F4MGJhOGVlUWhRN09QbVR6SzNKUFJDdG5ULTRoMU1ERW5XZE5YbVhUclRDUGlDQ0E4VGZhTExUSkdIMC1PbTA5UnNqcG9uZGh1d0NPWjFoV0hET081cEdmV0pXYWNUU1A1RENDNUlRWnJZVjZHV3p1U0xQcncwTDhheTNvSjVvcnctYTRoTkI5bWNCLWktUkxtMXJYOG5xTFI5RkR1RGRkdmJnNDFYQTBPWTc5Z0JDazdSYXZKNUF3ZEwzbUFBRXBR",
+    "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOWE13aV9NZjhyNXNnZWZzNFFSa1ppMGpucWV2U2JHa21IcEdWYzFRNFptbnZZa09QLTY0aUNKbWRId01MaHFfZkNSZl9qMG1jRDEyUVpnX2JGSDJpWmhaYWJYcjQ2Z01tdHJYZEpvVWZidzgzbnQ4VEVic2JiRGlwdnh1NVVjMUJUTEFxTXpzS1BDLTA1d0VzUE0zZlNoLXpoT1pjT0tFUW51Q1ZESUxyeHQ2b2I1TnB4U1c0Y2wwY0ptS1Fab0NHVUZlTWttR0NJWTB1U05VY2l1MDJZMjJsNEQ1OGxSVE5MWVHSAe8BQVVfeXFMUDZQbktZSV9DRUIzZEFqZGJFNTZmUkZ4Vm9DSTJNeWZZdlFKMmdBX3JyaXg0dGpPT0QwZFZTYVphVnJlVFI1YlNYcUV3SzVKcTlpTDBSOExPd2ZZN1ByRDF2SUxZSUViMzlMQ0V3Ynlza2VwRmhNdDIxSDlUSFVtd1BaY3VhUU8xUmdoSkxiRHY4YVFxcnRHbDR2akl2WGdnR0dpRXBYbWc0VGs1LWs0SGM5Wktyb0stV3lHTnp3S2RNVFJyNnBoc3lXWWpQeVBtUkJrRTF6SVVvSUxqdDVwWC1rd0VyemZrNDRfeldVZ0U",
+    "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1jVFFSM2JqSmM1Z3dXNXczdl9xdEM4Y2ZTY3pnNTNuV1JvWHNBaUJ2d2RzcWlXUXpJVWJaZzNnUDZmOGlReEx1bVFidHFHV2VmSVBNMnRDTDhNalFsRkUtdURzdw"
   ]
 }
