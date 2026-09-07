@@ -1,6 +1,27 @@
 {
-  "updated": "2026-09-03T11:04:44.785Z",
+  "updated": "2026-09-07T12:16:56.642Z",
   "items": [
+    {
+      "date": "2026-09-07",
+      "source": "Google News — European AI compute",
+      "title": "Could NVIDIA's purchase of Hugging Face boost the EU's AI sovereignty? - Euronews.com",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNb0ViTktVbjd6c2JaNUNLM2JDN2lQMzc4M3kydHNQSlNqblczNm84MmVsdFRmRUhFdmRVdzgtaUVsdWluNFJUUThEaWtVTWRPY2FBMi1QbHBFZkQ5bnNvUDJYN1oybE5qWExTMkFIRTRUaV9zb2FYaVQ0WkFNZXZQQmg5WWZGVzRiR3k1dklHb0YwVHFXZDk5S2l4dXVHYkFXS2lPSTNDYjlSek93?oc=5",
+      "commentary": "Nvidia's acquisition of Hugging Face places one of Europe's best-known open-model platforms under the ownership of the dominant supplier of AI accelerators, and Euronews frames the question of whether that helps or hurts EU sovereignty. The framing itself is instructive: Europe's flagship AI assets have tended to be absorbed rather than scaled, and each such transaction narrows the space in which European institutions set the terms of model distribution and tooling. Ownership of the layer where models are published and benchmarked confers agenda-setting power over which systems become defaults across European industry and research. Whether Brussels treats the deal as a merger-control matter or as a signal that sovereign alternatives need public capital and treaty-level backing will shape the next round of consolidation."
+    },
+    {
+      "date": "2026-09-07",
+      "source": "Google News — sovereign AI Europe",
+      "title": "LTM To Deliver Sovereign Cloud and AI in Europe Through Strategic Partnership With OVHcloud - uniindia.com",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNZHIwX3JlVVItckVrdlJvNTdzUWQwOFJxMDBMc1ZoeFk2U3R3QlA0TzNIc3VUb2oxYUs1OUNCaS14UkRSLUx1QldpZUZLc1VIVDBLREM1d0tPallJSFlMbWZNNGdMcVdTSlluZXNwWWtHd05zY3l0djlkZmFoYXNTNG9RSmk2ZTVmeFhfenRITWRYX3ZsR0ZZQnRLdG52MU5ham40UDNPVFBsZjRNUVN6YkhfMlpxbW1MbWNuTFRjVElvYW1PNnVwRnlQbDFRb0xIdjZsYUxPZ3kxeU41czhnY09UNA?oc=5",
+      "commentary": "OVHcloud's partnership with LTM to deliver sovereign cloud and AI services in Europe shows the commercial market attempting to supply what public procurement has been demanding since the Cloud and AI Development Act debate began. Such arrangements matter mainly at the hosting and inference layer; they do not by themselves create European capability to train frontier models, which remains the binding constraint. The risk is that a proliferation of vendor-defined \"sovereign\" offerings satisfies compliance requirements while leaving the underlying models and silicon foreign-controlled. A durable answer would pair commercial sovereign hosting with publicly financed frontier training capacity, so that the stack is European above the data centre floor as well as inside it."
+    },
+    {
+      "date": "2026-08-24",
+      "source": "Google News — European AI compute",
+      "title": "EU reactions to the Iran deal + Dependence on China + Weaknesses in AI sovereignty - Table.Briefings",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOTC1MMXZGYUZDWDdtaE1zYnpTa2h3YlJkdTJBMy1NSFFfcFVpNC1HbzRZc240OEhHNGdJdmV5T1BUMGtOYXY0bUZkSjI4ZVBBZzB5dnhkc2xVdlVzS2RRQ2pBazRkdlFlcHpkS01HbF9SZUczdlVES1FIc3VnYjVObjkwNFZEN2ZnaENTWFBWUnJaU3JfQ0p4dVB5eWJIcmFlWlZlTERqN2pTTkhtaUNWdVlkQTU3dG1jWGhRYlVSUnpBUUQwT0FtWWxlSEJ1LTV4?oc=5",
+      "commentary": "Table.Briefings groups Europe's China dependencies with weaknesses in its AI sovereignty in a single policy digest, reflecting how Brussels commentary increasingly treats the two as one supply-chain problem rather than separate files. Framing AI capability alongside raw-material and component reliance pushes the debate past regulation towards the harder question of who owns the inputs — chips, energy, and trained models. Diagnoses of weakness have now accumulated faster than instruments to remedy them, and InvestAI and the AI Factories programme are still assessed against that gap. Expect pressure for a single institutional vehicle capable of holding compute, talent and model development together, rather than another round of dependency audits."
+    },
     {
       "date": "2026-08-29",
       "source": "Google News — European AI compute",
@@ -147,27 +168,6 @@
       "title": "France's national health data platform begins its migration off Microsoft Azure",
       "url": "https://www.health-data-hub.fr/sites/default/files/2026-04/20260420%20CP%20La%20PDS%20engage%20sa%20migration%20.pdf",
       "commentary": "The Plateforme des données de santé selected Scaleway to replace Microsoft Azure, ending seven years in which a dataset intended to cover the entire population receiving care in France sat on infrastructure owned by a company subject to the CLOUD Act. The decisive constraint was SecNumCloud certification, which Azure cannot obtain because of US ownership — a procurement rule that achieved what years of litigation before the Conseil d'Etat and repeated objections from the CNIL did not. Sovereignty requirements written as certifications rather than aspirations prove enforceable precisely because they bind the buyer instead of appealing to the seller. No equivalent instrument exists one layer up: there is no certification a European buyer can specify that would cause a frontier model to be trained under European control."
-    },
-    {
-      "date": "2026-04-17",
-      "source": "European Commission",
-      "title": "Commission advances cloud sovereignty through strategic procurement",
-      "url": "https://commission.europa.eu/news-and-media/news/commission-advances-cloud-sovereignty-through-strategic-procurement-2026-04-17_en",
-      "commentary": "The European Commission awarded EUR 180 million in sovereign cloud contracts over six years to four providers — Post Telecom, STACKIT, Scaleway, and Proximus — under a new Cloud Sovereignty Framework that grades providers on eight concrete objectives via Sovereignty Effectiveness Assurance Levels (SEAL-0 to SEAL-4). The framework converts what had been an abstract debate about cloud sovereignty into a procurement-grade specification, with most awarded providers reaching SEAL-3 and full EU supply-chain SEAL-4 still beyond commercial reach. For Europa Nova, the SEAL methodology offers a precedent worth adapting: a treaty-based AI institution requires equivalent objective measures for sovereign compute access — supply chain provenance, governance independence, jurisdictional control — rather than the marketing language that currently dominates AI sovereignty discourse. Procurement frameworks alone, however, cannot summon frontier-scale capacity; the institutional vehicle remains the missing piece."
-    },
-    {
-      "date": "2026-04-09",
-      "source": "European Commission",
-      "title": "Commission marks one year of the AI Continent Action Plan with two new reports on AI adoption and policymaking",
-      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-marks-one-year-ai-continent-action-plan-two-new-reports-ai-adoption-and-policymaking",
-      "commentary": "The one-year progress report claims delivery across all five pillars: 19 operational AI Factories with 13 antennas, a Data Union Strategy, a European Legal Gateway Office, EUR 1 billion in adoption calls, and the AI Omnibus and Service Desk for regulatory simplification. The AI Gigafactories call drew 76 responses across 60 sites in 16 Member States — confirming that the political appetite and consortium capacity to commit hundreds of billions in private and public capital is already present. What the report cannot demonstrate is institutional permanence: AI Factories and Gigafactories are instruments of the current Commission's political cycle, not durable carriers of sovereign capability across decades. A treaty-based AI institution would convert the Action Plan's documented momentum into binding cross-cycle capacity, which is the remaining gap between aspiration and structural autonomy."
-    },
-    {
-      "date": "2026-03-30",
-      "source": "Euronews",
-      "title": "'Europe needs AI cloud infrastructure': Mistral raises $830m for data centre near Paris",
-      "url": "https://www.euronews.com/next/2026/03/30/europe-needs-ai-cloud-infrastructure-mistral-raises-830m-for-data-centre-near-paris",
-      "commentary": "Mistral raised EUR 750 million (USD 830 million) to build a 44-megawatt data centre near Bruyères-le-Châtel equipped with more than 13,000 NVIDIA chips, with a stated path to 200 megawatts of European compute capacity by 2027 and a 1.4-gigawatt campus by 2030 in partnership with NVIDIA and the UAE's MGX fund. The financing structure — bank loans and strategic equity rather than sovereign commitment — reveals why even Europe's most capable frontier laboratory remains capital-constrained relative to American peers, and why NVIDIA dependency persists at the silicon layer no matter how large the European data centre footprint grows. A treaty-based institution with sovereign budget authority would shift the financing question from market terms to political ones, matching the multi-decade horizons that frontier infrastructure actually requires. Mistral's expansion proves the demand for sovereign European AI compute; the absence of an institutional backstop explains why the supply remains structurally undersized."
     }
   ],
   "seen": [
@@ -234,6 +234,15 @@
     "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNVExLQm9JVE8wdk1vRlBWM3c1Z0NVQWszdF9lb196cnpuMEhBZWxOT3I3QUpCRUZOem4zbGVrcGc0UURiOExscHZ0R2xjdXFIWVltNllBXy1pU200SzV6bG1KT2ZoZU9HNU9tcjBlX2JOeW1tbUhrVG5SSE44NERGOVUxNFhMS243QlduVDJ5bWRFalJXeWNxbWg1VDNOQlpjSnpQLXA4dEpqVTVTQmNMVzdua05QSk5Z",
     "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPemRXMkFZZ2FXbXlrd1F4MGJhOGVlUWhRN09QbVR6SzNKUFJDdG5ULTRoMU1ERW5XZE5YbVhUclRDUGlDQ0E4VGZhTExUSkdIMC1PbTA5UnNqcG9uZGh1d0NPWjFoV0hET081cEdmV0pXYWNUU1A1RENDNUlRWnJZVjZHV3p1U0xQcncwTDhheTNvSjVvcnctYTRoTkI5bWNCLWktUkxtMXJYOG5xTFI5RkR1RGRkdmJnNDFYQTBPWTc5Z0JDazdSYXZKNUF3ZEwzbUFBRXBR",
     "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOWE13aV9NZjhyNXNnZWZzNFFSa1ppMGpucWV2U2JHa21IcEdWYzFRNFptbnZZa09QLTY0aUNKbWRId01MaHFfZkNSZl9qMG1jRDEyUVpnX2JGSDJpWmhaYWJYcjQ2Z01tdHJYZEpvVWZidzgzbnQ4VEVic2JiRGlwdnh1NVVjMUJUTEFxTXpzS1BDLTA1d0VzUE0zZlNoLXpoT1pjT0tFUW51Q1ZESUxyeHQ2b2I1TnB4U1c0Y2wwY0ptS1Fab0NHVUZlTWttR0NJWTB1U05VY2l1MDJZMjJsNEQ1OGxSVE5MWVHSAe8BQVVfeXFMUDZQbktZSV9DRUIzZEFqZGJFNTZmUkZ4Vm9DSTJNeWZZdlFKMmdBX3JyaXg0dGpPT0QwZFZTYVphVnJlVFI1YlNYcUV3SzVKcTlpTDBSOExPd2ZZN1ByRDF2SUxZSUViMzlMQ0V3Ynlza2VwRmhNdDIxSDlUSFVtd1BaY3VhUU8xUmdoSkxiRHY4YVFxcnRHbDR2akl2WGdnR0dpRXBYbWc0VGs1LWs0SGM5Wktyb0stV3lHTnp3S2RNVFJyNnBoc3lXWWpQeVBtUkJrRTF6SVVvSUxqdDVwWC1rd0VyemZrNDRfeldVZ0U",
-    "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1jVFFSM2JqSmM1Z3dXNXczdl9xdEM4Y2ZTY3pnNTNuV1JvWHNBaUJ2d2RzcWlXUXpJVWJaZzNnUDZmOGlReEx1bVFidHFHV2VmSVBNMnRDTDhNalFsRkUtdURzdw"
+    "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1jVFFSM2JqSmM1Z3dXNXczdl9xdEM4Y2ZTY3pnNTNuV1JvWHNBaUJ2d2RzcWlXUXpJVWJaZzNnUDZmOGlReEx1bVFidHFHV2VmSVBNMnRDTDhNalFsRkUtdURzdw",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUGVvb2ZRSC1CYWw0aU5ZTWFuU1V2ZGM4eUZpdDZGbjdsSGJiWXFCd2VaV1RIU3IzcEp0TUVRTUwzR1lGaWxJRnJEeW04dkNSOE9NUVRidDN1eHVPNTVKalZ4V20zR0syWVZlb1JmN2lERW02ZFRwemdIdmNFdFVWX3VmYzdrSERFZUxXd1hXRnB4X3ZnQmFlWjRDU2ZmTFh4dEN1M3Y4MzBfV2RGcGVKMw",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxNb0ViTktVbjd6c2JaNUNLM2JDN2lQMzc4M3kydHNQSlNqblczNm84MmVsdFRmRUhFdmRVdzgtaUVsdWluNFJUUThEaWtVTWRPY2FBMi1QbHBFZkQ5bnNvUDJYN1oybE5qWExTMkFIRTRUaV9zb2FYaVQ0WkFNZXZQQmg5WWZGVzRiR3k1dklHb0YwVHFXZDk5S2l4dXVHYkFXS2lPSTNDYjlSek93",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxQLWRZQ2F4QW5MYndmdTdqVlVFTUlYWmMtVHltVkRFYUdFdWxJOVc4eHYwZFF0MmJhZnFtd280VklHQUhFVkR0bzItVm9LN0RhM1B4azY0UXJWdS1pcVRyb0lSeXJLa2lvdk9na1VuVFZpVm9mTEE4aVAtQlpCa0JLNnJZZ2ktdjRZYnJSRWhFb19JUkp5ZHQxM1R2TnROM2d4dGJEbmNlNEwwdUE4aThaWg",
+    "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNZHIwX3JlVVItckVrdlJvNTdzUWQwOFJxMDBMc1ZoeFk2U3R3QlA0TzNIc3VUb2oxYUs1OUNCaS14UkRSLUx1QldpZUZLc1VIVDBLREM1d0tPallJSFlMbWZNNGdMcVdTSlluZXNwWWtHd05zY3l0djlkZmFoYXNTNG9RSmk2ZTVmeFhfenRITWRYX3ZsR0ZZQnRLdG52MU5ham40UDNPVFBsZjRNUVN6YkhfMlpxbW1MbWNuTFRjVElvYW1PNnVwRnlQbDFRb0xIdjZsYUxPZ3kxeU41czhnY09UNA",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxPd2NvVkFYdTFLdkpITFpnd1hqdFB1MEhuQWFrc3RTTFBfMWNzMmJYd2E0QmFLMW1ORnNrVk1XWmhwaUpoaFBscE9DWEkxQXN0eFV3eTVEVlN1OXJWVFhSRkt0TTd4aXBMcXAyMGhlSXRvWHhscmV2a1RabGlpU2VwTnYyREljNjJ0a0JvR2RETzZIclFiZkxlLWlHRVpYQQ",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxQZnZvbHBlVVJLQkd1bGZFN1NoMzdvZzljaFdPTFY0ZjNVNVEzNGlVTmljYUFpQTZvT0E0NnRaQlF4OUplcS1hb19oeU1QaGJDVTRXMW5ETEZOMEpuZnVySzM4cXhUbEd3UUtlU1FDTlItcjA2RXowTUhhdVhEZW03amQ3TGpiNFQ0R3FOQkYwX2FqMTRnNEMzelA1emQ",
+    "https://news.google.com/rss/articles/CBMieEFVX3lxTFBNeU1NV3BSLUdaUTZxckN3bnM0TEJFUTcwVG9hRDZHaWYyTXplTnJCQ0lCLS1DbWpRWlJmNm9JVnN5clFiOE1YMDFLcDA5dkJnTHVWV1JLT0hwNVViUm1PWENMN2xlbWhLUmcyclpObGstV3hxOG9rcg",
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxNODZxeDk4TFlrUWZLcDVqQUJ6ZHI4UUxkM3NzZFZJOW9ES1ZzOTlLbllRVGE2MVdheDNNM2czdGJlb1ZUTFRfUEozWnpCekxLNWlNZHVpOHc4UTF6ck1lSFVSaEhTYVRKZmdDMFM5aG1pSmlZQjZrUmpEN1QxcmdNNnhTdm5tOExJRmhGUzN6RFBQYkJhODMzWHVVRQ",
+    "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOTC1MMXZGYUZDWDdtaE1zYnpTa2h3YlJkdTJBMy1NSFFfcFVpNC1HbzRZc240OEhHNGdJdmV5T1BUMGtOYXY0bUZkSjI4ZVBBZzB5dnhkc2xVdlVzS2RRQ2pBazRkdlFlcHpkS01HbF9SZUczdlVES1FIc3VnYjVObjkwNFZEN2ZnaENTWFBWUnJaU3JfQ0p4dVB5eWJIcmFlWlZlTERqN2pTTkhtaUNWdVlkQTU3dG1jWGhRYlVSUnpBUUQwT0FtWWxlSEJ1LTV4"
   ]
 }
