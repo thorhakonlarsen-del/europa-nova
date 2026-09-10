@@ -1,6 +1,27 @@
 {
-  "updated": "2026-09-07T12:16:56.642Z",
+  "updated": "2026-09-10T11:07:14.149Z",
   "items": [
+    {
+      "date": "2026-09-08",
+      "source": "Google News — sovereign AI Europe",
+      "title": "Mistral raises €3B as sovereign AI becomes big business",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPZ0ZGd3VTRnhtTnhONFo1R0lCbWpsQ2NLdktaSjVvOEpmSkozVkNzYk4wYW90TVlaV0FVQm05UWdyOHd2OEZHQ1hJaUFNT1JGZ2hBRUFaN0FvUW5QWHFQMmFiWXNPWnJCRzhhcGY5dVRQMWFCSGdITWVKRWhrZ29LZmZWVnhlOTY0VnFKOVJsckJQRkFp?oc=5",
+      "commentary": "Mistral has closed what is reported as Europe's largest venture round at EUR 3 billion, on the explicit premise that sovereign AI is now a commercial market rather than a policy aspiration. The size of the raise confirms that private capital will fund European frontier model development up to a point, but venture financing carries investor mandates and exit horizons that sit awkwardly with the long-duration, non-commercial capability a treaty institution would be built to hold. Reporting around the round also notes partnerships with non-European industrial players, which means the sovereignty claim rests on where weights and deployment sit rather than on an autonomous stack. The open question for European policymakers is whether one well-capitalised national champion substitutes for public frontier capacity or merely raises the price of acquiring it later."
+    },
+    {
+      "date": "2026-09-07",
+      "source": "Google News — European AI compute",
+      "title": "Could NVIDIA's purchase of Hugging Face boost the EU's AI sovereignty?",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxON3FGT2owSTU1eHNJU2JnaDdlTVJXV0hpWUUtbmJWR1dtaUpTREstMWVfS2duTDk1NVVVdFEwNm9lOFBsdGtreE9SYzk3clZrMS1OSDlMNWpOazU2WW9XOHp3UnRvVF8zM0xMLWMyZEZ3clFWdnBxdGY1SXp6aWhZdGNB?oc=5",
+      "commentary": "NVIDIA's acquisition of Hugging Face places the principal distribution layer for open-weight models — a platform with French origins and deep roots in the European research community — under the control of the dominant supplier of AI compute. Vertical integration of chips and model hosting concentrates two chokepoints that European strategy has treated as separately contestable, and it complicates any assumption that open weights are themselves a hedge against dependency. Whether the deal helps or harms EU sovereignty turns on governance commitments and on whether European public infrastructure retains credible alternatives for hosting and serving models. Expect the case to sharpen arguments for publicly held model repositories and for compute procurement that is not routed through a single vendor's ecosystem."
+    },
+    {
+      "date": "2026-09-09",
+      "source": "Google News — sovereign AI Europe",
+      "title": "South Korea, Europe Form Third AI Axis Against US-China",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxORThJZlZOaEVsWkRmQkl5RlZYUC1Da2RiQ2Q3aUpoa080Rl8wa3NmaVFMLXd4dHlCNVlDQVBwX2Z1aWtSSEpLVXd5SlI3MEFpbENZSjFlcmRScWJRcENLMzYwYWgxRG1MajhWWlFIY2FZSXNQUUs4TVJ6N0Q5MXVEX0xPWnI3ZzBU?oc=5",
+      "commentary": "Korean reporting frames emerging Europe–South Korea AI cooperation as a third pole positioned between the American and Chinese blocs, which matters because Europe's weakest link is semiconductor manufacturing and memory supply rather than research talent. Partnership with a hardware-strong, non-superpower jurisdiction offers a route to compute access that does not deepen transatlantic dependency, provided the terms are codified rather than left to commercial deals. The precedent worth studying is treaty-based cooperation of the CERN and Galileo type, where shared governance rather than bilateral memoranda gave smaller partners durable rights. If such an axis is to be more than rhetoric, it will need an institutional vehicle capable of holding joint compute and model assets over decades."
+    },
     {
       "date": "2026-09-07",
       "source": "Google News — European AI compute",
@@ -147,27 +168,6 @@
       "title": "Strengthening Europe's tech sovereignty — Cloud and AI Development Act",
       "url": "https://commission.europa.eu/news-and-media/news/strengthening-europes-tech-sovereignty-2026-06-03_en",
       "commentary": "The Commission's Tech Sovereignty Package proposes a Cloud and AI Development Act structured around research and innovation, data centre capacity, and autonomy, with the autonomy pillar introducing a four-level framework running from EU-based data processing at the first level to requirements on third-country control, EU ownership, supply chain transparency, personnel clearance and independent audit at the highest. The justification the Commission cites is its own market data: the share of the European cloud market held by EU-based providers fell from roughly 29 percent in 2017 to around 15 percent in 2022. Graduated sovereignty levels are the correct instrument for procurement, because they convert an abstract claim into something a buyer can specify and an auditor can verify. They cannot summon frontier-scale compute into existence, which is the layer at which specification runs out and institutional capacity is required."
-    },
-    {
-      "date": "2026-05-07",
-      "source": "CNBC",
-      "title": "EU weighs restricting use of U.S. cloud platforms to process sensitive government data",
-      "url": "https://www.cnbc.com/2026/05/07/eu-commission-cloud-sensitive-data.html",
-      "commentary": "The European Commission is reportedly evaluating restrictions on US cloud providers handling sensitive EU government workloads, which would convert the Cloud Sovereignty Framework from a procurement preference into binding policy. The shift reflects the same logic that has driven projected sovereign-cloud spending past USD 23 billion: data residency without jurisdictional control is no longer accepted as sovereignty, particularly under an American administration that treats CLOUD Act access as routine. If formalised, the restriction creates an immediate demand signal for European providers and a compliance question for US hyperscalers operating in regulated sectors. The same logic, applied at the AI compute layer, is precisely what a treaty-based European AI institution would operationalise — but with frontier-scale capacity that no sovereign cloud provider can supply alone."
-    },
-    {
-      "date": "2026-04-24",
-      "source": "Fortune / CNBC",
-      "title": "Cohere acquires German AI company Aleph Alpha in deal valuing the combined entity at $20bn",
-      "url": "https://fortune.com/2026/04/24/cohere-aleph-alpha-deal-signals-rise-of-ai-middle-powers-counterweight-to-u-s-china/",
-      "commentary": "Canadian AI company Cohere announced the acquisition of Aleph Alpha, Germany's most credible frontier-model laboratory, at a combined valuation of approximately USD 20 billion, backed by EUR 500 million in structured financing from the Schwarz Group and explicit endorsements from both the German and Canadian governments. The framing in Berlin emphasises continued European operations, but corporate decision-making authority for the only German firm capable of pursuing frontier scale has now crossed the Atlantic. The deal validates the emerging \"middle powers\" thesis — that advanced economies outside the US and China are converging on shared sovereign-AI strategies — while simultaneously illustrating what happens when no European institutional vehicle exists to anchor such laboratories on the continent. Voluntary commercial alignment cannot substitute for treaty-grounded sovereign capacity; the difference becomes visible the moment capital pressure arrives."
-    },
-    {
-      "date": "2026-04-20",
-      "source": "Health Data Hub",
-      "title": "France's national health data platform begins its migration off Microsoft Azure",
-      "url": "https://www.health-data-hub.fr/sites/default/files/2026-04/20260420%20CP%20La%20PDS%20engage%20sa%20migration%20.pdf",
-      "commentary": "The Plateforme des données de santé selected Scaleway to replace Microsoft Azure, ending seven years in which a dataset intended to cover the entire population receiving care in France sat on infrastructure owned by a company subject to the CLOUD Act. The decisive constraint was SecNumCloud certification, which Azure cannot obtain because of US ownership — a procurement rule that achieved what years of litigation before the Conseil d'Etat and repeated objections from the CNIL did not. Sovereignty requirements written as certifications rather than aspirations prove enforceable precisely because they bind the buyer instead of appealing to the seller. No equivalent instrument exists one layer up: there is no certification a European buyer can specify that would cause a frontier model to be trained under European control."
     }
   ],
   "seen": [
@@ -243,6 +243,18 @@
     "https://news.google.com/rss/articles/CBMinAFBVV95cUxQZnZvbHBlVVJLQkd1bGZFN1NoMzdvZzljaFdPTFY0ZjNVNVEzNGlVTmljYUFpQTZvT0E0NnRaQlF4OUplcS1hb19oeU1QaGJDVTRXMW5ETEZOMEpuZnVySzM4cXhUbEd3UUtlU1FDTlItcjA2RXowTUhhdVhEZW03amQ3TGpiNFQ0R3FOQkYwX2FqMTRnNEMzelA1emQ",
     "https://news.google.com/rss/articles/CBMieEFVX3lxTFBNeU1NV3BSLUdaUTZxckN3bnM0TEJFUTcwVG9hRDZHaWYyTXplTnJCQ0lCLS1DbWpRWlJmNm9JVnN5clFiOE1YMDFLcDA5dkJnTHVWV1JLT0hwNVViUm1PWENMN2xlbWhLUmcyclpObGstV3hxOG9rcg",
     "https://news.google.com/rss/articles/CBMimwFBVV95cUxNODZxeDk4TFlrUWZLcDVqQUJ6ZHI4UUxkM3NzZFZJOW9ES1ZzOTlLbllRVGE2MVdheDNNM2czdGJlb1ZUTFRfUEozWnpCekxLNWlNZHVpOHc4UTF6ck1lSFVSaEhTYVRKZmdDMFM5aG1pSmlZQjZrUmpEN1QxcmdNNnhTdm5tOExJRmhGUzN6RFBQYkJhODMzWHVVRQ",
-    "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOTC1MMXZGYUZDWDdtaE1zYnpTa2h3YlJkdTJBMy1NSFFfcFVpNC1HbzRZc240OEhHNGdJdmV5T1BUMGtOYXY0bUZkSjI4ZVBBZzB5dnhkc2xVdlVzS2RRQ2pBazRkdlFlcHpkS01HbF9SZUczdlVES1FIc3VnYjVObjkwNFZEN2ZnaENTWFBWUnJaU3JfQ0p4dVB5eWJIcmFlWlZlTERqN2pTTkhtaUNWdVlkQTU3dG1jWGhRYlVSUnpBUUQwT0FtWWxlSEJ1LTV4"
+    "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOTC1MMXZGYUZDWDdtaE1zYnpTa2h3YlJkdTJBMy1NSFFfcFVpNC1HbzRZc240OEhHNGdJdmV5T1BUMGtOYXY0bUZkSjI4ZVBBZzB5dnhkc2xVdlVzS2RRQ2pBazRkdlFlcHpkS01HbF9SZUczdlVES1FIc3VnYjVObjkwNFZEN2ZnaENTWFBWUnJaU3JfQ0p4dVB5eWJIcmFlWlZlTERqN2pTTkhtaUNWdVlkQTU3dG1jWGhRYlVSUnpBUUQwT0FtWWxlSEJ1LTV4",
+    "https://news.google.com/rss/articles/CBMigAFBVV95cUxNRzU0cTlwNHctb0FiY092UVlJZFh4UmxsQ2lPLTdkVEU2SlRzVU12VzI2RGRYWEFqS2NMcVlXdXNTUGczTjFTbjZGMXY4bHhZYXN6bVpGQ0M0cndmMmthYjhUcGhPWlZsb1ZWeHhHOUdZWE93bTdUMjBNMzZQNTR6Mw",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxNcjdDWTloSGVaWHR1eTdSYkM0Tk1jMFI2TDZyb05HZXJHb240dkw4Z2dsVk5oV2pJcXhOZjdwWTZkTEVmRjU0Rl85ZkJmUW9fWVU1ZmJOM19EWkQ5ellSQ0czMnBHeGdMU19KRTlidEZvZVIwQ28weklnbDgwYVVacWx3",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxORThJZlZOaEVsWkRmQkl5RlZYUC1Da2RiQ2Q3aUpoa080Rl8wa3NmaVFMLXd4dHlCNVlDQVBwX2Z1aWtSSEpLVXd5SlI3MEFpbENZSjFlcmRScWJRcENLMzYwYWgxRG1MajhWWlFIY2FZSXNQUUs4TVJ6N0Q5MXVEX0xPWnI3ZzBU",
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxPQk9NWkhpUUhCRzctc0NTOExlaGF5Y2FYVTJlX295ZzQyRmktdG1HR20tRm42WUFPbkk2OEhZYVFPZDZjd3B2di02YV9JWjM4X0FYb3JsUFY1bVgtWUc3NV9CaHZFc1hUdWR2TzcyOTBlbWlBaVVvY01aaUQ1NXVpcGQ0THlLdkl1Y2VsZTlfT2pEWFJELW1feQ",
+    "https://news.google.com/rss/articles/CBMidEFVX3lxTFBYc1JreGFMNEJfaE5NN2EzV2ZoRVJIbnlsbkxRS2hWNzhJMVJDMDlDeXdvSG9LYm5pZURCS1VuU1hlVkpiZzgzUkZ1c1dyNDAwYkxqb0QwVmxBeHhheVY1WkNNUGpDSmQ1Z19KSHc4ZzRTRlAw",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxPZ0ZGd3VTRnhtTnhONFo1R0lCbWpsQ2NLdktaSjVvOEpmSkozVkNzYk4wYW90TVlaV0FVQm05UWdyOHd2OEZHQ1hJaUFNT1JGZ2hBRUFaN0FvUW5QWHFQMmFiWXNPWnJCRzhhcGY5dVRQMWFCSGdITWVKRWhrZ29LZmZWVnhlOTY0VnFKOVJsckJQRkFp",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxPTHVzSXFvYjdtSVE1NzhxVEFfQ3FwVGZqUGtvRzFUWHktZ1UzdnVpemVSVzJYTmdnN2xmZW14WlFldFdIRU1aZXlXYWVfQU9iOHdVZmNhVGFPV3J2V1JMN2JQalc2RllCcDZqdnp2UzVGMmFmektKazlUZlFpa3JGMGV4VmZjcEExd3UyR1JBdzFvWWFxYUZ5Tml2RGg0bkdTTGNRU0JWcEJKQU5Zbi0zTg",
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNNGhCMnBYbnlySTdEQm5xLWNSaldOZV9OQ0NKNE5jbEU0eHBiSlJ0eElsUVZwZFBJUFVpaGlVNVpZSmdic1FwZ1diM1dxRm9rUjJ1cTFUaWpxcWN6bkRnb3hlS2dFbmtXY0Y3WlZPVVh5anZlaVhBMjl0LTUydTJfcTRHZXdhdXkzcmN0cnVTMVl5VEJSN3JPcFRfM2VQcG5veWRrMVRlNWQ2azV2TTlaY2xsRXowZ2lzaU5tSThlUlJiZw",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVVp6QnJZS295YXZJRGtUQjRnTkNQdFFrZk41WGdQdFZZcFR3QXVoMXh0OVBjMVd5VlBzRDFKTmNuWTRKTENzUFBNeFh5UVNEQ2JocG9TSklUbjBsTG8wX2VjUVhRQUV1SmJaY0ZrUmpvelF4cFZGQ0pCd054Wm1fWWhEVkxQRU9sWGhWSHI1a2o1SHJuNm0zTEMyZlhjYjd1TXFKRGFoMXE5N1Myb2ZsVG9OQjYtQlFtQ0Y2QjBaRkNVQWpR",
+    "https://digital-strategy.ec.europa.eu/en/events/apply-ai-summit",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxON3FGT2owSTU1eHNJU2JnaDdlTVJXV0hpWUUtbmJWR1dtaUpTREstMWVfS2duTDk1NVVVdFEwNm9lOFBsdGtreE9SYzk3clZrMS1OSDlMNWpOazU2WW9XOHp3UnRvVF8zM0xMLWMyZEZ3clFWdnBxdGY1SXp6aWhZdGNB",
+    "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOYUxFYjJROW1jN3BScjNoQnNWekRuQzBuelBLQ2twQWJCU2RObHFUX2tXbGE4TXRCWDBLNzAzUzNTRllaQXN4SUlTQm9GWWhZeF9obElnQnNuTTRKQ1lrVkZfU2ZPSm4wRFFDbFNPaXg0NmpmNThya25Id0JqQU4ydkM0QTM0VXRPWDJmYjJ2eHI1VjNuazFSLTdqRWRUV0gzVFA2UDBFcWFCYUxYeGc4VC1pMXpHTmRwUGhWQ3RCSDA5a3lOM25YSzI5UWU5NmxURE1ZeTRFSU1UM1pNajhMbENpMGtvblYtZnBwTEpKbXpSZw"
   ]
 }
