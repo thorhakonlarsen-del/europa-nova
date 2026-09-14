@@ -1,6 +1,20 @@
 {
-  "updated": "2026-09-10T11:07:14.149Z",
+  "updated": "2026-09-14T12:32:05.710Z",
   "items": [
+    {
+      "date": "2026-09-14",
+      "source": "Google News — sovereign AI Europe",
+      "title": "How can Europe build sovereign AI computing capacity?",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTFQyX0xCUmI1SzhaQ2drbk5yVktrZTVZMUhwMlNmakJLcjFGbFZDR1ZXWWxVQVRia2JVV3dpRk5lZFZzc0NHNHdoM0l1RzFBY2RpZzhLZC1ydm9mZGpIRU5hRW9kWXNsclJLWGJVbjhzZ05LVGdjOFFKdjllbTFFc0RVczFzam9PcEtZVEplN1Q?oc=5",
+      "commentary": "Bruegel has turned its attention to the mechanics of building sovereign AI computing capacity in Europe, which moves the debate from declaratory ambition towards the harder questions of siting, financing and procurement. The think tank's framing matters institutionally, because Bruegel analysis tends to shape how the Commission and finance ministries reason about instruments such as AI Factories and InvestAI. The unresolved issue is whether publicly backed compute genuinely reduces dependency when the accelerators, networking and systems software remain overwhelmingly non-European. Expect this line of analysis to sharpen the argument that compute capacity without control over the model layer buys throughput rather than autonomy."
+    },
+    {
+      "date": "2026-09-09",
+      "source": "Google News — sovereign AI Europe",
+      "title": "Tech Bytes: Mistral’s record €3 billion raise turns sovereign AI into a global investment race",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOM1FrdUZPdHM4eVdqNllsWU5zTko5WFJBc1FjLVZoaFFjQkFjanRpSE85VWR5dENhejFMN2xvYlJhOGVWdnJuTFExU3VUTFJ1ZzcxZ2pkWXQ0ZkZJQkVnV0ctWEVhaUwtbW1nQmdmNFZndDhFR3RHX1ZhNTdQeEVrWXNsU0prWlJsX05VN3ZEUFdSNTZjVXg2NkxzZC1qNFh0Tmp2ekNVYVlibWdBc05VN3NVMy1ZUk1NV0pDS2lERUcyNnh6VHUyQ0J6amNZdy01Sm5EMV9RbjhKaGt6bUtZcjRCZFBmM2tPeUtwamNqX1JwWUJ0M3lMcU9B?oc=5",
+      "commentary": "Mistral's reported EUR 3 billion raise is the clearest signal yet that European frontier model development can attract capital at a scale previously assumed to be available only in the United States. Reframing sovereign AI as an investment race, however, carries a risk that the sovereignty label attaches to whichever European champion raises most, regardless of where control and governance ultimately sit. A single privately financed national champion is a thin basis for continental autonomy, particularly if later funding rounds draw in investors outside Europe. The case for treaty-based, publicly anchored capacity rests precisely on the gap that private rounds cannot close: durable ownership of frontier capability that survives a change in shareholder register."
+    },
     {
       "date": "2026-09-08",
       "source": "Google News — sovereign AI Europe",
@@ -154,20 +168,6 @@
       "title": "Letter to significant institutions on AI-enabled cybersecurity threats",
       "url": "https://www.bankingsupervision.europa.eu/press/letterstobanks/shared/pdf/2026/ssm.2026_letter_on_AI_enabled_cybersecurity_threats.en.pdf",
       "commentary": "Claudia Buch, Chair of the Supervisory Board, wrote to the chief executives of every significant institution supervised under the Single Supervisory Mechanism requiring a comprehensive action plan — with named owners, allocated resources and implementation timelines — to be submitted to each bank's Joint Supervisory Team by 31 October 2026. The expectations extend to third-party software and open-source components, AI-assisted defensive tooling under human oversight, and supply chain assurance sized to the threat, which draws the AI capabilities of a bank's vendors inside the supervisory perimeter. Three European authorities issued warnings on AI-enabled cyber risk on the same day, which is less a coincidence than a signal that the assessment is now settled across the institutional layer. Where the underlying model capability is sourced becomes a supervisory question the moment a bank is asked to evidence assurance over it."
-    },
-    {
-      "date": "2026-07-06",
-      "source": "Financial Conduct Authority",
-      "title": "AI and the future of retail financial services (The Mills Review)",
-      "url": "https://www.fca.org.uk/publications/corporate-documents/mills-review",
-      "commentary": "The Financial Conduct Authority's review, led by executive director Sheldon Mills, sets out seven priorities for a retail market shifting towards AI-enabled, continuous and delegated services — among them securing the regulatory perimeter, enabling the foundations for agentic finance, and developing a trusted public-interest AI financial capability service. That last recommendation is the notable one: a national regulator proposing that some AI capability serving consumers should sit in public rather than purely commercial hands. Commissioned research covering more than 5,000 UK consumers found one in five adults already open to AI making decisions on their behalf, which is the demand side of a market in which the models doing the deciding are overwhelmingly American. The United Kingdom is answering the delegation question with a public-interest institution at national scale; the same question at frontier scale still has no European answer."
-    },
-    {
-      "date": "2026-06-03",
-      "source": "European Commission",
-      "title": "Strengthening Europe's tech sovereignty — Cloud and AI Development Act",
-      "url": "https://commission.europa.eu/news-and-media/news/strengthening-europes-tech-sovereignty-2026-06-03_en",
-      "commentary": "The Commission's Tech Sovereignty Package proposes a Cloud and AI Development Act structured around research and innovation, data centre capacity, and autonomy, with the autonomy pillar introducing a four-level framework running from EU-based data processing at the first level to requirements on third-country control, EU ownership, supply chain transparency, personnel clearance and independent audit at the highest. The justification the Commission cites is its own market data: the share of the European cloud market held by EU-based providers fell from roughly 29 percent in 2017 to around 15 percent in 2022. Graduated sovereignty levels are the correct instrument for procurement, because they convert an abstract claim into something a buyer can specify and an auditor can verify. They cannot summon frontier-scale compute into existence, which is the layer at which specification runs out and institutional capacity is required."
     }
   ],
   "seen": [
@@ -255,6 +255,10 @@
     "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVVp6QnJZS295YXZJRGtUQjRnTkNQdFFrZk41WGdQdFZZcFR3QXVoMXh0OVBjMVd5VlBzRDFKTmNuWTRKTENzUFBNeFh5UVNEQ2JocG9TSklUbjBsTG8wX2VjUVhRQUV1SmJaY0ZrUmpvelF4cFZGQ0pCd054Wm1fWWhEVkxQRU9sWGhWSHI1a2o1SHJuNm0zTEMyZlhjYjd1TXFKRGFoMXE5N1Myb2ZsVG9OQjYtQlFtQ0Y2QjBaRkNVQWpR",
     "https://digital-strategy.ec.europa.eu/en/events/apply-ai-summit",
     "https://news.google.com/rss/articles/CBMiggFBVV95cUxON3FGT2owSTU1eHNJU2JnaDdlTVJXV0hpWUUtbmJWR1dtaUpTREstMWVfS2duTDk1NVVVdFEwNm9lOFBsdGtreE9SYzk3clZrMS1OSDlMNWpOazU2WW9XOHp3UnRvVF8zM0xMLWMyZEZ3clFWdnBxdGY1SXp6aWhZdGNB",
-    "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOYUxFYjJROW1jN3BScjNoQnNWekRuQzBuelBLQ2twQWJCU2RObHFUX2tXbGE4TXRCWDBLNzAzUzNTRllaQXN4SUlTQm9GWWhZeF9obElnQnNuTTRKQ1lrVkZfU2ZPSm4wRFFDbFNPaXg0NmpmNThya25Id0JqQU4ydkM0QTM0VXRPWDJmYjJ2eHI1VjNuazFSLTdqRWRUV0gzVFA2UDBFcWFCYUxYeGc4VC1pMXpHTmRwUGhWQ3RCSDA5a3lOM25YSzI5UWU5NmxURE1ZeTRFSU1UM1pNajhMbENpMGtvblYtZnBwTEpKbXpSZw"
+    "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOYUxFYjJROW1jN3BScjNoQnNWekRuQzBuelBLQ2twQWJCU2RObHFUX2tXbGE4TXRCWDBLNzAzUzNTRllaQXN4SUlTQm9GWWhZeF9obElnQnNuTTRKQ1lrVkZfU2ZPSm4wRFFDbFNPaXg0NmpmNThya25Id0JqQU4ydkM0QTM0VXRPWDJmYjJ2eHI1VjNuazFSLTdqRWRUV0gzVFA2UDBFcWFCYUxYeGc4VC1pMXpHTmRwUGhWQ3RCSDA5a3lOM25YSzI5UWU5NmxURE1ZeTRFSU1UM1pNajhMbENpMGtvblYtZnBwTEpKbXpSZw",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxOdVJjUWZrTUhIUmpsYUlmRnFPeTQyVjNzNXlNcVl0b0RZQmhFZk9qLWYxN1BUMUdNMUlpTU91dklUZy1mdEFCVG9HUWpZSkU0Q3hTMURSMzJxcXJaR1hDaFBQM0hQYW9pbEotYjl1ek53UjNtTENadHVNTkpWX2hWeVN2Q01jaE9wUl9YeEstQzhUZw",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTFQyX0xCUmI1SzhaQ2drbk5yVktrZTVZMUhwMlNmakJLcjFGbFZDR1ZXWWxVQVRia2JVV3dpRk5lZFZzc0NHNHdoM0l1RzFBY2RpZzhLZC1ydm9mZGpIRU5hRW9kWXNsclJLWGJVbjhzZ05LVGdjOFFKdjllbTFFc0RVczFzam9PcEtZVEplN1Q",
+    "https://news.google.com/rss/articles/CBMigwFBVV95cUxNc2NzM0Q3NWJfTkkxX2lmaHUzM1llOXFDVDFiQnpqTzRVQ2RRVFdBRnZkYkEyTjNKcUZTVGFsRzZwdm1qUE5yLW82Q1JiVUdKVmdVMHB2dkpka0Z2c2VaRFRDYVVBMVFzS2xic3I0SHQ2T3BsaWYtWExQaW5sbnU5eEFSdw",
+    "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOM1FrdUZPdHM4eVdqNllsWU5zTko5WFJBc1FjLVZoaFFjQkFjanRpSE85VWR5dENhejFMN2xvYlJhOGVWdnJuTFExU3VUTFJ1ZzcxZ2pkWXQ0ZkZJQkVnV0ctWEVhaUwtbW1nQmdmNFZndDhFR3RHX1ZhNTdQeEVrWXNsU0prWlJsX05VN3ZEUFdSNTZjVXg2NkxzZC1qNFh0Tmp2ekNVYVlibWdBc05VN3NVMy1ZUk1NV0pDS2lERUcyNnh6VHUyQ0J6amNZdy01Sm5EMV9RbjhKaGt6bUtZcjRCZFBmM2tPeUtwamNqX1JwWUJ0M3lMcU9B"
   ]
 }
