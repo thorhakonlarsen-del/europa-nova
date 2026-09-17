@@ -1,6 +1,27 @@
 {
-  "updated": "2026-09-14T12:32:05.710Z",
+  "updated": "2026-09-17T11:29:45.442Z",
   "items": [
+    {
+      "date": "2026-09-14",
+      "source": "ECB",
+      "title": "Christine Lagarde: A new age of capital: growth, sovereignty and AI",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260914_2~a3f0efbee4.en.html",
+      "commentary": "The ECB president has placed sovereignty and artificial intelligence at the centre of a speech on capital and growth, which moves the sovereignty debate out of the industrial policy silo and into the monetary and financial-stability arena. When a central bank frames AI capacity as a question of where capital is formed and deployed, it implicitly acknowledges that Europe's reliance on non-European model providers and compute is a balance-sheet exposure, not merely a competitiveness gap. That framing matters for any treaty-based financing vehicle, because it legitimises long-horizon public and quasi-public capital — including sovereign wealth — as a response rather than a distortion. Expect European savings mobilisation arguments and AI infrastructure arguments to converge further, with capital markets union rhetoric increasingly recruited to the sovereignty case."
+    },
+    {
+      "date": "2026-09-08",
+      "source": "Google News — sovereign AI Europe",
+      "title": "Mistral raises €3B to bet big on sovereign AI",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPeVR1WWlGN1pQUk1vWWNESE5uUC1IdDloaXBISE5KdHFoWGM4WGo3TXVwLVVla19lSzlWcGtKWFRiNUdNSEJMSXdpbUwyM2NYQy1lQnNPOG1oaTg2NW1HVE5VVVVRV3c4T1FWMThKUm5EcHlRR3BydUVoOTgxbktmaVh6a3RaZXZ3MGw3czJPZ243NTA?oc=5",
+      "commentary": "Mistral's EUR 3 billion raise is the clearest signal yet that private capital will fund European frontier model development at scale, explicitly on a sovereignty pitch. The amount is substantial by European venture standards yet remains modest against the training budgets of the leading US laboratories, which means the question shifts from whether Europe can fund a champion to whether one privately held champion is sufficient as a public-interest hedge. A single commercially governed firm carries concentration and ownership risk that a treaty-based institution is designed to avoid, particularly if later funding rounds draw in non-European strategic investors. The financing pattern around such rounds will indicate whether Europe is building sovereign capability or simply a well-capitalised acquisition target."
+    },
+    {
+      "date": "2026-09-07",
+      "source": "Google News — European AI compute",
+      "title": "Could NVIDIA's purchase of Hugging Face boost the EU's AI sovereignty?",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNbHNLbGxVR3dHV0wtREN5dXBsMGRabGtfRENfaUZwYlFJS3NMSkFVOWhhc09MeUt4Y3hrWVBzZnBWU0pCNG1jU0txN2gtNjhwT3lvdGFpUHF1cE1nOHExblQtSVNLTlplMElBa0pLM0FLaWxSdFI0LXhyRVRUTjVoZkwtbUFTbmFZSEpuaVJna1JvWWdjOElOSGp4cG0wNW15OWtnOFI5d2RCTDB3dG9PZA?oc=5",
+      "commentary": "Nvidia's acquisition of Hugging Face brings the principal open-weights distribution platform, French in origin, under the control of the dominant supplier of AI accelerators. Vertical integration of that kind narrows one of the few layers of the stack where European actors held genuine structural influence, and it converts an apparent commons into a corporate asset subject to a single non-European jurisdiction. The obvious policy question is whether merger review and the AI Act's governance provisions have any purchase on a transaction whose sovereignty effects are architectural rather than price-based. European institutions will need to decide quickly whether model hosting and distribution infrastructure belongs on the list of capabilities that must be publicly underwritten rather than merely regulated."
+    },
     {
       "date": "2026-09-14",
       "source": "Google News — sovereign AI Europe",
@@ -147,27 +168,6 @@
       "title": "Microsoft and Mistral expand strategic partnership to give enterprises and regulated industries frontier AI they can control",
       "url": "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/",
       "commentary": "Microsoft committed a multibillion-dollar sum to expanding Mistral's European GPU capacity, built on thousands of NVIDIA Vera Rubin processors, and will draw on that capacity to help deliver its own cloud and AI services in Europe. No equity changed hands, which makes the structure more revealing than an acquisition would have been: Europe's leading frontier laboratory is scaling on American demand and American silicon, while the sovereignty case for the arrangement is being made by the American partner. Microsoft's framing — that Europe should have access to the world's most capable AI without compromising control over its data, operations or digital future — concedes the premise of the sovereignty argument and answers it with commercial guarantees rather than institutional ones. Access on favourable terms is not the same as capability that survives a change in those terms."
-    },
-    {
-      "date": "2026-07-07",
-      "source": "European Systemic Risk Board",
-      "title": "Frontier AI models could strain cyber resilience in the financial system, ESRB warns",
-      "url": "https://www.esrb.europa.eu/news/pr/date/2026/html/esrb.pr260707~4e1b68241a.en.html",
-      "commentary": "The European Systemic Risk Board raised its assessment of systemic cyber risk from elevated to severe and named frontier AI models as the reason, finding that they currently favour attackers by enabling vulnerabilities to be discovered and exploited with greater speed, scale and sophistication. What makes the warning unusual is its second finding: that the concentration of leading AI providers outside the EU is itself a source of strategic dependency and geopolitical risk, and that the Union must scale up its capacity, expertise and strategic autonomy in this area. A macroprudential authority has now placed European dependence on non-European frontier models inside its formal risk framework rather than treating it as an industrial policy preference. Sovereign frontier capability has acquired a constituency with supervisory instruments behind it."
-    },
-    {
-      "date": "2026-07-07",
-      "source": "European Commission",
-      "title": "EU Action Plan on Cybersecurity and Artificial Intelligence",
-      "url": "https://digital-strategy.ec.europa.eu/en/library/eu-action-plan-cybersecurity-and-artificial-intelligence",
-      "commentary": "The Commission's action plan pairs a defensive agenda — evaluating AI models before they are placed on the EU market, a European Blueprint developed with ENISA for secure access to advanced AI systems, and secure testing platforms for energy, transport, health, finance and public administration — with a capability pillar resting on AI Factories and Gigafactories and an EU Grand Challenge on AI for cybersecurity. Naming secure access to advanced AI systems as an explicit policy objective is an implicit acknowledgement that Europe does not control the systems in question and must negotiate its way to them. The document carries no budget figures and no implementation timeline, which is the recurring shape of Commission instruments: an accurate diagnosis attached to a delivery mechanism bounded by the political cycle. Converting negotiated access into owned capability is precisely the gap a treaty-based institution with its own budget authority exists to close."
-    },
-    {
-      "date": "2026-07-07",
-      "source": "ECB Banking Supervision",
-      "title": "Letter to significant institutions on AI-enabled cybersecurity threats",
-      "url": "https://www.bankingsupervision.europa.eu/press/letterstobanks/shared/pdf/2026/ssm.2026_letter_on_AI_enabled_cybersecurity_threats.en.pdf",
-      "commentary": "Claudia Buch, Chair of the Supervisory Board, wrote to the chief executives of every significant institution supervised under the Single Supervisory Mechanism requiring a comprehensive action plan — with named owners, allocated resources and implementation timelines — to be submitted to each bank's Joint Supervisory Team by 31 October 2026. The expectations extend to third-party software and open-source components, AI-assisted defensive tooling under human oversight, and supply chain assurance sized to the threat, which draws the AI capabilities of a bank's vendors inside the supervisory perimeter. Three European authorities issued warnings on AI-enabled cyber risk on the same day, which is less a coincidence than a signal that the assessment is now settled across the institutional layer. Where the underlying model capability is sourced becomes a supervisory question the moment a bank is asked to evidence assurance over it."
     }
   ],
   "seen": [
@@ -259,6 +259,18 @@
     "https://news.google.com/rss/articles/CBMikgFBVV95cUxOdVJjUWZrTUhIUmpsYUlmRnFPeTQyVjNzNXlNcVl0b0RZQmhFZk9qLWYxN1BUMUdNMUlpTU91dklUZy1mdEFCVG9HUWpZSkU0Q3hTMURSMzJxcXJaR1hDaFBQM0hQYW9pbEotYjl1ek53UjNtTENadHVNTkpWX2hWeVN2Q01jaE9wUl9YeEstQzhUZw",
     "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTFQyX0xCUmI1SzhaQ2drbk5yVktrZTVZMUhwMlNmakJLcjFGbFZDR1ZXWWxVQVRia2JVV3dpRk5lZFZzc0NHNHdoM0l1RzFBY2RpZzhLZC1ydm9mZGpIRU5hRW9kWXNsclJLWGJVbjhzZ05LVGdjOFFKdjllbTFFc0RVczFzam9PcEtZVEplN1Q",
     "https://news.google.com/rss/articles/CBMigwFBVV95cUxNc2NzM0Q3NWJfTkkxX2lmaHUzM1llOXFDVDFiQnpqTzRVQ2RRVFdBRnZkYkEyTjNKcUZTVGFsRzZwdm1qUE5yLW82Q1JiVUdKVmdVMHB2dkpka0Z2c2VaRFRDYVVBMVFzS2xic3I0SHQ2T3BsaWYtWExQaW5sbnU5eEFSdw",
-    "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOM1FrdUZPdHM4eVdqNllsWU5zTko5WFJBc1FjLVZoaFFjQkFjanRpSE85VWR5dENhejFMN2xvYlJhOGVWdnJuTFExU3VUTFJ1ZzcxZ2pkWXQ0ZkZJQkVnV0ctWEVhaUwtbW1nQmdmNFZndDhFR3RHX1ZhNTdQeEVrWXNsU0prWlJsX05VN3ZEUFdSNTZjVXg2NkxzZC1qNFh0Tmp2ekNVYVlibWdBc05VN3NVMy1ZUk1NV0pDS2lERUcyNnh6VHUyQ0J6amNZdy01Sm5EMV9RbjhKaGt6bUtZcjRCZFBmM2tPeUtwamNqX1JwWUJ0M3lMcU9B"
+    "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOM1FrdUZPdHM4eVdqNllsWU5zTko5WFJBc1FjLVZoaFFjQkFjanRpSE85VWR5dENhejFMN2xvYlJhOGVWdnJuTFExU3VUTFJ1ZzcxZ2pkWXQ0ZkZJQkVnV0ctWEVhaUwtbW1nQmdmNFZndDhFR3RHX1ZhNTdQeEVrWXNsU0prWlJsX05VN3ZEUFdSNTZjVXg2NkxzZC1qNFh0Tmp2ekNVYVlibWdBc05VN3NVMy1ZUk1NV0pDS2lERUcyNnh6VHUyQ0J6amNZdy01Sm5EMV9RbjhKaGt6bUtZcjRCZFBmM2tPeUtwamNqX1JwWUJ0M3lMcU9B",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNNTVqQW4tQ1VoRWdOWkotWHNnNDRLd3NPNjRobE1jalFIVVJvQWZhbFpER0tPZ1ZaQ010MXQ0eUlHMTRxT2c1TURFSUZUUGhmQVNpaWM2RE40NG5oUHM1WjhBRzlhWGJRSkNZNVpyZ2dNMy1hMDJsalVjODFhOTk0OWI3bHdoUU0wb0pudjc2QnFITlpCUXFKTjdYeWRSdDFjTlNGS1UzejVMLXo2Wng1dk1sa0U0Tjc00gG-AUFVX3lxTE95d0NvbmVwSFp3bjJrTS1QUXA2djNCY2U2VlRQY1NnRHNacktJWkNqN0QxOEdKMFJOSDlPNW11NHZzLTlsM1owb1FPcmVLTFVKMEhVaGVUcFpaRXNQZE9KaEZDRXdzaGl6Y1FVNHBqY0d6MWtlSnZXeUVpQngzRWduVllicTFxeFNRVXByODVNVG9uQ0IxVFYwRFUtYVFJRjc3N2dIWjNMRVRlOWx0Sm1jNzBOd2FCZ0RmNnRrTlE",
+    "https://news.google.com/rss/articles/CBMigwJBVV95cUxQellYc0J2aWduYk1CSGlKV3dwQUtPTWZKMi1HVU1BU2RKbmIxRGc1VUJveURiNUJnSFlydmxzcEJvUXRSZXdwNzQyellwbXdXUnBGVkNwcG84UGpRVjhGZEdqU0ZGaGx2c25oSFFQRXhfX2dUQkhPdm1GdVliR21UblBGUm9nTko4OEJfdXBJaDdmRkQyMUpBaUpzaUltMENnNHdGM19xT1N1WHgxOFI0WktkbEZrdnJyWjh5dFpfZE11S0gwNTBPMndWYldQZVFuUldkV1pwMVJocjd5N1hCUUhLQ0pZZHoxSkh0cjJybWFmYm1za2FPbzFiekQxUDlZb0tF",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeGs1b3lkZG5DN2VHS0w5VmVYYXBtdzJ1aXpOb09tNkhOWEVhV3pteGtOTFo5dEpOd3lZc3dqRXFCZ2gxV2dIMTdiZTRZVkdtTWpiVjZEOUsyWXROaS14NTFzSDVRQ3ZKanEyblVjUVVybkZ0c3pUbzZnaWVJMGdVTEs0UUNZUm1R",
+    "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNa2E5aEQ1NkgtTmdXSFFiYVVqNk1ydFJMODRkYU13Mk9PZ0xhajdKdzZwLUhycC1EbTJ2U3c2X3JuWF82b3N4MVBhWE0wTDd0REVzNDVyRy12eXY1dF9sYS1Mbk5GZzZYd0g0LXYzcGxUR21TVVBSX2FVWWNlNUdfRGJGdm9CQkRpejVhZWRMSWJ2MDU1c2NOU0lyNlc4aUloY0VvZVp1a2J6X0t3WE53NlplVm9kT0lxQWtiNk9TaGJWaHhjZzNoSzRXejgtRmtHbmc2NDczNmFxd3R6clo2YUh2NEJ4RnJyWHREa3drREpQc2Vl",
+    "https://news.google.com/rss/articles/CBMicEFVX3lxTE1ZZE52Y2I2TjFKTGVzZDZwVlZYQnFKOVd2enY4a3o3WVdoQkxLYWtoS3Y1ZGxxVzJUQ2R6dy0teWFEQi13Rk1iVEtOaU11aDdpUVl5U3ZBcXhpX1pzM1p3TTFISUlUZUtLdFJZNnNoejc",
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQd09abHRwNENfcU4zN05PQWdQSXdoR0hpZHZWVGFWMnR3ODR0X1ZRd2hvQUtWQzlqa2tEaHN1U2FJT0dXS0h6dEdfSjZCMmN6Qkk2bnpGRFNKemJzNzkwTE5wc2JWREM2aVJBNDBqa1pLYUdiS1FXQWtselFaWkVDbHpCM29nUUJN",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxNeXV6MTg0Tjhkckxha0FlRmo2M0trc0V6LU0zMGZfQUJEdHdacFo2T2pPb0NKcnR0Ul9JYzRvc2hELW9IZEMxdDRjWE9GS0FaWXVTcjBZNHE0Wk5aWXplOTM2TlJwcEhXVDhZaF9FWFdWOHBvSUlqaTcyMXNQemRsX25ZdXM0MG1leVMxVUhvM0o1bnRVZ0ZXSlJrNmEyaVBzamlB",
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE1sNEFna05YTEU2UTNxLUp5UlJ5Z0NLbk5Ta3hZUUliTUNYYzFQTGFybi00U1ZVZkRwWk13dXBpS01UMVo2aFExQ1M5aTNCV1FJUUlRTHpGTjJ3Smh3WFJWbHdWT0s4RjMyZENoRHFzQjB6TU95ZFE",
+    "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260914_2~a3f0efbee4.en.html",
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxPeVR1WWlGN1pQUk1vWWNESE5uUC1IdDloaXBISE5KdHFoWGM4WGo3TXVwLVVla19lSzlWcGtKWFRiNUdNSEJMSXdpbUwyM2NYQy1lQnNPOG1oaTg2NW1HVE5VVVVRV3c4T1FWMThKUm5EcHlRR3BydUVoOTgxbktmaVh6a3RaZXZ3MGw3czJPZ243NTA",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxNbHNLbGxVR3dHV0wtREN5dXBsMGRabGtfRENfaUZwYlFJS3NMSkFVOWhhc09MeUt4Y3hrWVBzZnBWU0pCNG1jU0txN2gtNjhwT3lvdGFpUHF1cE1nOHExblQtSVNLTlplMElBa0pLM0FLaWxSdFI0LXhyRVRUTjVoZkwtbUFTbmFZSEpuaVJna1JvWWdjOElOSGp4cG0wNW15OWtnOFI5d2RCTDB3dG9PZA",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxNQmFuRjZhZTYzQzVkNFpjOUZadXJZTjJEbVExeWVZakQ4bGFYY0dNSHA5c28tTFBUNjZxdFpfSFFZOGdKbkZoLTVuRV9SLUZNWlBrekhrd0wzN3M1dUhrN2pBMnJzdnNEWlBxZnpaWmpLZVBKRnhEaVVVNjI1bUFtRmM5RVVRWTJCMERhN2licVNIQkJvc0kzNUpUV29jVVVfOC1RWTNnT0xBQlkydEswZg"
   ]
 }
