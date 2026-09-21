@@ -1,6 +1,20 @@
 {
-  "updated": "2026-09-17T11:29:45.442Z",
+  "updated": "2026-09-21T12:38:22.684Z",
   "items": [
+    {
+      "date": "2026-09-20",
+      "source": "European Commission — Press Corner",
+      "title": "Commission enhances energy efficiency and sustainability of data centres in the EU",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1667",
+      "commentary": "The Commission has proposed a common rating scheme for data centres intended to make their energy consumption transparent and to ease their integration into European energy systems. Energy is the binding constraint on any European attempt to host frontier-scale training runs, so the metrics chosen here will quietly determine where compute can be sited and on what terms. A rating scheme that rewards grid-responsive operation and low-carbon supply would favour Nordic locations with abundant hydro and cool climates, aligning sovereignty objectives with decarbonisation rather than setting them against one another. Whether the scheme becomes a facilitator or a compliance burden will depend on how it is reconciled with the compute build-out promised under the AI Continent Action Plan and the Cloud and AI Development Act."
+    },
+    {
+      "date": "2026-09-08",
+      "source": "Google News — sovereign AI Europe",
+      "title": "Mistral raises €3B to bet big on sovereign AI",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE43RUxYT1dlcDQwd19nVVhQWVlMVW4xUmZhMU5Nc0JOa2h5N0lOSGxTek9Wb3FLcWNXUjFaMFJLcFBNUzdHaklKaklaMzB1OTZvYUozbndaVk8wbHljeFJUQzc3Q1lYWnJkUVdkSGdGMFU4N3dOTi0wMV9JQUhGa2c?oc=5",
+      "commentary": "Europe's most prominent frontier model developer has raised EUR 3 billion on an explicitly sovereign positioning, confirming that private capital will fund at least part of the continent's model layer. A single venture-backed champion nevertheless carries concentration risk: its investor base, acquisition prospects and commercial incentives are not controlled by any European public authority, and a capability that matters for state functions would then sit outside democratic mandate. The case for a treaty-based facility rests precisely on this gap, providing durable public capacity alongside, not instead of, commercial developers. Watch whether subsequent funding rounds draw in non-European strategic investors, which would sharpen rather than settle the sovereignty question."
+    },
     {
       "date": "2026-09-14",
       "source": "ECB",
@@ -154,20 +168,6 @@
       "title": "Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
       "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
       "commentary": "Enforcement of a further tranche of AI Act obligations, including new transparency requirements, begins on 2 August, moving the Union from rule-setting into supervisory practice. Because the largest general-purpose model providers subject to these duties are predominantly non-European, the effectiveness of enforcement is itself a test of regulatory reach over foreign suppliers on whom European firms and administrations already depend. Rules constrain how imported capability behaves but do not create domestic capability, so enforcement and capacity-building need to advance together rather than substitute for one another. Whether compliance evidence is verifiable in Europe, and by European institutions, will be the practical measure of sovereignty here."
-    },
-    {
-      "date": "2026-08-11",
-      "source": "Google News — sovereign AI Europe",
-      "title": "In-region inference, open models, and new European infrastructure for sovereign AI. - mistral.ai",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9zbGlwUWhiRC1udXFGMzJHeGZkUmN6bHk4T3UxWE5uM2trY2xhUUdTeXZzQ1ZSTXlvc3AzMWREczBUcjg0N1g4ZWdaSkJkVldfYWJ0SjR5cGFGMlFpdUpFTGNTS0EyVm45dllmc21TckJwT05IalE?oc=5",
-      "commentary": "Europe's most prominent frontier model developer has set out a combination of in-region inference, open weights and new European infrastructure as its sovereignty proposition. The mix matters analytically: in-region serving addresses jurisdictional control over data flows, while open weights address the deeper dependency question of whether European users can inspect, adapt and self-host the models they rely upon. A single venture-financed company nonetheless carries concentration risk for a continent's strategic capability, since ownership and commercial direction can shift in ways public infrastructure cannot. The stronger arrangement would pair private developers with a publicly mandated institution holding compute and model assets on a long horizon."
-    },
-    {
-      "date": "2026-07-21",
-      "source": "Microsoft",
-      "title": "Microsoft and Mistral expand strategic partnership to give enterprises and regulated industries frontier AI they can control",
-      "url": "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/",
-      "commentary": "Microsoft committed a multibillion-dollar sum to expanding Mistral's European GPU capacity, built on thousands of NVIDIA Vera Rubin processors, and will draw on that capacity to help deliver its own cloud and AI services in Europe. No equity changed hands, which makes the structure more revealing than an acquisition would have been: Europe's leading frontier laboratory is scaling on American demand and American silicon, while the sovereignty case for the arrangement is being made by the American partner. Microsoft's framing — that Europe should have access to the world's most capable AI without compromising control over its data, operations or digital future — concedes the premise of the sovereignty argument and answers it with commercial guarantees rather than institutional ones. Access on favourable terms is not the same as capability that survives a change in those terms."
     }
   ],
   "seen": [
@@ -271,6 +271,13 @@
     "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260914_2~a3f0efbee4.en.html",
     "https://news.google.com/rss/articles/CBMikwFBVV95cUxPeVR1WWlGN1pQUk1vWWNESE5uUC1IdDloaXBISE5KdHFoWGM4WGo3TXVwLVVla19lSzlWcGtKWFRiNUdNSEJMSXdpbUwyM2NYQy1lQnNPOG1oaTg2NW1HVE5VVVVRV3c4T1FWMThKUm5EcHlRR3BydUVoOTgxbktmaVh6a3RaZXZ3MGw3czJPZ243NTA",
     "https://news.google.com/rss/articles/CBMisAFBVV95cUxNbHNLbGxVR3dHV0wtREN5dXBsMGRabGtfRENfaUZwYlFJS3NMSkFVOWhhc09MeUt4Y3hrWVBzZnBWU0pCNG1jU0txN2gtNjhwT3lvdGFpUHF1cE1nOHExblQtSVNLTlplMElBa0pLM0FLaWxSdFI0LXhyRVRUTjVoZkwtbUFTbmFZSEpuaVJna1JvWWdjOElOSGp4cG0wNW15OWtnOFI5d2RCTDB3dG9PZA",
-    "https://news.google.com/rss/articles/CBMisAFBVV95cUxNQmFuRjZhZTYzQzVkNFpjOUZadXJZTjJEbVExeWVZakQ4bGFYY0dNSHA5c28tTFBUNjZxdFpfSFFZOGdKbkZoLTVuRV9SLUZNWlBrekhrd0wzN3M1dUhrN2pBMnJzdnNEWlBxZnpaWmpLZVBKRnhEaVVVNjI1bUFtRmM5RVVRWTJCMERhN2licVNIQkJvc0kzNUpUV29jVVVfOC1RWTNnT0xBQlkydEswZg"
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxNQmFuRjZhZTYzQzVkNFpjOUZadXJZTjJEbVExeWVZakQ4bGFYY0dNSHA5c28tTFBUNjZxdFpfSFFZOGdKbkZoLTVuRV9SLUZNWlBrekhrd0wzN3M1dUhrN2pBMnJzdnNEWlBxZnpaWmpLZVBKRnhEaVVVNjI1bUFtRmM5RVVRWTJCMERhN2licVNIQkJvc0kzNUpUV29jVVVfOC1RWTNnT0xBQlkydEswZg",
+    "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1918",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1667",
+    "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMDlqVm9ldTk5RDlsdWFxRWQyNVpnTVhvY0xwUFl0Ui1rTHVaOUhsTnV1NFFxUk1IdENpQVBXSjduWVRmT2dIeWtMQ3NvTFZRcEtYRGU0Y3VBZ3Q2by1iMkprSVh2cjd4U1ZHNFFiN2trMU9PVFhsYVdIUHFKNlNCajJSbVFadTRHdGRTNmttN2xZMVE0Z3NEck9YR1RzRnRnWGkwUUlVTDgtTzUzcDlQOF93VWM1TzRDbFcyZQ",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxOTm5vaG1icktTNDB4TDNlVnZVXzZkZmZwUXBYcEhUSF9qM01pNTl6Qk5ZVG1sMGJNOVdTYi1IQ180b0JraHRyMEtQTWRHQlF5RktqZ3hJVGRzY3FqN0s1ZFluMlRoMHFKd0NoRjVaMmFXaXl0VnhNTWdCNGhEdy1YYkY4MDJDdURpUThoTGlUVmMxUDZNajloTnNGTWRqZEg2ZUlqYVpSRnF0TW5LVXMzV2wwMXdGaFU",
+    "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNRVU4eE5hbm5fZ2tWVUpwVVk2SEFzeld5aHVxNzZ1UHVFeXJJWmNWYlpnWDZ0MjdjUUd1QWN6bDE3OFZCT1ltMkJxbmRqQU8zVWVkaU4zS2FDcHVvWTFJQXYzb2o4Xy0yRnhYbldidXZ0R3RnWWN6UGpvRkpoMGtGSlJnOWxORHZYZUo4NTMydEJKQUpMMGpnSlBkWjVESVhrQjFqOEtNOW1lQ29LNWFlSTZvS2xmZ1dxWlZxU1VXT0pXY245NmRRRVNEbzdKZnpZVEdVbUtDMlhHY3FVbkZxZ0FQN2JGWXpiSGU5ZDFRUDZTVjlKeXBnUGNEaWU4azQ4WUxPcFVTVG51Yjg",
+    "https://news.google.com/rss/articles/CBMif0FVX3lxTE43RUxYT1dlcDQwd19nVVhQWVlMVW4xUmZhMU5Nc0JOa2h5N0lOSGxTek9Wb3FLcWNXUjFaMFJLcFBNUzdHaklKaklaMzB1OTZvYUozbndaVk8wbHljeFJUQzc3Q1lYWnJkUVdkSGdGMFU4N3dOTi0wMV9JQUhGa2c",
+    "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQTWdST2NPY0tRS1lEVkdNZUVfVGVpdjR4WWtDWnFIamQtMHlxTXd6NWFSeW9ZSTNWQ1c0VWdfdjZQNnZubUlCQzFSM3VISDI0V2k2ZFZaVWh2NGUwQy0tTDkyNTNNR1RGZ2xpdnVyS2dTU0dKdUlkbVUwQnFRNnliZmUxRE83VDItV2VUaEJxdUFLbGphUkJkX3dMdVVMZnl6dzlEb2tfYkszdkVwQlNTODYyQjg1eHNJOGFNTTRiZVNpQi1nLWFGdHFqMmE2dHNPYTVNcDdUWVItWTVpREpGNDVENXRaaTBJaXJuaEJhVkM"
   ]
 }
