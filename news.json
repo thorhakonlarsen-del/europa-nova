@@ -1,6 +1,13 @@
 {
-  "updated": "2026-09-21T12:38:22.684Z",
+  "updated": "2026-09-24T11:34:05.659Z",
   "items": [
+    {
+      "date": "2026-09-24",
+      "source": "Google News — sovereign AI Europe",
+      "title": "Italy's Clastix raises €2.9 million with Mistral backing to build sovereign Kubernetes infrastructure for Europe - eu-startups.com",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQVzZqWHk1a0hXZXFuWmRvbzBsSUZxclpyU3h5bVFlZkxJZ3dyVXp5RC0yTUdBSTVfc290dDIyaHhIUFg2cXZGZVQzX0tuNWkxX0ItcUxoM0VBVXBGUVU1SlBUOFA1YWQ5Q3R1NHU0WExCaGVfblZVQTJqSmNqcWw5cHo0WURJZ0NTXzB6aHVSLXB6bkZlajAwc016RnJaYTFUaDA4b2hFcW9mR2tUOUFtck9PX1c1QTVYSk9oWDB1ZGdmM2lsYjZVRTZycXJTcFl3OHgxcnlwSUtjVUZuMGtXNUFn?oc=5",
+      "commentary": "Clastix has raised EUR 2.9 million with Mistral among its backers to build sovereign Kubernetes infrastructure, a reminder that Europe's dependency problem sits not only at the model layer but in the orchestration and cloud plumbing beneath it. A frontier model trained in Europe still leaks sovereignty if it is served through control planes governed by non-European providers, which is why a French model developer investing downward into Italian infrastructure is more strategically interesting than the modest sum suggests. The pattern to watch is whether Europe's leading model firms continue assembling a domestic stack through private capital, or whether public instruments such as the AI Factories and InvestAI are structured to procure from it. Seed-scale rounds of this size cannot close the gap on their own, and the test will be whether European public buyers actually route demand towards these layers once they exist."
+    },
     {
       "date": "2026-09-20",
       "source": "European Commission — Press Corner",
@@ -161,13 +168,6 @@
       "title": "EU launches AI Gigafactories call to boost Europe's computing capacity and unlock more than €30 billion in investment",
       "url": "https://digital-strategy.ec.europa.eu/en/news/eu-launches-ai-gigafactories-call-boost-europes-computing-capacity-and-unlock-more-eu30-billion",
       "commentary": "The Commission has opened the call for AI gigafactories, presented as unlocking more than EUR 30 billion in investment to expand Europe's training-scale compute. Compute procurement of this magnitude is the most concrete instrument the Union currently has for reducing dependency on non-European infrastructure, but the call's design will determine whether the resulting capacity is genuinely governed in Europe or merely hosted here on imported accelerators and foreign operating stacks. Siting decisions will also push demand towards jurisdictions with abundant firm low-carbon power and cool climates, which strengthens the Nordic case for hosting a share of the build-out. The open question is whether a consortium-by-consortium tender can produce the coherent, mission-directed frontier capability that a treaty-based institution would deliver by construction."
-    },
-    {
-      "date": "2026-07-31",
-      "source": "European Commission — Digital Strategy",
-      "title": "Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
-      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
-      "commentary": "Enforcement of a further tranche of AI Act obligations, including new transparency requirements, begins on 2 August, moving the Union from rule-setting into supervisory practice. Because the largest general-purpose model providers subject to these duties are predominantly non-European, the effectiveness of enforcement is itself a test of regulatory reach over foreign suppliers on whom European firms and administrations already depend. Rules constrain how imported capability behaves but do not create domestic capability, so enforcement and capacity-building need to advance together rather than substitute for one another. Whether compliance evidence is verifiable in Europe, and by European institutions, will be the practical measure of sovereignty here."
     }
   ],
   "seen": [
@@ -278,6 +278,7 @@
     "https://news.google.com/rss/articles/CBMitwFBVV95cUxOTm5vaG1icktTNDB4TDNlVnZVXzZkZmZwUXBYcEhUSF9qM01pNTl6Qk5ZVG1sMGJNOVdTYi1IQ180b0JraHRyMEtQTWRHQlF5RktqZ3hJVGRzY3FqN0s1ZFluMlRoMHFKd0NoRjVaMmFXaXl0VnhNTWdCNGhEdy1YYkY4MDJDdURpUThoTGlUVmMxUDZNajloTnNGTWRqZEg2ZUlqYVpSRnF0TW5LVXMzV2wwMXdGaFU",
     "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNRVU4eE5hbm5fZ2tWVUpwVVk2SEFzeld5aHVxNzZ1UHVFeXJJWmNWYlpnWDZ0MjdjUUd1QWN6bDE3OFZCT1ltMkJxbmRqQU8zVWVkaU4zS2FDcHVvWTFJQXYzb2o4Xy0yRnhYbldidXZ0R3RnWWN6UGpvRkpoMGtGSlJnOWxORHZYZUo4NTMydEJKQUpMMGpnSlBkWjVESVhrQjFqOEtNOW1lQ29LNWFlSTZvS2xmZ1dxWlZxU1VXT0pXY245NmRRRVNEbzdKZnpZVEdVbUtDMlhHY3FVbkZxZ0FQN2JGWXpiSGU5ZDFRUDZTVjlKeXBnUGNEaWU4azQ4WUxPcFVTVG51Yjg",
     "https://news.google.com/rss/articles/CBMif0FVX3lxTE43RUxYT1dlcDQwd19nVVhQWVlMVW4xUmZhMU5Nc0JOa2h5N0lOSGxTek9Wb3FLcWNXUjFaMFJLcFBNUzdHaklKaklaMzB1OTZvYUozbndaVk8wbHljeFJUQzc3Q1lYWnJkUVdkSGdGMFU4N3dOTi0wMV9JQUhGa2c",
-    "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQTWdST2NPY0tRS1lEVkdNZUVfVGVpdjR4WWtDWnFIamQtMHlxTXd6NWFSeW9ZSTNWQ1c0VWdfdjZQNnZubUlCQzFSM3VISDI0V2k2ZFZaVWh2NGUwQy0tTDkyNTNNR1RGZ2xpdnVyS2dTU0dKdUlkbVUwQnFRNnliZmUxRE83VDItV2VUaEJxdUFLbGphUkJkX3dMdVVMZnl6dzlEb2tfYkszdkVwQlNTODYyQjg1eHNJOGFNTTRiZVNpQi1nLWFGdHFqMmE2dHNPYTVNcDdUWVItWTVpREpGNDVENXRaaTBJaXJuaEJhVkM"
+    "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQTWdST2NPY0tRS1lEVkdNZUVfVGVpdjR4WWtDWnFIamQtMHlxTXd6NWFSeW9ZSTNWQ1c0VWdfdjZQNnZubUlCQzFSM3VISDI0V2k2ZFZaVWh2NGUwQy0tTDkyNTNNR1RGZ2xpdnVyS2dTU0dKdUlkbVUwQnFRNnliZmUxRE83VDItV2VUaEJxdUFLbGphUkJkX3dMdVVMZnl6dzlEb2tfYkszdkVwQlNTODYyQjg1eHNJOGFNTTRiZVNpQi1nLWFGdHFqMmE2dHNPYTVNcDdUWVItWTVpREpGNDVENXRaaTBJaXJuaEJhVkM",
+    "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQVzZqWHk1a0hXZXFuWmRvbzBsSUZxclpyU3h5bVFlZkxJZ3dyVXp5RC0yTUdBSTVfc290dDIyaHhIUFg2cXZGZVQzX0tuNWkxX0ItcUxoM0VBVXBGUVU1SlBUOFA1YWQ5Q3R1NHU0WExCaGVfblZVQTJqSmNqcWw5cHo0WURJZ0NTXzB6aHVSLXB6bkZlajAwc016RnJaYTFUaDA4b2hFcW9mR2tUOUFtck9PX1c1QTVYSk9oWDB1ZGdmM2lsYjZVRTZycXJTcFl3OHgxcnlwSUtjVUZuMGtXNUFn"
   ]
 }
