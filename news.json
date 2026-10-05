@@ -1,6 +1,27 @@
 {
-  "updated": "2026-10-01T12:59:13.554Z",
+  "updated": "2026-10-05T14:23:28.302Z",
   "items": [
+    {
+      "date": "2026-10-02",
+      "source": "Google News — sovereign AI Europe",
+      "title": "Reporter’s Notebook: Europe’s Sovereign AI Push Needs Customers As Well As Capital",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNM21Ibl8zcndWTnJ4TGo0NzBhZHVsQ2VPNk1NQk1hVHVKWU16dTV5M3J3akxjdnlGV1I0TlhMTklZeE9ZbGlabWxLUUhQV1JuN0FDYTdIVlJJVDk5TG0xSHlsQkVycWFJN2ZjZnFCMDI1U1VsdF9jU293UElFcVdOXzBJdlo?oc=5",
+      "commentary": "Crunchbase sets out the demand-side problem that funding announcements tend to obscure: European sovereign AI ventures can raise capital and still fail for want of buyers willing to switch away from incumbent American providers. The argument matters for any treaty-based compute or model institution, because public money builds capacity but procurement builds markets, and the two are rarely designed together. A European facility that produces frontier capability without anchor customers in government, defence and regulated industry would reproduce the commercialisation gap that already afflicts the continent's research base. The policy lever to watch is therefore whether member states convert sovereignty rhetoric into binding offtake and procurement preference."
+    },
+    {
+      "date": "2026-10-02",
+      "source": "Google News — sovereign AI Europe",
+      "title": "French Air Force plans loyal wingman flight in 2028 in sovereign AI push",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQUFFyOE9sR3FjdEJ1OW1STXBfOHVZSUtFRDRhZVdzQzFoaFVaNndEYVItbmtibUR6NGVvd0N0WWdmZnNKcDlLR1NXVzBpQ3ZFckM0RUJZaUdPQlVsVFdFX0hpQXR6eHFiTTJ1ZGotUmRHcVVNUm14OUxNalFSamowWVpLLUczbVJnOXJxYUtUX3lwZ0FHeFB6UlFXTExyVzZad2trVmZLdjVXelJwcWxvRXFhcloyUWhwNEdEaUdldGpLMVpS?oc=5",
+      "commentary": "France attaching a dated flight milestone to an uncrewed combat aircraft programme shows defence becoming the fastest route by which European states acquire autonomous AI capability under national control. Military timelines impose a discipline that civil AI strategies lack, since an aircraft must fly on a set date with software whose provenance can be certified. The risk is fragmentation: capability built inside one national defence programme is difficult to share across a European institution, and duplicative sovereign efforts could absorb scarce engineering talent. Whether such programmes feed into, or compete with, pooled European compute and model-development structures will shape the continent's capability base well before 2028."
+    },
+    {
+      "date": "2026-10-01",
+      "source": "ECB",
+      "title": "Christine Lagarde: Where AI risks meet",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261001~cf3c630379.en.html",
+      "commentary": "Lagarde addressing the intersection of AI risks, in a speech issued jointly through the ECB and the ESRB, places AI firmly within the European macroprudential agenda rather than leaving it to digital regulators alone. Financial stability framing matters for sovereignty because concentration in a small number of non-European model and cloud providers is an operational dependency for banks, exchanges and supervisors themselves. Once such dependencies are named as systemic, the case for European-controlled alternatives shifts from industrial policy to prudential necessity, with different legal instruments available. Expect supervisory attention to third-country provider concentration to become a quieter but more durable driver of sovereign capability than headline investment programmes."
+    },
     {
       "date": "2026-09-25",
       "source": "Google News — sovereign AI Europe",
@@ -147,27 +168,6 @@
       "title": "DCAI and Corti Launch Sovereign AI Control Layer for European Enterprises - Trifork First to Adopt as Implementation Partner - PR Newswire UK",
       "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNSWNTOXUxZXFDbm5wYWNmRXRkOGpmWHJNSVEtWHNvRzFYS2FwU2hDcWx1Wm45WmM1b21zNjdsNjFyZ3p6Y1BMeXNtc3ljR1ppSWpZRi1aUV92VWZDX1dSdkpwcGljME1QNENZX2J4UGdfY2NoaFpvbFo0Y0ozbzV4eGViVWIwZjFPd2JkeXRIcEo2M0RCWTVNSEVucUJkNWNyaXdYbWtaMjI1SGJqRG5JaTZsODRXSURaV2xQYWg4Vkl0S0lBaGR5TWF0eDdfNVY1RnNJenU2OWpLZi1vQ19aNzJ6MkdhWkhRUTFQbEZJWl9MTVUwTlgySFROVm14S1F1SzdCSDN5TzlKc29yYjJZ?oc=5",
       "commentary": "A Danish compute-and-clinical-AI pairing has launched what it describes as a sovereign control layer for European enterprises, with an implementation partner already lined up. Offerings of this kind matter because they test whether jurisdictional control can be delivered as a commercial product layered above models and infrastructure, rather than requiring ownership of the underlying stack. The commercial risk is that a control layer reassures buyers about data residency and auditability while leaving the model itself, and the terms on which it is served, in non-European hands. Whether European procurement treats such layers as sufficient, or insists on deeper substitution, will shape how much genuine capability the continent ends up building."
-    },
-    {
-      "date": "2026-08-26",
-      "source": "Google News — sovereign AI Europe",
-      "title": "Rebellions supplies AI chip racks to UK cluster - Aju Press",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5GUFUyN2MzWVlEaWRORXdaYV8xaFN6N1NNbE9ZekI0X3RJeURpZXNGOFc3N0dzSGluSGEtdTJKQVJfMm1OYV9OWDY0Tld4VFRVNXBCdkhBZ9IBV0FVX3lxTE5GUFUyN2MzWVlEaWRORXdaYV8xaFN6N1NNbE9ZekI0X3RJeURpZXNGOFc3N0dzSGluSGEtdTJKQVJfMm1OYV9OWDY0Tld4VFRVNXBCdkhBZw?oc=5",
-      "commentary": "Korean accelerator designer Rebellions is reported to be supplying NPU racks to a UK cluster under a sovereign AI framing, a reminder that \"sovereign\" build-outs in Europe routinely run on imported silicon. Diversifying away from a single dominant American supplier does reduce one concentration risk, yet substituting an Asian vendor changes the counterparty rather than removing the dependency. For European compute planning, the episode underlines that control over siting, energy and workloads is achievable far sooner than control over the accelerator supply chain. Any credible European compute strategy will therefore need to state explicitly which layers of the stack it intends to own and which it accepts importing for the foreseeable future."
-    },
-    {
-      "date": "2026-08-21",
-      "source": "Google News — sovereign AI Europe",
-      "title": "The Mistral paradox: Europe’s push for tech sovereignty relies on China’s Z.ai - South China Morning Post",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQNmNTOW1wamRsZVNJUi1Uem93Y3ZjVk8zT19NU19wdDUxUTkyajdLOVVjSkF6dzNFaTIyOEpDUnNObWdyS1NDLW9pMWd6Rm9WUVh5LUI3Z1ZwWGs4MlAxSC1TZ3lZYlZqUmp2MEIzTmdPQ2dzTzZ5M0lOY1liZDFEeF8tbnRTcm5VcFUwdS1HVWh5bnYyWFd0TDA1ekQtMTU3SGRYWDUtQmo1aFJXRkVXRDRMdUZwU3ZzS05SSVVR0gG-AUFVX3lxTE1iR1FDWXBIdDNnR3NidkhTbXhhVmp3Vmt2NzczYzZUN215LVZTdE1jd3dMZmVtazFkc29xalpoeW9uODNyeVJkMm5ySnAwNWdFWHFvcFA2V1hneGd4ZW9EUUhXMWg2M0JXSHo5TWVEMEpGdENCRzk4UnAxR0V4eHVBVkYxNXI0SzJlQ3VVRFZ1R2hYcGY4S3FPd3Q4X09HWW84TVEzQ1k0OHl5VWo4aDFjYldTRW9EREJQN0szX1E?oc=5",
-      "commentary": "Reporting that Europe's flagship model developer draws on Chinese open-weight work from Z.ai reframes the sovereignty debate away from corporate nationality and towards the underlying research and weights supply chain. National-champion branding offers little protection if the architectures, training recipes and base models originate outside the bloc, and Europe's dependency simply shifts from American to Chinese upstream sources. For a treaty-based institution, the lesson is that sovereignty must be measured at the level of demonstrable in-house capability to train frontier systems from scratch, not at the level of who owns the deploying entity. Expect European procurement rules to face pressure to define provenance requirements for model lineage, a standard almost no current European offering could meet unaided."
-    },
-    {
-      "date": "2026-08-05",
-      "source": "Google News — European AI compute",
-      "title": "Europe Turns AI Sovereignty Into a €30 Billion Compute Tender",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQYkNad2hueXdVYlFLeG15ZGpHeU10MDJfUDMyY2hGdUtKemgtWkRKRlFZcHpHQ3UtcUQ5Nmg3SXpUUnNzVjREXzhObUliUEZQOHJCRGczSktOcWJEa3Npcl9vWkM1dVJjeFA3OXZ3THhpR3dWazhQU0xYX29nTzRyaHAzQ28yWWxFVENEbzA5U28?oc=5",
-      "commentary": "Framing sovereign compute ambitions as a procurement exercise on the order of EUR 30 billion tests whether public money can buy strategic autonomy through tendering rather than through institution-building. Tenders reward whoever can deliver capacity fastest, which in practice favours incumbent hyperscalers and American accelerator supply, so the sovereignty gain depends entirely on how ownership, siting and operational control are written into the contracts. A CERN-style vehicle would instead treat compute as durable shared infrastructure with governance attached, rather than a set of time-limited service purchases. Whether Europe ends up owning capability or merely renting it will be settled in the tender conditions, not the headline figure."
     }
   ],
   "seen": [
@@ -286,6 +286,12 @@
     "https://news.google.com/rss/articles/CBMipAFBVV95cUxORFRKSlJNMHFwMUExWHpycWlrZjVOcXVSSUEzMEFqVHE5RWxYaURwcnc4WGpKaWgzU3VJdGZCal9fY2lidFBzazZCTUhyejJMYTBJODFScHpKVzZEVHJnSmQ4OXNVVUpadVZ3V1RZNWZPX3ItYlJSQ3ZaQUNsWk5ZMkZNWmNKLTI2SzFNdmc4M19YNGFaYWUxOE9TcGFUYllTOTQxag",
     "https://news.google.com/rss/articles/CBMijwFBVV95cUxQd2tpcklwQmtXSFBxWVEtMWFaUEpCZENFTm1ncU1OZ2ZVaG03OTZ5ZXdKb3FaZnRwdURqM3l0NFRUZzB2UVZIUlhhME52dmdpUEdfcmE0aV8yN2FuLUVMY0VKSnJZY1d2WVdFWTRsYzAxQ2FITElLd1lNTkFLVUJVZ1ZYc0Fad2RZYWlXcXpYTQ",
     "https://news.google.com/rss/articles/CBMidkFVX3lxTE9jdWtJZ2swbkxtRTI2TTZxYWEyWUJIR3NEYVdSYVFpQnQ5OUltT1N0LUo0T2VLbTF3T21iRHV5dF9XcmFGQlEtRS1mNkFJVVBwdU1Ea0ZSdkQtcWVESTFFZktwd3RfSzY1NGJxY1RCMjg3RWY5cWc",
-    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2035"
+    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2035",
+    "https://news.google.com/rss/articles/CBMibkFVX3lxTE9hUWRnd0d0c1lrRk9xU2tObFBPekxXTmliWkthdllKTlZJZmFzRlpNaWo3eFBIOFEwZlhid3VjRWhtZVNGWnZjWUU4Tk9fY0dDRE1VRUh5MXB5aXVlZnloZE5kcWZaSkxtOHhjYnFB",
+    "https://news.google.com/rss/articles/CBMiZEFVX3lxTE80T0xqeHdKVHhXdFNuZnI2Wm91UzRqZEk4dkZzZ29BaVNkSmxvZ3ZPUktBeG1aMVVhS0thdHV5MFhCanQ2S09wU1pwdTNaUHQ2NW5pQ0hqTTN2eFlES05FQV9VR1o",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxQUFFyOE9sR3FjdEJ1OW1STXBfOHVZSUtFRDRhZVdzQzFoaFVaNndEYVItbmtibUR6NGVvd0N0WWdmZnNKcDlLR1NXVzBpQ3ZFckM0RUJZaUdPQlVsVFdFX0hpQXR6eHFiTTJ1ZGotUmRHcVVNUm14OUxNalFSamowWVpLLUczbVJnOXJxYUtUX3lwZ0FHeFB6UlFXTExyVzZad2trVmZLdjVXelJwcWxvRXFhcloyUWhwNEdEaUdldGpLMVpS",
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxNM21Ibl8zcndWTnJ4TGo0NzBhZHVsQ2VPNk1NQk1hVHVKWU16dTV5M3J3akxjdnlGV1I0TlhMTklZeE9ZbGlabWxLUUhQV1JuN0FDYTdIVlJJVDk5TG0xSHlsQkVycWFJN2ZjZnFCMDI1U1VsdF9jU293UElFcVdOXzBJdlo",
+    "https://www.esrb.europa.eu//news/speeches/date/2026/html/esrb.sp261001~0eb8b60ef2.en.html",
+    "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261001~cf3c630379.en.html"
   ]
 }
