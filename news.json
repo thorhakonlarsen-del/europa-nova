@@ -1,6 +1,27 @@
 {
-  "updated": "2026-10-05T14:23:28.302Z",
+  "updated": "2026-10-08T13:17:09.779Z",
   "items": [
+    {
+      "date": "2026-10-06",
+      "source": "Google News — sovereign AI Europe",
+      "title": "France’s Mistral unveils ‘Le Chonk’, its latest model in sovereign AI push",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPdTNtN1RkMkYzTXoyN3Z4bWhHNUlkOV9UbmhaWlpIY1dPNDRRcUVybUlXNTJ6ekJIWUhaUl90czQ5S243R0pWa0xxUWprSkJRc01ESjJnNzg5Mi14ZmdDUHZMNGNwOC01VFRzeXQ5ZmlOVWtHWHBIeWMzbXA1MFFkTTYyZEE2aWNhNXNrUXMycWhrbG1iQUtDVVMzdGdmYzE4TjlweXZHQ2kweUxKaFVNUHdB?oc=5",
+      "commentary": "Mistral has released its largest model to date, explicitly framed as part of a sovereign AI agenda, which keeps a European-controlled frontier option on the table at a moment when the alternative is wholesale reliance on American and Chinese providers. The significance lies less in benchmark position than in demonstrating that frontier-scale training can be organised from within Europe at all, with the compute, capital and talent that implies. A single venture-funded firm, however, carries a strategic burden that no comparable jurisdiction places on private shareholders alone, and ownership structures can shift. Whether Europe treats such capability as a public good to be underwritten institutionally, rather than hoping one company remains European, is the question this release sharpens."
+    },
+    {
+      "date": "2026-10-06",
+      "source": "Google News — European AI compute",
+      "title": "AI sovereignty: The EU’s dangerous dependence on China and the US.",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVUJiUjBza1RoOS0yeGdIeUIyTGVJYWZxT2RkS05QX0dGbDdNODU0U1BReGlLYkczTlpFQWNSU25QakNCaGZPVmNPMTIzbjdxdzhxVkdqbWJheFUyZmZqeHhVMWpQN1pZTkdpV1VXS052SVhEZlZKdE10VS1GUnR1UjBkVDZoZWRud3djamRTMDFaOUhpajNucHpPU1NLMkpzMll2MHJkTlNfczB6aDVJYQ?oc=5",
+      "commentary": "Table.Briefings sets out the EU's two-sided technological dependency, on American model providers and cloud operators at one end and Chinese hardware and supply chains at the other. Framing the problem as dual rather than transatlantic alone matters, because remedies aimed only at reducing US exposure can deepen reliance elsewhere in the stack. Dependency of this kind is not merely commercial: it propagates into financial stability, public administration and defence procurement wherever European institutions build atop foreign-controlled models. Pressure will grow for instruments that sit above national budgets and procurement cycles, since no single member state can finance an exit from both dependencies on its own."
+    },
+    {
+      "date": "2026-10-05",
+      "source": "European Commission — Digital Strategy",
+      "title": "Establishing the European AI Observatory: Call for tenders",
+      "url": "https://digital-strategy.ec.europa.eu/en/funding/establishing-european-ai-observatory-call-tenders",
+      "commentary": "The Commission has opened tendering for a European AI Observatory, adding a monitoring function to the growing institutional apparatus around the AI Act and the AI Continent agenda. Observation capacity is a genuine prerequisite for sovereignty: without independent European measurement of model capability, compute availability and market concentration, policymakers are left reading the assessments of the firms they intend to regulate. The design question is whether the Observatory acquires its own technical evaluation capability or becomes a secondary aggregator of vendor-supplied data. Its eventual relationship to any European body that actually trains frontier models will determine whether Europe can assess capability from the inside rather than at second hand."
+    },
     {
       "date": "2026-10-02",
       "source": "Google News — sovereign AI Europe",
@@ -147,27 +168,6 @@
       "title": "Europe Pushes for AI Sovereignty Amid Heavy Reliance on US Tech",
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPemRXMkFZZ2FXbXlrd1F4MGJhOGVlUWhRN09QbVR6SzNKUFJDdG5ULTRoMU1ERW5XZE5YbVhUclRDUGlDQ0E4VGZhTExUSkdIMC1PbTA5UnNqcG9uZGh1d0NPWjFoV0hET081cEdmV0pXYWNUU1A1RENDNUlRWnJZVjZHV3p1U0xQcncwTDhheTNvSjVvcnctYTRoTkI5bWNCLWktUkxtMXJYOG5xTFI5RkR1RGRkdmJnNDFYQTBPWTc5Z0JDazdSYXZKNUF3ZEwzbUFBRXBR?oc=5",
       "commentary": "Coverage frames Europe's sovereignty drive as running directly against continued structural dependence on American hardware, cloud platforms and frontier models. The tension it identifies is the central design problem for any European capability programme: declared autonomy financed through procurement from the very suppliers that create the dependency does not shift control. Meaningful sovereignty requires ownership of the training stack and the models themselves, not merely of the buildings and contracts around them. Expect this gap between stated ambition and supplier reality to become the main test applied to European compute and model initiatives over the coming year."
-    },
-    {
-      "date": "2026-08-31",
-      "source": "Google News — sovereign AI Europe",
-      "title": "AMD Enters a Sovereign AI Showcase, Not a Revenue Windfall",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNVExLQm9JVE8wdk1vRlBWM3c1Z0NVQWszdF9lb196cnpuMEhBZWxOT3I3QUpCRUZOem4zbGVrcGc0UURiOExscHZ0R2xjdXFIWVltNllBXy1pU200SzV6bG1KT2ZoZU9HNU9tcjBlX2JOeW1tbUhrVG5SSE44NERGOVUxNFhMS243QlduVDJ5bWRFalJXeWNxbWg1VDNOQlpjSnpQLXA4dEpqVTVTQmNMVzdua05QSk5Z?oc=5",
-      "commentary": "Market commentary reads the sovereign AI wave primarily as a shop window for American silicon vendors rather than a material earnings driver, which is a revealing lens on how these programmes are perceived from the supply side. If sovereign compute build-outs are understood chiefly as showcases for US chip architectures, the sovereignty gained is confined to physical siting and legal jurisdiction rather than to the underlying technology base. That distinction matters for how European public money — whether from EU instruments or national funds — should be conditioned when it underwrites accelerator purchases. The strategic question ahead is whether Europe can convert procurement scale into leverage over the chip and software layers, rather than remaining a demand-side customer with a sovereignty label attached."
-    },
-    {
-      "date": "2026-08-24",
-      "source": "Google News — sovereign AI Europe",
-      "title": "Mistral x HUMAIN - mistral.ai",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBoM215alpsRHFKLTB6NUJ1cmRubHpweTlaczlWaTAyeWRfaTAtWUVZZGZpU0thZGNlWnRRUnRMLTVtYzcyZEx3d0FwWFFJeTk5cDZv?oc=5",
-      "commentary": "Mistral, the closest thing Europe has to an independent frontier laboratory, has announced a tie-up with Saudi Arabia's HUMAIN, extending a pattern in which European model development is underwritten by capital and compute sourced outside the Union. Such arrangements ease the financing constraint that European public budgets have so far failed to relieve, but they also distribute influence over Europe's only scaled frontier developer to partners whose strategic interests are not European. The relevant question for EU policymakers is not whether Mistral should seek external partners, but why the alternative — pooled European public capital on treaty terms — remains unavailable at the scale frontier training now requires. Absent that alternative, each new external partnership narrows the space in which a genuinely sovereign European frontier capability could later be assembled."
-    },
-    {
-      "date": "2026-08-20",
-      "source": "Google News — sovereign AI Europe",
-      "title": "DCAI and Corti Launch Sovereign AI Control Layer for European Enterprises - Trifork First to Adopt as Implementation Partner - PR Newswire UK",
-      "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNSWNTOXUxZXFDbm5wYWNmRXRkOGpmWHJNSVEtWHNvRzFYS2FwU2hDcWx1Wm45WmM1b21zNjdsNjFyZ3p6Y1BMeXNtc3ljR1ppSWpZRi1aUV92VWZDX1dSdkpwcGljME1QNENZX2J4UGdfY2NoaFpvbFo0Y0ozbzV4eGViVWIwZjFPd2JkeXRIcEo2M0RCWTVNSEVucUJkNWNyaXdYbWtaMjI1SGJqRG5JaTZsODRXSURaV2xQYWg4Vkl0S0lBaGR5TWF0eDdfNVY1RnNJenU2OWpLZi1vQ19aNzJ6MkdhWkhRUTFQbEZJWl9MTVUwTlgySFROVm14S1F1SzdCSDN5TzlKc29yYjJZ?oc=5",
-      "commentary": "A Danish compute-and-clinical-AI pairing has launched what it describes as a sovereign control layer for European enterprises, with an implementation partner already lined up. Offerings of this kind matter because they test whether jurisdictional control can be delivered as a commercial product layered above models and infrastructure, rather than requiring ownership of the underlying stack. The commercial risk is that a control layer reassures buyers about data residency and auditability while leaving the model itself, and the terms on which it is served, in non-European hands. Whether European procurement treats such layers as sufficient, or insists on deeper substitution, will shape how much genuine capability the continent ends up building."
     }
   ],
   "seen": [
@@ -292,6 +292,18 @@
     "https://news.google.com/rss/articles/CBMixAFBVV95cUxQUFFyOE9sR3FjdEJ1OW1STXBfOHVZSUtFRDRhZVdzQzFoaFVaNndEYVItbmtibUR6NGVvd0N0WWdmZnNKcDlLR1NXVzBpQ3ZFckM0RUJZaUdPQlVsVFdFX0hpQXR6eHFiTTJ1ZGotUmRHcVVNUm14OUxNalFSamowWVpLLUczbVJnOXJxYUtUX3lwZ0FHeFB6UlFXTExyVzZad2trVmZLdjVXelJwcWxvRXFhcloyUWhwNEdEaUdldGpLMVpS",
     "https://news.google.com/rss/articles/CBMihAFBVV95cUxNM21Ibl8zcndWTnJ4TGo0NzBhZHVsQ2VPNk1NQk1hVHVKWU16dTV5M3J3akxjdnlGV1I0TlhMTklZeE9ZbGlabWxLUUhQV1JuN0FDYTdIVlJJVDk5TG0xSHlsQkVycWFJN2ZjZnFCMDI1U1VsdF9jU293UElFcVdOXzBJdlo",
     "https://www.esrb.europa.eu//news/speeches/date/2026/html/esrb.sp261001~0eb8b60ef2.en.html",
-    "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261001~cf3c630379.en.html"
+    "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261001~cf3c630379.en.html",
+    "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQS1NGbWZNQjYtQnhnbEF4LXZBMXdOTmZxV2pXVEY5S2hqbktYVWlGZ0wwUWlWVGkxX0RORllBZkVNOVA2ZW5qQTktMUctZENXcTRnRXJXbWEwVkVYbUdZUjFhUUx1VEdHYU9lSDlIZkZSREMyVVJuTENYRF9CWHZFeXRwY2lIelEtNzBndUw0SFFaNHRabnZWbkZNZEVoY2RDRjh2RG53TkxhYXlhNUpFVTU5aXV5VlNhY0Zjd1RlcTkyb0hEM0UtZlpwMU9FTDRlSDFTTzBmZzNEa1lIazJoR2hBSlhJd2JrVDZ1V3RRN09WeHczT096OE14TzZ1QQ",
+    "https://digital-strategy.ec.europa.eu/en/events/european-ai-innovation-month",
+    "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4wb2gtYTdQQzB1ZG5qZGFoQ3NzbXpidC16UEdfMFZKNWJNMS1BNG9YNXBscmwxQ25jN1IyeVRfNlpnRldTdmlyZERKMzNWbE1FdUwwQVFwZS03T0E",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxPdTNtN1RkMkYzTXoyN3Z4bWhHNUlkOV9UbmhaWlpIY1dPNDRRcUVybUlXNTJ6ekJIWUhaUl90czQ5S243R0pWa0xxUWprSkJRc01ESjJnNzg5Mi14ZmdDUHZMNGNwOC01VFRzeXQ5ZmlOVWtHWHBIeWMzbXA1MFFkTTYyZEE2aWNhNXNrUXMycWhrbG1iQUtDVVMzdGdmYzE4TjlweXZHQ2kweUxKaFVNUHdB",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxOajNSOWhqV0FKVFRVMHRsR3UweTVmZW9HQnVCQ2VnSW5TMEo4cGw5RzlFdXpXbVpPcVRqdzlEMEZQczRrSVQ5UjRGekRrLTd1cnFVN0hWU2UySFJMU0pMMnpzMHphQURJQ3BNM3VCcmVEUjhSWldWZGNLS0tRMXV6Qms2OEw2UjlyT3VESXJYOEM3LXJqV0Y5X3NOX0Vpb2NHckNKc2JpSWhmd3BQUm1KTmVnUlF6UdIBugFBVV95cUxQREpLM25MbFlqdTgwaVhkNlliVXRBcFJtYVVDZGwwQV8yeWhWeXRTZVJSV21qSW9ZNkpoNVNPZDk2QkU0Rk5ObzdHZHZrU2I3d2FLTjFjZGl6UWp4cUxKc2tmQWVXN1NkeDdoUERZVlFjVTQ0TTAzLWd2R3FFbEI3Vmg1S1RxZnNqb1VvdWNmbXdWQ1dNZmRjejZYcnBfX21RV2s0RzZ6blVhWVF3bVlqRUNXa1ZMUE1nZXc",
+    "https://news.google.com/rss/articles/CBMihwFBVV95cUxNLS0yNkY2S3F2U2M3ZlMycGlaUTFlZVU5Q21IdzNRWWJvYkVYaTdERUJPSWJTQjhDRG9aYTNleUxnSXdpUDAxbWR2dWh3Q2liR1h1OVRUSWVtcTJhMXZQNDNBQWh2ZWxEV3l6ckk3aFNIc2x3Uk5pY0hHOWlKLW53QldkSHVMSkk",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxNTE1nMHd6WVRfVmNjc1dqR2lHQWNhMmpBTHRhdmp6MHRoTVVyQXZZRGFjYk1GNDRHLTloSWw2d3dlQXlER003a1ZIMUkzdjE2amM5cklkdjNfQ3BsS0lMNjdiX3YwaVhNQmJDUGJaUFhXQUl2bWd5dXNxT0c5d1VrNjluM2JveGVsMlpCZ0hzaEhDcVdNRWFTbXg3eTdueWJkd3VjTW5Qd2ZZQS0xcF9QcHAxYnNfTkFGTXV2VmRZeFRaNUI0",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVUJiUjBza1RoOS0yeGdIeUIyTGVJYWZxT2RkS05QX0dGbDdNODU0U1BReGlLYkczTlpFQWNSU25QakNCaGZPVmNPMTIzbjdxdzhxVkdqbWJheFUyZmZqeHhVMWpQN1pZTkdpV1VXS052SVhEZlZKdE10VS1GUnR1UjBkVDZoZWRud3djamRTMDFaOUhpajNucHpPU1NLMkpzMll2MHJkTlNfczB6aDVJYQ",
+    "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA1Rkw1dGt1UEVTVnFwdmdmcUllT0ctZzFoSlBBLWNRbWhUVmQ1WG9LZ1EzRHNSMjIwLVExeV9EbVdHbUlzNFdXdXA3NUJ3RmJFSUJJV2VkRHU",
+    "https://news.google.com/rss/articles/CBMimgJBVV95cUxPX2pxaEJILU9OY2IyRExyZEs5b2R2MExiWEZBTVNNUkZwTlRnclR1SWhEbWNoQTk3SzM2Q2x1TExlU01ONjN2NDd6eGwzakUxYU0zZVFiV0NiMEJCMDV4RGl2WXJoQ2pxU3ZlV0dBTGF3eEpKTzdLMkN3S3VwVHE3SFc2dlpCWUJxTUdBcEVPOVNiNldXM1EzRUpGeEdiQ2QtXzY4cnV5Q2prbzUyU3k0NDhFVXdOY21vbW5scjA4a092VmZDaEFRY1B6aWhpWTYycDZFa2FWeDFjRW9pWm5tMzl5ZFM0M3Y5dmVRSl9wZkRVdGdkTWlzZmxtWm53RFVIb1cyY1o3MUFRcWJtUVloOG5CM3paRVNpcGc",
+    "https://digital-strategy.ec.europa.eu/en/funding/establishing-european-ai-observatory-call-tenders",
+    "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBhX1Q4QVc5OGEySndOSjQyQW4yT01kSjFlVk5IbzRzLUdId19WWHU5QUJkTHYzdDBiYktmNm9DeFBubkF1MEZweUM2ZW42ZDRpWDU2TQ"
   ]
 }
