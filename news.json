@@ -1,6 +1,20 @@
 {
-  "updated": "2026-10-08T13:17:09.779Z",
+  "updated": "2026-10-12T15:10:21.407Z",
   "items": [
+    {
+      "date": "2026-10-09",
+      "source": "European Commission — Digital Strategy",
+      "title": "Commission holds special meeting of Scientific panel on frontier AI safety and risks",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-holds-special-meeting-scientific-panel-frontier-ai-safety-and-risks",
+      "commentary": "Convening the scientific panel on frontier AI safety and risks outside its ordinary rhythm signals that the Commission intends the AI Act's expert machinery to be an active instrument rather than a formality. The sovereignty question is whether Europe can assess frontier systems it does not build: panel judgements about systemic risk currently depend on evidence and model access supplied largely by non-European developers. A credible European evaluation capability requires in-house compute and reference models of comparable scale, which no existing AI Factory commitment yet guarantees. Expect pressure to grow for pairing the panel's advisory role with public technical infrastructure that can verify claims independently."
+    },
+    {
+      "date": "2026-10-08",
+      "source": "Google News — sovereign AI Europe",
+      "title": "Le Chonk and Kolibri: Europe’s Answer to OpenAI, Built in Europe on Nvidia Chips - European Business Magazine",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBmcmdKUThQNFlNUnNfVl9CdkRkUnNaSkJBbU9rUHVZa0Zya3pGTkhRdURnNEFxRUh2LWxJLTFsdnV3TWE1Ni12R0picTByMV84QzhOMHBDZVQ5cTRZdEpmbS1uTkJnclVVbGc?oc=5",
+      "commentary": "Two European frontier model efforts positioned as answers to OpenAI illustrate both the ambition and the limit of the current approach: the weights may be European, but the silicon is not. Model-layer sovereignty built on a single foreign accelerator supplier relocates the dependency rather than removing it, leaving export controls and allocation decisions as live points of leverage over European capability. The more durable test is whether such ventures can secure multi-year compute at predictable cost, which private balance sheets in Europe have struggled to underwrite. A treaty-based facility with its own procurement weight and patient capital would change the terms on which these models are trained."
+    },
     {
       "date": "2026-10-06",
       "source": "Google News — sovereign AI Europe",
@@ -154,20 +168,6 @@
       "title": "LTM To Deliver Sovereign Cloud and AI in Europe Through Strategic Partnership With OVHcloud - uniindia.com",
       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNZHIwX3JlVVItckVrdlJvNTdzUWQwOFJxMDBMc1ZoeFk2U3R3QlA0TzNIc3VUb2oxYUs1OUNCaS14UkRSLUx1QldpZUZLc1VIVDBLREM1d0tPallJSFlMbWZNNGdMcVdTSlluZXNwWWtHd05zY3l0djlkZmFoYXNTNG9RSmk2ZTVmeFhfenRITWRYX3ZsR0ZZQnRLdG52MU5ham40UDNPVFBsZjRNUVN6YkhfMlpxbW1MbWNuTFRjVElvYW1PNnVwRnlQbDFRb0xIdjZsYUxPZ3kxeU41czhnY09UNA?oc=5",
       "commentary": "OVHcloud's partnership with LTM to deliver sovereign cloud and AI services in Europe shows the commercial market attempting to supply what public procurement has been demanding since the Cloud and AI Development Act debate began. Such arrangements matter mainly at the hosting and inference layer; they do not by themselves create European capability to train frontier models, which remains the binding constraint. The risk is that a proliferation of vendor-defined \"sovereign\" offerings satisfies compliance requirements while leaving the underlying models and silicon foreign-controlled. A durable answer would pair commercial sovereign hosting with publicly financed frontier training capacity, so that the stack is European above the data centre floor as well as inside it."
-    },
-    {
-      "date": "2026-08-24",
-      "source": "Google News — European AI compute",
-      "title": "EU reactions to the Iran deal + Dependence on China + Weaknesses in AI sovereignty - Table.Briefings",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOTC1MMXZGYUZDWDdtaE1zYnpTa2h3YlJkdTJBMy1NSFFfcFVpNC1HbzRZc240OEhHNGdJdmV5T1BUMGtOYXY0bUZkSjI4ZVBBZzB5dnhkc2xVdlVzS2RRQ2pBazRkdlFlcHpkS01HbF9SZUczdlVES1FIc3VnYjVObjkwNFZEN2ZnaENTWFBWUnJaU3JfQ0p4dVB5eWJIcmFlWlZlTERqN2pTTkhtaUNWdVlkQTU3dG1jWGhRYlVSUnpBUUQwT0FtWWxlSEJ1LTV4?oc=5",
-      "commentary": "Table.Briefings groups Europe's China dependencies with weaknesses in its AI sovereignty in a single policy digest, reflecting how Brussels commentary increasingly treats the two as one supply-chain problem rather than separate files. Framing AI capability alongside raw-material and component reliance pushes the debate past regulation towards the harder question of who owns the inputs — chips, energy, and trained models. Diagnoses of weakness have now accumulated faster than instruments to remedy them, and InvestAI and the AI Factories programme are still assessed against that gap. Expect pressure for a single institutional vehicle capable of holding compute, talent and model development together, rather than another round of dependency audits."
-    },
-    {
-      "date": "2026-08-29",
-      "source": "Google News — European AI compute",
-      "title": "Europe Pushes for AI Sovereignty Amid Heavy Reliance on US Tech",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPemRXMkFZZ2FXbXlrd1F4MGJhOGVlUWhRN09QbVR6SzNKUFJDdG5ULTRoMU1ERW5XZE5YbVhUclRDUGlDQ0E4VGZhTExUSkdIMC1PbTA5UnNqcG9uZGh1d0NPWjFoV0hET081cEdmV0pXYWNUU1A1RENDNUlRWnJZVjZHV3p1U0xQcncwTDhheTNvSjVvcnctYTRoTkI5bWNCLWktUkxtMXJYOG5xTFI5RkR1RGRkdmJnNDFYQTBPWTc5Z0JDazdSYXZKNUF3ZEwzbUFBRXBR?oc=5",
-      "commentary": "Coverage frames Europe's sovereignty drive as running directly against continued structural dependence on American hardware, cloud platforms and frontier models. The tension it identifies is the central design problem for any European capability programme: declared autonomy financed through procurement from the very suppliers that create the dependency does not shift control. Meaningful sovereignty requires ownership of the training stack and the models themselves, not merely of the buildings and contracts around them. Expect this gap between stated ambition and supplier reality to become the main test applied to European compute and model initiatives over the coming year."
     }
   ],
   "seen": [
@@ -304,6 +304,10 @@
     "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA1Rkw1dGt1UEVTVnFwdmdmcUllT0ctZzFoSlBBLWNRbWhUVmQ1WG9LZ1EzRHNSMjIwLVExeV9EbVdHbUlzNFdXdXA3NUJ3RmJFSUJJV2VkRHU",
     "https://news.google.com/rss/articles/CBMimgJBVV95cUxPX2pxaEJILU9OY2IyRExyZEs5b2R2MExiWEZBTVNNUkZwTlRnclR1SWhEbWNoQTk3SzM2Q2x1TExlU01ONjN2NDd6eGwzakUxYU0zZVFiV0NiMEJCMDV4RGl2WXJoQ2pxU3ZlV0dBTGF3eEpKTzdLMkN3S3VwVHE3SFc2dlpCWUJxTUdBcEVPOVNiNldXM1EzRUpGeEdiQ2QtXzY4cnV5Q2prbzUyU3k0NDhFVXdOY21vbW5scjA4a092VmZDaEFRY1B6aWhpWTYycDZFa2FWeDFjRW9pWm5tMzl5ZFM0M3Y5dmVRSl9wZkRVdGdkTWlzZmxtWm53RFVIb1cyY1o3MUFRcWJtUVloOG5CM3paRVNpcGc",
     "https://digital-strategy.ec.europa.eu/en/funding/establishing-european-ai-observatory-call-tenders",
-    "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBhX1Q4QVc5OGEySndOSjQyQW4yT01kSjFlVk5IbzRzLUdId19WWHU5QUJkTHYzdDBiYktmNm9DeFBubkF1MEZweUM2ZW42ZDRpWDU2TQ"
+    "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBhX1Q4QVc5OGEySndOSjQyQW4yT01kSjFlVk5IbzRzLUdId19WWHU5QUJkTHYzdDBiYktmNm9DeFBubkF1MEZweUM2ZW42ZDRpWDU2TQ",
+    "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBEaWZvZzl6Ylg2anRVNExmRGN0a1VISktlcVFHUlZodUF3UFlmQUw5YWg0TlpjMWhxOEFoQnhrQ0tKb3ZhQ0lkVUo5QWdfZjc3Q3VtdTRvLWRlcUlyNUE",
+    "https://digital-strategy.ec.europa.eu/en/news/commission-holds-special-meeting-scientific-panel-frontier-ai-safety-and-risks",
+    "https://news.google.com/rss/articles/CBMiakFVX3lxTFBmcmdKUThQNFlNUnNfVl9CdkRkUnNaSkJBbU9rUHVZa0Zya3pGTkhRdURnNEFxRUh2LWxJLTFsdnV3TWE1Ni12R0picTByMV84QzhOMHBDZVQ5cTRZdEpmbS1uTkJnclVVbGc",
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWVlIUkRHRmRUUzF6VFZBZXE4eldMdk5OSFpzSWIybmFoMUdGZzVUQkRlaXFRMmE3Um16T3JYMWJlTjFSNjNwQW9FT1RvaWVadndZdzI5Q3ptdl9fOW9uekpfdXhQblp3UzdjY3hDTmlfb0FFUldyT1ZKaXNGRWh3aWN1QnZpSUd2eHFwQi0yN0hMTGw1NGc"
   ]
 }
