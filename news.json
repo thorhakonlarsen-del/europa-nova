@@ -1,6 +1,27 @@
 {
-  "updated": "2026-10-22T11:37:30.243Z",
+  "updated": "2026-10-26T12:45:22.459Z",
   "items": [
+    {
+      "date": "2026-10-22",
+      "source": "Google News — sovereign AI Europe",
+      "title": "World Wide Technology Partners With Polarise to Accelerate Europe's Sovereign AI Buildout, Starting in Oslo",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZklhMzlGYWNCR09QZU1ZLV9lLUxwdy1aY2swd2tScG16OFQ2enY0ek1XM1BQUS1DTEhYQWQ3REtFTzF1STAxVXJfVkV3MjcyTW1WcmpHMURXWUxzQ1RReFJsTlpiSGdxb3VxUmdabmRQSUw0cjNSbURqZERLcVNYeWJGVFlqSndqdk1WVWlrczRNX1NFa3ktS3ZReEM5UmlzRTdGM2VR?oc=5",
+      "commentary": "Polarise has chosen Oslo as the starting point for a European sovereign AI buildout, with a US systems integrator as implementation partner — a configuration that captures both the promise and the limits of the current Nordic compute push. Norway's power and cooling advantages are precisely what a treaty-based European facility would want to draw on, but siting capacity in Oslo does not by itself place control of the stack in European hands when the integration, silicon and model layers remain foreign. The distinction between hosting compute and governing it is the one that will matter most as these projects multiply across the Nordics. Whether Norwegian capital takes an ownership position, rather than merely supplying land and electricity, will determine how much sovereignty this capacity actually confers."
+    },
+    {
+      "date": "2026-10-26",
+      "source": "Google News — sovereign AI Europe",
+      "title": "Taiwan’s Egis Partners with France’s SiPearl to Advance CPU Chiplets for Europe’s Sovereign AI Ambitions",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5lUi1pUGZVTWFBdlZUMEVEd204TE05TEVlNzUteUVqSzkzNS0wenZyQmVyQnVzYkRFOTB0NXhvUVBHVVFPQ3NiU2h4bVpHVnVZbGo0aTBFRTFoZzFReEpxd281WnJhUTg?oc=5",
+      "commentary": "SiPearl's tie-up with Taiwan's Egis on CPU chiplets moves European sovereignty ambitions down to the silicon layer, where dependency is hardest to unwind and where EuroHPC's processor programme has long been the thin end of the effort. Partnering with a Taiwanese design house is a reminder that no credible European chip path avoids Asian supply chains entirely; the question is whether Europe holds the architecture and IP while outsourcing specific blocks. Compute sovereignty built on imported accelerators is rentable rather than owned, so progress on indigenous processor design has disproportionate strategic weight relative to its modest budgets. Sustained procurement commitments from European AI Factories would do more to anchor this ecosystem than further one-off partnerships."
+    },
+    {
+      "date": "2026-10-10",
+      "source": "Google News — sovereign AI Europe",
+      "title": "The World Is Building Sovereign AI, It May Still Be Borrowing Control – OpEd",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPMFNBb25rS1ZvbTBEaUF3Y05kRW4tN0h3TUJYcmVUbmwxdGtSdHRKNHFGdWlPVFIyV3FLSEdIMTBoT2RZU0hsQ0dkb2EtaDIzTHBtS2hWSjhlSnVackZMVmdhYUVGVXhzdncxa3d3QkZfenU3SDE5SHFnRWFodXVSTzExMGdIeTl2SEhZT3c2UER0YS01b1JLVHJvc1RxUmdVM0xfOHVKU182VXY0aFJtS2JuVQ?oc=5",
+      "commentary": "The argument that states building sovereign AI may still be borrowing control cuts directly against the prevailing European assumption that domestic data centres equal autonomy. Where chips, model weights, tooling and operational expertise all originate outside the bloc, national branding on a facility changes jurisdiction over data without changing who can withdraw the underlying capability. Europe's policy instruments have so far concentrated on infrastructure and regulation, which are the parts of the problem most amenable to public money, while frontier model capability itself remains outside public control. A durable answer requires institutional ownership of training capability, not just of the buildings it runs in."
+    },
     {
       "date": "2026-10-21",
       "source": "Google News — sovereign AI Europe",
@@ -147,27 +168,6 @@
       "title": "Commission enhances energy efficiency and sustainability of data centres in the EU",
       "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1667",
       "commentary": "The Commission has proposed a common rating scheme for data centres intended to make their energy consumption transparent and to ease their integration into European energy systems. Energy is the binding constraint on any European attempt to host frontier-scale training runs, so the metrics chosen here will quietly determine where compute can be sited and on what terms. A rating scheme that rewards grid-responsive operation and low-carbon supply would favour Nordic locations with abundant hydro and cool climates, aligning sovereignty objectives with decarbonisation rather than setting them against one another. Whether the scheme becomes a facilitator or a compliance burden will depend on how it is reconciled with the compute build-out promised under the AI Continent Action Plan and the Cloud and AI Development Act."
-    },
-    {
-      "date": "2026-09-08",
-      "source": "Google News — sovereign AI Europe",
-      "title": "Mistral raises €3B to bet big on sovereign AI",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE43RUxYT1dlcDQwd19nVVhQWVlMVW4xUmZhMU5Nc0JOa2h5N0lOSGxTek9Wb3FLcWNXUjFaMFJLcFBNUzdHaklKaklaMzB1OTZvYUozbndaVk8wbHljeFJUQzc3Q1lYWnJkUVdkSGdGMFU4N3dOTi0wMV9JQUhGa2c?oc=5",
-      "commentary": "Europe's most prominent frontier model developer has raised EUR 3 billion on an explicitly sovereign positioning, confirming that private capital will fund at least part of the continent's model layer. A single venture-backed champion nevertheless carries concentration risk: its investor base, acquisition prospects and commercial incentives are not controlled by any European public authority, and a capability that matters for state functions would then sit outside democratic mandate. The case for a treaty-based facility rests precisely on this gap, providing durable public capacity alongside, not instead of, commercial developers. Watch whether subsequent funding rounds draw in non-European strategic investors, which would sharpen rather than settle the sovereignty question."
-    },
-    {
-      "date": "2026-09-14",
-      "source": "ECB",
-      "title": "Christine Lagarde: A new age of capital: growth, sovereignty and AI",
-      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260914_2~a3f0efbee4.en.html",
-      "commentary": "The ECB president has placed sovereignty and artificial intelligence at the centre of a speech on capital and growth, which moves the sovereignty debate out of the industrial policy silo and into the monetary and financial-stability arena. When a central bank frames AI capacity as a question of where capital is formed and deployed, it implicitly acknowledges that Europe's reliance on non-European model providers and compute is a balance-sheet exposure, not merely a competitiveness gap. That framing matters for any treaty-based financing vehicle, because it legitimises long-horizon public and quasi-public capital — including sovereign wealth — as a response rather than a distortion. Expect European savings mobilisation arguments and AI infrastructure arguments to converge further, with capital markets union rhetoric increasingly recruited to the sovereignty case."
-    },
-    {
-      "date": "2026-09-08",
-      "source": "Google News — sovereign AI Europe",
-      "title": "Mistral raises €3B to bet big on sovereign AI",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPeVR1WWlGN1pQUk1vWWNESE5uUC1IdDloaXBISE5KdHFoWGM4WGo3TXVwLVVla19lSzlWcGtKWFRiNUdNSEJMSXdpbUwyM2NYQy1lQnNPOG1oaTg2NW1HVE5VVVVRV3c4T1FWMThKUm5EcHlRR3BydUVoOTgxbktmaVh6a3RaZXZ3MGw3czJPZ243NTA?oc=5",
-      "commentary": "Mistral's EUR 3 billion raise is the clearest signal yet that private capital will fund European frontier model development at scale, explicitly on a sovereignty pitch. The amount is substantial by European venture standards yet remains modest against the training budgets of the leading US laboratories, which means the question shifts from whether Europe can fund a champion to whether one privately held champion is sufficient as a public-interest hedge. A single commercially governed firm carries concentration and ownership risk that a treaty-based institution is designed to avoid, particularly if later funding rounds draw in non-European strategic investors. The financing pattern around such rounds will indicate whether Europe is building sovereign capability or simply a well-capitalised acquisition target."
     }
   ],
   "seen": [
@@ -339,6 +339,25 @@
     "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNcnFyRWdSZjhDZl9JMmZLeTM2Q2RsR3RnUnRRMnN0emdLQm1oT194M1d5YUJQZERiY0R1eEl0RkxqYjNZQVlEeGFqV1hFejY4Ty1JcjMtOXBRZEotMnRvZWJ6ZWtmLVVpbERGVEhzSThiRnBjeHFmb2xhN0h1RHF4NERGM2ktYUt1aTZaQ3dCOEwtTGxVRzc3d29pVEtIR0t3Tk1GRndCT1VJUkwxTnMxMGpIWFJFUjVnaERWd2gyRTg5WWJxUU12UlZtaWhjS0NsdkRYeHlqZEpCRVF5NTVYRTNKS09Jbk1kVHBkMEJHS0NjZGRZVms4",
     "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQkFBVDlyRGdIYlBXcl9ZWERpUVc2NGNya25ya2lhY05CdlpWRXVzcXFJV2d6MnZjUzdudkVhWVNIZkdRb0E3RzFXU3R4Q3lQY2VrWUxIaFQ1TGdkNlU4UVI0WVBfWXpXTGlGZ0xoNkpEUGNvUWxxN3VkWmp2UkZ2NkU2SmF5STgzSTc5d3MyYi16alFMaC10U19DaUx0Z3BHOUpOZw",
     "https://news.google.com/rss/articles/CBMigwFBVV95cUxOMk1LcnNqVkQ4bGx0OG13d0U4aFllU0JvcERjYkF0cHhCTDJQYlhqaW9QSzhJeEtHc2dRNDdycm5pN1hYcV9jUkF0M0pWSFhrcEVWNjVVSXBOTVhyeXJDWjlPSkl1QkdOZkxZa01DbUhCclNFRnJMYkZqN0RjMVBmUmh6aw",
-    "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeWpYNXcyUW5iYV9uSlk5SHNIWU5BMVNlaWQwcFlvdVpKNGNTa0pKZGJEYW1wRVc3akNTWlRMb2tzd19vVGhreGlIOHhsSDBaV0NybDV6aFJ2empxOHl6VGZublc3b0hSVjZLTktxcWxGWlM4ZDdGYzg0Y3c2NlhxSdIBgAFBVV95cUxPeWpYNXcyUW5iYV9uSlk5SHNIWU5BMVNlaWQwcFlvdVpKNGNTa0pKZGJEYW1wRVc3akNTWlRMb2tzd19vVGhreGlIOHhsSDBaV0NybDV6aFJ2empxOHl6VGZublc3b0hSVjZLTktxcWxGWlM4ZDdGYzg0Y3c2NlhxSQ"
+    "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeWpYNXcyUW5iYV9uSlk5SHNIWU5BMVNlaWQwcFlvdVpKNGNTa0pKZGJEYW1wRVc3akNTWlRMb2tzd19vVGhreGlIOHhsSDBaV0NybDV6aFJ2empxOHl6VGZublc3b0hSVjZLTktxcWxGWlM4ZDdGYzg0Y3c2NlhxSdIBgAFBVV95cUxPeWpYNXcyUW5iYV9uSlk5SHNIWU5BMVNlaWQwcFlvdVpKNGNTa0pKZGJEYW1wRVc3akNTWlRMb2tzd19vVGhreGlIOHhsSDBaV0NybDV6aFJ2empxOHl6VGZublc3b0hSVjZLTktxcWxGWlM4ZDdGYzg0Y3c2NlhxSQ",
+    "https://news.google.com/rss/articles/CBMigAJBVV95cUxOTVhOcTFKMTRsMzNPTGxmU3BrVHE0WTFabjlLZEkzdTFuT1ZkdDUwaFNNQjktaURJVm5SZmY4alR0c2Y1c3dsRHEwYTBmQVhFVHNJZTQ3Y25hR2FtUlVESURndnpoczhrMC12M1RxQWhhQTI4VHB4c3R2RnY1bnA3QnBEckhydkkxdldob1F3QTFhbHlTVWlScmJiMnR2RG1jbDdzS081MVhVamNaQlpLZkxUTld4R2lUSEpBaGRYNGhCbHZGUUo2dlRIXzcxR0o5a2FMU3AxeUVScUZ1MjQ0X2p0d1lQUWI0cWI3Q3FqMUZxUlZlR2xKSGswQTF3UWJG0gGGAkFVX3lxTE5KYjJ0NDZ1dUh2RVhxLTVmVW5ibmFhNHdSYlcyX3VSVkQzVzk2ZFp4QUF4RmlhR3FTT1ktRXFZb3lyR0RuSzhRUEpmUkYzNG5fYTBNMGRPRXBlWjN4akdwMWdiNFN2NzVZMmV6dkNTOVpiZngydTNkTTV2X0t6bUdGejJ5SXduYXhuVU84RWVOcS05MGd1OGFoRGt4T3dMMzM5cDlac3lwV1YtS2hiWk04ckRxQ1NUdWdjT0txZUVyUTY2LW9QUVVKUGVSSE5KSV8ta0FESEx1LTBtazdGUGw1NHNERjh1bjgtREUyOF9xTW1wc0ItZkQxcnZaci0tTUVZU1RrUGc",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxNc1R4RldSTm9jdXgybXhMZkZTUmkwc3FOeFo3OGJSR2MzYVVsWl9qd3dfVVNldFVDa19uenNfVzZwcENZNGh2bTJLbTR5TmhGc2paZTJoZVZaMkstdlNOc0FuWExGS0hnc0J2Z3gybm9Sd0I4TUhIaFpsQkhYUjFMOENIckRHOFhUZmhudUJkaGh5WkxFdkN5YWdfLXhBT1U",
+    "https://news.google.com/rss/articles/CBMiygFBVV95cUxPZ3o1UEJoOFRGYkVMQXVXYW5PLU1RWnpCTG5GeTZTUExGa05ocjZWTHZPTGlwUzl1aEJfX3d5Z3NZRFZ5dEp4ZG1pSVJSME9iMXJFM3hTenJDNGE0dzhaajFZSXhnUUE4QUZ5Wm8zd3FQRzgtWjZWa2hyUjM5Yzg1aXpsWEdyVXRZd3QxNG9ZYU13RnNGYUZqUW9GV0RsUzJoMVhPN25ndFAyV29vZm56V0dNcVpjNlU0RkRvRGJGRWJoQ0JzUHgxRnJB",
+    "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5lUi1pUGZVTWFBdlZUMEVEd204TE05TEVlNzUteUVqSzkzNS0wenZyQmVyQnVzYkRFOTB0NXhvUVBHVVFPQ3NiU2h4bVpHVnVZbGo0aTBFRTFoZzFReEpxd281WnJhUTg",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxOMUNaOExSSWtNa1Q2UU5UT25hWlRWLXBSX0xwSE8taWVBV0paNkRIbTE5RFNVWlZCRWVDdVVGMUE0RkZPZ2lybkczS1d6SG1RZ1FLYXc0aHp4UUhWTTZPOHZGS2VfSGp4WHJ1TXlVOWJwUlJ4QW5UZ2FVblE4Vk5YSHdjaUNKcFhoVy1Jb3ZuWHhpNTE0WEpsdHRfYXNYZFU",
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNOWZubjd2azFmMHNyM3ZMVGljMFZQbGxjalJyRUkzcFB2ZFdnUXNaVzZPUkNhS2V2T1FFRWxOWG4tRmdpbGR4c1dzcmhmQWl3Qy1aX05nWVNUZUJ6Z0E3VTdzcHNZaWdGR21aRzZYTVk0QWdiYndraEVMdmhYOGhuVlRNNmpvWUwzMnY4",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxQNDF1V3RSZ0QxdjV1V1NLOTNnbUlRWUtGMDZZWDBFOXVUSEIyalFJSVh3OXM2Z3E0RVdva3pHd2RjYUpIYVdDQVU4dWFCNkw4emNUWVZKdEIzUHlFQlFxOFRRU1Y4WFhUVVNZZGxOSjdrOGsxRGRxdDR3RWR0WnkyeDVDbW9JX2FoMnZpN2xoTnZsRFVjeDdwTHpnWGI2bXlFMnlxRWFuUkRqV0xCc0VQdU1SN2diODg",
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOdlktNGlRTnNmX3JNWm1NeVNGQzVmckZ5OUlwSmZIS0pWdktpZnJkOGpHSmZrai1qaVgzTWdZUVNjZE9yOFpWcl9OdFZsZnk1R0RtdXZtTjJaYTBSRk9xQ25jZUlPbFZ6LTVkU3k2bkVXMks4dU0teWZCcEF0RmctX1RpcjZjaWFQSTNv",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZklhMzlGYWNCR09QZU1ZLV9lLUxwdy1aY2swd2tScG16OFQ2enY0ek1XM1BQUS1DTEhYQWQ3REtFTzF1STAxVXJfVkV3MjcyTW1WcmpHMURXWUxzQ1RReFJsTlpiSGdxb3VxUmdabmRQSUw0cjNSbURqZERLcVNYeWJGVFlqSndqdk1WVWlrczRNX1NFa3ktS3ZReEM5UmlzRTdGM2VR",
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxNdzB6cnJEUzI2NTRIZFhhY1hVQllwVmJ5cTJSZEQ5cXYtLUs0bnVNNlFUQTd3UG9oYU9VendEY1RTcERwSXllVm1xM0wwSV9jbjhQdFZhY2hqdzJEV2k0bGtwaVpmaERpYXNHNmpiT092Ri1PRTFzTTlWTV8yU0gyR3ppVktaUVFSNzllTUR5eXNaTXJYSzFRdFNvSHVhZ3ZVQlJDZE9xSQ",
+    "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOYnU4ZTZGQWViMEU2QlBvb1VFMEI1QklyN2xYZVNvaHQzaXg1SHBHeDhxTXFEcXBMUU9qMjN3VUFESmVIZkpULVVWMkJxQVlGUXBuVkY3WmZ3TWpaRDYwWWR5M2E5NGlTWk9EeUlIRjdyUGVIZjBFajVPaHFSUFRtUUhfMEl2RE41NlRPcERxcGtJS0ZENktXN05hWG9ibzd1NVBpVFhhblNyUi1vNGZsSTF4czVXQWpqUGNfY3NEQ1M0WEZ5STdETWlxajBGOW5ab3NtWnk4QkpBdXdhUHVsRzZFdzA0YnpOQXVyeHp0c2NCSUM5",
+    "https://news.google.com/rss/articles/CBMioAJBVV95cUxNcjg0WU0xdXY5WVlyVVdCUnVsNWhrZWZTVkN6a3hRSmZmX0xneFBzeUZGUURvall5NFlsTFBnZjNOSGJfZE1qWnNUMlBiUVNnNlFzT0FfN3dUU2ZySzRNdXFEdmJhMFhwLTZsSkxnVmxMZjZwWVowTHBlVDRBZXJWbmhVczk1ZVRTTW50MUViZnYtbm9MOUFYbS1xdC02SFNLNjdGaUZ4Zk0ycHR0MmdhS2dDa3F2VmJ4bHllSjRJR0xiWXZmWkhDOUJocHNXQzNBb1Y2OUc2MkY1WE5mNlVfUm1GbUNFS2J6LW5XSjE0Z0VBUTduTVpseWFMVmYzcEl0cHlVc0lSUEFWWGpHckdudUlfMXhzSTRzYl9fWThSMWQ",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxNd3V6azNkUGFPTVh2bjlCRk1VVXZ5Vm1Rb2dKaVhqTHJtY0k4MDBxTW92U3FKaG1VbjBMMGJQWC1hSUZTUHg5T3lodXZYQmNMaTc1MU1IX2xmT2o5d25janIyV3NxSTFMTFQ1Nm1TMkRTdzk2RGdXVFNSUzhMdEhmM29vbVJjc1AxQnM5ZlU1ZlRkU0tWQmdoRTcweUZoRk9iUmc",
+    "https://news.google.com/rss/articles/CBMi7AJBVV95cUxQY3RuTXFIbGxIVmJhZDNHOXpkQ2dXMkF4MEstZGVINlZkc25YbTYxQjgzZ2Jvd1VnLVBpNU1qaGJZYkRCSkVwZk9YWk1ybDJfWTRyZTY1ZG8yMFM4cjctdnRvdHNHZkZ6cldLZ2JCejdsR1g5Vkc1X1BZYndnRFhsWV9TanJFVXVVa1ZaM1pSSUNEZEFoUVctVXFuaHV1alFScG5sa2FIZjg5cXV5d09ZaVRjS1Z0RHBpZE9DTDVBQ1lMR1Z1b3JlNjd1UXBfb0dLZDAwT0hYLU1OdG0tN01oVTNVaDVsdzlSaGxVVzU0OExSeWJKWnRjN1VrMWRVUjV3TkZkSFg2Tkw5dHlFZmFZX1dISGppbEt6bGVRc2ZwWHl6SFpuYXFDT1p4UlloYmg3M0NVeV8xVkNwc3ZFQVBaN09HU1pQS2I1d3BlbHRQaC1meHVFSVZIOWt4NWVMSExBOXhiakVrenduZzds",
+    "https://news.google.com/rss/articles/CBMivwFBVV95cUxOMTFuTkRVYXhTYUluZmtJZ1hEV2VuZTdhME5iWU1rdFAtSVRGNEtzNHpoQkhxeF9KTDZ1SFlGazJTSDA5b2psWHFhSEN2UEJvTGUta285VmNDc3VCU293UmxlN3ZtU0hXdnM4Vjg0UG1fYlRiUDZhUE8zVVBvc1hKbzJoZkNqU3NFSHk0a0ptT1psbm90OUVTS2o5cUZrSnRONXd4aEJlQTU0aGE3SXVvdWUzV0t6S050cE5OdkNZOA",
+    "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNRWZnUnhRYTJ3RURBM0JkaFRUSGJYVkFyakVsZ0pQQW1jdGQ0b0ZFOGtNRlBkeDg2dTdqcE5UQmE1YVMzWEJwWlk5REhkaGNyeWVCUkNDLU14aW5aSVRPTzI0bWhNTnZFMktMM00yR3ZwUjBVZjRtandsNTRPS0RiYTBiSXZZZHBzV01SQmdGdWtITm0yTXNxOTZwd2F2YmEwQ2JGaUpjbUZYdUFWXzFtVUVXSTBMVm9yaTRic0ZKNktkeEpoS3ZrOEJfZzRYeEJINEwzNGlhWXlJR0E0YVh0THpB",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxPV3Z4S3JEdF9CZlhkSnh1WE04ZjVWSGg1MEhjSktlVW51M3d6Q2NoZ3k4SmZSeHZYUnlKYmlfM3pENlhXZWUta1lZUkJ5Z0N2Tm1zc21Qa3dIMjFpRGF6SDVwUzFvZFp3N0hzcUZtZ1ZwMVFKUkFYNnhGQklOWWY5eGpZOG9iNlFBQTVXTHFBZUY3NG4wbHJvNklSdUZsX3FibkE",
+    "https://news.google.com/rss/articles/CBMizwFBVV95cUxPdHF2T1EtNGZSMGF1V1hHQ3d6QUx6YWdLNVdUdnk0RjhsS1l4TmlDbzZ0Y0RtVXRtdEltT2N1WW9RTV9heHYzbkc1WVBYYVdJRTM2LU8tMUN4eHJYQi1ib2c4Xy1hbHM4ellnajZNVmZXQTgtRFk0Q0lxM1B2aTFqNDhjXzlWYzlTaHV3TWpLb0dxM0RTMHV2OGJBODg5YVdpTWc4Z3FXQ0xsVzlPb2lTRDdDRmJlOTQ0ZmNzQnhzUHMyWldNMFpmWDdHX2ZNSjA",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxPMFNBb25rS1ZvbTBEaUF3Y05kRW4tN0h3TUJYcmVUbmwxdGtSdHRKNHFGdWlPVFIyV3FLSEdIMTBoT2RZU0hsQ0dkb2EtaDIzTHBtS2hWSjhlSnVackZMVmdhYUVGVXhzdncxa3d3QkZfenU3SDE5SHFnRWFodXVSTzExMGdIeTl2SEhZT3c2UER0YS01b1JLVHJvc1RxUmdVM0xfOHVKU182VXY0aFJtS2JuVQ"
   ]
 }
