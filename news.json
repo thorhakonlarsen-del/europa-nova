@@ -1,6 +1,27 @@
 {
-  "updated": "2026-10-26T12:45:22.459Z",
+  "updated": "2026-10-29T12:47:43.748Z",
   "items": [
+    {
+      "date": "2026-10-22",
+      "source": "Google News — sovereign AI Europe",
+      "title": "World Wide Technology Partners With Polarise to Accelerate Europe's Sovereign AI Buildout, Starting in Oslo",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQUjhpSzUyUjRwYzhQS0ZXbmFTamF6eEhFOUM5SUMyRDNQQkduQzhZSHJLYmxHUVhHTnNOSmEtMnpuc0ZpTV9pa1VxWlU0dnJPUlhMdnJvcnNwUXhSX1ZybmoyOFU3Zm1mTjRSWHhzVnVQeVBZV2M5bk41a0VCRWxseFUxREtka29oVWtpQVY1QUg4anNFZlpHYUk2Z2Y0RXY1RWpWTG5TVkU2OFVCdTV4cjNLVjE1VFZ0M1JXX203WktiN3hHRkpKMVBJNExTYnRTbzNTMGR6TkE0Rk1KVXBRMEFzRXJaM2t1eFR5WVhXV1Y1aHJx?oc=5",
+      "commentary": "A US systems integrator and the European operator Polarise have tied up to build sovereign AI capacity with Oslo as the starting point, confirming that Nordic power and cooling economics are now the natural anchor for European compute. The choice of Norway matters institutionally as well as physically: a country outside the EU, but inside the European energy and capital system, is becoming the site where continental AI infrastructure is actually poured. The arrangement also illustrates the recurring pattern in which European sovereignty projects are delivered with substantial non-European technical and commercial involvement, which shapes who controls the operating layer over time. Whether Oslo becomes a host site or a genuine locus of European control will depend on how ownership, procurement and financing are structured as the buildout scales."
+    },
+    {
+      "date": "2026-10-28",
+      "source": "Google News — sovereign AI Europe",
+      "title": "European Sovereign AI, Cloud Not Ready for Major Banks: Temenos CEO",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPY096NnFJTHRNRTBQU2QwZktNak5GdUZGYVNTWV8ybXhfV1hzQzFzQ0RNM1A2MG51bmtjOGZSUm5DdVI3WW4wa21vaXFvOW5tbjZieGVhLUM4MkpuUlgxMkQ5d3A2NlE0TUprRU85bk9HeFNQcHJRd1YyZVBaMDhqM3h0ODRjbFlsZHA1aldYWWJwR0g2dEdZQ3RrdTQyTW8?oc=5",
+      "commentary": "The chief executive of a major European core banking software vendor has stated publicly that European sovereign AI and cloud offerings are not yet fit for large banks, which converts an abstract dependency argument into a concrete procurement verdict. Such judgements are self-reinforcing: if Europe's own financial infrastructure providers conclude that domestic alternatives cannot carry regulated workloads, the continent's banks will deepen their reliance on a handful of non-European model and cloud suppliers, and the associated concentration risk will migrate into the financial system itself. Supervisors concerned with operational resilience should read this as a capability gap rather than a vendor complaint. Closing it demands sustained public investment in production-grade European compute and models, not only regulatory pressure on the demand side."
+    },
+    {
+      "date": "2026-10-29",
+      "source": "Google News — sovereign AI Europe",
+      "title": "Semidynamics and Nokia Explore Collaboration to Strengthen Europe’s Sovereign AI Capabilities",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPWWp4YTJXQ2NUMG9BTVVqWU1wWDQ2QnZFTk53bExiRjdJOG45eHpmblpodTFfb3ZZczRxZjR5eUl6YjBMdjBib1Z1aGNxaGRIdFBzM2FnT2g0Ul9vbHIzemttdVpTR1VreHZnWHBqYmZrRlA1WjktOUdjazVZaW9lTUZOZHhPcHFoUjREaS1KRDlNR1BrcWpsUVlVUXdaZmtuWUdRWWNRYnlQRnFlZGR5T2FqLTFsVHAyS19zNk1hNDVuLWw1VmxRNGtNeW5oVW9v?oc=5",
+      "commentary": "A Spanish processor design house and a Finnish network equipment maker are exploring joint work on European sovereign AI capability, touching the layer of the stack where Europe is thinnest — silicon and the systems built around it. Partnerships of this kind matter less for their immediate output than for whether they can assemble enough demand to justify European chip design at frontier-relevant scale, something no single national programme has achieved. The exploratory framing is a reminder that industrial coordination in Europe still depends on bilateral corporate initiative rather than a standing institution with its own budget and mandate. A treaty-backed procurement commitment would give such efforts the guaranteed offtake that currently only US hyperscalers can provide."
+    },
     {
       "date": "2026-10-22",
       "source": "Google News — sovereign AI Europe",
@@ -147,27 +168,6 @@
       "title": "Mistral AI’s €3B Series D Makes It Europe’s Sovereign AI Champion — With a Paradox Built Into Its Foundation - Yahoo Finance",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQd2tpcklwQmtXSFBxWVEtMWFaUEpCZENFTm1ncU1OZ2ZVaG03OTZ5ZXdKb3FaZnRwdURqM3l0NFRUZzB2UVZIUlhhME52dmdpUEdfcmE0aV8yN2FuLUVMY0VKSnJZY1d2WVdFWTRsYzAxQ2FITElLd1lNTkFLVUJVZ1ZYc0Fad2RZYWlXcXpYTQ?oc=5",
       "commentary": "Mistral's EUR 3 billion Series D confirms that Europe can now fund frontier model development at something approaching global scale, while the reported paradox — reliance on non-European capital and hardware to build a European champion — exposes the limits of doing it through private markets alone. Sovereignty claims resting on a single venture-backed firm are fragile, because ownership, chip supply and follow-on funding all remain outside European public control. The episode strengthens the case for a treaty-based vehicle in which capital and governance are locked in by intergovernmental commitment rather than by investor preference. How Mistral's cap table evolves at the next round will be a useful indicator of whether private sovereignty is sustainable."
-    },
-    {
-      "date": "2026-09-23",
-      "source": "Google News — sovereign AI Europe",
-      "title": "Dassault tests sovereign AI on Rafale as new algorithms move closer to integration in future fighter upgrades - Defence Industry Europe",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPYnpubE52YUw5SGc3X29lNGdpZEZVVjBUUGZRZ3ozYWlJV0JFWUpxNHRsb1FtamRTVHNLNWlNSGg2ZWRqRlFULXM1OW1yR1hoU0hsb2NRTVJ4eEwtbUVRTkdUd2hFNUtESFdEUDBCNHFqa3A3aTBNNU9landGcUZVdVJjZkFKSF9uTjJuYTBzelBfYmZ1bXh0WHdSMHZrR19SRWtUWXYzMDY3UDBjVkRoNlNSd0dncTE4c3dOcXdod2FRVUFCdGlIekg5WDFBSzQza2FjMg?oc=5",
-      "commentary": "Dassault's flight testing of sovereign AI algorithms on the Rafale shows the defence sector moving from procurement of foreign software towards domestically controlled model development, with integration targeted at future fighter upgrades. Military applications are where dependency on non-European model providers carries the sharpest cost, since operational data, weights and update cycles cannot credibly be outsourced to another jurisdiction. The work also builds a demand signal for European compute and specialist talent that civilian programmes have struggled to generate on their own. If defence requirements end up setting the standard for verifiable European control of models, civil AI policy may find itself following rather than leading."
-    },
-    {
-      "date": "2026-09-24",
-      "source": "Google News — sovereign AI Europe",
-      "title": "Italy's Clastix raises €2.9 million with Mistral backing to build sovereign Kubernetes infrastructure for Europe - eu-startups.com",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQVzZqWHk1a0hXZXFuWmRvbzBsSUZxclpyU3h5bVFlZkxJZ3dyVXp5RC0yTUdBSTVfc290dDIyaHhIUFg2cXZGZVQzX0tuNWkxX0ItcUxoM0VBVXBGUVU1SlBUOFA1YWQ5Q3R1NHU0WExCaGVfblZVQTJqSmNqcWw5cHo0WURJZ0NTXzB6aHVSLXB6bkZlajAwc016RnJaYTFUaDA4b2hFcW9mR2tUOUFtck9PX1c1QTVYSk9oWDB1ZGdmM2lsYjZVRTZycXJTcFl3OHgxcnlwSUtjVUZuMGtXNUFn?oc=5",
-      "commentary": "Clastix has raised EUR 2.9 million with Mistral among its backers to build sovereign Kubernetes infrastructure, a reminder that Europe's dependency problem sits not only at the model layer but in the orchestration and cloud plumbing beneath it. A frontier model trained in Europe still leaks sovereignty if it is served through control planes governed by non-European providers, which is why a French model developer investing downward into Italian infrastructure is more strategically interesting than the modest sum suggests. The pattern to watch is whether Europe's leading model firms continue assembling a domestic stack through private capital, or whether public instruments such as the AI Factories and InvestAI are structured to procure from it. Seed-scale rounds of this size cannot close the gap on their own, and the test will be whether European public buyers actually route demand towards these layers once they exist."
-    },
-    {
-      "date": "2026-09-20",
-      "source": "European Commission — Press Corner",
-      "title": "Commission enhances energy efficiency and sustainability of data centres in the EU",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1667",
-      "commentary": "The Commission has proposed a common rating scheme for data centres intended to make their energy consumption transparent and to ease their integration into European energy systems. Energy is the binding constraint on any European attempt to host frontier-scale training runs, so the metrics chosen here will quietly determine where compute can be sited and on what terms. A rating scheme that rewards grid-responsive operation and low-carbon supply would favour Nordic locations with abundant hydro and cool climates, aligning sovereignty objectives with decarbonisation rather than setting them against one another. Whether the scheme becomes a facilitator or a compliance burden will depend on how it is reconciled with the compute build-out promised under the AI Continent Action Plan and the Cloud and AI Development Act."
     }
   ],
   "seen": [
@@ -358,6 +358,14 @@
     "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNRWZnUnhRYTJ3RURBM0JkaFRUSGJYVkFyakVsZ0pQQW1jdGQ0b0ZFOGtNRlBkeDg2dTdqcE5UQmE1YVMzWEJwWlk5REhkaGNyeWVCUkNDLU14aW5aSVRPTzI0bWhNTnZFMktMM00yR3ZwUjBVZjRtandsNTRPS0RiYTBiSXZZZHBzV01SQmdGdWtITm0yTXNxOTZwd2F2YmEwQ2JGaUpjbUZYdUFWXzFtVUVXSTBMVm9yaTRic0ZKNktkeEpoS3ZrOEJfZzRYeEJINEwzNGlhWXlJR0E0YVh0THpB",
     "https://news.google.com/rss/articles/CBMiogFBVV95cUxPV3Z4S3JEdF9CZlhkSnh1WE04ZjVWSGg1MEhjSktlVW51M3d6Q2NoZ3k4SmZSeHZYUnlKYmlfM3pENlhXZWUta1lZUkJ5Z0N2Tm1zc21Qa3dIMjFpRGF6SDVwUzFvZFp3N0hzcUZtZ1ZwMVFKUkFYNnhGQklOWWY5eGpZOG9iNlFBQTVXTHFBZUY3NG4wbHJvNklSdUZsX3FibkE",
     "https://news.google.com/rss/articles/CBMizwFBVV95cUxPdHF2T1EtNGZSMGF1V1hHQ3d6QUx6YWdLNVdUdnk0RjhsS1l4TmlDbzZ0Y0RtVXRtdEltT2N1WW9RTV9heHYzbkc1WVBYYVdJRTM2LU8tMUN4eHJYQi1ib2c4Xy1hbHM4ellnajZNVmZXQTgtRFk0Q0lxM1B2aTFqNDhjXzlWYzlTaHV3TWpLb0dxM0RTMHV2OGJBODg5YVdpTWc4Z3FXQ0xsVzlPb2lTRDdDRmJlOTQ0ZmNzQnhzUHMyWldNMFpmWDdHX2ZNSjA",
-    "https://news.google.com/rss/articles/CBMiswFBVV95cUxPMFNBb25rS1ZvbTBEaUF3Y05kRW4tN0h3TUJYcmVUbmwxdGtSdHRKNHFGdWlPVFIyV3FLSEdIMTBoT2RZU0hsQ0dkb2EtaDIzTHBtS2hWSjhlSnVackZMVmdhYUVGVXhzdncxa3d3QkZfenU3SDE5SHFnRWFodXVSTzExMGdIeTl2SEhZT3c2UER0YS01b1JLVHJvc1RxUmdVM0xfOHVKU182VXY0aFJtS2JuVQ"
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxPMFNBb25rS1ZvbTBEaUF3Y05kRW4tN0h3TUJYcmVUbmwxdGtSdHRKNHFGdWlPVFIyV3FLSEdIMTBoT2RZU0hsQ0dkb2EtaDIzTHBtS2hWSjhlSnVackZMVmdhYUVGVXhzdncxa3d3QkZfenU3SDE5SHFnRWFodXVSTzExMGdIeTl2SEhZT3c2UER0YS01b1JLVHJvc1RxUmdVM0xfOHVKU182VXY0aFJtS2JuVQ",
+    "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPWWp4YTJXQ2NUMG9BTVVqWU1wWDQ2QnZFTk53bExiRjdJOG45eHpmblpodTFfb3ZZczRxZjR5eUl6YjBMdjBib1Z1aGNxaGRIdFBzM2FnT2g0Ul9vbHIzemttdVpTR1VreHZnWHBqYmZrRlA1WjktOUdjazVZaW9lTUZOZHhPcHFoUjREaS1KRDlNR1BrcWpsUVlVUXdaZmtuWUdRWWNRYnlQRnFlZGR5T2FqLTFsVHAyS19zNk1hNDVuLWw1VmxRNGtNeW5oVW9v",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxOTlltNktIV0J4OHlPTV9TRnpmSmxodENvYkwySlRIcHZBT3VvTjVTVGlnelkteVJ3ZUNoSWJXWWFWOTVuVTR3SlhpX215aGRHS0RHWGdpY2NxTUxuZUJ0V1Z3a1ZMeE41S0xHWmd1TWZjMGxnS1lfeXFkUUwzYWJ4bkFBT2Z6OW5wRHlvaFhlamFNalB6YmNLMklBQmFoVC0xSnlGbW9B",
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVnVZekxWZ0xOblVkdDFqYmdHVXg5T3Q1XzRaUk9yT0xDTWRXbmkwS3NxTWNzNGNVTlJ4RXVTUFFTWWVCOXJOOGkyWTNLWjFldG1QRlhReTlaY3p1REFQSVJ6TEpvdlZHdjRpb2dBdTRzOUFlM0Z5SWlja2tKeVAwdzZkX0l4b3lyYXhfcG9vSXFoTWp1UUZZ",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxPY096NnFJTHRNRTBQU2QwZktNak5GdUZGYVNTWV8ybXhfV1hzQzFzQ0RNM1A2MG51bmtjOGZSUm5DdVI3WW4wa21vaXFvOW5tbjZieGVhLUM4MkpuUlgxMkQ5d3A2NlE0TUprRU85bk9HeFNQcHJRd1YyZVBaMDhqM3h0ODRjbFlsZHA1aldYWWJwR0g2dEdZQ3RrdTQyTW8",
+    "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQR1dLdmx6Uzg3WXBERWhqb0wydjRUbTNuN3J4NUJZOHkwenQ4OVo1blUzam9YNE1fWlMzbF9oTlJLU3VLWTJ2dVlWQVpTNWtfTzZEYTBMNG5YR0VzM0pDWV8xUzU2MHE0bFc1M1JXZHZqcjBZVmlsY3lra2tBb212ZnZTUmxfZlJGWkJTQllybm9nZHVpOG95M3hkVWN5Y2ZzaGZyZ2czdlhZUjROcGxMYURqZ3d1RkNPdUFsNElUY3dIZHNiVGM5ZC1UN2ozUjhvcDVSNlFQQUpBSU1UWGhjNkV0YWtXQQ",
+    "https://news.google.com/rss/articles/CBMixgFBVV95cUxNRVNucENZYzdMbW1TenVsTFp1azVzaTEwcHZHZnZCTEl3d1pIbl9PQmJrTWUtQnF5eXdDNl83Zjk4Si1Lcl9iZ1c1dnpweE9xVlhJSWlFZ0NXS3A1NlZkVGY2aVZ0Ri1MSTdRN21EbjRWOFhNdzBGWVU4aUY0bXN3MVNBMkJqTngxMTVVVXI5ZXV6OHlEOEVLMi1FdlFvR2U2T3htamIyV3luY0pBMUs2LUJsVEsyODJ2OGpBUUVORmxMQ3FjdWc",
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOUHF6US11SWFYSlhvb1NUMktCczFuSEttZ0ZGTVJpQ1d6M2FUZEtUTGE3T1hyR1pVM1hoTzVISHl2dmFFS0J0UUJnSlNsWk1KY2xCWkxMQ3N1NFJvZ0xkT0ktb0owZEdLS2dXaU9yaThmNjItM2pnamhHRlFYNF9uSFVNUmVFN0E0d2o0bTV6TUFnOFo1QkNWMU1ZSXRsU01NclplbTNETlUxdEltcGQ0X2dxSGFaeG92dklsYXp6U0NtY1ZKV25ZZlV2akwxZncwc3c",
+    "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQUjhpSzUyUjRwYzhQS0ZXbmFTamF6eEhFOUM5SUMyRDNQQkduQzhZSHJLYmxHUVhHTnNOSmEtMnpuc0ZpTV9pa1VxWlU0dnJPUlhMdnJvcnNwUXhSX1ZybmoyOFU3Zm1mTjRSWHhzVnVQeVBZV2M5bk41a0VCRWxseFUxREtka29oVWtpQVY1QUg4anNFZlpHYUk2Z2Y0RXY1RWpWTG5TVkU2OFVCdTV4cjNLVjE1VFZ0M1JXX203WktiN3hHRkpKMVBJNExTYnRTbzNTMGR6TkE0Rk1KVXBRMEFzRXJaM2t1eFR5WVhXV1Y1aHJx"
   ]
 }
