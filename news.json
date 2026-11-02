@@ -1,6 +1,13 @@
 {
-  "updated": "2026-10-29T12:47:43.748Z",
+  "updated": "2026-11-02T15:31:17.943Z",
   "items": [
+    {
+      "date": "2026-10-30",
+      "source": "ECB",
+      "title": "Philip R. Lane: AI adoption in Europe",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261030~08d9d540f0.en.html",
+      "commentary": "A member of the ECB's Executive Board devoting a set-piece speech to AI adoption in Europe signals that the central bank now treats diffusion of the technology as a macro-financial variable rather than a sectoral curiosity. For sovereignty, the salient question underneath adoption statistics is whose models and whose compute European firms are adopting, since productivity gains routed through non-European providers create recurring external payments and a dependency that monetary authorities cannot supervise. Central bank framing matters politically because it lends adoption arguments a fiscal and stability vocabulary that finance ministries respond to more readily than industrial-policy appeals. Expect the adoption-versus-dependency tension to become the pivot on which European compute and model-building budgets are justified."
+    },
     {
       "date": "2026-10-22",
       "source": "Google News — sovereign AI Europe",
@@ -161,13 +168,6 @@
       "title": "Europe can’t replicate the full AI stack, say investors and founders - PitchBook",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQM2ZwOWlZQWJLSEVrUklQZHFyYVAwNlZfMXlFcjRONk9oQ3NBRzZEOGNWWjgtU051dndSLWVTdTRDY0N3Z21NaEpLOVIycEZXV2N6a3J2Rm94RkNOSG1vX3diQVRucTUzaWZkZ3JSLXY4V3Zxb0dUblRlakRsOC05bVZ0WU16d0NROGVEMS1IenlLbDlrbDF6UXBydFRrZ18wSjRMTQ?oc=5",
       "commentary": "Investors and founders quoted here argue that Europe cannot rebuild every layer of the AI stack — chips, compute, models, applications — and should concentrate on the layers where it can realistically compete. The judgement matters because it directly challenges the premise behind much of the EU's current industrial programme, which spreads public money across factories, gigafactories and model developers simultaneously. Whether one accepts the diagnosis or not, the argument forces a prioritisation question that European policy has so far avoided answering explicitly: which dependencies are tolerable and which are not. Expect this framing to shape the next round of debate over how InvestAI and the Cloud and AI Development Act allocate scarce capital."
-    },
-    {
-      "date": "2026-09-08",
-      "source": "Google News — sovereign AI Europe",
-      "title": "Mistral AI’s €3B Series D Makes It Europe’s Sovereign AI Champion — With a Paradox Built Into Its Foundation - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQd2tpcklwQmtXSFBxWVEtMWFaUEpCZENFTm1ncU1OZ2ZVaG03OTZ5ZXdKb3FaZnRwdURqM3l0NFRUZzB2UVZIUlhhME52dmdpUEdfcmE0aV8yN2FuLUVMY0VKSnJZY1d2WVdFWTRsYzAxQ2FITElLd1lNTkFLVUJVZ1ZYc0Fad2RZYWlXcXpYTQ?oc=5",
-      "commentary": "Mistral's EUR 3 billion Series D confirms that Europe can now fund frontier model development at something approaching global scale, while the reported paradox — reliance on non-European capital and hardware to build a European champion — exposes the limits of doing it through private markets alone. Sovereignty claims resting on a single venture-backed firm are fragile, because ownership, chip supply and follow-on funding all remain outside European public control. The episode strengthens the case for a treaty-based vehicle in which capital and governance are locked in by intergovernmental commitment rather than by investor preference. How Mistral's cap table evolves at the next round will be a useful indicator of whether private sovereignty is sustainable."
     }
   ],
   "seen": [
@@ -366,6 +366,10 @@
     "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQR1dLdmx6Uzg3WXBERWhqb0wydjRUbTNuN3J4NUJZOHkwenQ4OVo1blUzam9YNE1fWlMzbF9oTlJLU3VLWTJ2dVlWQVpTNWtfTzZEYTBMNG5YR0VzM0pDWV8xUzU2MHE0bFc1M1JXZHZqcjBZVmlsY3lra2tBb212ZnZTUmxfZlJGWkJTQllybm9nZHVpOG95M3hkVWN5Y2ZzaGZyZ2czdlhZUjROcGxMYURqZ3d1RkNPdUFsNElUY3dIZHNiVGM5ZC1UN2ozUjhvcDVSNlFQQUpBSU1UWGhjNkV0YWtXQQ",
     "https://news.google.com/rss/articles/CBMixgFBVV95cUxNRVNucENZYzdMbW1TenVsTFp1azVzaTEwcHZHZnZCTEl3d1pIbl9PQmJrTWUtQnF5eXdDNl83Zjk4Si1Lcl9iZ1c1dnpweE9xVlhJSWlFZ0NXS3A1NlZkVGY2aVZ0Ri1MSTdRN21EbjRWOFhNdzBGWVU4aUY0bXN3MVNBMkJqTngxMTVVVXI5ZXV6OHlEOEVLMi1FdlFvR2U2T3htamIyV3luY0pBMUs2LUJsVEsyODJ2OGpBUUVORmxMQ3FjdWc",
     "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOUHF6US11SWFYSlhvb1NUMktCczFuSEttZ0ZGTVJpQ1d6M2FUZEtUTGE3T1hyR1pVM1hoTzVISHl2dmFFS0J0UUJnSlNsWk1KY2xCWkxMQ3N1NFJvZ0xkT0ktb0owZEdLS2dXaU9yaThmNjItM2pnamhHRlFYNF9uSFVNUmVFN0E0d2o0bTV6TUFnOFo1QkNWMU1ZSXRsU01NclplbTNETlUxdEltcGQ0X2dxSGFaeG92dklsYXp6U0NtY1ZKV25ZZlV2akwxZncwc3c",
-    "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQUjhpSzUyUjRwYzhQS0ZXbmFTamF6eEhFOUM5SUMyRDNQQkduQzhZSHJLYmxHUVhHTnNOSmEtMnpuc0ZpTV9pa1VxWlU0dnJPUlhMdnJvcnNwUXhSX1ZybmoyOFU3Zm1mTjRSWHhzVnVQeVBZV2M5bk41a0VCRWxseFUxREtka29oVWtpQVY1QUg4anNFZlpHYUk2Z2Y0RXY1RWpWTG5TVkU2OFVCdTV4cjNLVjE1VFZ0M1JXX203WktiN3hHRkpKMVBJNExTYnRTbzNTMGR6TkE0Rk1KVXBRMEFzRXJaM2t1eFR5WVhXV1Y1aHJx"
+    "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQUjhpSzUyUjRwYzhQS0ZXbmFTamF6eEhFOUM5SUMyRDNQQkduQzhZSHJLYmxHUVhHTnNOSmEtMnpuc0ZpTV9pa1VxWlU0dnJPUlhMdnJvcnNwUXhSX1ZybmoyOFU3Zm1mTjRSWHhzVnVQeVBZV2M5bk41a0VCRWxseFUxREtka29oVWtpQVY1QUg4anNFZlpHYUk2Z2Y0RXY1RWpWTG5TVkU2OFVCdTV4cjNLVjE1VFZ0M1JXX203WktiN3hHRkpKMVBJNExTYnRTbzNTMGR6TkE0Rk1KVXBRMEFzRXJaM2t1eFR5WVhXV1Y1aHJx",
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxNTWFpNk9oa1hRa3pBWUtTS1JIRUhtQkYteFk4eEswTVQzTm94alRVQ2YyRXJFREpZTks2V0pwRmRPRmpKdEc3MFlOWTkyYjB6bUMwMWFUcHBSSFhJcTZvUVJUTk9SclFWSkpGa1dZVTNOdEJFSy0ydFNVVW1UR0tNY1FoMXBHZWc3MEZtMVJfM1g1ZFhady1RbC05YWhaRmJ1Ul9rVFVVWDM3cE44bEVZ",
+    "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261030~08d9d540f0.en.html",
+    "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9DNVl3SVY0RDNOa3dRZW9CR0g5SGpFWFJzMnRTcENjU0ZacHQ1QklyVUVfcS1HaXdtNmQ4T1VIMmtwNFBTVEZjcWZQX3owRTBqT25fU3FCVFNrZw",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxON18zUkRsT092eFlqX2gzVkFIUERkQ1BMOUJmM19ndHdoUi12LUlDeXpfMGZlOEpwY0k4WVRmc1lSZE5aM1ZHckpNeXVjcmlSS0VxYmlXMGdNY3VSNTZHdUxCYWtUYXJyblpBcnlXdEYzTlpld2U0MTZ2Vm96SHlqZ3JoSjFtQ0JGVzRNR0FCZ1hLcHhVUld1VEN5QkFPSUE"
   ]
 }
