@@ -1,6 +1,27 @@
 {
-  "updated": "2026-11-02T15:31:17.943Z",
+  "updated": "2026-11-05T14:29:15.485Z",
   "items": [
+    {
+      "date": "2026-11-03",
+      "source": "Google News — European AI compute",
+      "title": "EU leaders to debate AI sovereignty and safety at informal summit in Dublin - INSIGHT EU MONITORING",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNRW1keUd3RDQybnVjWmlQbEdZQms2cU5ua3FwQ3Z4MDg0aWJsUDdDallqY1cwdERVamxXQXhoOFpzVi1mVzktMlJTeWlqdzIybkVweVAzZnkzUklkRHJraE9SLUhBdS10Y0FJVHpodkFFSlFIanlOTlZCYXZZRkc0emRpYS1zNkhzazlxa2M4QUpORG5PVmVVRUdVMXMtX182OGh6Q01jSGlLUUl6SDRZSVd5Yld3eXh0dDBZS1pzc3ptbWhOMXFMeHBMa3lJZkE2Q3RsS0V4dmliQQ?oc=5",
+      "commentary": "Placing AI sovereignty and safety on the agenda of an informal European Council meeting moves the question out of the Commission's digital portfolio and into the hands of heads of state and government, where budgetary and treaty-level decisions are actually made. Informal summits produce no binding conclusions, but they set the terms on which later funding and legislative packages are negotiated, and they reveal which capitals are prepared to pay for capability rather than regulation alone. The pairing of sovereignty with safety in the same discussion matters, because it suggests leaders are not yet treating the two as a trade-off. Whether this translates into an institutional vehicle with its own balance sheet, rather than another coordination mechanism layered over national programmes, is the test to watch in the months after Dublin."
+    },
+    {
+      "date": "2026-11-02",
+      "source": "Google News — sovereign AI Europe",
+      "title": "Mistral CEO: Europe faces ‘complete trap’ without frontier AI - POLITICO.eu",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNRFFFeVZFTXIydmlKWWQ0cXZELXFzZ3QxZm1BS2haWjY4Y01tb0loVjNReXQ3SHEyQTN5Z3BGQWo1TGtSci1qV1VoM1U4cFRnSXBRb2RmUFFVNGFGUC1ELVc1aUtsa0xZc0l2aG14dVZYZWdpUm9uakVDOHhhYVp6bEtkN2JCQkFHSURB?oc=5",
+      "commentary": "Europe's most prominent independent model developer arguing publicly that the continent is trapped without frontier capability sharpens the distinction between adopting AI and building it. The framing cuts against the comfortable position that Europe can specialise in applications and regulation while importing the underlying models, since application layers built on foreign frontier systems inherit their pricing, availability and terms. Coming from a commercial actor, the claim carries an obvious interest, but it also exposes how thin the European frontier field is when a single firm can speak for it. The policy question that follows is whether frontier development should remain dependent on venture-backed national champions or be underwritten by a public, multi-state structure insulated from market cycles."
+    },
+    {
+      "date": "2026-11-03",
+      "source": "European Commission — Digital Strategy",
+      "title": "Call for proposals: EU AI Media Platform – Modular multilingual public-interest infrastructure for European news and audiovisual media (IA) - Apply AI",
+      "url": "https://digital-strategy.ec.europa.eu/en/funding/call-proposals-eu-ai-media-platform-modular-multilingual-public-interest-infrastructure-european",
+      "commentary": "Funding a modular multilingual AI platform for European news and audiovisual media treats information infrastructure as a domain where dependency on non-European providers carries civic as well as commercial cost. Multilingual capability is one of the few areas where European requirements genuinely diverge from those of the dominant US and Chinese labs, giving public procurement real leverage over what gets built. The open question is which models the platform will sit on top of, since a public-interest interface running on imported frontier systems relocates the dependency rather than removing it. Procurement of this kind will matter most if it is designed to create demand that a European frontier capability could eventually serve."
+    },
     {
       "date": "2026-10-30",
       "source": "ECB",
@@ -147,27 +168,6 @@
       "title": "Reporter’s Notebook: Europe’s Sovereign AI Push Needs Customers As Well As Capital",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNM21Ibl8zcndWTnJ4TGo0NzBhZHVsQ2VPNk1NQk1hVHVKWU16dTV5M3J3akxjdnlGV1I0TlhMTklZeE9ZbGlabWxLUUhQV1JuN0FDYTdIVlJJVDk5TG0xSHlsQkVycWFJN2ZjZnFCMDI1U1VsdF9jU293UElFcVdOXzBJdlo?oc=5",
       "commentary": "Crunchbase sets out the demand-side problem that funding announcements tend to obscure: European sovereign AI ventures can raise capital and still fail for want of buyers willing to switch away from incumbent American providers. The argument matters for any treaty-based compute or model institution, because public money builds capacity but procurement builds markets, and the two are rarely designed together. A European facility that produces frontier capability without anchor customers in government, defence and regulated industry would reproduce the commercialisation gap that already afflicts the continent's research base. The policy lever to watch is therefore whether member states convert sovereignty rhetoric into binding offtake and procurement preference."
-    },
-    {
-      "date": "2026-10-02",
-      "source": "Google News — sovereign AI Europe",
-      "title": "French Air Force plans loyal wingman flight in 2028 in sovereign AI push",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQUFFyOE9sR3FjdEJ1OW1STXBfOHVZSUtFRDRhZVdzQzFoaFVaNndEYVItbmtibUR6NGVvd0N0WWdmZnNKcDlLR1NXVzBpQ3ZFckM0RUJZaUdPQlVsVFdFX0hpQXR6eHFiTTJ1ZGotUmRHcVVNUm14OUxNalFSamowWVpLLUczbVJnOXJxYUtUX3lwZ0FHeFB6UlFXTExyVzZad2trVmZLdjVXelJwcWxvRXFhcloyUWhwNEdEaUdldGpLMVpS?oc=5",
-      "commentary": "France attaching a dated flight milestone to an uncrewed combat aircraft programme shows defence becoming the fastest route by which European states acquire autonomous AI capability under national control. Military timelines impose a discipline that civil AI strategies lack, since an aircraft must fly on a set date with software whose provenance can be certified. The risk is fragmentation: capability built inside one national defence programme is difficult to share across a European institution, and duplicative sovereign efforts could absorb scarce engineering talent. Whether such programmes feed into, or compete with, pooled European compute and model-development structures will shape the continent's capability base well before 2028."
-    },
-    {
-      "date": "2026-10-01",
-      "source": "ECB",
-      "title": "Christine Lagarde: Where AI risks meet",
-      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261001~cf3c630379.en.html",
-      "commentary": "Lagarde addressing the intersection of AI risks, in a speech issued jointly through the ECB and the ESRB, places AI firmly within the European macroprudential agenda rather than leaving it to digital regulators alone. Financial stability framing matters for sovereignty because concentration in a small number of non-European model and cloud providers is an operational dependency for banks, exchanges and supervisors themselves. Once such dependencies are named as systemic, the case for European-controlled alternatives shifts from industrial policy to prudential necessity, with different legal instruments available. Expect supervisory attention to third-country provider concentration to become a quieter but more durable driver of sovereign capability than headline investment programmes."
-    },
-    {
-      "date": "2026-09-25",
-      "source": "Google News — sovereign AI Europe",
-      "title": "Europe can’t replicate the full AI stack, say investors and founders - PitchBook",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQM2ZwOWlZQWJLSEVrUklQZHFyYVAwNlZfMXlFcjRONk9oQ3NBRzZEOGNWWjgtU051dndSLWVTdTRDY0N3Z21NaEpLOVIycEZXV2N6a3J2Rm94RkNOSG1vX3diQVRucTUzaWZkZ3JSLXY4V3Zxb0dUblRlakRsOC05bVZ0WU16d0NROGVEMS1IenlLbDlrbDF6UXBydFRrZ18wSjRMTQ?oc=5",
-      "commentary": "Investors and founders quoted here argue that Europe cannot rebuild every layer of the AI stack — chips, compute, models, applications — and should concentrate on the layers where it can realistically compete. The judgement matters because it directly challenges the premise behind much of the EU's current industrial programme, which spreads public money across factories, gigafactories and model developers simultaneously. Whether one accepts the diagnosis or not, the argument forces a prioritisation question that European policy has so far avoided answering explicitly: which dependencies are tolerable and which are not. Expect this framing to shape the next round of debate over how InvestAI and the Cloud and AI Development Act allocate scarce capital."
     }
   ],
   "seen": [
@@ -370,6 +370,14 @@
     "https://news.google.com/rss/articles/CBMirwFBVV95cUxNTWFpNk9oa1hRa3pBWUtTS1JIRUhtQkYteFk4eEswTVQzTm94alRVQ2YyRXJFREpZTks2V0pwRmRPRmpKdEc3MFlOWTkyYjB6bUMwMWFUcHBSSFhJcTZvUVJUTk9SclFWSkpGa1dZVTNOdEJFSy0ydFNVVW1UR0tNY1FoMXBHZWc3MEZtMVJfM1g1ZFhady1RbC05YWhaRmJ1Ul9rVFVVWDM3cE44bEVZ",
     "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261030~08d9d540f0.en.html",
     "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9DNVl3SVY0RDNOa3dRZW9CR0g5SGpFWFJzMnRTcENjU0ZacHQ1QklyVUVfcS1HaXdtNmQ4T1VIMmtwNFBTVEZjcWZQX3owRTBqT25fU3FCVFNrZw",
-    "https://news.google.com/rss/articles/CBMinwFBVV95cUxON18zUkRsT092eFlqX2gzVkFIUERkQ1BMOUJmM19ndHdoUi12LUlDeXpfMGZlOEpwY0k4WVRmc1lSZE5aM1ZHckpNeXVjcmlSS0VxYmlXMGdNY3VSNTZHdUxCYWtUYXJyblpBcnlXdEYzTlpld2U0MTZ2Vm96SHlqZ3JoSjFtQ0JGVzRNR0FCZ1hLcHhVUld1VEN5QkFPSUE"
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxON18zUkRsT092eFlqX2gzVkFIUERkQ1BMOUJmM19ndHdoUi12LUlDeXpfMGZlOEpwY0k4WVRmc1lSZE5aM1ZHckpNeXVjcmlSS0VxYmlXMGdNY3VSNTZHdUxCYWtUYXJyblpBcnlXdEYzTlpld2U0MTZ2Vm96SHlqZ3JoSjFtQ0JGVzRNR0FCZ1hLcHhVUld1VEN5QkFPSUE",
+    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2351",
+    "https://www.fca.org.uk/news/press-releases/fca-explore-quantum-computing-tackle-financial-crime",
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQeWRVQjgtbTZmRlF5VWZHUENndTdnWGRzTFF6TEJ5R3NMQUN3NE41MjE2YnU5RS10N2NFNENkUjlvWWI5cFVrOXFhM3FKSm9meTlHYTRkS3Q5akZza0RGOXdMT2J4Tng4MEdsWTJ0dHVJcEtCMldlNGZZZkQzRGVZYnphdlI0eHRNbkRuc3JBU0dGendCR2tUZDFIS2FtR1dZODg4cU1fZEczeFNhVmpMdHFoaXRIZUFUbFhF",
+    "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNRW1keUd3RDQybnVjWmlQbEdZQms2cU5ua3FwQ3Z4MDg0aWJsUDdDallqY1cwdERVamxXQXhoOFpzVi1mVzktMlJTeWlqdzIybkVweVAzZnkzUklkRHJraE9SLUhBdS10Y0FJVHpodkFFSlFIanlOTlZCYXZZRkc0emRpYS1zNkhzazlxa2M4QUpORG5PVmVVRUdVMXMtX182OGh6Q01jSGlLUUl6SDRZSVd5Yld3eXh0dDBZS1pzc3ptbWhOMXFMeHBMa3lJZkE2Q3RsS0V4dmliQQ",
+    "https://digital-strategy.ec.europa.eu/en/funding/call-proposals-eu-ai-media-platform-modular-multilingual-public-interest-infrastructure-european",
+    "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPeHZ2VG5ERU1LU1lFTTU2SGU0OU9UU19ydmM2QWtwd0UtdjhCdWJvZ1hKQnUxblBRNE5LazBqTzZnRS1aV3I2WnhhOHE3OC10NUJqaXpUejJNVFloU3NMYWxOcUxRSmgtcUd4S3JKaWtzTTB1TlNla0RUUWVhWVpuWUtuRGhUU1dHN0VmQUNaNGVwT1ZQM0lPUl9WNGdnRVRZOF9TYlRoeHBYOG54a3NiRDNobDMwOUtaSDBsd1pJTktNMi1ack14dFdyOFpFZDBCbGV0bmNwbk8",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxOZGJIYzRkTEFWa0U3Z3BoYlpPTUlzenB0MTRfbzBPTVVpOW8ya2VyUGV2N3FTNG5GWUM0cmhQREltdFhrdnBUNFhTYS1rdjY3WGxnTjVNT1RHUzliZEprcnZ5STVWWDVjVGFDSDN4eFAxa19LcDIwSmVuY1JXYmp1ZC1yTTZOZl90eUVaWVUxUlpwWDZoYUw5ck12UUlzNzQ",
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNRFFFeVZFTXIydmlKWWQ0cXZELXFzZ3QxZm1BS2haWjY4Y01tb0loVjNReXQ3SHEyQTN5Z3BGQWo1TGtSci1qV1VoM1U4cFRnSXBRb2RmUFFVNGFGUC1ELVc1aUtsa0xZc0l2aG14dVZYZWdpUm9uakVDOHhhYVp6bEtkN2JCQkFHSURB"
   ]
 }
