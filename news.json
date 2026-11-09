@@ -1,6 +1,20 @@
 {
-  "updated": "2026-11-05T14:29:15.485Z",
+  "updated": "2026-11-09T15:57:32.199Z",
   "items": [
+    {
+      "date": "2026-11-06",
+      "source": "Google News — sovereign AI Europe",
+      "title": "Sovereign AI: Why European companies want to keep their data out of Big Tech’s hands - EL PAÍS English",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPQXpmWkFOR2dnYllPNWR1ck9YWmhaN2xXUnU2cXUzMW9KcXN5VXgtLVBjdTV2WWhObkZIQk12ZldLSnU3MVdBNWR1MmY5TUN0VkNxQ1FtUWJhWmg0cmdUTFpac2xTel80TThUNzRYdTBIRGVkWGlMajUxRHY3UWpPclBVU1Zhb1h5SVJ2enVRSGpmdmp6Wk5lSmV3OVh6eW5uV1diY1FzRFNpUTlIelhwUlZjR2ozMEoxRXdQUGkwc3JNSkd1UDlfLXdmVGtHUUdCQUHSAeYBQVVfeXFMUGJCSmVEcE5tbGQ1aWp2ZVl4V2xtTDE1Z1d2MnlQNHhlRDhSLVlxMzVyaVd3bXpPQ05VSjRKSXJQUlA3alFuNlRxNVBLNkcwMERwdTQ5cXJ2ODh1MHEwRi01YnZoNW5qUjctWVh5dkhYTkJIeTIxNHJuYXYyQmR2TGhZblhHZVlGcF9najVjblRQczVZSmJ4UkFyc2ZFdjVtS1J0MkgtVHZIY0VSUDVmOV9lYzdXUmRPbTVtdHM0Q25WX0ZQQ0QyWWRLVVQxenhseVpUZGU1SmF4X0ZnWVJWRmlDbTJERXc?oc=5",
+      "commentary": "Reporting on European firms seeking to keep corporate data outside the large non-European cloud and model providers signals that sovereignty concerns have migrated from ministries to procurement departments. Demand-side pressure of this kind matters more than declaratory policy, because it creates a commercial market that European providers can actually serve rather than a subsidy queue. The limiting factor remains supply: without domestically controlled frontier models and the compute to train them, data residency becomes a legal wrapper around foreign capability. Whether this corporate appetite converts into durable European alternatives depends on whether a credible public-interest developer emerges to anchor the stack above the infrastructure layer."
+    },
+    {
+      "date": "2026-10-21",
+      "source": "Google News — sovereign AI Europe",
+      "title": "IREN to Advance Europe’s Sovereign AI Ambitions with 300MW Spanish Campus - GlobeNewswire",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPVTNTZ0hUYWpxN1A0a2JWYXhBX1RYTHA0QkxZdWgwU1BRdmViZm4tZjdEUm5IWFRuekZPRVpmbzh6T1ZySkZmWkJxWWx3dXVod3hZUUJDR3ZIYUg3WHVkOFBiMElPalB3Z2VMRnJwaURmWUllU3dGSFVIRXdRZkN0VG5ZRnZXUGJtemVYYXB2ZlotWXFKcnFQWHJ2YWdmNldjTGpUSmhoS01EbVdoQVhlQ0d1UGU3TkVjRl9HU0JkWjdmWkJXR1djTTg3aW80RGRMV3QzM204UkpJczdLc0E?oc=5",
+      "commentary": "A 300MW campus in Spain adds meaningful AI-capable capacity on European soil, and confirms that Iberian power availability is becoming a decisive input into where European training and inference workloads physically sit. The sovereignty question, however, turns on ownership and control rather than geography: capacity built and operated by a non-European listed company located in Europe is a dependency relocated, not removed. Similar dynamics already shape the Nordic picture, where abundant low-carbon power attracts external operators faster than it builds domestic capability. The policy test ahead is whether Europe secures governance rights and guaranteed allocation over such sites, or merely hosts them."
+    },
     {
       "date": "2026-11-03",
       "source": "Google News — European AI compute",
@@ -154,20 +168,6 @@
       "title": "AI sovereignty: The EU’s dangerous dependence on China and the US.",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVUJiUjBza1RoOS0yeGdIeUIyTGVJYWZxT2RkS05QX0dGbDdNODU0U1BReGlLYkczTlpFQWNSU25QakNCaGZPVmNPMTIzbjdxdzhxVkdqbWJheFUyZmZqeHhVMWpQN1pZTkdpV1VXS052SVhEZlZKdE10VS1GUnR1UjBkVDZoZWRud3djamRTMDFaOUhpajNucHpPU1NLMkpzMll2MHJkTlNfczB6aDVJYQ?oc=5",
       "commentary": "Table.Briefings sets out the EU's two-sided technological dependency, on American model providers and cloud operators at one end and Chinese hardware and supply chains at the other. Framing the problem as dual rather than transatlantic alone matters, because remedies aimed only at reducing US exposure can deepen reliance elsewhere in the stack. Dependency of this kind is not merely commercial: it propagates into financial stability, public administration and defence procurement wherever European institutions build atop foreign-controlled models. Pressure will grow for instruments that sit above national budgets and procurement cycles, since no single member state can finance an exit from both dependencies on its own."
-    },
-    {
-      "date": "2026-10-05",
-      "source": "European Commission — Digital Strategy",
-      "title": "Establishing the European AI Observatory: Call for tenders",
-      "url": "https://digital-strategy.ec.europa.eu/en/funding/establishing-european-ai-observatory-call-tenders",
-      "commentary": "The Commission has opened tendering for a European AI Observatory, adding a monitoring function to the growing institutional apparatus around the AI Act and the AI Continent agenda. Observation capacity is a genuine prerequisite for sovereignty: without independent European measurement of model capability, compute availability and market concentration, policymakers are left reading the assessments of the firms they intend to regulate. The design question is whether the Observatory acquires its own technical evaluation capability or becomes a secondary aggregator of vendor-supplied data. Its eventual relationship to any European body that actually trains frontier models will determine whether Europe can assess capability from the inside rather than at second hand."
-    },
-    {
-      "date": "2026-10-02",
-      "source": "Google News — sovereign AI Europe",
-      "title": "Reporter’s Notebook: Europe’s Sovereign AI Push Needs Customers As Well As Capital",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNM21Ibl8zcndWTnJ4TGo0NzBhZHVsQ2VPNk1NQk1hVHVKWU16dTV5M3J3akxjdnlGV1I0TlhMTklZeE9ZbGlabWxLUUhQV1JuN0FDYTdIVlJJVDk5TG0xSHlsQkVycWFJN2ZjZnFCMDI1U1VsdF9jU293UElFcVdOXzBJdlo?oc=5",
-      "commentary": "Crunchbase sets out the demand-side problem that funding announcements tend to obscure: European sovereign AI ventures can raise capital and still fail for want of buyers willing to switch away from incumbent American providers. The argument matters for any treaty-based compute or model institution, because public money builds capacity but procurement builds markets, and the two are rarely designed together. A European facility that produces frontier capability without anchor customers in government, defence and regulated industry would reproduce the commercialisation gap that already afflicts the continent's research base. The policy lever to watch is therefore whether member states convert sovereignty rhetoric into binding offtake and procurement preference."
     }
   ],
   "seen": [
@@ -378,6 +378,8 @@
     "https://digital-strategy.ec.europa.eu/en/funding/call-proposals-eu-ai-media-platform-modular-multilingual-public-interest-infrastructure-european",
     "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPeHZ2VG5ERU1LU1lFTTU2SGU0OU9UU19ydmM2QWtwd0UtdjhCdWJvZ1hKQnUxblBRNE5LazBqTzZnRS1aV3I2WnhhOHE3OC10NUJqaXpUejJNVFloU3NMYWxOcUxRSmgtcUd4S3JKaWtzTTB1TlNla0RUUWVhWVpuWUtuRGhUU1dHN0VmQUNaNGVwT1ZQM0lPUl9WNGdnRVRZOF9TYlRoeHBYOG54a3NiRDNobDMwOUtaSDBsd1pJTktNMi1ack14dFdyOFpFZDBCbGV0bmNwbk8",
     "https://news.google.com/rss/articles/CBMinwFBVV95cUxOZGJIYzRkTEFWa0U3Z3BoYlpPTUlzenB0MTRfbzBPTVVpOW8ya2VyUGV2N3FTNG5GWUM0cmhQREltdFhrdnBUNFhTYS1rdjY3WGxnTjVNT1RHUzliZEprcnZ5STVWWDVjVGFDSDN4eFAxa19LcDIwSmVuY1JXYmp1ZC1yTTZOZl90eUVaWVUxUlpwWDZoYUw5ck12UUlzNzQ",
-    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNRFFFeVZFTXIydmlKWWQ0cXZELXFzZ3QxZm1BS2haWjY4Y01tb0loVjNReXQ3SHEyQTN5Z3BGQWo1TGtSci1qV1VoM1U4cFRnSXBRb2RmUFFVNGFGUC1ELVc1aUtsa0xZc0l2aG14dVZYZWdpUm9uakVDOHhhYVp6bEtkN2JCQkFHSURB"
+    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNRFFFeVZFTXIydmlKWWQ0cXZELXFzZ3QxZm1BS2haWjY4Y01tb0loVjNReXQ3SHEyQTN5Z3BGQWo1TGtSci1qV1VoM1U4cFRnSXBRb2RmUFFVNGFGUC1ELVc1aUtsa0xZc0l2aG14dVZYZWdpUm9uakVDOHhhYVp6bEtkN2JCQkFHSURB",
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPQXpmWkFOR2dnYllPNWR1ck9YWmhaN2xXUnU2cXUzMW9KcXN5VXgtLVBjdTV2WWhObkZIQk12ZldLSnU3MVdBNWR1MmY5TUN0VkNxQ1FtUWJhWmg0cmdUTFpac2xTel80TThUNzRYdTBIRGVkWGlMajUxRHY3UWpPclBVU1Zhb1h5SVJ2enVRSGpmdmp6Wk5lSmV3OVh6eW5uV1diY1FzRFNpUTlIelhwUlZjR2ozMEoxRXdQUGkwc3JNSkd1UDlfLXdmVGtHUUdCQUHSAeYBQVVfeXFMUGJCSmVEcE5tbGQ1aWp2ZVl4V2xtTDE1Z1d2MnlQNHhlRDhSLVlxMzVyaVd3bXpPQ05VSjRKSXJQUlA3alFuNlRxNVBLNkcwMERwdTQ5cXJ2ODh1MHEwRi01YnZoNW5qUjctWVh5dkhYTkJIeTIxNHJuYXYyQmR2TGhZblhHZVlGcF9najVjblRQczVZSmJ4UkFyc2ZFdjVtS1J0MkgtVHZIY0VSUDVmOV9lYzdXUmRPbTVtdHM0Q25WX0ZQQ0QyWWRLVVQxenhseVpUZGU1SmF4X0ZnWVJWRmlDbTJERXc",
+    "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPVTNTZ0hUYWpxN1A0a2JWYXhBX1RYTHA0QkxZdWgwU1BRdmViZm4tZjdEUm5IWFRuekZPRVpmbzh6T1ZySkZmWkJxWWx3dXVod3hZUUJDR3ZIYUg3WHVkOFBiMElPalB3Z2VMRnJwaURmWUllU3dGSFVIRXdRZkN0VG5ZRnZXUGJtemVYYXB2ZlotWXFKcnFQWHJ2YWdmNldjTGpUSmhoS01EbVdoQVhlQ0d1UGU3TkVjRl9HU0JkWjdmWkJXR1djTTg3aW80RGRMV3QzM204UkpJczdLc0E"
   ]
 }
