@@ -1,6 +1,27 @@
 {
-  "updated": "2026-11-12T15:00:24.670Z",
+  "updated": "2026-11-16T15:32:08.226Z",
   "items": [
+    {
+      "date": "2026-11-14",
+      "source": "Google News — European AI compute",
+      "title": "EU leaders discuss AI sovereignty and Ukraine peace at informal Dublin summit",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPODcya0lsU2owRVVjdDl6d1FZY21jNEoycXVXd2lGdEk0QXQtdTZUOFhrS2hOMnlsaFBiOXVET2tWRUNhT1BoNVk0RDVoRHl1Y2t1dFRwdkp5aVFQazRfY1NSRFIyTE03S1BnOG9mdUpITWpobnFsTmVFWDY2RHZsd0hpRDJmdVpWSFNOc0dBQk5tWkFhM1dFVDRVVF8tcG54eFBhTzMzcXlqQmVTU1dEcHI1QXEyRUVRSHpKZDllNXhnemZUcWgxMkcyWGFuQnJoV3o5NHkyTDZ0eGwz?oc=5",
+      "commentary": "Heads of state and government took AI sovereignty and computing capacity into the informal European Council setting in Dublin, alongside Ukraine — a signal that compute dependency is now treated as a security question rather than an industrial-policy footnote. Informal summits produce no binding conclusions, but they set the frame within which the next Commission proposals on compute and cloud will be negotiated, and they determine whether member states accept pooled financing. The repeated pairing of sovereignty with safeguards suggests leaders are still trying to reconcile the AI Act's regulatory architecture with an industrial build-out agenda that depends on non-European hardware. Whether that reconciliation produces an institutional vehicle, rather than another round of coordinated national programmes, is the open question for 2027."
+    },
+    {
+      "date": "2026-11-16",
+      "source": "Google News — sovereign AI Europe",
+      "title": "Telia joins European technology leaders in forming AI Gigafactory Northern consortium to build trusted, sustainable AI infrastructure - Cision News",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQRW1tVjhyRE9fMk5MQXNBWUxPMG92bWVCOFFjYVlpMHJIczJ4XzVTaEZhandRajlzbVE1R2MxYkZySE9obDNSWm1FODdvcTNpY3FBb2xPbF9haExRdF9TMjRuZmR1WHd2MGFsRVl5Ui1JRXpBTWVjWXBGN0k3UmwyYnhNcmJYRHF2Q3V3VUpzOTRwU18zOUFkRkNxQjhfcFNvNHRkU2tqLWRDb0pBM1RzUDg0MF9zVnNyVnQ1MWJmODZyZDFhWGZGWXg1THl5a081VDhaamxuOVJZTUduT3F4NGFDRQ?oc=5",
+      "commentary": "Formation of a Northern AI Gigafactory consortium with Telia among its backers places Nordic connectivity and energy assets at the centre of the EU's gigafactory programme, which is precisely where abundant low-carbon power and cool climate give Europe a structural advantage over competing siting decisions. Telecoms operators joining as consortium members matters because network and colocation capacity, not just accelerators, determine whether sovereign compute is usable by European firms at scale. The harder test will be governance: who controls access, pricing and model-training priority once the facility is operating, and whether non-EU Nordic participation can be accommodated. Should these consortia consolidate rather than proliferate, they become the natural physical substrate for any treaty-based European frontier laboratory."
+    },
+    {
+      "date": "2026-11-11",
+      "source": "Google News — sovereign AI Europe",
+      "title": "Armada and Johnson Controls launch Galleon Forge Two in Dublin, bringing sovereign AI infrastructure production to Europe",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQNE94MWlENjlySXlBNm9LN3VaQVRtSnF0Z18zWjI4cUhjbzJtTmxobnppc0c5QW9ZMk9WWGdrMWFYd1R3dHo0cXU0YWlBZEhSM2RzdTJFZWVvQ01UVmJwal9Rc1ljeXVwTThZV3Z6SmFRQTZ3UV9VcEVIQ2JfSVpIeUtmdy0zTjl2WDhLRGZ6VkROMHVrbEhHbFlNYlNWUDVMNmlKa001bmh1RmFrbFRXVlUxcTNGNjB5SEtDOUluenVGNVJpZVFETkNhVFVnTUdtQkh1bA?oc=5",
+      "commentary": "Siting production of modular AI infrastructure in Dublin shifts part of the data-centre supply chain onto European soil, addressing a dependency that sits upstream of the compute debate and is usually ignored in favour of chip counts. Manufacturing capability for enclosures, cooling and power systems is slower to relocate than software, so a European production base has durable value even as accelerator supply remains American. The sovereignty claim nonetheless rests on corporate ownership structures that are not European, which is the recurring ambiguity in how the term is now marketed. Procurement rules attached to EU-funded facilities will decide whether such plants genuinely reduce external leverage or merely localise assembly."
+    },
     {
       "date": "2026-11-11",
       "source": "Google News — European AI compute",
@@ -147,27 +168,6 @@
       "title": "Philip R. Lane: The AI opportunity for Europe",
       "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261013~9db9bf4fd6.en.html",
       "commentary": "The ECB's chief economist has used a set-piece speech to frame artificial intelligence as an opportunity for the European economy, placing the subject squarely inside central banking's remit rather than leaving it to industrial policy ministries. When a monetary authority begins speaking publicly about AI's economic trajectory, the question of who supplies the underlying models and compute stops being purely a competitiveness matter and starts shading into questions of productive capacity and financial stability. For advocates of a treaty-based European capability, the salient point is that the institution with the clearest view of the euro area's structural weaknesses is now engaged with the technology that could widen or narrow them. Attention should now turn to whether the ECB's analysis extends from adoption and diffusion towards the dependency risks created by reliance on non-European model providers."
-    },
-    {
-      "date": "2026-10-02",
-      "source": "Google News — sovereign AI Europe",
-      "title": "Reporter’s Notebook: Europe’s Sovereign AI Push Needs Customers As Well As Capital",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOakNNNVdXN2VRc25ma0hTNFpfaV9RV1czQWdUZVBfVThBcXIzUURBcE9aQzd1Q0NNb3k1Qno4NGNfYkczNUdvMmZsdDBQN042T3NOQ01CTThUMXFqc1JIRTJSZ19tdUFsbEhWZk1pVWRvcVQ0UlNiQ3gtQ053RTlYbzkxOFJlVUN5aGpEeQ?oc=5",
-      "commentary": "A reported argument that Europe's sovereign AI effort lacks demand as much as funding identifies the weakness that subsidy-led programmes consistently underestimate. Compute capacity and model development financed from public sources remain commercially hollow if European firms and public administrations continue procuring from incumbent American providers, which leaves sovereign infrastructure underused and politically vulnerable at the next budget cycle. The implication for institutional design is that procurement commitments matter at least as much as capital commitments, and that any treaty-based vehicle would need anchor customers written into its founding arrangements. Whether member states are willing to bind their own purchasing behaviour, rather than merely co-finance capacity, will determine if the current push produces durable capability or stranded assets."
-    },
-    {
-      "date": "2026-10-09",
-      "source": "European Commission — Digital Strategy",
-      "title": "Commission holds special meeting of Scientific panel on frontier AI safety and risks",
-      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-holds-special-meeting-scientific-panel-frontier-ai-safety-and-risks",
-      "commentary": "Convening the scientific panel on frontier AI safety and risks outside its ordinary rhythm signals that the Commission intends the AI Act's expert machinery to be an active instrument rather than a formality. The sovereignty question is whether Europe can assess frontier systems it does not build: panel judgements about systemic risk currently depend on evidence and model access supplied largely by non-European developers. A credible European evaluation capability requires in-house compute and reference models of comparable scale, which no existing AI Factory commitment yet guarantees. Expect pressure to grow for pairing the panel's advisory role with public technical infrastructure that can verify claims independently."
-    },
-    {
-      "date": "2026-10-08",
-      "source": "Google News — sovereign AI Europe",
-      "title": "Le Chonk and Kolibri: Europe’s Answer to OpenAI, Built in Europe on Nvidia Chips - European Business Magazine",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBmcmdKUThQNFlNUnNfVl9CdkRkUnNaSkJBbU9rUHVZa0Zya3pGTkhRdURnNEFxRUh2LWxJLTFsdnV3TWE1Ni12R0picTByMV84QzhOMHBDZVQ5cTRZdEpmbS1uTkJnclVVbGc?oc=5",
-      "commentary": "Two European frontier model efforts positioned as answers to OpenAI illustrate both the ambition and the limit of the current approach: the weights may be European, but the silicon is not. Model-layer sovereignty built on a single foreign accelerator supplier relocates the dependency rather than removing it, leaving export controls and allocation decisions as live points of leverage over European capability. The more durable test is whether such ventures can secure multi-year compute at predictable cost, which private balance sheets in Europe have struggled to underwrite. A treaty-based facility with its own procurement weight and patient capital would change the terms on which these models are trained."
     }
   ],
   "seen": [
@@ -384,6 +384,15 @@
     "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNVEJDNVVHMWJhSTR0dk1IMVdreGV2UmVlSVVFd2FzYnJiUHVKaC15NXFZVWZzS2JWVHBnSUdTRHFyZVFWSWM4YUpqLU80WGtjNTE0RmNlQ19lcEFpUHNaTjdKWFl4TzZCODRjWEtDLW9VZk51cVN6T0FoWmVSdGFsNHFVWHNNMy1mdnpvTkJWVE5jWTJhamR5SUoybWlfYVdRUVprbElFZU9yeDZUUHFudTRxa0Y0dGZVT2FjblFlOE11ckJCNFVPZg",
     "https://news.google.com/rss/articles/CBMingFBVV95cUxQZFpGRzdqUWdwR0pFQXVhaW90VWlldUhnMTlNYU9MaHBDX1l6T0ZIM1NfVGdUM0tQZFZVYlFqbEtZSmxDeFFVeHZKUkhJMkNTS1BIMXoyWFR6bFlrczZsd05MeGUwdGl3NjR2bVdkTks5bW9udUt0VFJxWmU5ZmE1a2IzRGFNSi0zSVZEMEhpRlBENnRxUjhDZE0xeDkydw",
     "https://news.google.com/rss/articles/CBMidEFVX3lxTFA5X3NTaEFWSGR0U0p3V0k0YkVvd0xSZ1R4THVndERXOExlRGNQMUoyQVFtNDZiRi15N2Z4b0p6SENyVllZbG51OGhDNkdMR3NZZWJNRE1vZFkwMWFaOEJBaG9QLXFPUVFSNnI4N0pqQzBFTmRr",
-    "https://news.google.com/rss/articles/CBMinAJBVV95cUxPa3Z1MENxSFpmMWd2dEN5LUN0Y2I1QnZGX0g5cHc5d18yNW1OTDQ0M0xKQXZKNXgyREJUQ2wyQUhJZ3Z0QlZzU3lLMWJnNlBrMks2S3VzaEY5Y25NcTR2eDRzR05Fd2p0NnNSQVN5WFVHclNydlVDR1VyXzlMMkQ4eW9uWmhKbXhYOTlOM2RPaHJpYTk1VWFSSURVY1IyMEhiMm9sOUtGOFMtakNXcVJOZ2FUY21CZTNLVmxjMUduZ0xXek1teWh6Y2g2TlItVE0xTmt3ZFVON0tzLUt0eWpRTnkyNkhwalI3YVdmNHNLRElFaG1RVEdLUmZCQ2pXRDZVODRKbk05VlZRT1BPVVFydFM3OUlBWTZUMlI5btIBogJBVV95cUxQaEN3RFpLRXhFTDJQQTNKNDJfemdFSlZMX0hSTzNvWUJ6SWtLQTR0MHF4OGhFR3FuUGxfSEZJdXhHUkxNVXlVZWs1bURLUVpfSjdVWGFyWUlMdHc1TkRjekx3NDZRMEV6QU5HalVLdjhFOUE4MVR1amxya0xmRTFpWWt3QkpQZFN5cTdpdlg1ZmppY1ZCWkJvVDUwRG9CRGlBc0VSZ21OdmhlYmIydVM1X1BrWjlCdnZkU3cwOUlxd2ZxbFBmUGVXd0hyeVFkYmRTTWJBNGUwR0M5NWJLcDl5NmdLcWlpM09xemRZcVloWGlaaHh2TXV5VjdsMTVrTU5JTHVBNkVEVWdJV2NzampqMmdqTDhNakZCYjI3bFF2WDBUUQ"
+    "https://news.google.com/rss/articles/CBMinAJBVV95cUxPa3Z1MENxSFpmMWd2dEN5LUN0Y2I1QnZGX0g5cHc5d18yNW1OTDQ0M0xKQXZKNXgyREJUQ2wyQUhJZ3Z0QlZzU3lLMWJnNlBrMks2S3VzaEY5Y25NcTR2eDRzR05Fd2p0NnNSQVN5WFVHclNydlVDR1VyXzlMMkQ4eW9uWmhKbXhYOTlOM2RPaHJpYTk1VWFSSURVY1IyMEhiMm9sOUtGOFMtakNXcVJOZ2FUY21CZTNLVmxjMUduZ0xXek1teWh6Y2g2TlItVE0xTmt3ZFVON0tzLUt0eWpRTnkyNkhwalI3YVdmNHNLRElFaG1RVEdLUmZCQ2pXRDZVODRKbk05VlZRT1BPVVFydFM3OUlBWTZUMlI5btIBogJBVV95cUxQaEN3RFpLRXhFTDJQQTNKNDJfemdFSlZMX0hSTzNvWUJ6SWtLQTR0MHF4OGhFR3FuUGxfSEZJdXhHUkxNVXlVZWs1bURLUVpfSjdVWGFyWUlMdHc1TkRjekx3NDZRMEV6QU5HalVLdjhFOUE4MVR1amxya0xmRTFpWWt3QkpQZFN5cTdpdlg1ZmppY1ZCWkJvVDUwRG9CRGlBc0VSZ21OdmhlYmIydVM1X1BrWjlCdnZkU3cwOUlxd2ZxbFBmUGVXd0hyeVFkYmRTTWJBNGUwR0M5NWJLcDl5NmdLcWlpM09xemRZcVloWGlaaHh2TXV5VjdsMTVrTU5JTHVBNkVEVWdJV2NzampqMmdqTDhNakZCYjI3bFF2WDBUUQ",
+    "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPT1lVeHRpbUdvRzJXWmVBNEpiMUlGMzdmQ3dTUzYxYjBGWkVGQ0xDVEk2MkZ1dUhaekhFYU00YldkWWplS3pQaEtoclVxeG94R3RCUDI0VFkzWFBGZkQ3UVhtQXRSSGlaOElpbW11Mm5fSlAxUnNIZS1Nam9vbWhFN3k4ZVVMejlmYjZ3QnVMSmdnbXQxdGE3VWhZNlZJMVJJakd6c24wY3hzamdWWnVMclY5STBudUxRZEloSjJfaWpjdWJCeG5PLW1DQTJXZTlQVGJ0bzNMeFg",
+    "https://news.google.com/rss/articles/CBMicEFVX3lxTE9YN3pnaDFva0lPczhXeUtZVmw3T1JkRHY0X2xRbzhKRTd6eWs4c2VfU0N3M0N0OEJnR0c2MWtrN1BhRVJ2bjlhcFczVnRVM0pkbWZ6ZUN2Q29pRXlZT3Y3OVNMWVIxUUlHRXA4Qml0SjA",
+    "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQRW1tVjhyRE9fMk5MQXNBWUxPMG92bWVCOFFjYVlpMHJIczJ4XzVTaEZhandRajlzbVE1R2MxYkZySE9obDNSWm1FODdvcTNpY3FBb2xPbF9haExRdF9TMjRuZmR1WHd2MGFsRVl5Ui1JRXpBTWVjWXBGN0k3UmwyYnhNcmJYRHF2Q3V3VUpzOTRwU18zOUFkRkNxQjhfcFNvNHRkU2tqLWRDb0pBM1RzUDg0MF9zVnNyVnQ1MWJmODZyZDFhWGZGWXg1THl5a081VDhaamxuOVJZTUduT3F4NGFDRQ",
+    "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQSWFxSVNGMGNJcG1rQUN4Y2sxeGpIMmtmTDU0bm04eHJWX0JWNVY4QjJtSTRVNG1XNGM4Qm5pZGgyeUU3d3R2RG1LMGtZUnlMVEhKcXBTTnVJUkNaaWFnWm5kZl8xYlBzSXUta0h0eUREUU1jQi1ya2UtVy1zZUdhWWdpUFh5MlFNNmlXUFlkNVhfR3pJUm03YkFwXzU3bXp2TUF4ZGFiaWYydWtiN3VRMExKcXdDb2N0WW05NDFhTUVYNnNVaGlic0FLVV9kbzlFLVVjYndCeGhqaEpkNGozWmljTHNGNzZFZFE",
+    "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPODcya0lsU2owRVVjdDl6d1FZY21jNEoycXVXd2lGdEk0QXQtdTZUOFhrS2hOMnlsaFBiOXVET2tWRUNhT1BoNVk0RDVoRHl1Y2t1dFRwdkp5aVFQazRfY1NSRFIyTE03S1BnOG9mdUpITWpobnFsTmVFWDY2RHZsd0hpRDJmdVpWSFNOc0dBQk5tWkFhM1dFVDRVVF8tcG54eFBhTzMzcXlqQmVTU1dEcHI1QXEyRUVRSHpKZDllNXhnemZUcWgxMkcyWGFuQnJoV3o5NHkyTDZ0eGwz",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxNWEVHS1dtTG5ISnh0OXhfVUE4S0QxLWRLNmFOWF9ya2ZqNkFkV3NZaGY0SXliOE5zY05WTklvX0Y1dk5yTVEteEVUbWdRNlZwd0tkVEVQTXF3R2YzeDJKaWI4VkpwMTFNWkZFNWpKT2xMa1I0WXpsMHlPN0ZqcllLb3hSeDhBNHZYNVRjNmdKMHNha1VFUG9iZXhBZ3VfbXlkdnNj",
+    "https://news.google.com/rss/articles/CBMizwFBVV95cUxPanBnM2RhekE5NWFPU3p4UnVzcVNfOUFJaEJ5amNlclNjTTNMOEF5SmtBNWM5bjRsV2pqQXNQd29ya1VQNk5fSWZZQnQ2TVAtakdKNDl6TUhYdU1fakhaeE82V0JjaWs2Z3RLQ0tncHVXVERwUzF3c2FvelNUbmZzNFZxSE5MTGdCX2VRTmJFWW1GWUNaS3BtbV9sSHpMdUFVZWtiRnhBNmRabGxOVFRuODh5QmEwc0p1SGs1V0RtZ21fbmp4b1ZPWHp6OTVHYVk",
+    "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQNE94MWlENjlySXlBNm9LN3VaQVRtSnF0Z18zWjI4cUhjbzJtTmxobnppc0c5QW9ZMk9WWGdrMWFYd1R3dHo0cXU0YWlBZEhSM2RzdTJFZWVvQ01UVmJwal9Rc1ljeXVwTThZV3Z6SmFRQTZ3UV9VcEVIQ2JfSVpIeUtmdy0zTjl2WDhLRGZ6VkROMHVrbEhHbFlNYlNWUDVMNmlKa001bmh1RmFrbFRXVlUxcTNGNjB5SEtDOUluenVGNVJpZVFETkNhVFVnTUdtQkh1bA",
+    "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNWHNlVUtxUjhmOXlwVzVVY2tMdW11enhYVU5SaThlM04wOGpubnRGai1STTI5MG1PTkpTdXFXd2tUQ1kxbE0xZXFBck9fN2JILWtxSkFhZGRTMWFPTjlaTkkxSEhnVTg5Q2FfblRoVlFfOVdLZy1JRVVCSXRCdk9aVHRBOEpzMFNfTU9TT1o4ZEwzNzBERDYyeDBBZG9rRG0xdXNWMDFPa01PSWV0VWlnU2FyMDQ5WjVDdHNlODBEeWdVQl83Ums2dWk0OXhKSXEzWFRzQThZTldBbVE"
   ]
 }
