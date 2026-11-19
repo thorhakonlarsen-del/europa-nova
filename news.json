@@ -1,6 +1,27 @@
 {
-  "updated": "2026-11-16T15:32:08.226Z",
+  "updated": "2026-11-19T15:37:53.529Z",
   "items": [
+    {
+      "date": "2026-11-18",
+      "source": "ECB",
+      "title": "Risks from AI valuations, fiscal imbalances and geoeconomic tensions weigh on financial stability outlook",
+      "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261118~83c5c60158.en.html",
+      "commentary": "The ECB has placed AI valuations alongside fiscal imbalances and geoeconomic tensions at the centre of its financial stability outlook, which moves AI from an industrial-policy file to a prudential one. For Europe the exposure is doubly awkward: euro area investors and firms are financially exposed to a concentrated set of largely non-European AI companies while also depending on those same firms for operational capability, so a market correction would hit both portfolios and production. Supervisory attention of this kind tends to precede data collection and disclosure requirements, which would at least make the scale of the dependency measurable. The policy question that follows is whether Europe treats concentration risk purely as something to be disclosed, or as an argument for building domestic alternatives that reduce it at source."
+    },
+    {
+      "date": "2026-11-17",
+      "source": "Google News — sovereign AI Europe",
+      "title": "AI Gigafactory consortium targets large-scale sovereign AI infrastructure across Nordic and Baltic region - Innovation News Network",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPYVBaT2RyZFNmMHlfNC10MnBldDJJTzJPX09ZajNEUkJtelI2RXh5alQzMmxlSUlKNkVTbnh5TmpHX09iRk44b0o3QVhkbWZ5VDFxd2wtNFRFUFpacW5qMmxuSFBDbGVoaDRsUU9YcGpTYkpBMWwtd1J2VUZ0b2dfZ2lEaHI2UQ?oc=5",
+      "commentary": "A consortium has formed to pursue large-scale AI gigafactory capacity across the Nordic and Baltic region, led by established telecoms and infrastructure players rather than by model developers. Siting frontier-scale compute in the north follows the logic of cheap low-carbon power and cooling, and it gives the Nordic-Baltic bloc a concrete stake in the EU's compute build-out rather than a purely consumptive role. The open question is governance: who allocates capacity, on what terms, and whether European research institutions and startups obtain guaranteed access or merely commercial queue positions. A gigafactory that ends up leased wholesale to non-European model providers would deliver energy exports in a new form rather than sovereign capability, and the access rules written now will determine which outcome arrives."
+    },
+    {
+      "date": "2026-11-16",
+      "source": "European Commission — Digital Strategy",
+      "title": "Commission hosts Apply AI Summit to boost Europe’s AI innovation and uptake",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-hosts-apply-ai-summit-boost-europes-ai-innovation-and-uptake",
+      "commentary": "The Commission's Apply AI Summit continues the pivot in Brussels from regulating AI to deploying it, with adoption across industry and the public sector as the stated objective. Adoption policy is not sovereignty-neutral, however: accelerating uptake while European frontier model capacity remains thin simply deepens the installed base of non-European systems inside European firms and administrations, and switching costs rise with every deployment. The sequencing matters, since procurement conditions and model-provenance requirements are far easier to impose before a public-sector estate is committed than after. Whether the Apply AI agenda is coupled to supply-side commitments on compute and model development will decide if uptake reinforces dependency or reduces it."
+    },
     {
       "date": "2026-11-14",
       "source": "Google News — European AI compute",
@@ -147,27 +168,6 @@
       "title": "First harmonised standard supporting the AI Act published in the Official Journal",
       "url": "https://digital-strategy.ec.europa.eu/en/library/first-harmonised-standard-supporting-ai-act-published-official-journal",
       "commentary": "Publication of the first harmonised standard under the AI Act in the Official Journal moves the regulation from principle to testable conformity criteria, giving developers a presumption-of-conformity route rather than case-by-case interpretation. The sovereignty dimension lies in who shapes the subsequent standards pipeline: European bodies now set the technical vocabulary that any model provider, including non-European ones, must speak to access the internal market. For a European frontier developer, harmonised standards can lower compliance uncertainty relative to bespoke legal assessment, which matters more to smaller entrants than to firms with large regulatory affairs functions. The pace at which the remaining standards follow will determine whether the AI Act operates as an enabling framework for domestic capability or merely a market-access filter administered on others' terms."
-    },
-    {
-      "date": "2026-10-16",
-      "source": "Google News — sovereign AI Europe",
-      "title": "Dublin declaration on developing sovereign AI in the EU presented — Deutsche Welle",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRENEYW5lTEZYSl9pcGZZRzlkLTd2NTJNN25sLU1Yeld2SkdBb2k1bWFvbFZjcGx2VVZBUGNXLXptOXVkNXdvUTRXTEpGVE1TUEFCMXljMURGQlVENk1Fc2VSckx4OG0zUDVIcWVuY010QV9BYVlLVUk1andQWmFlcThTZjRzUENpcFRoeWQzVzRLYjNyalpkbWJxbi1WVGotM2dvMnVGUEVYR2JaanNURWdoTF80dw?oc=5",
-      "commentary": "A declaration on sovereign AI presented in Dublin signals that member states are converging on a shared political statement of intent rather than leaving the question to individual national strategies. Declarations of this kind are cheap to sign and hard to enforce, so the test is whether the text is followed by binding instruments, pooled budgets or a legal vehicle with its own mandate. Europa Nova's case rests precisely on that gap: political consensus on sovereign AI already exists, while the institutional machinery to convert it into frontier capability does not. Watch whether signatories attach compute, funding or governance commitments in the months after Dublin, since a declaration without those remains a statement of preference."
-    },
-    {
-      "date": "2026-10-08",
-      "source": "Google News — sovereign AI Europe",
-      "title": "CADA represents everything that’s wrong with Europe’s approach to digital sovereignty",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNcTVpNFFlRTctRWFGM3JzcEZfZ1FxbkdzRHZ1MTRSUFoyenBlLXYycXZLWWJzLXhBa1VwTlJVQVViZ2dSSXhhSDVoMUxURWFZTVp4VjBrcFdfNXZrTnZ1X0lWMzloWnBPR3k2S19QalBXaklZX2JLR3BaYi1USWFWOHZQWDNrUzNrRW1CejNWYUl3VW9GNXBnMkltYkdiSk1aYVpQUS11QldGUGROVlZYT1lPU3A3c1BZU3I4cjJHQnhLQ1hxUDI3RnI1TFgtclFsVzZJcExLaEhFSGM?oc=5",
-      "commentary": "Civil society criticism of the Cloud and AI Development Act from EDRi opens a second front in the sovereignty debate, attacking not the goal of European capability but the means chosen to pursue it. Opposition from digital rights groups matters because the Act's passage through Parliament depends on a coalition that includes actors sceptical of industrial subsidy framed as sovereignty. Any sovereign compute proposal, including treaty-based ones, will face the same objection: that public money ends up underwriting incumbents or foreign-owned infrastructure relabelled as European. Designing ownership and governance so that sovereignty claims survive scrutiny from rights advocates, not just from industry, is becoming a precondition for political durability."
-    },
-    {
-      "date": "2026-10-13",
-      "source": "ECB",
-      "title": "Philip R. Lane: The AI opportunity for Europe",
-      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261013~9db9bf4fd6.en.html",
-      "commentary": "The ECB's chief economist has used a set-piece speech to frame artificial intelligence as an opportunity for the European economy, placing the subject squarely inside central banking's remit rather than leaving it to industrial policy ministries. When a monetary authority begins speaking publicly about AI's economic trajectory, the question of who supplies the underlying models and compute stops being purely a competitiveness matter and starts shading into questions of productive capacity and financial stability. For advocates of a treaty-based European capability, the salient point is that the institution with the clearest view of the euro area's structural weaknesses is now engaged with the technology that could widen or narrow them. Attention should now turn to whether the ECB's analysis extends from adoption and diffusion towards the dependency risks created by reliance on non-European model providers."
     }
   ],
   "seen": [
@@ -393,6 +393,17 @@
     "https://news.google.com/rss/articles/CBMiowFBVV95cUxNWEVHS1dtTG5ISnh0OXhfVUE4S0QxLWRLNmFOWF9ya2ZqNkFkV3NZaGY0SXliOE5zY05WTklvX0Y1dk5yTVEteEVUbWdRNlZwd0tkVEVQTXF3R2YzeDJKaWI4VkpwMTFNWkZFNWpKT2xMa1I0WXpsMHlPN0ZqcllLb3hSeDhBNHZYNVRjNmdKMHNha1VFUG9iZXhBZ3VfbXlkdnNj",
     "https://news.google.com/rss/articles/CBMizwFBVV95cUxPanBnM2RhekE5NWFPU3p4UnVzcVNfOUFJaEJ5amNlclNjTTNMOEF5SmtBNWM5bjRsV2pqQXNQd29ya1VQNk5fSWZZQnQ2TVAtakdKNDl6TUhYdU1fakhaeE82V0JjaWs2Z3RLQ0tncHVXVERwUzF3c2FvelNUbmZzNFZxSE5MTGdCX2VRTmJFWW1GWUNaS3BtbV9sSHpMdUFVZWtiRnhBNmRabGxOVFRuODh5QmEwc0p1SGs1V0RtZ21fbmp4b1ZPWHp6OTVHYVk",
     "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQNE94MWlENjlySXlBNm9LN3VaQVRtSnF0Z18zWjI4cUhjbzJtTmxobnppc0c5QW9ZMk9WWGdrMWFYd1R3dHo0cXU0YWlBZEhSM2RzdTJFZWVvQ01UVmJwal9Rc1ljeXVwTThZV3Z6SmFRQTZ3UV9VcEVIQ2JfSVpIeUtmdy0zTjl2WDhLRGZ6VkROMHVrbEhHbFlNYlNWUDVMNmlKa001bmh1RmFrbFRXVlUxcTNGNjB5SEtDOUluenVGNVJpZVFETkNhVFVnTUdtQkh1bA",
-    "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNWHNlVUtxUjhmOXlwVzVVY2tMdW11enhYVU5SaThlM04wOGpubnRGai1STTI5MG1PTkpTdXFXd2tUQ1kxbE0xZXFBck9fN2JILWtxSkFhZGRTMWFPTjlaTkkxSEhnVTg5Q2FfblRoVlFfOVdLZy1JRVVCSXRCdk9aVHRBOEpzMFNfTU9TT1o4ZEwzNzBERDYyeDBBZG9rRG0xdXNWMDFPa01PSWV0VWlnU2FyMDQ5WjVDdHNlODBEeWdVQl83Ums2dWk0OXhKSXEzWFRzQThZTldBbVE"
+    "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNWHNlVUtxUjhmOXlwVzVVY2tMdW11enhYVU5SaThlM04wOGpubnRGai1STTI5MG1PTkpTdXFXd2tUQ1kxbE0xZXFBck9fN2JILWtxSkFhZGRTMWFPTjlaTkkxSEhnVTg5Q2FfblRoVlFfOVdLZy1JRVVCSXRCdk9aVHRBOEpzMFNfTU9TT1o4ZEwzNzBERDYyeDBBZG9rRG0xdXNWMDFPa01PSWV0VWlnU2FyMDQ5WjVDdHNlODBEeWdVQl83Ums2dWk0OXhKSXEzWFRzQThZTldBbVE",
+    "https://www.fca.org.uk/news/press-releases/fca-launches-world-first-platform-giving-firms-new-insight-ai-innovation",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxQSGhZRlV6U3VVVldCenhtcExJVC1IQS02T0FVaHUxek9lNHZJNWlrWkZzbUlRQXk3OEVHRzNMb0dLZFJXRVNCUHA3ZXBHUENCdHRNbDdXZ0pxbXkwbm1fMkdtanAxSjZDZlFabzBwZ0JyZUN4ZTVValFWZzVkT0JZS1ZyLVA5QjF0RV9sQmtKaUdpWml4dnl5UGd3",
+    "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261118~83c5c60158.en.html",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxNZ0g3blgzWEl6M2s1TjdKR0RLMEk5T0pwcGx4d2RTY3BxN3ZjaDVXcndKbWJreUJ5X05CQ20xNHNOQzVkNWMwZXRHUTZmUG8yYjJtQ3pheGdaNjRRRW1ZWThyYkRYdjUtaWVMNUpURWJjVTNaNkZ4ZW5LdHByY3p3TFVoLUpyUGRxd1U5UVRBOFY0bjlyMWFCSjgweDVueENZdWM3OXJ0blJoMm1VTm9QSTc0QV9uVkU",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxNWVpMRFRYUlV5UXVyczhzUWtzTUtWWWN1R3RrS0R2a016bFl3ZGNTcDlwbDJRT3l0Q2RscmdrMXgxeHhtVWgzcF9wYzI1aHZENktXTDl6c2VHUk9EUXdqSV83b0FOYWVoVXloQzhNOS1PTUVlbmNxbDRvVUNRS1V1cXRxRURlLVpub0tyeEc3WG9fUUVBZ1VCVDBnaEZaaWNIa09sdXhNQTl5RWh0",
+    "https://www.fca.org.uk/news/blogs/what-were-learning-firms-engaging-our-innovation-services",
+    "https://news.google.com/rss/articles/CBMihgFBVV95cUxPYVBaT2RyZFNmMHlfNC10MnBldDJJTzJPX09ZajNEUkJtelI2RXh5alQzMmxlSUlKNkVTbnh5TmpHX09iRk44b0o3QVhkbWZ5VDFxd2wtNFRFUFpacW5qMmxuSFBDbGVoaDRsUU9YcGpTYkpBMWwtd1J2VUZ0b2dfZ2lEaHI2UQ",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxPOTM1VUdpQmhjYmpRTDExckRjSnRQNExpc0ZNblFta1I4TWZGNW9Ia01KRXN6WXk3V1FjU01WbjdTNjVBcFVpTzVGbEtRWGhtX2JUbTZHeHcySnJOSjJIWkFUU0ZxYVZzVzhkTlh4OG9vZEd6UXRHbUEtMFppU2ozNUtPTlVmTU5SV1lFNVc5Q2c4bExUcF8zb1J3VlJ3b1hYOUE",
+    "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNUXpLaXUzY3pISmlqdE1GNnVIcE1YSUxrNHc1dU9sUkdzVkNoa25kY2VaNnBDRjlkTHlEejcyZmNFZ3o3eDB6dGlEQk1QMndsV0hVQ0I5YTMtSm96UWstczZOVVhTSWJPQVMxak14emJlamN4UDZkRnU4OHE4Mnl3TjhLX0NlQWtEaXFxemZJZ2ZEdDhFYkxPSF80cFgtSHVPU0xVTTAxcWx5RG9PaTl5MHFvQ1h1dzZiX2JjbE54YjFhdXpEX0lJU2FNOV9DUlNwUWJxcWM0MUVYNVdDT3oyN3dPU0U0LUxPbTU1cw",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxPTjJTd01JOEh5R29xSUw1NUptU09KWDRaUC1wY1ZPRHN0LU5sWnNGZ0NDNzFfYk56SEFKT3BpaVVQdC1NR3BZNHE0eVBrMWFTX2ZSTEN3ZGtBTFhkT1dBYXBZVkEwRnZFYUVhME5sTFZUeFI5YzJ2aFBWNnk4bDlPREl0U0NiemMzaFpnWEZpOUs2Zw",
+    "https://digital-strategy.ec.europa.eu/en/news/commission-hosts-apply-ai-summit-boost-europes-ai-innovation-and-uptake"
   ]
 }
